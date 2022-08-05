@@ -13,7 +13,7 @@ namespace Configurator.Core.Models.Device
 		/// </summary>
 		public Loops()
 		{
-			Channels = Enums.LoopChannels.None;
+			Channels = default;
 		}
 
 		/// <summary>
