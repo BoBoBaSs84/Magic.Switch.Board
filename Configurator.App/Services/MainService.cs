@@ -74,17 +74,20 @@ namespace Configurator.Services
 				Loops = new() { Channels = LoopChannels.Ch2 }
 			});
 
-			var list = Core.Enums.FlagsToList(Core.Enums.SwitchChannels.Ch1 | SwitchChannels.Ch2 | SwitchChannels.Ch3 | SwitchChannels.Ch4);			
-			var list2 = Core.Enums.ToList<Core.Enums.LoopChannels>();
-
+			var list = (SwitchChannels.Ch1 | SwitchChannels.Ch2 | SwitchChannels.Ch3 | SwitchChannels.Ch4).FlagsToList();
+			var list2 = LoopChannels.Ch3.GetListFromEnum();
+			
 			if (list is not null)
 				foreach (var item in list)
 					Console.WriteLine($"{nameof(item)}: {item}\t{nameof(item)}Number: {(int)item}\tdescription: {item.GetDescription()}");
 
-
 			if (list2 is not null)
 				foreach (var item in list2)
 					Console.WriteLine($"{nameof(item)}: {item}\t{nameof(item)}Number: {(int)item}\tdescription: {item.GetDescription()}");
+
+			Console.WriteLine($"{Environment.NewLine}");
+			Console.WriteLine($"{Statics.AssemblyName}-{Statics.AssemblyVersion}-{Statics.AssemblyLocation}-{Statics.Culture}");
+
 
 			deviceConfigService.Write(deviceConfig, null);
 			deviceConfig = deviceConfigService.Read();

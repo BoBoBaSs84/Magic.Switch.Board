@@ -119,7 +119,7 @@ namespace Configurator.Core
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
 		/// <param name="enumFlags"></param>
-		/// <returns><see cref="List{T}"/></returns>
+		/// <returns>A <see cref="List{T}"/> of the provided enum flags.</returns>
 		public static List<T>? FlagsToList<T>(this T enumFlags) where T : Enum, IConvertible
 		{
 			if (!typeof(T).IsEnum)
@@ -133,11 +133,11 @@ namespace Configurator.Core
 		}
 
 		/// <summary>
-		/// The <see cref="ToList{T}"/> method should return a list of all enumerators of the given type of enum.
+		/// The <see cref="GetListFromEnum{T}"/> method should return a list of all enumerators of the given type of enum.
 		/// </summary>
 		/// <typeparam name="T"></typeparam>
-		/// <returns>A list of the provided enum.</returns>
-		public static List<T>? ToList<T>() where T : Enum
-			=> (!typeof(T).IsEnum) ? default : Enum.GetValues(typeof(T)).Cast<T>().ToList();
+		/// <returns>A <see cref="List{T}"/> of the provided enum.</returns>
+		public static List<T>? GetListFromEnum<T>(this T @enum) where T : Enum
+			=> (!typeof(T).IsEnum) ? default : Enum.GetValues(@enum.GetType()).Cast<T>().ToList();
 	}
 }
