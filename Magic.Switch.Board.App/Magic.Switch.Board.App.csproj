@@ -11,7 +11,7 @@
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<AnalysisLevel>latest</AnalysisLevel>
 		<AnalysisMode>recommended</AnalysisMode>
-		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<GeneratedAssemblyInfoFile>Properties\AssemblyInfo.cs</GeneratedAssemblyInfoFile>
 		<Configurations>Debug;Release</Configurations>
 		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
@@ -21,6 +21,10 @@
 		<RepositoryUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageLicenseFile>D:\Source\Magic.Switch.Board\LICENSE</PackageLicenseFile>
+		<Authors>https://github.com/BoBoBaSs84</Authors>
+		<Copyright>© 2022 BoBoBaSs84</Copyright>
+		<ApplicationIcon>Magic.Switch.Board.App.ico</ApplicationIcon>
+		<PackageIcon>Magic.Switch.Board.App.png</PackageIcon>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -34,6 +38,17 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Content Include="Magic.Switch.Board.App.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Magic.Switch.Board.App.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 </Project>
