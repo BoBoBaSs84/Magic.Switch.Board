@@ -1,7 +1,6 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
 
 	<PropertyGroup>
-		<OutputType>Exe</OutputType>
 		<TargetFramework>net6.0</TargetFramework>
 		<PlatformTarget>AnyCPU</PlatformTarget>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -16,7 +15,12 @@
 		<GeneratedAssemblyInfoFile>Properties\AssemblyInfo.cs</GeneratedAssemblyInfoFile>
 		<Configurations>Debug;Release</Configurations>
 		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>		
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<UserSecretsId>dotnet-Magic.Switch.Board.App-3e3983e6-bfab-499c-a054-9f21d44718f2</UserSecretsId>
+		<PackageProjectUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseFile>D:\Source\Magic.Switch.Board\LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -31,11 +35,5 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
-		<PackageReference Include="Terminal.Gui" Version="1.7.1" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\Configurator.Core\Configurator.Core.csproj" />
-	</ItemGroup>
-
 </Project>
