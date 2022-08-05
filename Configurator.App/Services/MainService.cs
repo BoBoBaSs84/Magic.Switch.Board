@@ -49,7 +49,7 @@ namespace Configurator.Services
 			appConfigService.Write(appConfig, null);
 			await userNotificationService.NotifyWithMessageAsync("Application configuration saved.");
 
-			Core.Models.Device.Configuration? deviceConfig = deviceConfigService.Create(Statics.AssemblyVersion);
+			Configuration? deviceConfig = deviceConfigService.Create(Statics.AssemblyVersion);
 			deviceConfig.Channels.Add(new Channel()
 			{
 				Name = "Amp Switch plus Reverb and Chorus",
@@ -65,7 +65,17 @@ namespace Configurator.Services
 				Switches = new() { Channels = SwitchChannels.Ch3 },
 				Loops = new() { Channels = LoopChannels.Ch1 }
 			});
+			deviceConfig.Channels.Add(new Channel()
+			{
+				Name = "Distortion and Reverb w/Pitch",
+				Input = new() { Number = 12 },
+				Output = new() { Number = 43, MessageType = MidiMessageType.PCM, MidiChannel = MidiChannel.Ch2 },
+				Switches = new() { Channels = SwitchChannels.Ch3 },
+				Loops = new() { Channels = LoopChannels.Ch2 }
+			});
+			
 			deviceConfigService.Write(deviceConfig, null);
+			deviceConfig = deviceConfigService.Read();
 
 			return ExitCode.Success;
 		}
