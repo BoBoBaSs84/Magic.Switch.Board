@@ -1,6 +1,4 @@
-﻿using Magic.Switch.Board.Services.Logging;
-
-namespace Magic.Switch.Board.Services.Logging.Interfaces;
+﻿namespace Magic.Switch.Board.Services.Logging.Interfaces;
 
 /// <summary>
 /// This is the '<see cref="ILoggerService"/>' interface for the logger service class '<see cref="LoggerService"/>'
@@ -11,25 +9,30 @@ public interface ILoggerService
 	/// Interface member for logging debug messages of type <see cref="string"/>
 	/// </summary>
 	/// <param name="message"></param>
-	void LogInfo(string message);
+	void Info(string message);
 	/// <summary>
 	/// Interface member for logging warning messages of type <see cref="string"/>
 	/// </summary>
 	/// <param name="message"></param>
-	void LogWarn(string message);
+	void Warn(string message);
 	/// <summary>
 	/// Interface member for logging debug messages of type <see cref="string"/>
 	/// </summary>
 	/// <param name="message"></param>
-	void LogDebug(string message);
+	void Debug(string message);
 	/// <summary>
 	/// Interface member for logging error messages of type <see cref="string"/>
 	/// </summary>
 	/// <param name="message"></param>
-	void LogError(string message);
+	void Error(string message);
 	/// <summary>
 	/// Interface member for logging trace messages of type <see cref="string"/>
 	/// </summary>
 	/// <param name="message"></param>
-	void LogTrace(string message);
+	void Trace(string message);
+	/// <summary>
+	/// Interface member for logging status messages of type <see cref="string"/>
+	/// </summary>
+	/// <param name="message"></param>
+	void Status(string message);
 }

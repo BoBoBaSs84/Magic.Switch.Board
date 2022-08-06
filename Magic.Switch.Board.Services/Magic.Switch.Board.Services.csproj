@@ -35,10 +35,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="NLog.Extensions.Logging" Version="5.0.1" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <ProjectReference Include="..\Magic.Switch.Board.Entities\Magic.Switch.Board.Entities.csproj" />
 	</ItemGroup>
 

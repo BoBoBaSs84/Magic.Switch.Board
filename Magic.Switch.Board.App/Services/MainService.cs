@@ -47,7 +47,7 @@ internal sealed class MainService : IMainService
 	{
 		var appConfig = appConfigService.Create(AssemblyVersion);
 		bool success = appConfigService.Write(appConfig);
-		loggerService.LogInfo($"{nameof(appConfigService)}.{nameof(appConfigService.Write)}: {nameof(success)} = {success}");
+		loggerService.Info($"{nameof(appConfigService)}.{nameof(appConfigService.Write)}: {nameof(success)} = {success}");
 
 		var deviceConfig = deviceConfigService.Create(AssemblyVersion);
 		deviceConfig.Channels.Add(new Channel()
@@ -74,7 +74,7 @@ internal sealed class MainService : IMainService
 			Loops = new() { Channels = LoopChannels.Ch2 }
 		});
 		success = deviceConfigService.Write(deviceConfig);
-		loggerService.LogInfo($"{nameof(deviceConfigService)}.{nameof(deviceConfigService.Write)}: {nameof(success)} = {success}");
+		loggerService.Info($"{nameof(deviceConfigService)}.{nameof(deviceConfigService.Write)}: {nameof(success)} = {success}");
 
 		return ExitCode.Success;
 	}
