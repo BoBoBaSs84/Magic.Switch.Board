@@ -6,7 +6,7 @@ namespace Magic.Switch.Board.Services.Logging;
 /// <summary>
 /// This is the '<see cref="LoggerService"/>' class which implements the members of the '<see cref="ILoggerService"/>' interface
 /// </summary>
-public class LoggerService : ILoggerService
+public sealed class LoggerService : ILoggerService
 {
 	private readonly ILogger logger;
 	/// <summary>

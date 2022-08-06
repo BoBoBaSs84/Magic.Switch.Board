@@ -26,7 +26,7 @@ internal sealed class Program
 			})
 			.ConfigureServices((hostContext, services) =>
 			{
-				services.ConfigureConsoleHost();
+				services.ConfigureConsoleService();
 				services.ConfigureTransientServices();
 				services.ConfigureSingletonServices();
 				services.ConfigureScopedServices();

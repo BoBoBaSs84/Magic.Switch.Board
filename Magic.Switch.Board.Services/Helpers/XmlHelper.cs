@@ -8,7 +8,7 @@ namespace Magic.Switch.Board.Services.Helpers;
 /// The <see cref="XmlHelper{T}"/> class
 /// </summary>
 /// <typeparam name="T"></typeparam>
-internal class XmlHelper<T> where T : class
+internal sealed class XmlHelper<T> where T : class
 {
 	private readonly XmlSerializer xmlSerializer;
 	private readonly XmlWriterSettings xmlWriterSettings;

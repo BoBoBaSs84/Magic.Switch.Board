@@ -3,7 +3,7 @@
 namespace Magic.Switch.Board.Services.Helpers;
 
 /// <inheritdoc/>
-internal class StringWriterHelper : StringWriter
+internal sealed class StringWriterHelper : StringWriter
 {
 	private readonly Encoding m_Encoding;
 

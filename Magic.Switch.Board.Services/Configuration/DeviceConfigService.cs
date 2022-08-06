@@ -9,17 +9,18 @@ namespace Magic.Switch.Board.Services.Configuration;
 /// <summary>
 /// The <see cref="DeviceConfigService"/> class implements the members of the <see cref="IDeviceConfigService"/> interface
 /// </summary>
-public class DeviceConfigService : IDeviceConfigService
+public sealed class DeviceConfigService : IDeviceConfigService
 {
 	/// <inheritdoc/>
-	public DeviceConfiguration Create(string softwareVersion) =>
-		new(softwareVersion);
-
+	public DeviceConfiguration Create(string applicationVersion) =>
+		new(applicationVersion);
 	/// <inheritdoc/>
 	public DeviceConfiguration? Read() =>
 		XmlHelper<DeviceConfiguration>.ReadFile(DeviceConfigFileName);
-
 	/// <inheritdoc/>
 	public void Write(DeviceConfiguration configuration, Encoding? encoding) =>
 		XmlHelper<DeviceConfiguration>.WriteFile(DeviceConfigFileName, configuration, encoding);
+	/// <inheritdoc/>
+	public void Write(DeviceConfiguration configuration) =>
+		XmlHelper<DeviceConfiguration>.WriteFile(DeviceConfigFileName, configuration, Encoding.UTF8);
 }
