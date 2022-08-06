@@ -97,7 +97,7 @@ internal sealed class ConsoleService : IHostedService
 		}
 		catch (Exception ex)
 		{
-			loggerService.LogError(ex.Message);
+			loggerService.LogError($"{nameof(ex.Message)}: {ex.Message}\n{nameof(ex.InnerException)}: {ex.InnerException}");
 			return ExitCode.UnhandledException;
 		}
 		finally

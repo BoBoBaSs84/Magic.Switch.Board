@@ -9,13 +9,27 @@ namespace Magic.Switch.Board.Services.Configuration.Interfaces;
 public interface IDeviceConfigService
 {
 	/// <summary>
+	/// The <see cref="Create"/> method creates a new <see cref="DeviceConfiguration"/>.
+	/// </summary>
+	/// <param name="applicationVersion">The Version of the application that creates the configuration.</param>
+	/// <returns><see cref="DeviceConfiguration"/></returns>
+	public DeviceConfiguration Create(string applicationVersion);
+
+	/// <summary>
+	/// The <see cref="Read"/> method reads the <see cref="DeviceConfiguration"/> from file.
+	/// </summary>
+	/// <returns><see cref="DeviceConfiguration"/></returns>
+	public DeviceConfiguration? Read();
+
+	/// <summary>
 	/// The <see cref="Write(DeviceConfiguration)"/> method writes the device configuration to file.
 	/// </summary>
 	/// <remarks>
 	/// This method will enforce to use <see cref="Encoding.UTF8"/>.
 	/// </remarks>
 	/// <param name="configuration">The device configuration.</param>
-	public void Write(DeviceConfiguration configuration);
+	/// <returns>The success of true or false. </returns>
+	public bool Write(DeviceConfiguration configuration);
 
 	/// <summary>
 	/// The <see cref="Write(DeviceConfiguration, Encoding?)"/> method writes the device configuration to file.
@@ -25,18 +39,6 @@ public interface IDeviceConfigService
 	/// </remarks>
 	/// <param name="configuration">The device configuration.</param>
 	/// <param name="encoding">The encoding type.</param>
-	public void Write(DeviceConfiguration configuration, Encoding? encoding);
-
-	/// <summary>
-	/// The <see cref="Read"/> method reads the <see cref="DeviceConfiguration"/> from file.
-	/// </summary>
-	/// <returns><see cref="DeviceConfiguration"/></returns>
-	public DeviceConfiguration? Read();
-
-	/// <summary>
-	/// The <see cref="Create"/> method creates a new <see cref="DeviceConfiguration"/>.
-	/// </summary>
-	/// <param name="applicationVersion">The Version of the application that creates the configuration.</param>
-	/// <returns><see cref="DeviceConfiguration"/></returns>
-	public DeviceConfiguration Create(string applicationVersion);
+	/// <returns>The success of true or false. </returns>
+	public bool Write(DeviceConfiguration configuration, Encoding? encoding);
 }

@@ -7,7 +7,7 @@ namespace Magic.Switch.Board.Entities.Configuration;
 /// <summary>
 /// The <see cref="ApplicationConfiguration"/> class is the root element of the configuration file
 /// </summary>
-[XmlRoot(ElementName = nameof(ConfigurationRootElementName), IsNullable = false, Namespace = ApplicationNamespace)]
+[XmlRoot(ElementName = ConfigurationRootElementName, IsNullable = false, Namespace = ApplicationNamespace)]
 public class ApplicationConfiguration
 {
 	/// <summary>

@@ -18,9 +18,9 @@ public sealed class DeviceConfigService : IDeviceConfigService
 	public DeviceConfiguration? Read() =>
 		XmlHelper<DeviceConfiguration>.ReadFile(DeviceConfigFileName);
 	/// <inheritdoc/>
-	public void Write(DeviceConfiguration configuration, Encoding? encoding) =>
+	public bool Write(DeviceConfiguration configuration, Encoding? encoding) =>
 		XmlHelper<DeviceConfiguration>.WriteFile(DeviceConfigFileName, configuration, encoding);
 	/// <inheritdoc/>
-	public void Write(DeviceConfiguration configuration) =>
+	public bool Write(DeviceConfiguration configuration) =>
 		XmlHelper<DeviceConfiguration>.WriteFile(DeviceConfigFileName, configuration, Encoding.UTF8);
 }

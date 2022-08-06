@@ -13,8 +13,8 @@ public abstract class InputOutputBase
 	/// </summary>
 	public InputOutputBase()
 	{
-		MidiChannel = default;
-		MessageType = default;
+		MidiChannel = MidiChannel.Ch1;
+		MessageType = MidiMessageType.PCM;
 		Number = default;
 	}
 

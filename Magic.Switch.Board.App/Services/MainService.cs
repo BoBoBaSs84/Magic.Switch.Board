@@ -1,6 +1,7 @@
 ﻿using Magic.Switch.Board.App.Services.Interfaces;
 using Magic.Switch.Board.Entities.Configuration;
 using Magic.Switch.Board.Services.Configuration.Interfaces;
+using Magic.Switch.Board.Services.Logging.Interfaces;
 using static Magic.Switch.Board.App.Enums;
 using static Magic.Switch.Board.App.Statics;
 using static Magic.Switch.Board.Entities.Enums;
@@ -18,16 +19,19 @@ internal sealed class MainService : IMainService
 {
 	private readonly IAppConfigService appConfigService;
 	private readonly IDeviceConfigService deviceConfigService;
+	private readonly ILoggerService loggerService;
 
 	/// <summary>
 	/// Initialises the <see cref="MainService" /> using the specified dependencies.
 	/// </summary>
 	/// <param name="appConfigService">The application configuration service.</param>
 	/// <param name="deviceConfigService">The device configuration service.</param>
-	public MainService(IAppConfigService appConfigService, IDeviceConfigService deviceConfigService)
+	/// <param name="loggerService">The logger to use within this service.</param>
+	public MainService(IAppConfigService appConfigService, IDeviceConfigService deviceConfigService, ILoggerService loggerService)
 	{
 		this.appConfigService = appConfigService;
 		this.deviceConfigService = deviceConfigService;
+		this.loggerService = loggerService;
 	}
 
 	/// <summary>
@@ -42,7 +46,8 @@ internal sealed class MainService : IMainService
 	public async Task<ExitCode> Main(string[] args, CancellationToken cancellationToken)
 	{
 		var appConfig = appConfigService.Create(AssemblyVersion);
-		appConfigService.Write(appConfig);
+		bool success = appConfigService.Write(appConfig);
+		loggerService.LogInfo($"{nameof(appConfigService)}.{nameof(appConfigService.Write)}: {nameof(success)} = {success}");
 
 		var deviceConfig = deviceConfigService.Create(AssemblyVersion);
 		deviceConfig.Channels.Add(new Channel()
@@ -68,7 +73,8 @@ internal sealed class MainService : IMainService
 			Switches = new() { Channels = SwitchChannels.Ch3 },
 			Loops = new() { Channels = LoopChannels.Ch2 }
 		});
-		deviceConfigService.Write(deviceConfig);
+		success = deviceConfigService.Write(deviceConfig);
+		loggerService.LogInfo($"{nameof(deviceConfigService)}.{nameof(deviceConfigService.Write)}: {nameof(success)} = {success}");
 
 		return ExitCode.Success;
 	}

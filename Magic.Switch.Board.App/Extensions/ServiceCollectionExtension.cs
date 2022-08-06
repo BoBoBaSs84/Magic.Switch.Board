@@ -22,8 +22,6 @@ namespace Magic.Switch.Board.App.Extensions
 		/// <param name="services"></param>
 		public static void ConfigureScopedServices(this IServiceCollection services)
 		{			
-			services.AddScoped<IDeviceConfigService, DeviceConfigService>();
-			services.AddScoped<IAppConfigService, AppConfigService>();
 		}
 
 		/// <summary>
@@ -42,6 +40,8 @@ namespace Magic.Switch.Board.App.Extensions
 		public static void ConfigureSingletonServices(this IServiceCollection services)
 		{
 			services.AddSingleton<ILoggerService, LoggerService>();
+			services.AddSingleton<IDeviceConfigService, DeviceConfigService>();
+			services.AddSingleton<IAppConfigService, AppConfigService>();
 		}
 	}
 }

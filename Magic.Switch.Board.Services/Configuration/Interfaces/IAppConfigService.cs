@@ -28,7 +28,8 @@ public interface IAppConfigService
 	/// This method will enforce to use <see cref="Encoding.UTF8"/>.
 	/// </remarks>
 	/// <param name="configuration">The application configuration.</param>
-	public void Write(ApplicationConfiguration configuration);
+	/// <returns>The success of true or false. </returns>
+	public bool Write(ApplicationConfiguration configuration);
 
 	/// <summary>
 	/// The <see cref="Write(ApplicationConfiguration, Encoding?)"/> method writes the application configuration to file.
@@ -38,5 +39,6 @@ public interface IAppConfigService
 	/// </remarks>
 	/// <param name="configuration">The application configuration.</param>
 	/// <param name="encoding">The encoding type.</param>
-	public void Write(ApplicationConfiguration configuration, Encoding? encoding);
+	/// <returns>The success of true or false. </returns>
+	public bool Write(ApplicationConfiguration configuration, Encoding? encoding);
 }

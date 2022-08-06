@@ -7,7 +7,7 @@ namespace Magic.Switch.Board.Entities.Configuration;
 /// <summary>
 /// The <see cref="DeviceConfiguration"/> class is the root element of the configuration file
 /// </summary>
-[XmlRoot(ElementName = nameof(ConfigurationRootElementName), IsNullable = false, Namespace = DeviceNamespace)]
+[XmlRoot(ElementName = ConfigurationRootElementName, IsNullable = false, Namespace = DeviceNamespace)]
 public class DeviceConfiguration
 {
 	/// <summary>

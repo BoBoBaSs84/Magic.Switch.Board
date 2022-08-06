@@ -160,7 +160,7 @@ internal sealed class XmlHelper<T> where T : class
 		}
 		catch (Exception ex)
 		{
-			throw new XmlException("Error during deserialisation.", ex);
+			throw new XmlException(ex.Message, ex.InnerException);
 		}
 	}
 
@@ -195,7 +195,7 @@ internal sealed class XmlHelper<T> where T : class
 		}
 		catch (Exception ex)
 		{
-			throw new XmlException("Error during serialisation.", ex);
+			throw new XmlException(ex.Message, ex.InnerException);
 		}
 	}
 

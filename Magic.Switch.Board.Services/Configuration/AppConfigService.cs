@@ -18,9 +18,9 @@ public sealed class AppConfigService : IAppConfigService
 	public ApplicationConfiguration? Read() =>
 		XmlHelper<ApplicationConfiguration>.ReadFile(AppConfigFileName);
 	/// <inheritdoc/>
-	public void Write(ApplicationConfiguration configuration, Encoding? encoding) =>
+	public bool Write(ApplicationConfiguration configuration, Encoding? encoding) =>
 		XmlHelper<ApplicationConfiguration>.WriteFile(AppConfigFileName, configuration, encoding);
 	/// <inheritdoc/>
-	public void Write(ApplicationConfiguration configuration) =>
+	public bool Write(ApplicationConfiguration configuration) =>
 		XmlHelper<ApplicationConfiguration>.WriteFile(AppConfigFileName, configuration, Encoding.UTF8);
 }
