@@ -12,30 +12,15 @@ namespace Configurator.Core.Services
 	public class DeviceConfigService : IDeviceConfigService
 	{
 		/// <inheritdoc/>
-		public Configuration Create(string softwareVersion) => new(softwareVersion);
+		public Configuration Create(string softwareVersion) =>
+			new(softwareVersion);
 
 		/// <inheritdoc/>
-		public Configuration? Read()
-		{
-			if (!File.Exists(DeviceConfigFileName))
-				return null;
-
-			string readText = File.ReadAllText(DeviceConfigFileName);
-			if (readText is null)
-				return null;
-
-			XmlSerializerDeserializer<Configuration> xmlSerializerDeserializer = new();
-			Configuration? obj = xmlSerializerDeserializer.Deserialize(readText);
-			return obj;
-		}
+		public Configuration? Read() =>
+			XmlSerializerDeserializer<Configuration>.ReadFile(DeviceConfigFileName);
 
 		/// <inheritdoc/>
-		public void Write(Configuration configuration, Encoding? encoding)
-		{
-			encoding ??= Encoding.UTF8;
-			XmlSerializerDeserializer<Configuration> xmlSerializerDeserializer = new();
-			string content = xmlSerializerDeserializer.Serialize(configuration, encoding);
-			File.WriteAllText(DeviceConfigFileName, content, encoding);
-		}
+		public void Write(Configuration configuration, Encoding? encoding) =>
+			XmlSerializerDeserializer<Configuration>.WriteFile(DeviceConfigFileName, configuration, encoding);
 	}
 }

@@ -13,7 +13,7 @@ namespace Configurator.Core.Models.Device
 		/// </summary>
 		public Switches()
 		{
-			Channels = Enums.SwitchChannels.None;
+			Channels = default;
 		}
 
 		/// <summary>

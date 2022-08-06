@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<OutputType>Exe</OutputType>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>netstandard2.1</TargetFramework>
 		<PlatformTarget>AnyCPU</PlatformTarget>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<LangVersion>latest</LangVersion>
@@ -12,11 +11,17 @@
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<AnalysisLevel>latest</AnalysisLevel>
 		<AnalysisMode>recommended</AnalysisMode>
-		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<GeneratedAssemblyInfoFile>Properties\AssemblyInfo.cs</GeneratedAssemblyInfoFile>
 		<Configurations>Debug;Release</Configurations>
 		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>		
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<PackageProjectUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseFile>D:\Source\Magic.Switch.Board\LICENSE</PackageLicenseFile>
+		<Authors>https://github.com/BoBoBaSs84</Authors>
+		<Copyright>© 2022 BoBoBaSs84</Copyright>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -30,13 +35,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
-
-		<PackageReference Include="Terminal.Gui" Version="1.7.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\Configurator.Core\Configurator.Core.csproj" />
+	  <ProjectReference Include="..\Magic.Switch.Board.Entities\Magic.Switch.Board.Entities.csproj" />
 	</ItemGroup>
 
 </Project>

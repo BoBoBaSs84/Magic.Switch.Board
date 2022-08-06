@@ -42,14 +42,14 @@ namespace Configurator.Services
 		/// <param name="cancellationToken">The cancellation token.</param>
 		/// <returns>The application exit code.</returns>
 		public async Task<ExitCode> Main(string[] args, CancellationToken cancellationToken)
-		{	
+		{
 			Core.Models.Application.Configuration? appConfig = appConfigService.Create(Statics.AssemblyVersion);
 			await userNotificationService.NotifyWithMessageAsync("Application configuration created.");
 
 			appConfigService.Write(appConfig, null);
 			await userNotificationService.NotifyWithMessageAsync("Application configuration saved.");
 
-			Core.Models.Device.Configuration? deviceConfig = deviceConfigService.Create(Statics.AssemblyVersion);
+			Configuration? deviceConfig = deviceConfigService.Create(Statics.AssemblyVersion);
 			deviceConfig.Channels.Add(new Channel()
 			{
 				Name = "Amp Switch plus Reverb and Chorus",
@@ -65,7 +65,32 @@ namespace Configurator.Services
 				Switches = new() { Channels = SwitchChannels.Ch3 },
 				Loops = new() { Channels = LoopChannels.Ch1 }
 			});
+			deviceConfig.Channels.Add(new Channel()
+			{
+				Name = "Distortion and Reverb w/Pitch",
+				Input = new() { Number = 12 },
+				Output = new() { Number = 43, MessageType = MidiMessageType.PCM, MidiChannel = MidiChannel.Ch2 },
+				Switches = new() { Channels = SwitchChannels.Ch3 },
+				Loops = new() { Channels = LoopChannels.Ch2 }
+			});
+
+			var list = (SwitchChannels.Ch1 | SwitchChannels.Ch2 | SwitchChannels.Ch3 | SwitchChannels.Ch4).FlagsToList();
+			var list2 = LoopChannels.Ch3.GetListFromEnum();
+			
+			if (list is not null)
+				foreach (var item in list)
+					Console.WriteLine($"{nameof(item)}: {item}\t{nameof(item)}Number: {(int)item}\tdescription: {item.GetDescription()}");
+
+			if (list2 is not null)
+				foreach (var item in list2)
+					Console.WriteLine($"{nameof(item)}: {item}\t{nameof(item)}Number: {(int)item}\tdescription: {item.GetDescription()}");
+
+			Console.WriteLine($"{Environment.NewLine}");
+			Console.WriteLine($"{Statics.AssemblyName}-{Statics.AssemblyVersion}-{Statics.AssemblyLocation}-{Statics.Culture}");
+
+
 			deviceConfigService.Write(deviceConfig, null);
+			deviceConfig = deviceConfigService.Read();
 
 			return ExitCode.Success;
 		}
