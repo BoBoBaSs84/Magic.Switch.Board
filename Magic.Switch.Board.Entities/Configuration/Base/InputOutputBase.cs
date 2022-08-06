@@ -31,6 +31,7 @@ public abstract class InputOutputBase
 		Number = number;
 	}
 
+	/// <summary>
 	/// The <see cref="MidiChannel"/> property
 	/// </summary>
 	[XmlAttribute(AttributeName = nameof(MidiChannel))]
