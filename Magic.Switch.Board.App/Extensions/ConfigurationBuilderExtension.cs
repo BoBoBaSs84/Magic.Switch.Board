@@ -7,7 +7,7 @@
 		/// </summary>
 		/// <param name="configurationBuilder"></param>
 		/// <param name="args"></param>
-		public static void ConfigureCommandLine(this IConfigurationBuilder configurationBuilder, string[] args)
+		internal static void ConfigureCommandLine(this IConfigurationBuilder configurationBuilder, string[] args)
 		{
 			configurationBuilder.AddCommandLine(args, new Dictionary<string, string>
 			{
@@ -20,7 +20,7 @@
 		/// The <see cref="ConfigureUserSecrets(IConfigurationBuilder)"/> method should configure the user secret settings
 		/// </summary>
 		/// <param name="configurationBuilder"></param>
-		public static void ConfigureUserSecrets(this IConfigurationBuilder configurationBuilder)
+		internal static void ConfigureUserSecrets(this IConfigurationBuilder configurationBuilder)
 		{
 			configurationBuilder.AddUserSecrets<Program>(true, true);
 		}

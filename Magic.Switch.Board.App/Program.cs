@@ -1,24 +1,36 @@
 using Magic.Switch.Board.App.Extensions;
+using NLog;
+using static Magic.Switch.Board.App.Statics;
 
 namespace Magic.Switch.Board.App;
 
-public class Program
+internal sealed class Program
 {
-	public static void Main(string[] args) =>
-		CreateHostBuilder(args)
-		.Build()
-		.Run();
+	private Program()
+	{
+		LogManager.LoadConfiguration(Path.Combine(AsseblyDirectory, NlogConfigFileName));
+	}
 
-	public static IHostBuilder CreateHostBuilder(string[] args) =>
-		Host.CreateDefaultBuilder(args)
-		.UseContentRoot(Path.GetDirectoryName(typeof(Program).Assembly.Location))
-		.ConfigureAppConfiguration(config =>
-		{
-			config.ConfigureCommandLine(args);
-			config.ConfigureUserSecrets();
-		})
-		.ConfigureServices(services =>
-		{
-			services.ConfigureApplicationHost();
-		});
+	private static async Task Main(string[] args)
+	{
+		await Host.CreateDefaultBuilder(args)
+			.UseContentRoot(AsseblyDirectory)
+			.ConfigureLogging(logging =>
+			{
+				logging.ConfigureConsoleLogging();
+			})
+			.ConfigureAppConfiguration(config =>
+			{
+				config.ConfigureCommandLine(args);
+				config.ConfigureUserSecrets();
+			})
+			.ConfigureServices((hostContext, services) =>
+			{
+				services.ConfigureConsoleHost();
+				services.ConfigureTransientServices();
+				services.ConfigureSingletonServices();
+				services.ConfigureScopedServices();
+			})
+			.RunConsoleAsync();
+	}
 }
