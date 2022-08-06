@@ -11,7 +11,7 @@ namespace Magic.Switch.Board.App.Extensions
 		/// See the 'appsettings.json' file for additional options regarding the enviroment specific settings.
 		/// </remarks>
 		/// <param name="loggingBuilder"></param>
-		internal static void ConfigureConsoleLogging(this ILoggingBuilder loggingBuilder)
+		public static void ConfigureConsoleLogging(this ILoggingBuilder loggingBuilder)
 		{
 			loggingBuilder.AddSimpleConsole(options =>
 			{

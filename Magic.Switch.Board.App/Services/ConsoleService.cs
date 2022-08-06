@@ -4,18 +4,27 @@ using static Magic.Switch.Board.App.Enums;
 
 namespace Magic.Switch.Board.App.Services;
 
+/// <summary>
+/// Hosted service that handles the application lifetime events and invokes the main application service.
+/// </summary>
 internal sealed class ConsoleService : IHostedService
 {
-	private readonly ILoggerService loggerService;
 	private readonly IHostApplicationLifetime appLifetime;
+	private readonly ILoggerService loggerService;	
 	private readonly IMainService mainService;
 	private CancellationTokenSource? cancellationTokenSource;
 	private Task<ExitCode>? mainTask;
 
-	public ConsoleService(ILoggerService loggerService, IHostApplicationLifetime appLifetime, IMainService mainService)
+	/// <summary>
+	/// Initialises the <see cref="ConsoleService" /> using the specified dependencies.
+	/// </summary>
+	/// <param name="appLifetime">Notifies of application lifetime events.</param>
+	/// <param name="loggerService">The logger to use within this service.</param>
+	/// <param name="mainService">The main service.</param>
+	public ConsoleService(IHostApplicationLifetime appLifetime, ILoggerService loggerService, IMainService mainService)
 	{
-		this.loggerService = loggerService;
 		this.appLifetime = appLifetime;
+		this.loggerService = loggerService;		
 		this.mainService = mainService;
 	}
 
@@ -81,6 +90,10 @@ internal sealed class ConsoleService : IHostedService
 		try
 		{
 			return await mainService.Main(args, cancellationToken);
+		}
+		catch (TaskCanceledException)
+		{
+			return ExitCode.Cancelled;
 		}
 		catch (Exception ex)
 		{

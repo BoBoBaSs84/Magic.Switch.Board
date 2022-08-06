@@ -9,6 +9,19 @@ namespace Magic.Switch.Board.Services.Configuration.Interfaces;
 public interface IAppConfigService
 {
 	/// <summary>
+	/// The <see cref="Create"/> method creates a new application <see cref="ApplicationConfiguration"/>.
+	/// </summary>
+	/// <param name="applicationVersion">The Version of the application that creates the configuration.</param>
+	/// <returns><see cref="ApplicationConfiguration"/></returns>
+	public ApplicationConfiguration Create(string applicationVersion);
+
+	/// <summary>
+	/// The <see cref="Read"/> method reads the <see cref="ApplicationConfiguration"/> from file.
+	/// </summary>
+	/// <returns><see cref="ApplicationConfiguration"/></returns>
+	public ApplicationConfiguration? Read();
+
+	/// <summary>
 	/// The <see cref="Write(ApplicationConfiguration)"/> method writes the application configuration to file.
 	/// </summary>
 	/// <remarks>
@@ -26,17 +39,4 @@ public interface IAppConfigService
 	/// <param name="configuration">The application configuration.</param>
 	/// <param name="encoding">The encoding type.</param>
 	public void Write(ApplicationConfiguration configuration, Encoding? encoding);
-
-	/// <summary>
-	/// The <see cref="Read"/> method reads the <see cref="ApplicationConfiguration"/> from file.
-	/// </summary>
-	/// <returns><see cref="ApplicationConfiguration"/></returns>
-	public ApplicationConfiguration? Read();
-
-	/// <summary>
-	/// The <see cref="Create"/> method creates a new application <see cref="ApplicationConfiguration"/>.
-	/// </summary>
-	/// <param name="applicationVersion">The Version of the application that creates the configuration.</param>
-	/// <returns><see cref="ApplicationConfiguration"/></returns>
-	public ApplicationConfiguration Create(string applicationVersion);
 }

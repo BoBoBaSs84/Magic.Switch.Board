@@ -13,24 +13,29 @@ internal sealed class Program
 
 	private static async Task Main(string[] args)
 	{
-		await Host.CreateDefaultBuilder(args)
-			.UseContentRoot(AsseblyDirectory)
-			.ConfigureLogging(logging =>
-			{
-				logging.ConfigureConsoleLogging();
-			})
-			.ConfigureAppConfiguration(config =>
-			{
-				config.ConfigureCommandLine(args);
-				config.ConfigureUserSecrets();
-			})
-			.ConfigureServices((hostContext, services) =>
-			{
-				services.ConfigureConsoleService();
-				services.ConfigureTransientServices();
-				services.ConfigureSingletonServices();
-				services.ConfigureScopedServices();
-			})
-			.RunConsoleAsync();
+		IHostBuilder hostBuilder = Host.CreateDefaultBuilder(args)
+			.UseContentRoot(AsseblyDirectory);
+
+		hostBuilder.ConfigureLogging(logging =>
+		{
+			logging.ConfigureConsoleLogging();
+		});
+
+		hostBuilder.ConfigureAppConfiguration(config =>
+		{
+			config.ConfigureCommandLine(args);
+			config.ConfigureUserSecrets();
+		});
+
+		hostBuilder.ConfigureServices(services =>
+		{
+			services.ConfigureConsoleService();
+			services.ConfigureTransientServices();
+			services.ConfigureSingletonServices();
+			services.ConfigureScopedServices();
+		});
+
+		await hostBuilder.RunConsoleAsync()
+			.ConfigureAwait(false); ;
 	}
 }

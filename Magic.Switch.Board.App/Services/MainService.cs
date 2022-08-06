@@ -19,6 +19,11 @@ internal sealed class MainService : IMainService
 	private readonly IAppConfigService appConfigService;
 	private readonly IDeviceConfigService deviceConfigService;
 
+	/// <summary>
+	/// Initialises the <see cref="MainService" /> using the specified dependencies.
+	/// </summary>
+	/// <param name="appConfigService">The application configuration service.</param>
+	/// <param name="deviceConfigService">The device configuration service.</param>
 	public MainService(IAppConfigService appConfigService, IDeviceConfigService deviceConfigService)
 	{
 		this.appConfigService = appConfigService;
