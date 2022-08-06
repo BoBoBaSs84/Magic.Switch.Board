@@ -34,7 +34,7 @@ internal sealed class ConsoleService : IHostedService
 	/// <param name="cancellationToken">Indicates that the start process has been aborted.</param>
 	public Task StartAsync(CancellationToken cancellationToken)
 	{
-		loggerService.Info($"Application is starting.");
+		loggerService.Debug($"Application is starting.");
 
 		cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
 		// Bail if the start process has been aborted.
@@ -45,7 +45,7 @@ internal sealed class ConsoleService : IHostedService
 		{
 			string[]? args = Environment.GetCommandLineArgs();
 
-			loggerService.Info($"Application has started with arguments: \"{string.Join(" ", args)}\".");
+			loggerService.Debug($"Application has started with arguments: \"{string.Join(" ", args)}\".");
 
 			mainTask = ExecuteMainAsync(args, cancellationTokenSource.Token);
 		});
@@ -78,7 +78,7 @@ internal sealed class ConsoleService : IHostedService
 			exitCode = ExitCode.Aborted;
 		}
 		
-		loggerService.Info($"Exiting with return code: {exitCode}");
+		loggerService.Information($"Exiting with return code: {exitCode}");
 
 		Environment.ExitCode = (int)exitCode;
 	}
@@ -103,7 +103,7 @@ internal sealed class ConsoleService : IHostedService
 		}
 		catch (Exception ex)
 		{
-			loggerService.Error($"{nameof(ex.Message)}: {ex.Message}\n{nameof(ex.InnerException)}: {ex.InnerException}");
+			loggerService.Critical($"{nameof(ex.Message)}: {ex.Message}\n{nameof(ex.InnerException)}: {ex.InnerException}");
 			return ExitCode.UnhandledException;
 		}
 		finally

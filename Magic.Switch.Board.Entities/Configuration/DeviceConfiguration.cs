@@ -1,6 +1,6 @@
-﻿using System.Xml.Serialization;
+﻿using Magic.Switch.Board.Entities.Configuration.Base;
+using System.Xml.Serialization;
 using static Magic.Switch.Board.Entities.Constants;
-using static Magic.Switch.Board.Entities.Statics;
 
 namespace Magic.Switch.Board.Entities.Configuration;
 
@@ -8,63 +8,36 @@ namespace Magic.Switch.Board.Entities.Configuration;
 /// The <see cref="DeviceConfiguration"/> class is the root element of the configuration file
 /// </summary>
 [XmlRoot(ElementName = ConfigurationRootElementName, IsNullable = false, Namespace = DeviceNamespace)]
-public class DeviceConfiguration
+public class DeviceConfiguration : ConfigurationBase
 {
 	/// <summary>
 	/// The <see cref="DeviceConfiguration"/> constructor
 	/// </summary>
-	public DeviceConfiguration()
+	public DeviceConfiguration() : base()
 	{
-		Id = Guid.NewGuid();
 		Channels = new();
-		ApplicationVersion = string.Empty;
-		ConfigurationVersion = AssemblyVersion;
 	}
 
 	/// <summary>
 	/// The <see cref="DeviceConfiguration"/> constructor
 	/// </summary>
-	/// <param name="applicationVersion"></param>
+	/// <param name="applicationVersion">The version of the application that creates the configuration.</param>
 	/// <exception cref="ArgumentNullException"></exception>
-	public DeviceConfiguration(string applicationVersion)
+	public DeviceConfiguration(string applicationVersion) : base(applicationVersion)
 	{
-		Id = Guid.NewGuid();
 		Channels = new();
-		ApplicationVersion = applicationVersion ?? throw new ArgumentNullException(nameof(applicationVersion));
-		ConfigurationVersion = AssemblyVersion;
 	}
 
 	/// <summary>
-	/// Constructor
+	/// The <see cref="DeviceConfiguration"/> constructor
 	/// </summary>
-	/// <param name="applicationVersion"></param>
-	/// <param name="channels"></param>
+	/// <param name="applicationVersion">The version of the application that creates the configuration.</param>
+	/// <param name="channels">The list of channels that should be added.</param>
 	/// <exception cref="ArgumentNullException"></exception>
-	public DeviceConfiguration(string applicationVersion, List<Channel> channels)
+	public DeviceConfiguration(string applicationVersion, List<Channel> channels) : base(applicationVersion)
 	{
-		Id = Guid.NewGuid();
-		ApplicationVersion = applicationVersion ?? throw new ArgumentNullException(nameof(applicationVersion));
 		Channels = channels ?? throw new ArgumentNullException(nameof(channels));
-		ConfigurationVersion = AssemblyVersion;
 	}
-
-	/// <summary>
-	/// The <see cref="Id"/> property
-	/// </summary>
-	[XmlAttribute(AttributeName = nameof(Id))]
-	public Guid Id { get; set; }
-
-	/// <summary>
-	/// The <see cref="ApplicationVersion"/> property
-	/// </summary>
-	[XmlAttribute(AttributeName = nameof(ApplicationVersion))]
-	public string ApplicationVersion { get; set; }
-
-	/// <summary>
-	/// <see cref="ConfigurationVersion"/> property
-	/// </summary>
-	[XmlAttribute(AttributeName = nameof(ConfigurationVersion))]
-	public string ConfigurationVersion { get; set; }
 
 	/// <summary>
 	/// The <see cref="Channels"/> property

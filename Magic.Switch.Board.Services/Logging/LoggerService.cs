@@ -12,15 +12,15 @@ public sealed class LoggerService : ILoggerService
 	/// <inheritdoc/>
 	public void Debug(string message) => LogToFile(nameof(Debug).ToUpper(CultureInfo), message);
 	/// <inheritdoc/>
+	public void Critical(string message) => LogToFile(nameof(Critical).ToUpper(CultureInfo), message);
+	/// <inheritdoc/>
 	public void Error(string message) => LogToFile(nameof(Error).ToUpper(CultureInfo), message);
 	/// <inheritdoc/>
-	public void Info(string message) => LogToFile(nameof(Info).ToUpper(CultureInfo), message);
+	public void Information(string message) => LogToFile(nameof(Information).ToUpper(CultureInfo), message);
 	/// <inheritdoc/>
 	public void Trace(string message) => LogToFile(nameof(Trace).ToUpper(CultureInfo), message);
 	/// <inheritdoc/>
-	public void Warn(string message) => LogToFile(nameof(Warn).ToUpper(CultureInfo), message);
-	/// <inheritdoc/>
-	public void Status(string message) => LogToFile(nameof(Status).ToUpper(CultureInfo), message);
+	public void Warning(string message) => LogToFile(nameof(Warning).ToUpper(CultureInfo), message);
 
 	/// <summary>
 	/// The <see cref="LogToFile(string, string)"/> method logs the message content to the log file.
