@@ -1,6 +1,7 @@
-﻿using System.Reflection;
+﻿using System.IO;
+using System.Reflection;
 
-namespace Magic.Switch.Board.App;
+namespace Magic.Switch.Board;
 
 internal static class Statics
 {

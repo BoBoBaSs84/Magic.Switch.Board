@@ -1,6 +1,7 @@
-﻿using Microsoft.Extensions.Logging.Console;
+﻿using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Console;
 
-namespace Magic.Switch.Board.App.Extensions
+namespace Magic.Switch.Board.Extensions
 {
 	internal static class LoggingBuilderExtension
 	{
@@ -10,10 +11,10 @@ namespace Magic.Switch.Board.App.Extensions
 		/// <remarks>
 		/// See the 'appsettings.json' file for additional options regarding the enviroment specific settings.
 		/// </remarks>
-		/// <param name="loggingBuilder"></param>
-		public static void ConfigureConsoleLogging(this ILoggingBuilder loggingBuilder)
+		/// <param name="logging"></param>
+		public static void ConfigureConsoleLogging(this ILoggingBuilder logging)
 		{
-			loggingBuilder.AddSimpleConsole(options =>
+			logging.AddSimpleConsole(options =>
 			{
 				options.SingleLine = true;
 				options.ColorBehavior = LoggerColorBehavior.Enabled;

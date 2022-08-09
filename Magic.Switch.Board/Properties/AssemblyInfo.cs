@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Configuration.UserSecrets;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Windows;
 
 [assembly: UserSecretsId("27296C33-913A-4F49-A2D8-5124C95BAFB5")]
 [assembly: AssemblyCompany("https://github.com/BoBoBaSs84")]
@@ -11,6 +12,15 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyMetadata("RepositoryUrl", "https://github.com/BoBoBaSs84/Magic.Switch.Board")]
 [assembly: Guid("27296C33-913A-4F49-A2D8-5124C95BAFB5")]
 [assembly: ComVisible(false)]
+[assembly: ThemeInfo(
+		ResourceDictionaryLocation.None, //where theme specific resource dictionaries are located
+																		 //(used if a resource is not found in the page,
+																		 // or application resource dictionaries)
+		ResourceDictionaryLocation.SourceAssembly //where the generic resource dictionary is located
+																							//(used if a resource is not found in the page,
+																							// app, or any theme specific resource dictionaries)
+)]
+
 #if (DEBUG)
 [assembly: AssemblyConfiguration("Debug")]
 #else
