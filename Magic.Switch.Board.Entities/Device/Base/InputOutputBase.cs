@@ -1,7 +1,7 @@
 ﻿using System.Xml.Serialization;
-using static Magic.Switch.Board.Entities.Enums;
+using static Magic.Switch.Board.Models.Enums;
 
-namespace Magic.Switch.Board.Entities.Configuration.Base;
+namespace Magic.Switch.Board.Models.Device.Base;
 
 /// <summary>
 /// The <see cref="InputOutputBase"/> class

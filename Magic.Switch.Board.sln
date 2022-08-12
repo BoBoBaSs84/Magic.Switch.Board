@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Entities", "Magic.Switch.Board.Entities\Magic.Switch.Board.Entities.csproj", "{3348F9BF-6F40-42BC-A3D6-29BA5A80F8F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Models", "Magic.Switch.Board.Entities\Magic.Switch.Board.Models.csproj", "{3348F9BF-6F40-42BC-A3D6-29BA5A80F8F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Services", "Magic.Switch.Board.Services\Magic.Switch.Board.Services.csproj", "{897C0EFB-5548-436C-BF6D-40182C2C9A40}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Repositories", "Magic.Switch.Board.Repositories\Magic.Switch.Board.Repositories.csproj", "{771DCE77-806A-4BA6-97D4-FCDE25E634A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Contracts", "Magic.Switch.Board.Repositories\Magic.Switch.Board.Contracts.csproj", "{771DCE77-806A-4BA6-97D4-FCDE25E634A4}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board", "Magic.Switch.Board\Magic.Switch.Board.csproj", "{C866DFB8-A708-4D5C-80A8-6D864385DB82}"
 EndProject

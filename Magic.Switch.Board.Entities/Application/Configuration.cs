@@ -1,30 +1,30 @@
-﻿using Magic.Switch.Board.Entities.Configuration.Base;
+﻿using Magic.Switch.Board.Models.Base;
 using System.Xml.Serialization;
-using static Magic.Switch.Board.Entities.Constants;
-using static Magic.Switch.Board.Entities.Enums;
+using static Magic.Switch.Board.Models.Constants;
+using static Magic.Switch.Board.Models.Enums;
 
-namespace Magic.Switch.Board.Entities.Configuration;
+namespace Magic.Switch.Board.Models.Application;
 
 /// <summary>
-/// The <see cref="ApplicationConfiguration"/> class is the root element of the configuration file.
+/// The <see cref="Configuration"/> class is the root element of the configuration file.
 /// </summary>
 [XmlRoot(ElementName = ConfigurationRootElementName, IsNullable = false, Namespace = ApplicationNamespace)]
-public class ApplicationConfiguration : ConfigurationBase
+public class Configuration : ConfigurationBase
 {
 	/// <summary>
-	/// The empty <see cref="ApplicationConfiguration"/> constructor.
+	/// The empty <see cref="Configuration"/> constructor.
 	/// </summary>
-	public ApplicationConfiguration() : base()
+	public Configuration() : base()
 	{
 		LogLevel = LogLevel.Warning;
 	}
 
 	/// <summary>
-	/// The <see cref="ApplicationConfiguration"/> constructor.
+	/// The <see cref="Configuration"/> constructor.
 	/// </summary>
 	/// <param name="applicationVersion">The version of the application that creates the configuration.</param>
 	/// <exception cref="ArgumentNullException"></exception>
-	public ApplicationConfiguration(string applicationVersion) : base(applicationVersion)
+	public Configuration(string applicationVersion) : base(applicationVersion)
 	{
 		LogLevel = LogLevel.Warning;
 	}

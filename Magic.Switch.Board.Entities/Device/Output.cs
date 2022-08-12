@@ -1,8 +1,8 @@
-﻿using Magic.Switch.Board.Entities.Configuration.Base;
+﻿using Magic.Switch.Board.Models.Device.Base;
 using System.Xml.Serialization;
-using static Magic.Switch.Board.Entities.Enums;
+using static Magic.Switch.Board.Models.Enums;
 
-namespace Magic.Switch.Board.Entities.Configuration;
+namespace Magic.Switch.Board.Models.Device;
 
 /// <summary>
 /// The <see cref="Output"/> class

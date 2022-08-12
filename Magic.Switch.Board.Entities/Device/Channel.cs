@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace Magic.Switch.Board.Entities.Configuration;
+namespace Magic.Switch.Board.Models.Device;
 
 /// <summary>
 /// The <see cref="Channel"/> class

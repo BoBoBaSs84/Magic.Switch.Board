@@ -18,9 +18,9 @@ internal static class Statics
 		assembly = Assembly.GetExecutingAssembly();
 		AssemblyDirectory = Path.GetDirectoryName(assembly.Location);
 		AssemblyName = assembly.GetName().Name;
-		AppConfigFileName = $"{AssemblyDirectory}\\{nameof(Entities.Configuration.ApplicationConfiguration)}.xml";
+		AppConfigFileName = $"{AssemblyDirectory}\\Application.Configuration.xml";
 		CultureInfo = CultureInfo.CurrentCulture;
-		DeviceConfigFileName = $"{AssemblyDirectory}\\{nameof(Entities.Configuration.DeviceConfiguration)}.xml";
+		DeviceConfigFileName = $"{AssemblyDirectory}\\Device.Configuration.xml";
 		LogFileName = $"{AssemblyDirectory}\\{AssemblyName}.log";
 	}
 }

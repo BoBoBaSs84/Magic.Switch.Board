@@ -43,16 +43,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Magic.Switch.Board.Services\Magic.Switch.Board.Services.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<None Update="appsettings.Development.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 		<None Update="AppSettings.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Magic.Switch.Board.Repositories\Magic.Switch.Board.Contracts.csproj" />
 	</ItemGroup>
 
 </Project>

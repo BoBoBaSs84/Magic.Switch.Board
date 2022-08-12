@@ -35,7 +35,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Magic.Switch.Board.Entities\Magic.Switch.Board.Entities.csproj" />
+	  <ProjectReference Include="..\Magic.Switch.Board.Entities\Magic.Switch.Board.Models.csproj" />
 	</ItemGroup>
 
 </Project>

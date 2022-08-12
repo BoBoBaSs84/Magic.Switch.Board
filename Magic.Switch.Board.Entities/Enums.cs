@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Reflection;
 
-namespace Magic.Switch.Board.Entities;
+namespace Magic.Switch.Board.Models;
 
 /// <summary>
 /// The <see cref="Enums"/> class
@@ -25,8 +25,8 @@ public static class Enums
 		Critical = 5,
 		[Description("Not used for writing log messages. Specifies that a logging category should not write any messages.")]
 		None = 6
-	}	
-	
+	}
+
 	[Flags]
 	public enum SwitchChannels
 	{

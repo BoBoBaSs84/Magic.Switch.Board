@@ -1,4 +1,5 @@
 ﻿using Magic.Switch.Board.Extensions;
+using Magic.Switch.Board.Views;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Windows;
@@ -11,49 +12,49 @@ namespace Magic.Switch.Board
 	/// </summary>
 	public partial class App : Application
 	{
-		private readonly IHostBuilder hostBuilder;
-		private readonly IHost host;
+		private readonly IHostBuilder _hostBuilder;
+		private readonly IHost _host;
 
 		/// <summary>
 		/// The App constructor
 		/// </summary>
 		public App()
 		{
-			hostBuilder = Host.CreateDefaultBuilder()
+			_hostBuilder = Host.CreateDefaultBuilder()
 				.UseContentRoot(AsseblyDirectory);
 
-			hostBuilder.ConfigureLogging(logging =>
+			_hostBuilder.ConfigureLogging(logging =>
 			{
 				logging.ConfigureConsoleLogging();
 			});
 
-			hostBuilder.ConfigureAppConfiguration(config =>
+			_hostBuilder.ConfigureAppConfiguration(config =>
 			{
 				config.ConfigureUserSecrets();
 			});
 
-			hostBuilder.ConfigureServices(services =>
+			_hostBuilder.ConfigureServices(services =>
 			{
 				services.ConfigureScopedServices();
 				services.ConfigureSingletonServices();
-				services.AddSingleton<MainWindow>();
+				services.ConfigureApplicationViews();
 			});
 
-			host = hostBuilder.Build();
+			_host = _hostBuilder.Build();
 		}
 
 		private async void Application_Startup(object sender, StartupEventArgs e)
 		{
-			await host.StartAsync();
-			MainWindow? mainWindow = host.Services.GetRequiredService<MainWindow>();
+			await _host.StartAsync();
+			MainWindow mainWindow = _host.Services.GetRequiredService<MainWindow>();
 			mainWindow.Show();
 		}
 
 		private async void Application_Exit(object sender, ExitEventArgs e)
 		{
-			using (host)
+			using (_host)
 			{
-				await host.StopAsync(TimeSpan.FromSeconds(5));
+				await _host.StopAsync(TimeSpan.FromSeconds(5));
 			}
 		}
 	}

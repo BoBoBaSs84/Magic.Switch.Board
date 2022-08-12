@@ -1,7 +1,7 @@
 ﻿using System.Xml.Serialization;
-using static Magic.Switch.Board.Entities.Statics;
+using static Magic.Switch.Board.Models.Statics;
 
-namespace Magic.Switch.Board.Entities.Configuration.Base
+namespace Magic.Switch.Board.Models.Base
 {
 	/// <summary>
 	/// The <see cref="ConfigurationBase"/> class for configurations.

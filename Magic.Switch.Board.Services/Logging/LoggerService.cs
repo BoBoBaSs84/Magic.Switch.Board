@@ -6,7 +6,7 @@ using static Magic.Switch.Board.Services.Statics;
 namespace Magic.Switch.Board.Services.Logging;
 
 /// <summary>
-/// This is the '<see cref="LoggerService"/>' class which implements the members of the '<see cref="ILoggerService"/>' interface
+/// This is the '<see cref="LoggerService"/>' class which implements the members of the '<see cref="ILoggerService"/>' interface.
 /// </summary>
 public sealed class LoggerService : ILoggerService
 {

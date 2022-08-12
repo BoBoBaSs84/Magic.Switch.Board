@@ -1,7 +1,8 @@
-﻿using Magic.Switch.Board.Services.Configuration;
-using Magic.Switch.Board.Services.Configuration.Interfaces;
+﻿using Magic.Switch.Board.Services.Application;
+using Magic.Switch.Board.Services.Application.Interfaces;
 using Magic.Switch.Board.Services.Logging;
 using Magic.Switch.Board.Services.Logging.Interfaces;
+using Magic.Switch.Board.Views;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Magic.Switch.Board.Extensions
@@ -14,8 +15,8 @@ namespace Magic.Switch.Board.Extensions
 		/// <param name="services"></param>
 		public static void ConfigureScopedServices(this IServiceCollection services)
 		{
-			services.AddScoped<IAppConfigService, AppConfigService>();
-			services.AddScoped<IDeviceConfigService, DeviceConfigService>();
+			services.AddSingleton<IConfigurationService, ConfigurationService>();
+			services.AddSingleton<Services.Device.Interfaces.IConfigurationService, Services.Device.ConfigurationService>();
 		}
 
 		/// <summary>
@@ -33,6 +34,11 @@ namespace Magic.Switch.Board.Extensions
 		public static void ConfigureSingletonServices(this IServiceCollection services)
 		{
 			services.AddSingleton<ILoggerService, LoggerService>();
+		}
+
+		public static void ConfigureApplicationViews(this IServiceCollection services)
+		{
+			services.AddSingleton<MainWindow>();
 		}
 	}
 }

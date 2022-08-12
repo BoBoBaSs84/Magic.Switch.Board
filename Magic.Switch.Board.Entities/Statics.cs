@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Magic.Switch.Board.Entities;
+namespace Magic.Switch.Board.Models;
 
 internal static class Statics
 {
