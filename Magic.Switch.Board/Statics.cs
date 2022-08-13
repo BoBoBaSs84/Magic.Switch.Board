@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Globalization;
+using System.IO;
 using System.Reflection;
 
 namespace Magic.Switch.Board;
@@ -14,5 +15,19 @@ internal static class Statics
 		assembly = Assembly.GetExecutingAssembly();
 		AssemblyVersion = assembly.GetName().Version!.ToString();
 		AsseblyDirectory = Path.GetDirectoryName(assembly.Location)!;
+	}
+
+	/// <summary>
+	/// Provides possible language values
+	/// </summary>
+	/// <returns></returns>
+	public static CultureInfo[] GetSupportedLanguages()
+	{
+		return new[]
+		{
+			new CultureInfo("en-US"),
+			new CultureInfo("de-DE"),
+			new CultureInfo("fr-FR")
+		};
 	}
 }

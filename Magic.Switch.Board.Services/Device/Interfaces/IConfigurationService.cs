@@ -4,9 +4,9 @@ using System.Text;
 namespace Magic.Switch.Board.Services.Device.Interfaces;
 
 /// <summary>
-/// The <see cref="IConfigurationService"/> interface exposes the public methods for reading an writing the device configuration file.
+/// The <see cref="IDeviceConfigService"/> interface exposes the public methods for reading an writing the device configuration file.
 /// </summary>
-public interface IConfigurationService
+public interface IDeviceConfigService
 {
 	/// <summary>
 	/// The <see cref="Create"/> method creates a new <see cref="Configuration"/>.

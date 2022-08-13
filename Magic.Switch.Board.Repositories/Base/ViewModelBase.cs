@@ -22,7 +22,7 @@ namespace Magic.Switch.Board.Contracts.Base
 		}
 
 		/// <summary>
-		/// The <see cref="SetProperty{T}(ref T, T, string, bool)"/> method takes control of the property value setting.
+		/// The <see cref="SetProperty{T}(T, T, string, bool)"/> method takes control of the property value setting.
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -33,7 +33,7 @@ namespace Magic.Switch.Board.Contracts.Base
 		/// <param name="propertyName">The name of the property.</param>
 		/// <param name="validate">Should the property be validated before setting?</param>
 		/// <returns>Returns 'true' if the property has been set.</returns>
-		public bool SetProperty<T>(ref T field, T newValue, [CallerMemberName] string propertyName = default!, bool validate = false)
+		public bool SetProperty<T>(T field, T newValue, [CallerMemberName] string propertyName = default!, bool validate = false)
 		{
 			if (!Equals(field, newValue))
 			{

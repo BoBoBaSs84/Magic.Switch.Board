@@ -8,17 +8,17 @@ using static Magic.Switch.Board.Services.Statics;
 namespace Magic.Switch.Board.Services.Device;
 
 /// <summary>
-/// The <see cref="ConfigurationService"/> class implements the members of the <see cref="IConfigurationService"/> interface
+/// The <see cref="DeviceConfigService"/> class implements the members of the <see cref="IDeviceConfigService"/> interface
 /// </summary>
-public sealed class ConfigurationService : IConfigurationService
+public sealed class DeviceConfigService : IDeviceConfigService
 {
 	private readonly ILoggerService logger;
 
 	/// <summary>
-	/// The <see cref="ConfigurationService"/> class constructor
+	/// The <see cref="DeviceConfigService"/> class constructor
 	/// </summary>
 	/// <param name="logger"></param>
-	public ConfigurationService(ILoggerService logger) => this.logger = logger;
+	public DeviceConfigService(ILoggerService logger) => this.logger = logger;
 
 	/// <inheritdoc/>	
 	public Configuration Create(string applicationVersion) => new(applicationVersion);

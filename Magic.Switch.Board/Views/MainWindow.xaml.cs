@@ -1,7 +1,4 @@
-﻿using Magic.Switch.Board.Contracts.Application;
-using Magic.Switch.Board.Services.Application.Interfaces;
-using System.Windows;
-using static Magic.Switch.Board.Statics;
+﻿using System.Windows;
 
 namespace Magic.Switch.Board.Views;
 
@@ -10,15 +7,11 @@ namespace Magic.Switch.Board.Views;
 /// </summary>
 public partial class MainWindow : Window
 {
-	private readonly ConfigurationViewModel _configurationViewModel;
-
 	/// <summary>
 	/// The <see cref="MainWindow"/> constructor
 	/// </summary>
-	public MainWindow(IConfigurationService configurationService)
+	public MainWindow()
 	{
 		InitializeComponent();
-		_configurationViewModel = new(configurationService, AssemblyVersion);
-		DataContext = _configurationViewModel;
 	}
 }

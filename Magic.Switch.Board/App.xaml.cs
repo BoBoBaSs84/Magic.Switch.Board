@@ -35,9 +35,12 @@ namespace Magic.Switch.Board
 
 			_hostBuilder.ConfigureServices(services =>
 			{
+				// Services
 				services.ConfigureScopedServices();
 				services.ConfigureSingletonServices();
-				services.ConfigureApplicationViews();
+				
+				// Viewmodels
+				services.ConfigureViewsModels();
 			});
 
 			_host = _hostBuilder.Build();
@@ -47,6 +50,9 @@ namespace Magic.Switch.Board
 		{
 			await _host.StartAsync();
 			MainWindow mainWindow = _host.Services.GetRequiredService<MainWindow>();
+			if (e.Args.Length > 0)
+				MessageBox.Show($"Now opening file: \n\n{e.Args[0]}");
+			
 			mainWindow.Show();
 		}
 

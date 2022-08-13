@@ -13,9 +13,17 @@ namespace Magic.Switch.Board.Contracts.Base
 		/// <summary>
 		/// The <see cref="RelayCommand"/> class constructor
 		/// </summary>
+		/// <param name="execute"></param>
+		public RelayCommand(Action<object> execute) : this(execute, default!)
+		{
+		}
+
+		/// <summary>
+		/// The <see cref="RelayCommand"/> class constructor
+		/// </summary>
 		/// <param name="canExecute"></param>
 		/// <param name="execute"></param>
-		public RelayCommand(Predicate<object> canExecute, Action<object> execute)
+		public RelayCommand(Action<object> execute, Predicate<object> canExecute)
 		{
 			_canExecute = canExecute;
 			_execute = execute;

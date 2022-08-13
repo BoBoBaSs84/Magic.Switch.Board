@@ -26,6 +26,7 @@
 		<Authors>https://github.com/BoBoBaSs84</Authors>
 		<Copyright>© 2022 BoBoBaSs84</Copyright>
 		<ApplicationIcon>Magic.Switch.Board.ico</ApplicationIcon>
+		<StartupObject>Magic.Switch.Board.App</StartupObject>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -40,6 +41,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+		<PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -49,10 +51,34 @@
 		<None Update="AppSettings.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
+		<None Update="Properties\Settings.settings">
+		  <Generator>SettingsSingleFileGenerator</Generator>
+		  <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
 	</ItemGroup>
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Magic.Switch.Board.Repositories\Magic.Switch.Board.Contracts.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Properties\Settings.Designer.cs">
+	    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Settings.settings</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	</ItemGroup>
 
 </Project>

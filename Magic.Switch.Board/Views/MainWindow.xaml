@@ -5,52 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Magic.Switch.Board.Views"
         mc:Ignorable="d"
-        Title="Magic.Switch.Board" Height="720" Width="1280"
-				MinHeight="540" MinWidth="960"
+        Title="Magic.Switch.Board" SizeToContent="WidthAndHeight"
 				>
 	<DockPanel>
-		<Menu DockPanel.Dock="Top">
-			<MenuItem Header="_File">
-				<MenuItem Header="_New" />
-				<MenuItem Header="_Load" />
-				<MenuItem Header="_Exit" />
-			</MenuItem>
-			<MenuItem Header="_Options">
-				<MenuItem Header="_Language">
-					<MenuItem Header="German" />
-					<MenuItem Header="English" />
-					<MenuItem Header="French" />
-				</MenuItem>
-				<MenuItem Header="LogLevel">					
-				</MenuItem>
-			</MenuItem>
-			<MenuItem Header="_Help" />
-		</Menu>
-		<Grid>
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="Auto"/>
-				<ColumnDefinition Width="*"/>
-			</Grid.ColumnDefinitions>
-			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="Auto"/>
-			</Grid.RowDefinitions>
-
-
-			<Label Grid.Column="0" Grid.Row="0" Margin="4" Content="Id:" HorizontalAlignment="Right"/>
-			<TextBlock Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Margin="4" Text="{Binding Id}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-
-			<Label Grid.Column="0" Grid.Row="1" Margin="4" Content="Application Version:" HorizontalAlignment="Right"/>
-			<TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Margin="4" Text="{Binding ApplicationVersion}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-
-			<Label Grid.Column="0" Grid.Row="2" Margin="4" Content="Configuration Version:" HorizontalAlignment="Right"/>
-			<TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Margin="4" Text="{Binding ConfigurationVersion}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-
-			<Label Grid.Column="0" Grid.Row="3" Margin="4" Content="LogLevel:" HorizontalAlignment="Right"/>
-			<TextBlock Grid.Column="1" Grid.Row="3" Margin="4" Text="{Binding LogLevel}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-
+		<Grid x:Name="MainGrid">
+			
 		</Grid>
 	</DockPanel>
 </Window>

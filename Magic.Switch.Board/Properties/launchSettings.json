@@ -1,11 +1,11 @@
 {
-	"profiles": {
-		"Magic.Switch.Board": {
-			"commandName": "Project",
-			"dotnetRunMessages": true,
-			"environmentVariables": {
-				"DOTNET_ENVIRONMENT": "Development"
-			}
-		}
-	}
+  "profiles": {
+    "Magic.Switch.Board": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true
+    }
+  }
 }

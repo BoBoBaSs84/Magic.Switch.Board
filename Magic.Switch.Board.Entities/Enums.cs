@@ -116,6 +116,9 @@ public static class Enums
 	/// <summary>
 	/// The <see cref="GetDescription{T}(T)"/> extension method will try to get the <see cref="DescriptionAttribute"/> of an enum if used
 	/// </summary>
+	/// <remarks>
+	/// If the enum has no description property, the enum name will be returned.
+	/// </remarks>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="enumValue"></param>
 	/// <returns><see cref="string"/> which can be <see cref="Nullable"/></returns>
@@ -154,4 +157,22 @@ public static class Enums
 	/// <returns>A <see cref="List{T}"/> of the provided enum.</returns>
 	public static List<T> GetListFromEnum<T>(this T @enum) where T : Enum
 		=> Enum.GetValues(@enum.GetType()).Cast<T>().ToList();
+
+	/// <summary>
+	/// The <see cref="GetEnumsWithDescription{T}(T)"/> method should return a dictornary with enums and their description.
+	/// </summary>
+	/// <remarks>
+	/// If the enum has no description property, the enum name will be returned.
+	/// </remarks>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="enum"></param>
+	/// <returns>A dictionary with enums and their description.</returns>
+	public static Dictionary<T, string> GetEnumsWithDescription<T>(this T @enum) where T : struct, IConvertible
+	{
+		List<T> enumList = Enum.GetValues(@enum.GetType()).Cast<T>().ToList();
+		Dictionary<T, string> dictToReturn = new();
+		foreach (var e in enumList)
+			dictToReturn.Add(e, e.GetDescription());
+		return dictToReturn;
+	}
 }
