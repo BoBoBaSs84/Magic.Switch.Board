@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using Magic.Switch.Board.Properties;
+using System.Windows;
+using static Magic.Switch.Board.Properties.Settings;
 
 namespace Magic.Switch.Board.Views;
 
@@ -13,5 +15,6 @@ public partial class MainWindow : Window
 	public MainWindow()
 	{
 		InitializeComponent();
+		TextBox.Text = Default.Language;
 	}
 }

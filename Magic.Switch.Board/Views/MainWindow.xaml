@@ -9,7 +9,7 @@
 				>
 	<DockPanel>
 		<Grid x:Name="MainGrid">
-			
+			<TextBox x:Name="TextBox" />
 		</Grid>
 	</DockPanel>
 </Window>
