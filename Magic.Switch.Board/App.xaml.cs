@@ -38,7 +38,7 @@ namespace Magic.Switch.Board
 				// Services
 				services.ConfigureScopedServices();
 				services.ConfigureSingletonServices();
-				
+
 				// Viewmodels
 				services.ConfigureViewsModels();
 			});
@@ -52,7 +52,7 @@ namespace Magic.Switch.Board
 			MainWindow mainWindow = _host.Services.GetRequiredService<MainWindow>();
 			if (e.Args.Length > 0)
 				MessageBox.Show($"Now opening file: \n\n{e.Args[0]}");
-			
+
 			mainWindow.Show();
 		}
 

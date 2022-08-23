@@ -171,7 +171,7 @@ public static class Enums
 	{
 		List<T> enumList = Enum.GetValues(@enum.GetType()).Cast<T>().ToList();
 		Dictionary<T, string> dictToReturn = new();
-		foreach (var e in enumList)
+		foreach (T e in enumList)
 			dictToReturn.Add(e, e.GetDescription());
 		return dictToReturn;
 	}

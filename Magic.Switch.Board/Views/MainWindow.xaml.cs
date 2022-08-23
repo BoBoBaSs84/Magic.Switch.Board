@@ -1,5 +1,4 @@
-﻿using Magic.Switch.Board.Properties;
-using System.Windows;
+﻿using System.Windows;
 using static Magic.Switch.Board.Properties.Settings;
 
 namespace Magic.Switch.Board.Views;

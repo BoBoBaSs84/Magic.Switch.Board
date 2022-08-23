@@ -12,8 +12,8 @@ internal sealed class StringWriterHelper : StringWriter
 	/// The <see cref="StringWriterHelper"/> class constructor.
 	/// </summary>
 	/// <param name="encoding"></param>
-	public StringWriterHelper(Encoding encoding) 
-		: base(new StringBuilder(), CultureInfo)	=> m_Encoding = encoding;
+	public StringWriterHelper(Encoding encoding)
+		: base(new StringBuilder(), CultureInfo) => m_Encoding = encoding;
 
 	/// <inheritdoc/>
 	public override Encoding Encoding
