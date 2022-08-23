@@ -22,11 +22,12 @@
 		<PackageProjectUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
-		<PackageLicenseFile>D:\Source\Magic.Switch.Board\LICENSE</PackageLicenseFile>
 		<Authors>https://github.com/BoBoBaSs84</Authors>
 		<Copyright>© 2022 BoBoBaSs84</Copyright>
 		<ApplicationIcon>Magic.Switch.Board.ico</ApplicationIcon>
 		<StartupObject>Magic.Switch.Board.App</StartupObject>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -59,6 +60,10 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Magic.Switch.Board.Repositories\Magic.Switch.Board.Contracts.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="LICENSE" Pack="true" PackagePath=""/>
 	</ItemGroup>
 
 	<ItemGroup>
