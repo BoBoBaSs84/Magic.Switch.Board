@@ -1,5 +1,7 @@
 ﻿using Magic.Switch.Board.Contracts.Base;
 using Magic.Switch.Board.Services.Logging.Interfaces;
+using Magic.Switch.Board.Services.Device.Interfaces;
+using Magic.Switch.Board.Models.Device;
 using System.Windows;
 using System.Windows.Input;
 
@@ -11,14 +13,21 @@ namespace Magic.Switch.Board.Contracts
 	public class MainViewModel : ViewModelBase
 	{
 		private readonly ILoggerService _logger;
+		private readonly IDeviceConfigService _deviceConfigService;
+		private readonly string _applicationVersion;
+		private Configuration? configuration;
 
 		/// <summary>
 		/// The <see cref="MainViewModel"/> class constructor.
 		/// </summary>
-		/// <param name="logger"></param>
-		public MainViewModel(ILoggerService logger)
+		/// <param name="logger">The logger service.</param>
+		/// <param name="deviceConfigService">The device configuration service.</param>
+		/// <param name="applicationVersion">The application version.</param>
+		public MainViewModel(ILoggerService logger, IDeviceConfigService deviceConfigService, string applicationVersion)
 		{
 			_logger = logger;
+			_deviceConfigService = deviceConfigService;
+			_applicationVersion = applicationVersion;
 		}
 
 		private RelayCommand? cmdNewFile;
@@ -30,7 +39,9 @@ namespace Magic.Switch.Board.Contracts
 		private void PerformCmdNewFile()
 		{
 			_logger.Trace("Let's trace!");
-			MessageBox.Show("This is a message box message", "message box", MessageBoxButton.OK, MessageBoxImage.Information);
+			configuration = _deviceConfigService.Create(_applicationVersion);
+			if (configuration is not null)
+				_logger.Information($"{nameof(Configuration)} created.");
 		}
 
 		private RelayCommand? cmdOpenFile;
@@ -75,6 +86,16 @@ namespace Magic.Switch.Board.Contracts
 				_logger.Trace("Application shut down confirmed.");
 				Application.Current.Shutdown();
 			}			
+		}
+
+		private RelayCommand? cmdShowAbout;
+		/// <summary>
+		/// The <see cref="CmdShowAbout"/> command for showing the about Message.
+		/// </summary>
+		public ICommand CmdShowAbout => cmdShowAbout ??= new RelayCommand(PerformCmdShowAbout);
+
+		private void PerformCmdShowAbout()
+		{
 		}
 	}
 }

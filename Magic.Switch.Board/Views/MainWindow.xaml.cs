@@ -1,6 +1,8 @@
 ﻿using Magic.Switch.Board.Contracts;
+using Magic.Switch.Board.Services.Device.Interfaces;
 using Magic.Switch.Board.Services.Logging.Interfaces;
 using System.Windows;
+using static Magic.Switch.Board.Statics;
 
 namespace Magic.Switch.Board.Views;
 
@@ -9,17 +11,12 @@ namespace Magic.Switch.Board.Views;
 /// </summary>
 public partial class MainWindow : Window
 {
-	private readonly ILoggerService _logger;
-	private readonly MainViewModel _mainViewModel;
-
 	/// <summary>
 	/// The <see cref="MainWindow"/> constructor
 	/// </summary>
-	public MainWindow(ILoggerService logger)
+	public MainWindow(ILoggerService logger, IDeviceConfigService deviceConfigService)
 	{
 		InitializeComponent();
-		_logger = logger;
-		_mainViewModel = new MainViewModel(_logger);
-		DataContext = _mainViewModel;
+		DataContext = new MainViewModel(logger, deviceConfigService, AssemblyVersion);
 	}
 }

@@ -44,7 +44,7 @@
 					</MenuItem>
 				</MenuItem>
 				<MenuItem Header="_Help">
-					<MenuItem Header="_About">
+					<MenuItem Header="_About" Command="{Binding CmdShowAbout}">
 						<MenuItem.Icon>
 							<Image Source="/Resources/IconHelpAbout.ico"/>
 						</MenuItem.Icon>
