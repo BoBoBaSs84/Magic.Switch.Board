@@ -54,8 +54,6 @@ namespace Magic.Switch.Board.Contracts.Base
 		/// <returns>true if this command can be executed; otherwise, false.</returns>
 		public bool CanExecute(object? parameter)
 		{
-			if (parameter is null)
-				return false;
 			return _canExecute is null || _canExecute();
 		}
 

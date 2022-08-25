@@ -19,27 +19,27 @@
 			<Grid.RowDefinitions>
 				<RowDefinition Height="20px"/>
 				<RowDefinition Height="*"/>
-			</Grid.RowDefinitions>
+			</Grid.RowDefinitions>			
 			<Menu Grid.ColumnSpan="2">
 				<MenuItem Header="_File">
-					<MenuItem Header="_New">
+					<MenuItem Header="_New" Command="{Binding CmdNewFile}">
 						<MenuItem.Icon>
 							<Image Source="/Resources/IconFileNew.ico"/>
 						</MenuItem.Icon>
 					</MenuItem>
-					<MenuItem Header="_Open">
+					<MenuItem Header="_Open" Command="{Binding CmdOpenFile}">
 						<MenuItem.Icon>
 							<Image Source="/Resources/IconFileOpen.ico"/>
 						</MenuItem.Icon>
 					</MenuItem>
 					<Separator/>
-					<MenuItem Header="_Settings">
+					<MenuItem Header="_Settings" Command="{Binding CmdOpenSettings}">
 						<MenuItem.Icon>
 							<Image Source="/Resources/IconFileSettings.ico"/>
 						</MenuItem.Icon>
 					</MenuItem>
 					<Separator/>
-					<MenuItem Header="_Quit">
+					<MenuItem Header="_Quit" Command="{Binding CmdQuitApplication}">
 						<MenuItem.Icon>
 							<Image Source="/Resources/IconFileQuit.ico"/>
 						</MenuItem.Icon>
