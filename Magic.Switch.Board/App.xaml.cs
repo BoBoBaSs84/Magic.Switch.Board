@@ -50,9 +50,6 @@ namespace Magic.Switch.Board
 		{
 			await _host.StartAsync();
 			MainWindow mainWindow = _host.Services.GetRequiredService<MainWindow>();
-			if (e.Args.Length > 0)
-				MessageBox.Show($"Now opening file: \n\n{e.Args[0]}");
-
 			mainWindow.Show();
 		}
 

@@ -45,7 +45,9 @@ public interface ILoggerService
 	/// </remarks>
 	/// <param name="message"></param>
 	/// <param name="callerName"></param>
+#pragma warning disable CA1716 // Identifiers should not match keywords
 	void Error(string message, [CallerMemberName] string callerName = default!);
+#pragma warning restore CA1716
 	/// <summary>
 	/// The interface member for logging trace messages of type <see cref="string"/>
 	/// </summary>

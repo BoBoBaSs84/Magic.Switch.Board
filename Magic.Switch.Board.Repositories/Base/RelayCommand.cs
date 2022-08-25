@@ -3,48 +3,83 @@
 namespace Magic.Switch.Board.Contracts.Base
 {
 	/// <summary>
-	/// The <see cref="RelayCommand"/> base class. Implements the members of the <see cref="ICommand"/> interface.
+	/// The <see cref="RelayCommand"/> class.
 	/// </summary>
+	/// <remarks>
+	/// Implements the mebmer of the <see cref="ICommand"/> interface.
+	/// A command whose sole purpose is to relay its functionality to other objects by invoking delegates.
+	/// The default return value for the CanExecute method is <see langword="true"/>.
+	/// RaiseCanExecuteChanged needs to be called whenever
+	/// CanExecute is expected to return a different value.
+	/// </remarks>
 	public class RelayCommand : ICommand
 	{
-		private readonly Predicate<object> _canExecute;
-		private readonly Action<object> _execute;
-
+		#region fields
+		private readonly Action _execute;
+		private readonly Func<bool>? _canExecute;
+		#endregion
+		/// <inheritdoc/>
+		public event EventHandler? CanExecuteChanged;
+		#region constructors
 		/// <summary>
-		/// The <see cref="RelayCommand"/> class constructor
+		/// Creates a new command that can always execute.
 		/// </summary>
-		/// <param name="execute"></param>
-		public RelayCommand(Action<object> execute) : this(execute, default!)
+		/// <param name="execute">The execution logic.</param>
+		public RelayCommand(Action execute) : this(execute, null)
 		{
 		}
 
 		/// <summary>
-		/// The <see cref="RelayCommand"/> class constructor
+		/// Creates a new command.
 		/// </summary>
-		/// <param name="canExecute"></param>
-		/// <param name="execute"></param>
-		public RelayCommand(Action<object> execute, Predicate<object> canExecute)
+		/// <param name="execute">The execution logic.</param>
+		/// <param name="canExecute">The execution status logic.</param>
+		public RelayCommand(Action execute, Func<bool>? canExecute)
 		{
-			_canExecute = canExecute;
+			if (execute is null)
+				throw new ArgumentNullException(nameof(execute));
 			_execute = execute;
+			_canExecute = canExecute;
 		}
+		#endregion
 
-		/// <inheritdoc/>
-		public event EventHandler? CanExecuteChanged
+		#region ICommand members
+		/// <summary>
+		/// Determines whether this RelayCommand can execute in its current state.
+		/// </summary>
+		/// <param name="parameter">
+		/// Data used by the command. If the command does not require data to be passed,
+		/// this object can be set to null.
+		/// </param>
+		/// <returns>true if this command can be executed; otherwise, false.</returns>
+		public bool CanExecute(object? parameter)
 		{
-			add => CommandManager.RequerySuggested += value;
-			remove => CommandManager.RequerySuggested -= value;
+			if (parameter is null)
+				return false;
+			return _canExecute is null || _canExecute();
 		}
 
-		/// <inheritdoc/>
-		public bool CanExecute(object? parameter) =>
-			parameter is not null && _canExecute(parameter);
-
-		/// <inheritdoc/>
+		/// <summary>
+		/// Executes the RelayCommand on the current command target.
+		/// </summary>
+		/// <param name="parameter">
+		/// Data used by the command. If the command does not require data to be passed,
+		/// this object can be set to null.
+		/// </param>
 		public void Execute(object? parameter)
 		{
-			if (parameter is not null)
-				_execute(parameter);
+			_execute();
 		}
+
+		/// <summary>
+		/// Method used to raise the CanExecuteChanged event
+		/// to indicate that the return value of the CanExecute
+		/// method has changed.
+		/// </summary>
+		public void RaiseCanExecuteChanged()
+		{
+			CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+		}
+		#endregion
 	}
 }
