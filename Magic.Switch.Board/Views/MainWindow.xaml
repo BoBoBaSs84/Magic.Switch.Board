@@ -3,9 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Magic.Switch.Board.Views"
 				xmlns:contracts="clr-namespace:Magic.Switch.Board.Contracts;assembly=Magic.Switch.Board.Contracts"
-				xmlns:prop="clr-namespcae:Magic.Siwtch.Board.Properties"
 				d:DataContext="{d:DesignInstance Type=contracts:MainViewModel}"
         mc:Ignorable="d"
         Title="Magic.Switch.Board" Width="1280" Height="720"
@@ -14,7 +12,7 @@
 		<Grid x:Name="MainGrid">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="3*"/>
+				<ColumnDefinition Width="4*"/>
 			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="20px"/>
