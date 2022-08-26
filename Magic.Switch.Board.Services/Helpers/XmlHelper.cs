@@ -33,11 +33,16 @@ internal sealed class XmlHelper<T> where T : class
 	/// </summary>
 	/// <remarks>
 	/// Calls the <see cref="Deserialize(TextReader)"/> method.
+	/// Will throw an exception if <paramref name="xmlString"/> is <see langword="null"/>.
 	/// </remarks>
 	/// <param name="xmlString"></param>
 	/// <returns>An object of the given type.</returns>
+	/// <exception cref="ArgumentNullException"></exception>
 	public T? Deserialize(string xmlString)
 	{
+		if (xmlString is null)
+			throw new ArgumentNullException(nameof(xmlString));
+
 		TextReader reader = new StringReader(xmlString);
 		return Deserialize(reader);
 	}
@@ -47,11 +52,16 @@ internal sealed class XmlHelper<T> where T : class
 	/// </summary>
 	/// <remarks>
 	/// Calls the <see cref="Deserialize(TextReader)"/> method.
+	/// Will throw an exception if <paramref name="xmlDocument"/> is <see langword="null"/>.
 	/// </remarks>
 	/// <param name="xmlDocument"></param>
 	/// <returns>An object of the given type.</returns>
+	/// <exception cref="ArgumentNullException"></exception>
 	public T? Deserialize(XmlDocument xmlDocument)
 	{
+		if (xmlDocument is null)
+			throw new ArgumentNullException(nameof(xmlDocument));
+
 		TextReader reader = new StringReader(xmlDocument.OuterXml);
 		return Deserialize(reader);
 	}
@@ -61,11 +71,16 @@ internal sealed class XmlHelper<T> where T : class
 	/// </summary>
 	/// <remarks>
 	/// The method does the actual deserialization process.
+	/// Will throw an exception if <paramref name="textReader"/> is <see langword="null"/>.
 	/// </remarks>
 	/// <param name="textReader"></param>
 	/// <returns>An object of the given type.</returns>
+	/// <exception cref="ArgumentNullException"></exception>
 	public T? Deserialize(TextReader textReader)
 	{
+		if (textReader is null)
+			throw new ArgumentNullException(nameof(textReader));
+
 		using XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
 		T? obj = (T)xmlSerializer.Deserialize(xmlReader)!;
 		textReader.Close();
@@ -77,12 +92,17 @@ internal sealed class XmlHelper<T> where T : class
 	/// </summary>
 	/// <remarks>
 	/// Calls the <see cref="StringSerialize(T, Encoding?)"/> method.
+	/// Will throw an exception if <paramref name="obj"/> is <see langword="null"/>.
 	/// </remarks>
 	/// <param name="obj"></param>
 	/// <param name="encoding"></param>
 	/// <returns>An object of type <see cref="XmlDocument"/></returns>
+	/// <exception cref="ArgumentNullException"></exception>
 	public XmlDocument Serialize(T obj, Encoding? encoding)
 	{
+		if (obj is null)
+			throw new ArgumentNullException(nameof(obj));
+
 		string xmlString = StringSerialize(obj, encoding);
 		XmlDocument xmlDocument = new();
 		xmlDocument.LoadXml(xmlString);
@@ -94,12 +114,17 @@ internal sealed class XmlHelper<T> where T : class
 	/// </summary>
 	/// <remarks>
 	/// Calls the <see cref="WriterSerialize(T, Encoding?)"/> method.
+	/// Will throw an exception if <paramref name="obj"/> is <see langword="null"/>.
 	/// </remarks>
 	/// <param name="obj"></param>
 	/// <param name="encoding"></param>
 	/// <returns>An object of type <see cref="string"/></returns>
+	/// <exception cref="ArgumentNullException"></exception>
 	public string StringSerialize(T obj, Encoding? encoding)
 	{
+		if (obj is null)
+			throw new ArgumentNullException(nameof(obj));
+
 		TextWriter textWriter = WriterSerialize(obj, encoding);
 		string? xmlString = textWriter.ToString();
 		textWriter.Close();
@@ -114,12 +139,17 @@ internal sealed class XmlHelper<T> where T : class
 	/// <remarks>
 	/// The method does the actual serialization process.
 	/// Since the encoding parameter can be <see cref="Nullable"/>, it is set to <see cref="Encoding.UTF8"/> here at the latest.
+	/// Will throw an exception if <paramref name="obj"/> is <see langword="null"/>.
 	/// </remarks>
 	/// <param name="obj"></param>
 	/// <param name="encoding"></param>
 	/// <returns>An object of type <see cref="TextWriter"/></returns>
+	/// <exception cref="ArgumentNullException"></exception>
 	public TextWriter WriterSerialize(T obj, Encoding? encoding)
 	{
+		if (obj is null)
+			throw new ArgumentNullException(nameof(obj));
+
 		encoding ??= Encoding.UTF8;
 		xmlWriterSettings.Encoding = encoding;
 		using StringWriter stringWriter = new StringWriterHelper(encoding);
@@ -134,6 +164,8 @@ internal sealed class XmlHelper<T> where T : class
 	/// </summary>
 	/// <remarks>
 	/// File name can include the path.
+	/// Will throw an exception if <paramref name="fileName"/> is <see langword="null"/>.
+	/// Will throw an exception if <paramref name="fileName"/> is not found.
 	/// </remarks>
 	/// <param name="fileName"></param>
 	/// <returns>The object or null.</returns>
@@ -165,15 +197,19 @@ internal sealed class XmlHelper<T> where T : class
 	}
 
 	/// <summary>
-	/// The <see cref="WriteFile(string, T, Encoding?)"/> method serializes the object to file and and saves the file to disk.
+	/// The <see cref="WriteFile(string, T, Encoding?)"/> method serializes
+	/// the object to file and and saves the file to disk.
 	/// </summary>
 	/// <remarks>
-	/// File name can include the path. If encoding is null <see cref="Encoding.UTF8"/> is used.
+	/// File name can include the path.
+	/// If encoding is null <see cref="Encoding.UTF8"/> is used.
+	/// Will throw an exception if <paramref name="fileName"/> is <see langword="null"/>.
+	/// Will throw an exception if <paramref name="obj"/> is <see langword="null"/>.
 	/// </remarks>
 	/// <param name="fileName"></param>
 	/// <param name="obj"></param>
 	/// <param name="encoding"></param>
-	/// <returns>True or false depending on the outcome.</returns>
+	/// <returns><see langword="true"/> or <see langword="false"/> depending on the outcome.</returns>
 	/// <exception cref="ArgumentNullException"></exception>
 	/// <exception cref="XmlException"></exception>
 	public static bool WriteFile(string fileName, T obj, Encoding? encoding)

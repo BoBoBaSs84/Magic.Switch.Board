@@ -32,7 +32,7 @@ namespace Magic.Switch.Board.Extensions
 		/// <param name="services"></param>
 		public static void ConfigureSingletonServices(this IServiceCollection services)
 		{
-			services.AddSingleton<ILoggerService, LoggerService>();
+			services.AddSingleton<ILoggerService, FileLoggerService>();
 		}
 
 		public static void ConfigureViewsModels(this IServiceCollection services)

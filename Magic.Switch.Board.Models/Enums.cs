@@ -122,9 +122,9 @@ public static class Enums
 	/// <typeparam name="T"></typeparam>
 	/// <param name="enumValue"></param>
 	/// <returns><see cref="string"/> which can be <see cref="Nullable"/></returns>
-	public static string GetDescription<T>(this T enumValue) where T : struct, IConvertible
+	public static string GetDescription<T>(this T enumValue) where T : Enum, IConvertible
 	{
-		FieldInfo? fieldInfo = enumValue.GetType().GetField(enumValue.ToString()!);
+		FieldInfo? fieldInfo = enumValue.GetType().GetField(enumValue.ToString());
 
 		if (fieldInfo is not null)
 		{
@@ -167,7 +167,7 @@ public static class Enums
 	/// <typeparam name="T"></typeparam>
 	/// <param name="enum"></param>
 	/// <returns>A dictionary with enums and their description.</returns>
-	public static Dictionary<T, string> GetEnumsWithDescription<T>(this T @enum) where T : struct, IConvertible
+	public static Dictionary<T, string> GetEnumsWithDescription<T>(this T @enum) where T : Enum, IConvertible
 	{
 		List<T> enumList = Enum.GetValues(@enum.GetType()).Cast<T>().ToList();
 		Dictionary<T, string> dictToReturn = new();

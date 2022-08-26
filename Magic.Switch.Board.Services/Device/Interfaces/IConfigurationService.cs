@@ -9,10 +9,11 @@ namespace Magic.Switch.Board.Services.Device.Interfaces;
 public interface IDeviceConfigService
 {
 	/// <summary>
-	/// The <see cref="Create"/> method creates a new <see cref="Configuration"/>.
+	/// The <see cref="Create"/> method should create a new device configuration.
 	/// </summary>
-	/// <param name="applicationVersion">The Version of the application that creates the configuration.</param>
-	/// <returns><see cref="Configuration"/></returns>
+	/// <param name="applicationVersion">The Version of the application that creates the device configuration.</param>
+	/// <returns>A device configurastion of type <see cref="Configuration"/>.</returns>
+	/// <exception cref="ArgumentNullException"></exception>
 	public Configuration Create(string applicationVersion);
 
 	/// <summary>
@@ -26,9 +27,11 @@ public interface IDeviceConfigService
 	/// </summary>
 	/// <remarks>
 	/// This method will enforce to use <see cref="Encoding.UTF8"/>.
+	/// Will throw an exception is <paramref name="configuration"/> is <see langword="null"/>.
 	/// </remarks>
 	/// <param name="configuration">The device configuration.</param>
-	/// <returns>The success of true or false. </returns>
+	/// <returns><see langword="true"/> or <see langword="false"/> as success message.</returns>
+	/// <exception cref="ArgumentNullException"></exception>
 	public bool Write(Configuration configuration);
 
 	/// <summary>
@@ -36,9 +39,11 @@ public interface IDeviceConfigService
 	/// </summary>
 	/// <remarks>
 	/// Since encoding can be <see cref="Nullable"/>, when null, <see cref="Encoding.UTF8"/> will be used.
+	/// Will throw an exception is <paramref name="configuration"/> is <see langword="null"/>.
 	/// </remarks>
 	/// <param name="configuration">The device configuration.</param>
-	/// <param name="encoding">The encoding type.</param>
-	/// <returns>The success of true or false. </returns>
+	/// <param name="encoding">The desired encoding type.</param>
+	/// <returns><see langword="true"/> or <see langword="false"/> as success message.</returns>
+	/// <exception cref="ArgumentNullException"></exception>
 	public bool Write(Configuration configuration, Encoding? encoding);
 }

@@ -8,25 +8,30 @@ using static Magic.Switch.Board.Services.Statics;
 namespace Magic.Switch.Board.Services.Device;
 
 /// <summary>
-/// The <see cref="DeviceConfigService"/> class implements the members of the <see cref="IDeviceConfigService"/> interface
+/// The <see cref="DeviceConfigService"/> class implements the members of the <see cref="IDeviceConfigService"/> interface.
 /// </summary>
 public sealed class DeviceConfigService : IDeviceConfigService
 {
 	private readonly ILoggerService logger;
 
 	/// <summary>
-	/// The <see cref="DeviceConfigService"/> class constructor
+	/// The <see cref="DeviceConfigService"/> class constructor.
 	/// </summary>
 	/// <param name="logger"></param>
 	public DeviceConfigService(ILoggerService logger) => this.logger = logger;
 
 	/// <inheritdoc/>	
-	public Configuration Create(string applicationVersion) => new(applicationVersion);
+	public Configuration Create(string applicationVersion)
+	{
+		if (applicationVersion is null)
+			throw new ArgumentNullException(nameof(applicationVersion));		
+		return new(applicationVersion);
+	}
 
 	/// <inheritdoc/>
 	public Configuration? Read()
 	{
-		Configuration? configuration = default!;
+		Configuration? configuration = default;
 		try
 		{
 			configuration = XmlHelper<Configuration>.ReadFile(DeviceConfigFileName);
@@ -41,6 +46,9 @@ public sealed class DeviceConfigService : IDeviceConfigService
 	/// <inheritdoc/>
 	public bool Write(Configuration configuration, Encoding? encoding)
 	{
+		if (configuration is null)
+			throw new ArgumentNullException(nameof(configuration));
+
 		bool success = false;
 		try
 		{
@@ -53,10 +61,12 @@ public sealed class DeviceConfigService : IDeviceConfigService
 		return success;
 	}
 
-
 	/// <inheritdoc/>
 	public bool Write(Configuration configuration)
 	{
+		if (configuration is null)
+			throw new ArgumentNullException(nameof(configuration));
+
 		bool success = false;
 		try
 		{
