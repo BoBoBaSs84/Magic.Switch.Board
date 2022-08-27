@@ -1,7 +1,5 @@
-﻿using Magic.Switch.Board.Core.Contracts.Services;
-using Magic.Switch.Board.ViewModels;
+﻿using Magic.Switch.Board.ViewModels;
 using System.Windows;
-using static Magic.Switch.Board.Statics;
 
 namespace Magic.Switch.Board.Views;
 
@@ -13,9 +11,9 @@ public partial class MainWindow : Window
 	/// <summary>
 	/// The <see cref="MainWindow"/> constructor
 	/// </summary>
-	public MainWindow(ILoggerService logger, IDeviceConfigService deviceConfigService)
+	public MainWindow()
 	{
 		InitializeComponent();
-		DataContext = new MainViewModel(logger, deviceConfigService, AssemblyVersion);
+		DataContext = App.GetService<MainViewModel>();
 	}
 }

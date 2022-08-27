@@ -3,17 +3,17 @@ using Magic.Switch.Board.Core.Models.Device;
 using Magic.Switch.Board.ViewModels.Base;
 using System.Windows;
 using System.Windows.Input;
+using static Magic.Switch.Board.Statics;
 
 namespace Magic.Switch.Board.ViewModels;
 
 /// <summary>
 /// The <see cref="MainViewModel"/> class.
 /// </summary>
-public class MainViewModel : ViewModelBase
+public sealed class MainViewModel : ViewModelBase
 {
 	private readonly ILoggerService _logger;
 	private readonly IDeviceConfigService _deviceConfigService;
-	private readonly string _applicationVersion;
 	private Configuration? configuration;
 
 	/// <summary>
@@ -22,11 +22,10 @@ public class MainViewModel : ViewModelBase
 	/// <param name="logger">The logger service.</param>
 	/// <param name="deviceConfigService">The device configuration service.</param>
 	/// <param name="applicationVersion">The application version.</param>
-	public MainViewModel(ILoggerService logger, IDeviceConfigService deviceConfigService, string applicationVersion)
+	public MainViewModel(ILoggerService logger, IDeviceConfigService deviceConfigService)
 	{
 		_logger = logger;
 		_deviceConfigService = deviceConfigService;
-		_applicationVersion = applicationVersion;
 	}
 
 	private RelayCommand? cmdNewFile;
@@ -38,7 +37,7 @@ public class MainViewModel : ViewModelBase
 	private void PerformCmdNewFile()
 	{
 		_logger.Trace("Let's trace!");
-		configuration = _deviceConfigService.Create(_applicationVersion);
+		configuration = _deviceConfigService.Create(AssemblyVersion);
 		if (configuration is not null)
 			_logger.Information($"{nameof(Configuration)} created.");
 	}

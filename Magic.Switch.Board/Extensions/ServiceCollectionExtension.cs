@@ -29,11 +29,11 @@ internal static class ServiceCollectionExtension
 
 	public static void ConfigureViewsModels(this IServiceCollection services)
 	{
-		_ = services.AddTransient<MainViewModel>();
+		services.AddTransient<MainViewModel>();
 	}
 
 	public static void ConfigureViews(this IServiceCollection services)
 	{
-		_ = services.AddTransient<MainWindow>();
+		services.AddTransient<MainWindow>();
 	}
 }
