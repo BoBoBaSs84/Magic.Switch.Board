@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace Magic.Switch.Board.Contracts.Base;
+namespace Magic.Switch.Board.ViewModels.Base;
 
 /// <summary>
 /// The <see cref="RelayCommand"/> class.
@@ -14,13 +14,12 @@ namespace Magic.Switch.Board.Contracts.Base;
 /// </remarks>
 public class RelayCommand : ICommand
 {
-	#region fields
 	private readonly Action _execute;
 	private readonly Func<bool>? _canExecute;
-	#endregion
+
 	/// <inheritdoc/>
 	public event EventHandler? CanExecuteChanged;
-	#region constructors
+
 	/// <summary>
 	/// Creates a new command that can always execute.
 	/// </summary>
@@ -41,7 +40,6 @@ public class RelayCommand : ICommand
 		_execute = execute;
 		_canExecute = canExecute;
 	}
-	#endregion
 
 	#region ICommand members
 	/// <summary>
@@ -52,10 +50,7 @@ public class RelayCommand : ICommand
 	/// this object can be set to null.
 	/// </param>
 	/// <returns>true if this command can be executed; otherwise, false.</returns>
-	public bool CanExecute(object? parameter)
-	{
-		return _canExecute is null || _canExecute();
-	}
+	public bool CanExecute(object? parameter) => _canExecute is null || _canExecute();
 
 	/// <summary>
 	/// Executes the RelayCommand on the current command target.

@@ -1,11 +1,10 @@
-﻿using Magic.Switch.Board.Contracts.Base;
-using Magic.Switch.Board.Models.Device;
-using Magic.Switch.Board.Services.Device.Interfaces;
-using Magic.Switch.Board.Services.Logging.Interfaces;
+﻿using Magic.Switch.Board.Core.Contracts.Services;
+using Magic.Switch.Board.Core.Models.Device;
+using Magic.Switch.Board.ViewModels.Base;
 using System.Windows;
 using System.Windows.Input;
 
-namespace Magic.Switch.Board.Contracts;
+namespace Magic.Switch.Board.ViewModels;
 
 /// <summary>
 /// The <see cref="MainViewModel"/> class.
@@ -78,9 +77,7 @@ public class MainViewModel : ViewModelBase
 	{
 		_logger.Trace("Application shut down reqeusted.");
 		if (MessageBox.Show("do you really want to quit?", "Quit", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
-		{
 			_logger.Trace("Application shut down aborted.");
-		}
 		else
 		{
 			_logger.Trace("Application shut down confirmed.");

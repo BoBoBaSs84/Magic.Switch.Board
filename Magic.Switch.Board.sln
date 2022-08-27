@@ -3,13 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Services", "Magic.Switch.Board.Services\Magic.Switch.Board.Services.csproj", "{897C0EFB-5548-436C-BF6D-40182C2C9A40}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board", "Magic.Switch.Board\Magic.Switch.Board.csproj", "{C866DFB8-A708-4D5C-80A8-6D864385DB82}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Models", "Magic.Switch.Board.Models\Magic.Switch.Board.Models.csproj", "{8F88CE9D-4E9A-49B0-B2B1-8CB10749E0E3}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Contracts", "Magic.Switch.Board.Contracts\Magic.Switch.Board.Contracts.csproj", "{69DFDCFA-200D-4573-8B05-562305A11963}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magic.Switch.Board.Core", "Magic.Switch.Board.Core\Magic.Switch.Board.Core.csproj", "{021E056B-E7D7-4A0B-877A-902C8A5CD1A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{897C0EFB-5548-436C-BF6D-40182C2C9A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{897C0EFB-5548-436C-BF6D-40182C2C9A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{897C0EFB-5548-436C-BF6D-40182C2C9A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{897C0EFB-5548-436C-BF6D-40182C2C9A40}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C866DFB8-A708-4D5C-80A8-6D864385DB82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C866DFB8-A708-4D5C-80A8-6D864385DB82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C866DFB8-A708-4D5C-80A8-6D864385DB82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C866DFB8-A708-4D5C-80A8-6D864385DB82}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F88CE9D-4E9A-49B0-B2B1-8CB10749E0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F88CE9D-4E9A-49B0-B2B1-8CB10749E0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F88CE9D-4E9A-49B0-B2B1-8CB10749E0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F88CE9D-4E9A-49B0-B2B1-8CB10749E0E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{69DFDCFA-200D-4573-8B05-562305A11963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69DFDCFA-200D-4573-8B05-562305A11963}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69DFDCFA-200D-4573-8B05-562305A11963}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69DFDCFA-200D-4573-8B05-562305A11963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{021E056B-E7D7-4A0B-877A-902C8A5CD1A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{021E056B-E7D7-4A0B-877A-902C8A5CD1A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{021E056B-E7D7-4A0B-877A-902C8A5CD1A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{021E056B-E7D7-4A0B-877A-902C8A5CD1A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,5 @@
-﻿using Magic.Switch.Board.Contracts;
-using Magic.Switch.Board.Services.Device.Interfaces;
-using Magic.Switch.Board.Services.Logging.Interfaces;
+﻿using Magic.Switch.Board.Core.Contracts.Services;
+using Magic.Switch.Board.ViewModels;
 using System.Windows;
 using static Magic.Switch.Board.Statics;
 
