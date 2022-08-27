@@ -8,7 +8,7 @@ namespace Magic.Switch.Board.Models;
 internal static class Statics
 {
 	private static readonly Assembly assembly;
-	
+
 	/// <summary>
 	/// The <see cref="AssemblyVersion"/> property.
 	/// </summary>

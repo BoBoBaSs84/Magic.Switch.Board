@@ -5,60 +5,59 @@ using Microsoft.Extensions.Hosting;
 using System.Windows;
 using static Magic.Switch.Board.Statics;
 
-namespace Magic.Switch.Board
+namespace Magic.Switch.Board;
+
+/// <summary>
+/// Interaction logic for App.xaml
+/// </summary>
+public partial class App : Application
 {
+	private readonly IHostBuilder _hostBuilder;
+	private readonly IHost _host;
+
 	/// <summary>
-	/// Interaction logic for App.xaml
+	/// The App constructor
 	/// </summary>
-	public partial class App : Application
+	public App()
 	{
-		private readonly IHostBuilder _hostBuilder;
-		private readonly IHost _host;
+		_hostBuilder = Host.CreateDefaultBuilder()
+			.UseContentRoot(AsseblyDirectory);
 
-		/// <summary>
-		/// The App constructor
-		/// </summary>
-		public App()
+		_hostBuilder.ConfigureLogging(logging =>
 		{
-			_hostBuilder = Host.CreateDefaultBuilder()
-				.UseContentRoot(AsseblyDirectory);
+			logging.ConfigureConsoleLogging();
+		});
 
-			_hostBuilder.ConfigureLogging(logging =>
-			{
-				logging.ConfigureConsoleLogging();
-			});
-
-			_hostBuilder.ConfigureAppConfiguration(config =>
-			{
-				config.ConfigureUserSecrets();
-			});
-
-			_hostBuilder.ConfigureServices(services =>
-			{
-				// Services
-				services.ConfigureScopedServices();
-				services.ConfigureSingletonServices();
-
-				// Viewmodels
-				services.ConfigureViewsModels();
-			});
-
-			_host = _hostBuilder.Build();
-		}
-
-		private async void Application_Startup(object sender, StartupEventArgs e)
+		_hostBuilder.ConfigureAppConfiguration(config =>
 		{
-			await _host.StartAsync();
-			MainWindow mainWindow = _host.Services.GetRequiredService<MainWindow>();
-			mainWindow.Show();
-		}
+			config.ConfigureUserSecrets();
+		});
 
-		private async void Application_Exit(object sender, ExitEventArgs e)
+		_hostBuilder.ConfigureServices(services =>
 		{
-			using (_host)
-			{
-				await _host.StopAsync(TimeSpan.FromSeconds(5));
-			}
+			// Services
+			services.ConfigureScopedServices();
+			services.ConfigureSingletonServices();
+
+			// Viewmodels
+			services.ConfigureViewsModels();
+		});
+
+		_host = _hostBuilder.Build();
+	}
+
+	private async void Application_Startup(object sender, StartupEventArgs e)
+	{
+		await _host.StartAsync();
+		MainWindow mainWindow = _host.Services.GetRequiredService<MainWindow>();
+		mainWindow.Show();
+	}
+
+	private async void Application_Exit(object sender, ExitEventArgs e)
+	{
+		using (_host)
+		{
+			await _host.StopAsync(TimeSpan.FromSeconds(5));
 		}
 	}
 }

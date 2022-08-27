@@ -21,13 +21,10 @@ internal static class Statics
 	/// Provides possible language values
 	/// </summary>
 	/// <returns></returns>
-	public static CultureInfo[] GetSupportedLanguages()
+	public static CultureInfo[] GetSupportedLanguages() => new[]
 	{
-		return new[]
-		{
-			new CultureInfo("en-US"),
-			new CultureInfo("de-DE"),
-			new CultureInfo("fr-FR")
-		};
-	}
+		new CultureInfo("en-US"),
+		new CultureInfo("de-DE"),
+		new CultureInfo("fr-FR")
+	};
 }

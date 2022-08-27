@@ -16,8 +16,5 @@ internal sealed class StringWriterHelper : StringWriter
 		: base(new StringBuilder(), CurrentCulture) => m_Encoding = encoding;
 
 	/// <inheritdoc/>
-	public override Encoding Encoding
-	{
-		get => m_Encoding;
-	}
+	public override Encoding Encoding => m_Encoding;
 }

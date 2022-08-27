@@ -24,7 +24,7 @@ public sealed class DeviceConfigService : IDeviceConfigService
 	public Configuration Create(string applicationVersion)
 	{
 		if (applicationVersion is null)
-			throw new ArgumentNullException(nameof(applicationVersion));		
+			throw new ArgumentNullException(nameof(applicationVersion));
 		return new(applicationVersion);
 	}
 
