@@ -1,5 +1,6 @@
 ﻿using Magic.Switch.Board.Core.Contracts.Services;
 using System.Text;
+using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core.Services;
 
@@ -20,7 +21,6 @@ public sealed class FileService : IFileService
 	public (bool success, string message) Delete(string folderPath, string fileName)
 	{
 		string message;
-
 		try
 		{
 			if (folderPath is null)
@@ -32,11 +32,11 @@ public sealed class FileService : IFileService
 			string fullpath = Path.Combine(folderPath, fileName);
 
 			if (!FileExists(fullpath))
-				throw new ArgumentException($"File does not exists.");
+				throw new ArgumentException(string.Format(Culture, File_Service_Error_File));
 
 			File.Delete(fullpath);
-			message = "File deleted.";
-			_logger.Information($"{message} {fullpath}");
+			message = string.Format(Culture, File_Service_File_Deleted, fullpath);
+			_logger.Information(message);
 			return (true, message);
 		}
 		catch (Exception ex)
@@ -62,10 +62,10 @@ public sealed class FileService : IFileService
 			string fullpath = Path.Combine(folderPath, fileName);
 
 			if (!FileExists(fullpath))
-				throw new ArgumentException($"File does not exists.");
+				throw new ArgumentException(string.Format(Culture, File_Service_Error_File));
 
 			content = File.ReadAllText(fullpath);
-			_logger.Information($"File read. {fullpath}");
+			_logger.Information(string.Format(Culture, File_Service_File_Read, fullpath));
 			return (true, content);
 		}
 		catch (Exception ex)
@@ -80,7 +80,6 @@ public sealed class FileService : IFileService
 	public (bool success, string message) Save(string folderPath, string fileName, string fileContent)
 	{
 		string message;
-
 		try
 		{
 			if (folderPath is null)
@@ -93,11 +92,13 @@ public sealed class FileService : IFileService
 				throw new ArgumentNullException(nameof(fileContent));
 
 			if (!DirectoryExists(folderPath))
-				throw new ArgumentException($"Directory does not exists.");
+				throw new ArgumentException(string.Format(Culture, File_Service_Error_Directory));
 
-			File.WriteAllText(Path.Combine(folderPath, fileName), fileContent, Encoding.UTF8);
-			message = "File created.";
-			_logger.Information($"{message} {Path.Combine(folderPath, fileName)}");
+			string fullpath = Path.Combine(folderPath, fileName);
+
+			File.WriteAllText(fullpath, fileContent, Encoding.UTF8);
+			message = string.Format(Culture, File_Service_File_Deleted, fullpath);
+			_logger.Information(message);
 			return (true, message);
 		}
 		catch (Exception ex)

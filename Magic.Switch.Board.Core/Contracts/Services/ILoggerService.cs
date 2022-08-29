@@ -3,7 +3,7 @@
 namespace Magic.Switch.Board.Core.Contracts.Services;
 
 /// <summary>
-/// This is the <see cref="ILoggerService"/> interface for the logger service class <see cref="FileLoggerService"/>.
+/// This is the <see cref="ILoggerService"/> interface for various logger service implementations.
 /// </summary>
 public interface ILoggerService
 {

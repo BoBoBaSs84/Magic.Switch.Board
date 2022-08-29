@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Enum_LogLevel_Critical_Description" xml:space="preserve">
+    <value>Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention.</value>
+  </data>
+  <data name="Enum_LogLevel_Debug_Description" xml:space="preserve">
+    <value>Logs that are used for interactive investigation during development. These logs should primarily contain information useful for debugging and have no long-term value.</value>
+  </data>
+  <data name="Enum_LogLevel_Error_Description" xml:space="preserve">
+    <value>Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure.</value>
+  </data>
+  <data name="Enum_LogLevel_Information_Description" xml:space="preserve">
+    <value>Logs that track the general flow of the application. These logs should have long-term value.</value>
+  </data>
+  <data name="Enum_LogLevel_None_Description" xml:space="preserve">
+    <value>Not used for writing log messages. Specifies that a logging category should not write any messages.</value>
+  </data>
+  <data name="Enum_LogLevel_Trace_Description" xml:space="preserve">
+    <value>Logs that contain the most detailed messages. These messages may contain sensitive application data. These messages are disabled by default and should never be enabled in a production environment.</value>
+  </data>
+  <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
+    <value>Logs that highlight an abnormal or unexpected event in the application flow, but do not otherwise cause the application execution to stop.</value>
+  </data>
+  <data name="Enum_LoopChannels_1" xml:space="preserve">
+    <value>Loop Channel 1</value>
+  </data>
+  <data name="Enum_LoopChannels_2" xml:space="preserve">
+    <value>Loop Channel 2</value>
+  </data>
+  <data name="Enum_LoopChannels_3" xml:space="preserve">
+    <value>Loop Channel 3</value>
+  </data>
+  <data name="Enum_LoopChannels_4" xml:space="preserve">
+    <value>Loop Channel 4</value>
+  </data>
+  <data name="Enum_LoopChannels_5" xml:space="preserve">
+    <value>Loop Channel 5</value>
+  </data>
+  <data name="Enum_LoopChannels_6" xml:space="preserve">
+    <value>Loop Channel 6</value>
+  </data>
+  <data name="Enum_LoopChannels_7" xml:space="preserve">
+    <value>Loop Channel 7</value>
+  </data>
+  <data name="Enum_LoopChannels_8" xml:space="preserve">
+    <value>Loop Channel 8</value>
+  </data>
+  <data name="Enum_MidiChannel_1" xml:space="preserve">
+    <value>Midi Channel 1</value>
+  </data>
+  <data name="Enum_MidiChannel_10" xml:space="preserve">
+    <value>Midi Channel 10</value>
+  </data>
+  <data name="Enum_MidiChannel_11" xml:space="preserve">
+    <value>Midi Channel 11</value>
+  </data>
+  <data name="Enum_MidiChannel_12" xml:space="preserve">
+    <value>Midi Channel 12</value>
+  </data>
+  <data name="Enum_MidiChannel_13" xml:space="preserve">
+    <value>Midi Channel 13</value>
+  </data>
+  <data name="Enum_MidiChannel_14" xml:space="preserve">
+    <value>Midi Channel 14</value>
+  </data>
+  <data name="Enum_MidiChannel_15" xml:space="preserve">
+    <value>Midi Channel 15</value>
+  </data>
+  <data name="Enum_MidiChannel_16" xml:space="preserve">
+    <value>Midi Channel 16</value>
+  </data>
+  <data name="Enum_MidiChannel_2" xml:space="preserve">
+    <value>Midi Channel 2</value>
+  </data>
+  <data name="Enum_MidiChannel_3" xml:space="preserve">
+    <value>Midi Channel 3</value>
+  </data>
+  <data name="Enum_MidiChannel_4" xml:space="preserve">
+    <value>Midi Channel 4</value>
+  </data>
+  <data name="Enum_MidiChannel_5" xml:space="preserve">
+    <value>Midi Channel 5</value>
+  </data>
+  <data name="Enum_MidiChannel_6" xml:space="preserve">
+    <value>Midi Channel 6</value>
+  </data>
+  <data name="Enum_MidiChannel_7" xml:space="preserve">
+    <value>Midi Channel 7</value>
+  </data>
+  <data name="Enum_MidiChannel_8" xml:space="preserve">
+    <value>Midi Channel 8</value>
+  </data>
+  <data name="Enum_MidiChannel_9" xml:space="preserve">
+    <value>Midi Channel 9</value>
+  </data>
+  <data name="Enum_MidiMessageType_CCM" xml:space="preserve">
+    <value>Control Change Message</value>
+  </data>
+  <data name="Enum_MidiMessageType_PCM" xml:space="preserve">
+    <value>Program Change Message</value>
+  </data>
+  <data name="Enum_SwitchChannels_1" xml:space="preserve">
+    <value>Switch Channel 1</value>
+  </data>
+  <data name="Enum_SwitchChannels_2" xml:space="preserve">
+    <value>Switch Channel 2</value>
+  </data>
+  <data name="Enum_SwitchChannels_3" xml:space="preserve">
+    <value>Switch Channel 3</value>
+  </data>
+  <data name="Enum_SwitchChannels_4" xml:space="preserve">
+    <value>Switch Channel 4</value>
+  </data>
+  <data name="Enum_SwitchChannels_5" xml:space="preserve">
+    <value>Switch Channel 5</value>
+  </data>
+  <data name="Enum_SwitchChannels_6" xml:space="preserve">
+    <value>Switch Channel 6</value>
+  </data>
+  <data name="Enum_SwitchChannels_7" xml:space="preserve">
+    <value>Switch Channel 7</value>
+  </data>
+  <data name="Enum_SwitchChannels_8" xml:space="preserve">
+    <value>Switch Channel 8</value>
+  </data>
+  <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">
+    <value>Error during deserialisation. Unkown attribute found. Name: '{0}' at line: {1} and position: {2}.</value>
+  </data>
+  <data name="Error_Xml_Unknown_Element" xml:space="preserve">
+    <value>Error during deserialisation. Unkown element found. Name: '{0}' at line: {1} and position: {2}.</value>
+  </data>
+  <data name="Error_Xml_Unknown_Node" xml:space="preserve">
+    <value>Error during deserialisation. Unkown node found. Name: '{0}' of type: '{1}'</value>
+  </data>
+  <data name="File_Service_Error_Directory" xml:space="preserve">
+    <value>The directory could not be found.</value>
+  </data>
+  <data name="File_Service_Error_File" xml:space="preserve">
+    <value>The file could not be found.</value>
+  </data>
+  <data name="File_Service_File_Created" xml:space="preserve">
+    <value>The file '{0}' was created.</value>
+  </data>
+  <data name="File_Service_File_Deleted" xml:space="preserve">
+    <value>The file '{0}' has been deleted.</value>
+  </data>
+  <data name="File_Service_File_Read" xml:space="preserve">
+    <value>The file '{0}' has been loaded.</value>
+  </data>
+  <data name="Model_Field_Range_Generic" xml:space="preserve">
+    <value>{0} must be in a range between {2} and {1}.</value>
+  </data>
+  <data name="Model_Field_Required_Generic" xml:space="preserve">
+    <value>{0} is a required field.</value>
+  </data>
+  <data name="Model_Field_StringLength_Generic" xml:space="preserve">
+    <value>{0} must be between {2} and {1} characters long.</value>
+  </data>
+</root>

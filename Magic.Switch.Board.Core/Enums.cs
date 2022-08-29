@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Magic.Switch.Board.Core.Properties;
+using System.ComponentModel;
 using System.Reflection;
 
 namespace Magic.Switch.Board.Core;
@@ -11,105 +12,105 @@ public static class Enums
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 	public enum LogLevel
 	{
-		[Description("Logs that contain the most detailed messages. These messages may contain sensitive application data. These messages are disabled by default and should never be enabled in a production environment.")]
+		[LocalizedDescription("Enum_LogLevel_Trace_Description")]
 		Trace = 0,
-		[Description("Logs that are used for interactive investigation during development. These logs should primarily contain information useful for debugging and have no long-term value.")]
+		[LocalizedDescription("Enum_LogLevel_Debug_Description")]
 		Debug = 1,
-		[Description("Logs that track the general flow of the application. These logs should have long-term value.")]
+		[LocalizedDescription("Enum_LogLevel_Information_Description")]
 		Information = 2,
-		[Description("Logs that highlight an abnormal or unexpected event in the application flow, but do not otherwise cause the application execution to stop.")]
+		[LocalizedDescription("Enum_LogLevel_Warning_Description")]
 		Warning = 3,
-		[Description("Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure.")]
+		[LocalizedDescription("Enum_LogLevel_Error_Description")]
 		Error = 4,
-		[Description("Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention.")]
+		[LocalizedDescription("Enum_LogLevel_Critical_Description")]
 		Critical = 5,
-		[Description("Not used for writing log messages. Specifies that a logging category should not write any messages.")]
+		[LocalizedDescription("Enum_LogLevel_None_Description")]
 		None = 6
 	}
 
 	[Flags]
 	public enum SwitchChannels
 	{
-		[Description("Switch Channel 1")]
+		[LocalizedDescription("Enum_SwitchChannels_1")]
 		Ch1 = 1,
-		[Description("Switch Channel 2")]
+		[LocalizedDescription("Enum_SwitchChannels_2")]
 		Ch2 = 2,
-		[Description("Switch Channel 3")]
+		[LocalizedDescription("Enum_SwitchChannels_3")]
 		Ch3 = 4,
-		[Description("Switch Channel 4")]
+		[LocalizedDescription("Enum_SwitchChannels_4")]
 		Ch4 = 8,
-		[Description("Switch Channel 5")]
+		[LocalizedDescription("Enum_SwitchChannels_5")]
 		Ch5 = 16,
-		[Description("Switch Channel 6")]
+		[LocalizedDescription("Enum_SwitchChannels_6")]
 		Ch6 = 32,
-		[Description("Switch Channel 7")]
+		[LocalizedDescription("Enum_SwitchChannels_7")]
 		Ch7 = 64,
-		[Description("Switch Channel 8")]
+		[LocalizedDescription("Enum_SwitchChannels_8")]
 		Ch8 = 128
 	}
 
 	[Flags]
 	public enum LoopChannels
 	{
-		[Description("Loop Channel 1")]
+		[LocalizedDescription("Enum_LoopChannels_1")]
 		Ch1 = 1,
-		[Description("Loop Channel 2")]
+		[LocalizedDescription("Enum_LoopChannels_2")]
 		Ch2 = 2,
-		[Description("Loop Channel 3")]
+		[LocalizedDescription("Enum_LoopChannels_3")]
 		Ch3 = 4,
-		[Description("Loop Channel 4")]
+		[LocalizedDescription("Enum_LoopChannels_4")]
 		Ch4 = 8,
-		[Description("Loop Channel 5")]
+		[LocalizedDescription("Enum_LoopChannels_5")]
 		Ch5 = 16,
-		[Description("Loop Channel 6")]
+		[LocalizedDescription("Enum_LoopChannels_6")]
 		Ch6 = 32,
-		[Description("Loop Channel 7")]
+		[LocalizedDescription("Enum_LoopChannels_7")]
 		Ch7 = 64,
-		[Description("Loop Channel 8")]
+		[LocalizedDescription("Enum_LoopChannels_8")]
 		Ch8 = 128
 	}
 
 	public enum MidiMessageType
 	{
-		[Description("Program Change Message")]
+		[LocalizedDescription("Enum_MidiMessageType_PCM")]
 		PCM = 1,
-		[Description("Control Change Message")]
+		[LocalizedDescription("Enum_MidiMessageType_CCM")]
 		CCM = 2
 	}
 
 	public enum MidiChannel
 	{
-		[Description("Midi Channel 1")]
+		[Description("Enum_MidiChannel_1")]
 		Ch1 = 1,
-		[Description("Midi Channel 2")]
+		[Description("Enum_MidiChannel_2")]
 		Ch2 = 2,
-		[Description("Midi Channel 3")]
+		[Description("Enum_MidiChannel_3")]
 		Ch3 = 3,
-		[Description("Midi Channel 4")]
+		[Description("Enum_MidiChannel_4")]
 		Ch4 = 4,
-		[Description("Midi Channel 5")]
+		[Description("Enum_MidiChannel_5")]
 		Ch5 = 5,
-		[Description("Midi Channel 6")]
+		[Description("Enum_MidiChannel_6")]
 		Ch6 = 6,
-		[Description("Midi Channel 7")]
+		[Description("Enum_MidiChannel_7")]
 		Ch7 = 7,
-		[Description("Midi Channel 8")]
+		[Description("Enum_MidiChannel_8")]
 		Ch8 = 8,
-		[Description("Midi Channel 9")]
+		[Description("Enum_MidiChannel_9")]
 		Ch9 = 9,
-		[Description("Midi Channel 10")]
+		[Description("Enum_MidiChannel_10")]
 		Ch10 = 10,
-		[Description("Midi Channel 11")]
+		[Description("Enum_MidiChannel_11")]
 		Ch11 = 11,
-		[Description("Midi Channel 12")]
+		[Description("Enum_MidiChannel_12")]
 		Ch12 = 12,
-		[Description("Midi Channel 13")]
+		[Description("Enum_MidiChannel_13")]
 		Ch13 = 13,
-		[Description("Midi Channel 14")]
+		[Description("Enum_MidiChannel_14")]
 		Ch14 = 14,
-		[Description("Midi Channel 15")]
+		[Description("Enum_MidiChannel_15")]
 		Ch15 = 15,
-		[Description("Midi Channel 16")]
+		[Description("Enum_MidiChannel_16")]
 		Ch16 = 16
 	}
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
@@ -174,5 +175,30 @@ public static class Enums
 		foreach (T e in enumList)
 			dictToReturn.Add(e, e.GetDescription());
 		return dictToReturn;
+	}
+
+	/// <summary>
+	/// The <see cref="LocalizedDescriptionAttribute"/> class.
+	/// </summary>	
+	private class LocalizedDescriptionAttribute : DescriptionAttribute
+	{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="LocalizedDescriptionAttribute"/> class.
+		/// </summary>
+		/// <param name="resKey">The resource key to look up.</param>
+		public LocalizedDescriptionAttribute(string resKey) : base(Localize(resKey))
+		{
+		}
+
+		/// <summary>
+		/// The <see cref="Localize(string)"/> method will try to find the localized string for the <paramref name="resKey"/>.
+		/// </summary>
+		/// <param name="resKey"></param>
+		/// <returns>The localized looked up string.</returns>
+		private static string Localize(string resKey)
+		{
+			string stringToReturn = Resources.ResourceManager.GetString(resKey, Resources.Culture)!;
+			return stringToReturn ?? "Not found.";
+		}
 	}
 }

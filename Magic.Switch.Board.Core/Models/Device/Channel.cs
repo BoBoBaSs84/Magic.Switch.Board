@@ -1,6 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Magic.Switch.Board.Core.Properties;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
+using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core.Models.Device;
 
@@ -45,7 +47,7 @@ public class Channel
 	/// <summary>
 	/// The <see cref="Id"/> property.
 	/// </summary>
-	[Required]
+	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Id))]
 	[XmlAttribute(AttributeName = nameof(Id))]
 	public Guid Id { get; set; }
@@ -53,8 +55,8 @@ public class Channel
 	/// <summary>
 	/// The <see cref="Name"/> property, can not be <see langword="null"/>.
 	/// </summary>
-	[Required(AllowEmptyStrings = false)]
-	[StringLength(50)]
+	[Required(AllowEmptyStrings = false, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
+	[StringLength(50, MinimumLength = 5, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_StringLength_Generic))]
 	[JsonPropertyName(nameof(Name))]
 	[XmlElement(ElementName = nameof(Name), IsNullable = false)]
 	public string Name { get; set; }
@@ -62,7 +64,7 @@ public class Channel
 	/// <summary>
 	/// The <see cref="Input"/> property, can not be <see langword="null"/>.
 	/// </summary>
-	[Required]
+	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Input))]
 	[XmlElement(ElementName = nameof(Input), IsNullable = false)]
 	public Input Input { get; set; }

@@ -1,6 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Magic.Switch.Board.Core.Properties;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
+using static Magic.Switch.Board.Core.Properties.Resources;
 using static Magic.Switch.Board.Core.Statics;
 
 namespace Magic.Switch.Board.Core.Models.Device;
@@ -61,7 +63,7 @@ public class Configuration
 	/// <summary>
 	/// The <see cref="Id"/> property.
 	/// </summary>
-	[Required]
+	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Id))]
 	[XmlAttribute(AttributeName = nameof(Id))]
 	public Guid Id { get; set; }
@@ -69,8 +71,8 @@ public class Configuration
 	/// <summary>
 	/// The <see cref="ApplicationVersion"/> property, can not be <see langword="null"/>.
 	/// </summary>
-	[Required(AllowEmptyStrings = false)]
-	[StringLength(25)]
+	[Required(AllowEmptyStrings = false, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
+	[StringLength(25, MinimumLength = 8, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_StringLength_Generic))]
 	[JsonPropertyName(nameof(ApplicationVersion))]
 	[XmlAttribute(AttributeName = nameof(ApplicationVersion))]
 	public string ApplicationVersion { get; set; }
@@ -78,8 +80,8 @@ public class Configuration
 	/// <summary>
 	/// <see cref="ConfigurationVersion"/> property, can not be <see langword="null"/>.
 	/// </summary>
-	[Required(AllowEmptyStrings = false)]
-	[StringLength(25)]
+	[Required(AllowEmptyStrings = false, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
+	[StringLength(25, MinimumLength = 8, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_StringLength_Generic))]
 	[JsonPropertyName(nameof(ConfigurationVersion))]
 	[XmlAttribute(AttributeName = nameof(ConfigurationVersion))]
 	public string ConfigurationVersion { get; set; }
@@ -87,7 +89,7 @@ public class Configuration
 	/// <summary>
 	/// The <see cref="Channels"/> property.
 	/// </summary>
-	[Required]
+	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Channels))]
 	[XmlArray(ElementName = nameof(Channels), IsNullable = true)]
 	[XmlArrayItem(ElementName = nameof(Channel), IsNullable = false)]

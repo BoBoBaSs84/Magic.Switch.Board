@@ -149,5 +149,86 @@ namespace Magic.Switch.Board.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Application version.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Application_Version {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Application_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Channels.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Channels {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Channels", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configuration version.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Configuration_Version {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Configuration_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Identifier.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Id {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Input {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Input", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loops.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Loops {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Loops", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Name {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Output {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Output", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Switches.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Switches {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Switches", resourceCulture);
+            }
+        }
     }
 }

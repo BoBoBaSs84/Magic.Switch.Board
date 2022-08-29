@@ -1,6 +1,9 @@
-﻿using System.Text.Json.Serialization;
+﻿using Magic.Switch.Board.Core.Properties;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 using static Magic.Switch.Board.Core.Enums;
+using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core.Models.Device;
 
@@ -24,6 +27,7 @@ public class Loops
 	/// <summary>
 	/// The <see cref="Channels"/> property.
 	/// </summary>
+	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Channels))]
 	[XmlAttribute(AttributeName = nameof(Channels))]
 	public LoopChannels Channels { get; set; }
