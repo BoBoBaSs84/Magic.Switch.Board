@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
+using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core.Helpers;
 
@@ -168,8 +169,7 @@ internal sealed class XmlHelper<T> where T : class
 	/// <param name="e"></param>
 	/// <exception cref="XmlException"></exception>
 	private void OnUnknownNode(object? sender, XmlNodeEventArgs e) =>
-		throw new XmlException($"Error during deserialisation. " +
-			$"Unkown node found, name: '{e.Name}' of type: '{e.NodeType}'");
+		throw new XmlException(string.Format(Culture, Error_Xml_Unknown_Node, e.Name, e.NodeType));
 
 	/// <summary>
 	/// The <see cref="OnUnknownElement(object?, XmlElementEventArgs)"/> method.
@@ -182,8 +182,7 @@ internal sealed class XmlHelper<T> where T : class
 	/// <param name="e"></param>
 	/// <exception cref="XmlException"></exception>
 	private void OnUnknownElement(object? sender, XmlElementEventArgs e) =>
-		throw new XmlException($"Error during deserialisation. " +
-			$"Unkown element found, name: '{e.Element.Name}' at line: {e.LineNumber} position: {e.LinePosition}");
+		throw new XmlException(string.Format(Culture, Error_Xml_Unknown_Element, e.Element.Name, e.LineNumber, e.LinePosition));
 
 	/// <summary>
 	/// The <see cref="OnUnknownAttribute(object?, XmlAttributeEventArgs)"/> method.
@@ -196,6 +195,5 @@ internal sealed class XmlHelper<T> where T : class
 	/// <param name="e"></param>
 	/// <exception cref="XmlException"></exception>
 	private void OnUnknownAttribute(object? sender, XmlAttributeEventArgs e) =>
-		throw new XmlException($"Error during deserialisation. " +
-			$"Unkown attribute found, name: '{e.Attr.Name}' at line: {e.LineNumber} position: {e.LinePosition}");
+		throw new XmlException(string.Format(Culture, Error_Xml_Unknown_Attribute, e.Attr.Name, e.LineNumber, e.LinePosition));
 }
