@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="File_Service_Error_Directory" xml:space="preserve">
+    <value>No se pudo encontrar el directorio.</value>
+  </data>
+  <data name="File_Service_Error_File" xml:space="preserve">
+    <value>No se pudo encontrar el archivo.</value>
+  </data>
   <data name="File_Service_File_Created" xml:space="preserve">
     <value>Se ha creado el archivo '{0}'.</value>
   </data>
@@ -126,19 +132,13 @@
   <data name="File_Service_File_Read" xml:space="preserve">
     <value>El archivo '{0}' ha sido cargado.</value>
   </data>
+  <data name="Model_Field_Range_Generic" xml:space="preserve">
+    <value>{0} debe estar en un rango entre {2} y {1}.</value>
+  </data>
   <data name="Model_Field_Required_Generic" xml:space="preserve">
     <value>{0} es un campo obligatorio.</value>
   </data>
   <data name="Model_Field_StringLength_Generic" xml:space="preserve">
     <value>{0} debe tener entre {2} y {1} caracteres.</value>
-  </data>
-  <data name="Model_Field_Range_Generic" xml:space="preserve">
-    <value>{0} debe estar en un rango entre {2} y {1}.</value>
-  </data>
-  <data name="File_Service_Error_Directory" xml:space="preserve">
-    <value>No se pudo encontrar el directorio.</value>
-  </data>
-  <data name="File_Service_Error_File" xml:space="preserve">
-    <value>No se pudo encontrar el archivo.</value>
   </data>
 </root>
