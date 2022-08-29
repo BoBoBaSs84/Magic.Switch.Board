@@ -26,9 +26,9 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 
 	public Guid Id { get => id; set => SetProperty(ref id, value); }
 
-	public string ApplicationVersion { get => applicationVersion; set => SetProperty(ref applicationVersion, value); }
+	public string ApplicationVersion { get => applicationVersion; set => SetPropertyAndValidate(ref applicationVersion, value); }
 
-	public string ConfigurationVersion { get => configurationVersion; set => SetProperty(ref configurationVersion, value); }
+	public string ConfigurationVersion { get => configurationVersion; set => SetPropertyAndValidate(ref configurationVersion, value); }
 
 	public ObservableCollection<ChannelVM> Channels { get => channels; set => SetProperty(ref channels, value); }
 

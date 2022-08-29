@@ -1,7 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Magic.Switch.Board.Core.Properties;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 using static Magic.Switch.Board.Core.Enums;
+using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core.Models.Device.Base;
 
@@ -38,6 +40,7 @@ public abstract class InputOutputBase
 	/// <summary>
 	/// The <see cref="MidiChannel"/> property
 	/// </summary>
+	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(MidiChannel))]
 	[XmlAttribute(AttributeName = nameof(MidiChannel))]
 	public MidiChannel MidiChannel { get; set; }
@@ -45,6 +48,7 @@ public abstract class InputOutputBase
 	/// <summary>
 	/// The <see cref="MessageType"/> property
 	/// </summary>
+	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(MessageType))]
 	[XmlAttribute(AttributeName = nameof(MessageType))]
 	public MidiMessageType MessageType { get; set; }
@@ -52,8 +56,8 @@ public abstract class InputOutputBase
 	/// <summary>
 	/// The <see cref="Number"/> property
 	/// </summary>
-	[Required]
-	[Range(0, 127)]
+	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
+	[Range(0, 127, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Range_Generic))]
 	[JsonPropertyName(nameof(Number))]
 	[XmlAttribute(AttributeName = nameof(Number))]
 	public int Number { get; set; }

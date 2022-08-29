@@ -3,8 +3,8 @@ using Magic.Switch.Board.Core.Models.Device;
 using Magic.Switch.Board.ViewModels.Base;
 using System.Windows;
 using System.Windows.Input;
-using static Magic.Switch.Board.Statics;
 using static Magic.Switch.Board.Core.Enums;
+using static Magic.Switch.Board.Statics;
 
 namespace Magic.Switch.Board.ViewModels;
 
@@ -69,7 +69,10 @@ public sealed class MainViewModel : ViewModelBase
 
 			if (configuration is null)
 				return;
+
 			configurationVM = new(configuration);
+
+			configurationVM.ApplicationVersion = "1.0";
 		}
 	}
 
