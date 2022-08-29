@@ -315,6 +315,7 @@ public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyCha
 	}
 	#endregion
 
+	#region INotifyPropertyChanging members
 	/// <inheritdoc/>
 	public event PropertyChangingEventHandler? PropertyChanging;
 
@@ -327,6 +328,7 @@ public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyCha
 	/// <param name="propertyName">The name of the property, can be <see langword="null"/>.</param>
 	protected virtual void OnPropertyChanging([CallerMemberName] string? propertyName = null) =>
 		PropertyChanging?.Invoke(this, new PropertyChangingEventArgs(propertyName));
+	#endregion
 }
 
 /// <summary>
