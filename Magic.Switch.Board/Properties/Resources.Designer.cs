@@ -205,11 +205,38 @@ namespace Magic.Switch.Board.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Message type.
+        /// </summary>
+        internal static string ViewModel_Display_Name_MessageType {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_MessageType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Midi channel.
+        /// </summary>
+        internal static string ViewModel_Display_Name_MidiChannel {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_MidiChannel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         internal static string ViewModel_Display_Name_Name {
             get {
                 return ResourceManager.GetString("ViewModel_Display_Name_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Number {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Number", resourceCulture);
             }
         }
         
