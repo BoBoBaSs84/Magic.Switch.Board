@@ -30,6 +30,8 @@ internal static class ServiceCollectionExtension
 	public static void ConfigureViewsModels(this IServiceCollection services)
 	{
 		services.AddTransient<MainViewModel>();
+		//services.AddTransient<ConfigurationVM>();
+		//services.AddTransient<ChannelVM>();
 	}
 
 	public static void ConfigureViews(this IServiceCollection services)

@@ -16,6 +16,9 @@
 			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
 				<RowDefinition Height="20px"/>
+				<RowDefinition Height="20px"/>
+				<RowDefinition Height="20px"/>
+				<RowDefinition Height="20px"/>
 				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>			
 			<Menu Grid.ColumnSpan="2">
@@ -67,6 +70,9 @@
 					</MenuItem>
 				</MenuItem>
 			</Menu>
+			<TextBlock d:DataContext="{d:DesignInstance Type=vm:ConfigurationVM}" Grid.Row="1" Grid.Column="0" Text="{Binding Id}" />
+			<TextBlock d:DataContext="{d:DesignInstance Type=vm:ConfigurationVM}" Grid.Row="2" Grid.Column="0" Text="{Binding ApplicationVersion}" />
+			<TextBlock d:DataContext="{d:DesignInstance Type=vm:ConfigurationVM}" Grid.Row="3" Grid.Column="0" Text="{Binding ConfigurationVersion}" />
 		</Grid>
 	</DockPanel>
 </Window>

@@ -14,6 +14,7 @@ public sealed class MainViewModel : ViewModelBase
 {
 	private readonly ILoggerService _logger;
 	private readonly IDeviceConfigService _deviceConfigService;
+	private ConfigurationVM? configurationVM;
 	private Configuration? configuration;
 
 	/// <summary>
@@ -21,7 +22,6 @@ public sealed class MainViewModel : ViewModelBase
 	/// </summary>
 	/// <param name="logger">The logger service.</param>
 	/// <param name="deviceConfigService">The device configuration service.</param>
-	/// <param name="applicationVersion">The application version.</param>
 	public MainViewModel(ILoggerService logger, IDeviceConfigService deviceConfigService)
 	{
 		_logger = logger;
@@ -39,7 +39,10 @@ public sealed class MainViewModel : ViewModelBase
 		_logger.Trace("Let's trace!");
 		configuration = _deviceConfigService.Create(AssemblyVersion);
 		if (configuration is not null)
+		{
+			configurationVM = new(configuration);
 			_logger.Information($"{nameof(Configuration)} created.");
+		}
 	}
 
 	private RelayCommand? cmdOpenFile;
