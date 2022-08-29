@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 using static Magic.Switch.Board.Core.Statics;
 
@@ -60,6 +61,7 @@ public class Configuration
 	/// <summary>
 	/// The <see cref="Id"/> property.
 	/// </summary>
+	[Required]
 	[JsonPropertyName(nameof(Id))]
 	[XmlAttribute(AttributeName = nameof(Id))]
 	public Guid Id { get; set; }
@@ -67,6 +69,8 @@ public class Configuration
 	/// <summary>
 	/// The <see cref="ApplicationVersion"/> property, can not be <see langword="null"/>.
 	/// </summary>
+	[Required(AllowEmptyStrings = false)]
+	[StringLength(25)]
 	[JsonPropertyName(nameof(ApplicationVersion))]
 	[XmlAttribute(AttributeName = nameof(ApplicationVersion))]
 	public string ApplicationVersion { get; set; }
@@ -74,6 +78,8 @@ public class Configuration
 	/// <summary>
 	/// <see cref="ConfigurationVersion"/> property, can not be <see langword="null"/>.
 	/// </summary>
+	[Required(AllowEmptyStrings = false)]
+	[StringLength(25)]
 	[JsonPropertyName(nameof(ConfigurationVersion))]
 	[XmlAttribute(AttributeName = nameof(ConfigurationVersion))]
 	public string ConfigurationVersion { get; set; }
@@ -81,6 +87,7 @@ public class Configuration
 	/// <summary>
 	/// The <see cref="Channels"/> property.
 	/// </summary>
+	[Required]
 	[JsonPropertyName(nameof(Channels))]
 	[XmlArray(ElementName = nameof(Channels), IsNullable = true)]
 	[XmlArrayItem(ElementName = nameof(Channel), IsNullable = false)]

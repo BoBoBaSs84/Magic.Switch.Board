@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 using static Magic.Switch.Board.Core.Enums;
 
@@ -51,6 +52,8 @@ public abstract class InputOutputBase
 	/// <summary>
 	/// The <see cref="Number"/> property
 	/// </summary>
+	[Required]
+	[Range(0, 127)]
 	[JsonPropertyName(nameof(Number))]
 	[XmlAttribute(AttributeName = nameof(Number))]
 	public int Number { get; set; }

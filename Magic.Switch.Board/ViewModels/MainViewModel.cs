@@ -4,6 +4,7 @@ using Magic.Switch.Board.ViewModels.Base;
 using System.Windows;
 using System.Windows.Input;
 using static Magic.Switch.Board.Statics;
+using static Magic.Switch.Board.Core.Enums;
 
 namespace Magic.Switch.Board.ViewModels;
 
@@ -36,12 +37,39 @@ public sealed class MainViewModel : ViewModelBase
 
 	private void PerformCmdNewFile()
 	{
-		_logger.Trace("Let's trace!");
+		_logger.Trace("Started.");
 		configuration = _deviceConfigService.Create(AssemblyVersion);
+		_logger.Information("New device configuration created.");
 		if (configuration is not null)
 		{
+			if (configuration.Channels.Count == 0)
+			{
+				configuration.Channels.Add(new Channel()
+				{
+					Id = Guid.NewGuid(),
+					Name = "This is the first test channel.",
+					Input = new Input(MidiChannel.Ch1, MidiMessageType.PCM, 1),
+					Output = new Output(MidiChannel.Ch2, MidiMessageType.CCM, 67),
+					Switches = new Switches(SwitchChannels.Ch1 | SwitchChannels.Ch3),
+					Loops = new Loops(LoopChannels.Ch5 | LoopChannels.Ch7)
+				});
+				configuration.Channels.Add(new Channel()
+				{
+					Id = Guid.NewGuid(),
+					Name = "This is the second test channel.",
+					Input = new Input(MidiChannel.Ch11, MidiMessageType.PCM, 3),
+					Output = new Output(MidiChannel.Ch2, MidiMessageType.CCM, 45),
+					Switches = new Switches(SwitchChannels.Ch3 | SwitchChannels.Ch2)
+				});
+			}
+			_deviceConfigService.Write($"D:\\", "Test.xml", configuration);
+			_logger.Information("New device configuration saved.");
+			configuration = _deviceConfigService.Read($"D:\\", "Test.xml");
+			_logger.Information("Device configuration loaded.");
+
+			if (configuration is null)
+				return;
 			configurationVM = new(configuration);
-			_logger.Information($"{nameof(Configuration)} created.");
 		}
 	}
 
@@ -53,7 +81,7 @@ public sealed class MainViewModel : ViewModelBase
 
 	private void PerformCmdOpenFile()
 	{
-		_logger.Trace("Let's trace!");
+		_logger.Trace("Started.");
 		MessageBox.Show("This is a message box message", "message box", MessageBoxButton.OK, MessageBoxImage.Information);
 	}
 
@@ -65,7 +93,7 @@ public sealed class MainViewModel : ViewModelBase
 
 	private void PerformCmdOpenSettings()
 	{
-		_logger.Trace("Let's trace!");
+		_logger.Trace("Started.");
 		MessageBox.Show("This is a message box message", "message box", MessageBoxButton.OK, MessageBoxImage.Information);
 	}
 

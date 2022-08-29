@@ -3,14 +3,12 @@
 namespace Magic.Switch.Board.ViewModels.Base;
 
 /// <summary>
-/// The <see cref="RelayCommand"/> class.
+/// The <see cref="RelayCommand"/> class. Implements the mebmer of the <see cref="ICommand"/> interface.
 /// </summary>
 /// <remarks>
-/// Implements the mebmer of the <see cref="ICommand"/> interface.
 /// A command whose sole purpose is to relay its functionality to other objects by invoking delegates.
 /// The default return value for the CanExecute method is <see langword="true"/>.
-/// RaiseCanExecuteChanged needs to be called whenever
-/// CanExecute is expected to return a different value.
+/// RaiseCanExecuteChanged needs to be called whenever CanExecute is expected to return a different value.
 /// </remarks>
 public class RelayCommand : ICommand
 {
@@ -21,7 +19,7 @@ public class RelayCommand : ICommand
 	public event EventHandler? CanExecuteChanged;
 
 	/// <summary>
-	/// Creates a new command that can always execute.
+	/// Initializes a new instance of the <see cref="RelayCommand"/> class that can always execute.
 	/// </summary>
 	/// <param name="execute">The execution logic.</param>
 	public RelayCommand(Action execute) : this(execute, null)
@@ -29,7 +27,7 @@ public class RelayCommand : ICommand
 	}
 
 	/// <summary>
-	/// Creates a new command.
+	/// Initializes a new instance of the <see cref="RelayCommand"/> class.
 	/// </summary>
 	/// <param name="execute">The execution logic.</param>
 	/// <param name="canExecute">The execution status logic.</param>

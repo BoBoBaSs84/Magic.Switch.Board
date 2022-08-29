@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
 namespace Magic.Switch.Board.Core.Models.Device;
@@ -10,7 +11,7 @@ namespace Magic.Switch.Board.Core.Models.Device;
 public class Channel
 {
 	/// <summary>
-	/// The empty <see cref="Channel"/> class constructor.
+	/// Initializes a new parameterless instance of the <see cref="Channel"/> class.
 	/// </summary>
 	public Channel()
 	{
@@ -23,7 +24,7 @@ public class Channel
 	}
 
 	/// <summary>
-	/// The standard <see cref="Channel"/> class constructor.
+	/// Initializes a new instance of the <see cref="Channel"/> class.
 	/// </summary>
 	/// <param name="name">The name of the channel configuration.</param>
 	/// <param name="input">The input parameters the channel listens to.</param>
@@ -44,6 +45,7 @@ public class Channel
 	/// <summary>
 	/// The <see cref="Id"/> property.
 	/// </summary>
+	[Required]
 	[JsonPropertyName(nameof(Id))]
 	[XmlAttribute(AttributeName = nameof(Id))]
 	public Guid Id { get; set; }
@@ -51,6 +53,8 @@ public class Channel
 	/// <summary>
 	/// The <see cref="Name"/> property, can not be <see langword="null"/>.
 	/// </summary>
+	[Required(AllowEmptyStrings = false)]
+	[StringLength(50)]
 	[JsonPropertyName(nameof(Name))]
 	[XmlElement(ElementName = nameof(Name), IsNullable = false)]
 	public string Name { get; set; }
@@ -58,6 +62,7 @@ public class Channel
 	/// <summary>
 	/// The <see cref="Input"/> property, can not be <see langword="null"/>.
 	/// </summary>
+	[Required]
 	[JsonPropertyName(nameof(Input))]
 	[XmlElement(ElementName = nameof(Input), IsNullable = false)]
 	public Input Input { get; set; }
