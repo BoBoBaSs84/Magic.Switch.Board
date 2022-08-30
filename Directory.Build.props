@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <Platforms>AnyCPU;x64;x86;arm64</Platforms>
+    <Platforms>AnyCPU;x64;x86</Platforms>
     <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
