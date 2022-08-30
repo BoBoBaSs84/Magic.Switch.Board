@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using static Magic.Switch.Board.Properties.Resources;
 
-namespace Magic.Switch.Board.ViewModels;
+namespace Magic.Switch.Board.ViewModels.Device;
 
 /// <summary>
 /// The <see cref="ConfigurationVM"/> class is the view model class for the model class <see cref="Configuration"/>.
@@ -29,15 +29,15 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 
 	/// <summary>The <see cref="Id"/> property.</summary>
 	[Display(Name = nameof(ViewModel_Display_Name_Id), ResourceType = typeof(Resources))]
-	public Guid Id { get => id; set => SetProperty(ref id, value); }
+	public Guid Id { get => id; private set => SetProperty(ref id, value); }
 
 	/// <summary>The <see cref="ApplicationVersion"/> property.</summary>
 	[Display(Name = nameof(ViewModel_Display_Name_Application_Version), ResourceType = typeof(Resources))]
-	public string ApplicationVersion { get => applicationVersion; set => SetPropertyAndValidate(ref applicationVersion, value); }
+	public string ApplicationVersion { get => applicationVersion; set => SetProperty(ref applicationVersion, value); }
 
 	/// <summary>The <see cref="ConfigurationVersion"/> property.</summary>
 	[Display(Name = nameof(ViewModel_Display_Name_Configuration_Version), ResourceType = typeof(Resources))]
-	public string ConfigurationVersion { get => configurationVersion; set => SetPropertyAndValidate(ref configurationVersion, value); }
+	public string ConfigurationVersion { get => configurationVersion; set => SetProperty(ref configurationVersion, value); }
 
 	/// <summary>The <see cref="Channels"/> property.</summary>
 	[Display(Name = nameof(ViewModel_Display_Name_Channels), ResourceType = typeof(Resources))]

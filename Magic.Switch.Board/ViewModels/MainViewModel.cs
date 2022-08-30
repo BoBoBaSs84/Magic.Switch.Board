@@ -1,6 +1,7 @@
 ﻿using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.Core.Models.Device;
 using Magic.Switch.Board.ViewModels.Base;
+using Magic.Switch.Board.ViewModels.Device;
 using System.Windows;
 using System.Windows.Input;
 using static Magic.Switch.Board.Core.Enums;
