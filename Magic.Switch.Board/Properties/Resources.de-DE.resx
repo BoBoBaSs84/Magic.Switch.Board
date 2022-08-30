@@ -120,7 +120,37 @@
   <data name="ViewModel_Display_Name_Application_Version" xml:space="preserve">
     <value>Version der Anwendung</value>
   </data>
+  <data name="ViewModel_Display_Name_Channels" xml:space="preserve">
+    <value>Kanäle</value>
+  </data>
   <data name="ViewModel_Display_Name_Configuration_Version" xml:space="preserve">
     <value>Version der Konfiguration</value>
+  </data>
+  <data name="ViewModel_Display_Name_Id" xml:space="preserve">
+    <value>Bezeichner</value>
+  </data>
+  <data name="ViewModel_Display_Name_Input" xml:space="preserve">
+    <value>Eingabe</value>
+  </data>
+  <data name="ViewModel_Display_Name_Loops" xml:space="preserve">
+    <value>Schlingen</value>
+  </data>
+  <data name="ViewModel_Display_Name_MessageType" xml:space="preserve">
+    <value>Art der Nachricht</value>
+  </data>
+  <data name="ViewModel_Display_Name_MidiChannel" xml:space="preserve">
+    <value>Midi-Kanal</value>
+  </data>
+  <data name="ViewModel_Display_Name_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="ViewModel_Display_Name_Number" xml:space="preserve">
+    <value>Zahl</value>
+  </data>
+  <data name="ViewModel_Display_Name_Output" xml:space="preserve">
+    <value>Ausgabe</value>
+  </data>
+  <data name="ViewModel_Display_Name_Switches" xml:space="preserve">
+    <value>Schalter</value>
   </data>
 </root>

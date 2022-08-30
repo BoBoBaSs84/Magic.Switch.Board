@@ -118,159 +118,159 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Enum_LogLevel_Critical_Description" xml:space="preserve">
-    <value>Registri che descrivono un'applicazione o un arresto anomalo del sistema irreversibile o un errore irreversibile che richiede attenzione immediata.</value>
+    <value>Αρχεία καταγραφής που περιγράφουν μια μη ανακτήσιμη εφαρμογή ή κατάρρευση του συστήματος ή μια καταστροφική αποτυχία που απαιτεί άμεση προσοχή.</value>
   </data>
   <data name="Enum_LogLevel_Debug_Description" xml:space="preserve">
-    <value>Registri utilizzati per l'indagine interattiva durante lo sviluppo. Questi registri devono contenere principalmente informazioni utili per il debug e non hanno alcun valore a lungo termine.</value>
+    <value>Αρχεία καταγραφής που χρησιμοποιούνται για διαδραστική έρευνα κατά τη διάρκεια της ανάπτυξης. Αυτά τα αρχεία καταγραφής θα πρέπει να περιέχουν κυρίως πληροφορίες χρήσιμες για τον εντοπισμό σφαλμάτων και να μην έχουν μακροπρόθεσμη αξία.</value>
   </data>
   <data name="Enum_LogLevel_Error_Description" xml:space="preserve">
-    <value>Log che evidenziano quando il flusso corrente di esecuzione viene interrotto a causa di un errore. Questi dovrebbero indicare un errore nell'attività corrente, non un errore a livello di applicazione.</value>
+    <value>Αρχεία καταγραφής που επισημαίνουν πότε διακόπτεται η τρέχουσα ροή εκτέλεσης λόγω αποτυχίας. Αυτά θα πρέπει να υποδεικνύουν αποτυχία στην τρέχουσα δραστηριότητα, όχι αποτυχία σε ολόκληρη την εφαρμογή.</value>
   </data>
   <data name="Enum_LogLevel_Information_Description" xml:space="preserve">
-    <value>Registri che tengono traccia del flusso generale dell'applicazione. Questi registri dovrebbero avere un valore a lungo termine.</value>
+    <value>Αρχεία καταγραφής που παρακολουθούν τη γενική ροή της εφαρμογής. Αυτά τα αρχεία καταγραφής πρέπει να έχουν μακροπρόθεσμη αξία.</value>
   </data>
   <data name="Enum_LogLevel_None_Description" xml:space="preserve">
-    <value>Non utilizzato per la scrittura di messaggi di registro. Specifica che una categoria di registrazione non deve scrivere alcun messaggio.</value>
+    <value>Δεν χρησιμοποιείται για τη σύνταξη μηνυμάτων καταγραφής. Καθορίζει ότι μια κατηγορία καταγραφής δεν πρέπει να γράφει μηνύματα.</value>
   </data>
   <data name="Enum_LogLevel_Trace_Description" xml:space="preserve">
-    <value>Registri che contengono i messaggi più dettagliati. Questi messaggi possono contenere dati sensibili dell'applicazione. Questi messaggi sono disabilitati per impostazione predefinita e non devono mai essere abilitati in un ambiente di produzione.</value>
+    <value>Αρχεία καταγραφής που περιέχουν τα πιο λεπτομερή μηνύματα. Αυτά τα μηνύματα ενδέχεται να περιέχουν ευαίσθητα δεδομένα εφαρμογών. Αυτά τα μηνύματα είναι απενεργοποιημένα από προεπιλογή και δεν πρέπει ποτέ να ενεργοποιούνται σε περιβάλλον παραγωγής.</value>
   </data>
   <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
-    <value>Log che evidenziano un evento anomalo o imprevisto nel flusso dell'applicazione, ma che non causano altrimenti l'arresto dell'esecuzione dell'applicazione.</value>
+    <value>Αρχεία καταγραφής που επισημαίνουν ένα μη φυσιολογικό ή μη αναμενόμενο συμβάν στη ροή της εφαρμογής, αλλά δεν προκαλούν τη διακοπή της εκτέλεσης της εφαρμογής.</value>
   </data>
   <data name="Enum_LoopChannels_1" xml:space="preserve">
-    <value>Loop Canale 1</value>
+    <value>Κανάλι βρόχου 1</value>
   </data>
   <data name="Enum_LoopChannels_2" xml:space="preserve">
-    <value>Loop Canale 2</value>
+    <value>Κανάλι βρόχου 2</value>
   </data>
   <data name="Enum_LoopChannels_3" xml:space="preserve">
-    <value>Loop Canale 3</value>
+    <value>Κανάλι βρόχου 3</value>
   </data>
   <data name="Enum_LoopChannels_4" xml:space="preserve">
-    <value>Loop Canale 4</value>
+    <value>Κανάλι βρόχου 4</value>
   </data>
   <data name="Enum_LoopChannels_5" xml:space="preserve">
-    <value>Loop Canale 5</value>
+    <value>Κανάλι βρόχου 5</value>
   </data>
   <data name="Enum_LoopChannels_6" xml:space="preserve">
-    <value>Loop Canale 6</value>
+    <value>Κανάλι βρόχου 6</value>
   </data>
   <data name="Enum_LoopChannels_7" xml:space="preserve">
-    <value>Loop Canale 7</value>
+    <value>Κανάλι βρόχου 7</value>
   </data>
   <data name="Enum_LoopChannels_8" xml:space="preserve">
-    <value>Loop Canale 8</value>
+    <value>Κανάλι βρόχου 8</value>
   </data>
   <data name="Enum_MidiChannel_1" xml:space="preserve">
-    <value>Midi Canale 1</value>
+    <value>Κανάλι Μίντι 1</value>
   </data>
   <data name="Enum_MidiChannel_10" xml:space="preserve">
-    <value>Midi Canale 10</value>
+    <value>Κανάλι Μίντι 10</value>
   </data>
   <data name="Enum_MidiChannel_11" xml:space="preserve">
-    <value>Canale Midi 11</value>
+    <value>Κανάλι Μίντι 11</value>
   </data>
   <data name="Enum_MidiChannel_12" xml:space="preserve">
-    <value>Midi Canale 12</value>
+    <value>Κανάλι Μίντι 12</value>
   </data>
   <data name="Enum_MidiChannel_13" xml:space="preserve">
-    <value>Canale Midi 13</value>
+    <value>Κανάλι Μίντι 13</value>
   </data>
   <data name="Enum_MidiChannel_14" xml:space="preserve">
-    <value>Midi Canale 14</value>
+    <value>Κανάλι Μίντι 14</value>
   </data>
   <data name="Enum_MidiChannel_15" xml:space="preserve">
-    <value>Midi Canale 15</value>
+    <value>Κανάλι Μίντι 15</value>
   </data>
   <data name="Enum_MidiChannel_16" xml:space="preserve">
-    <value>Canale Midi 16</value>
+    <value>Κανάλι Μίντι 16</value>
   </data>
   <data name="Enum_MidiChannel_2" xml:space="preserve">
-    <value>Midi Canale 2</value>
+    <value>Κανάλι Μίντι 2</value>
   </data>
   <data name="Enum_MidiChannel_3" xml:space="preserve">
-    <value>Midi Canale 3</value>
+    <value>Κανάλι Μίντι 3</value>
   </data>
   <data name="Enum_MidiChannel_4" xml:space="preserve">
-    <value>Midi Canale 4</value>
+    <value>Κανάλι Μίντι 4</value>
   </data>
   <data name="Enum_MidiChannel_5" xml:space="preserve">
-    <value>Midi Canale 5</value>
+    <value>Κανάλι Μίντι 5</value>
   </data>
   <data name="Enum_MidiChannel_6" xml:space="preserve">
-    <value>Midi Canale 6</value>
+    <value>Κανάλι Μίντι 6</value>
   </data>
   <data name="Enum_MidiChannel_7" xml:space="preserve">
-    <value>Midi Canale 7</value>
+    <value>Κανάλι Μίντι 7</value>
   </data>
   <data name="Enum_MidiChannel_8" xml:space="preserve">
-    <value>Midi Canale 8</value>
+    <value>Κανάλι Μίντι 8</value>
   </data>
   <data name="Enum_MidiChannel_9" xml:space="preserve">
-    <value>Midi Canale 9</value>
+    <value>Κανάλι Μίντι 9</value>
   </data>
   <data name="Enum_MidiMessageType_CCM" xml:space="preserve">
-    <value>Messaggio di modifica del controllo</value>
+    <value>Μήνυμα αλλαγής ελέγχου</value>
   </data>
   <data name="Enum_MidiMessageType_PCM" xml:space="preserve">
-    <value>Messaggio di modifica del programma</value>
+    <value>Μήνυμα αλλαγής προγράμματος</value>
   </data>
   <data name="Enum_SwitchChannels_1" xml:space="preserve">
-    <value>Cambia canale 1</value>
+    <value>Εναλλαγή καναλιού 1</value>
   </data>
   <data name="Enum_SwitchChannels_2" xml:space="preserve">
-    <value>Cambia canale 2</value>
+    <value>Εναλλαγή καναλιού 2</value>
   </data>
   <data name="Enum_SwitchChannels_3" xml:space="preserve">
-    <value>Cambia canale 3</value>
+    <value>Εναλλαγή καναλιού 3</value>
   </data>
   <data name="Enum_SwitchChannels_4" xml:space="preserve">
-    <value>Cambia canale 4</value>
+    <value>Εναλλαγή καναλιού 4</value>
   </data>
   <data name="Enum_SwitchChannels_5" xml:space="preserve">
-    <value>Cambia canale 5</value>
+    <value>Εναλλαγή καναλιού 5</value>
   </data>
   <data name="Enum_SwitchChannels_6" xml:space="preserve">
-    <value>Cambia canale 6</value>
+    <value>Εναλλαγή καναλιού 6</value>
   </data>
   <data name="Enum_SwitchChannels_7" xml:space="preserve">
-    <value>Cambia canale 7</value>
+    <value>Εναλλαγή καναλιού 7</value>
   </data>
   <data name="Enum_SwitchChannels_8" xml:space="preserve">
-    <value>Cambia canale 8</value>
+    <value>Εναλλαγή καναλιού 8</value>
   </data>
   <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">
-    <value>Errore durante la deserializzazione. Attributo Sconosciuto trovato. Nome: '{0}' in linea: {1} e posizione: {2}.</value>
+    <value>Σφάλμα κατά την αποσειροποίηση. Βρέθηκε άγνωστο χαρακτηριστικό. Όνομα: «{0}» στη γραμμή: {1} και θέση: {2}.</value>
   </data>
   <data name="Error_Xml_Unknown_Element" xml:space="preserve">
-    <value>Errore durante la deserializzazione. Elemento sconosciuto trovato. Nome: '{0}' in linea: {1} e posizione: {2}.</value>
+    <value>Σφάλμα κατά την αποσειροποίηση. Βρέθηκε άγνωστο στοιχείο. Όνομα: «{0}» στη γραμμή: {1} και θέση: {2}.</value>
   </data>
   <data name="Error_Xml_Unknown_Node" xml:space="preserve">
-    <value>Errore durante la deserializzazione. Nodo sconosciuto trovato. Nome: '{0}' del tipo: '{1}'</value>
+    <value>Σφάλμα κατά την αποσειροποίηση. Βρέθηκε άγνωστος κόμβος. Ονομασία: «{0}» τύπου: «{1}»</value>
   </data>
   <data name="File_Service_Error_Directory" xml:space="preserve">
-    <value>La directory non è stata trovata.</value>
+    <value>Δεν ήταν δυνατή η εύρεση του καταλόγου.</value>
   </data>
   <data name="File_Service_Error_File" xml:space="preserve">
-    <value>Il file non è stato trovato.</value>
+    <value>Δεν ήταν δυνατή η εύρεση του αρχείου.</value>
   </data>
   <data name="File_Service_File_Created" xml:space="preserve">
-    <value>Il file '{0}' è stato creato.</value>
+    <value>Δημιουργήθηκε το αρχείο '{0}'.</value>
   </data>
   <data name="File_Service_File_Deleted" xml:space="preserve">
-    <value>Il file "{0}" è stato eliminato.</value>
+    <value>Το αρχείο «{0}» έχει διαγραφεί.</value>
   </data>
   <data name="File_Service_File_Read" xml:space="preserve">
-    <value>Il file '{0}' è stato caricato.</value>
+    <value>Το αρχείο '{0}' έχει φορτωθεί.</value>
   </data>
   <data name="Model_Field_Range_Generic" xml:space="preserve">
-    <value>{0} deve essere compreso in un intervallo tra {2} e {1}.</value>
+    <value>{0} πρέπει να κυμαίνεται μεταξύ {2} και {1}.</value>
   </data>
   <data name="Model_Field_Required_Generic" xml:space="preserve">
-    <value>{0} è un campo obbligatorio.</value>
+    <value>{0} είναι υποχρεωτικό πεδίο.</value>
   </data>
   <data name="Model_Field_StringLength_Generic" xml:space="preserve">
-    <value>{0} deve avere una lunghezza compresa tra {2} e {1} caratteri.</value>
+    <value>{0} πρέπει να είναι μεταξύ {2} και {1} χαρακτήρων.</value>
   </data>
 </root>

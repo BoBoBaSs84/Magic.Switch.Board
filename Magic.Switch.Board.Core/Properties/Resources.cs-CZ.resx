@@ -118,159 +118,159 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Enum_LogLevel_Critical_Description" xml:space="preserve">
-    <value>Registri che descrivono un'applicazione o un arresto anomalo del sistema irreversibile o un errore irreversibile che richiede attenzione immediata.</value>
+    <value>Protokoly, které popisují neopravitelnou chybu aplikace nebo systému nebo závažné selhání, které vyžaduje okamžitou pozornost.</value>
   </data>
   <data name="Enum_LogLevel_Debug_Description" xml:space="preserve">
-    <value>Registri utilizzati per l'indagine interattiva durante lo sviluppo. Questi registri devono contenere principalmente informazioni utili per il debug e non hanno alcun valore a lungo termine.</value>
+    <value>Protokoly, které se používají pro interaktivní šetření během vývoje. Tyto protokoly by měly primárně obsahovat informace užitečné pro ladění a neměly by mít žádnou dlouhodobou hodnotu.</value>
   </data>
   <data name="Enum_LogLevel_Error_Description" xml:space="preserve">
-    <value>Log che evidenziano quando il flusso corrente di esecuzione viene interrotto a causa di un errore. Questi dovrebbero indicare un errore nell'attività corrente, non un errore a livello di applicazione.</value>
+    <value>Protokoly, které zvýrazní, když je aktuální tok provádění zastaven z důvodu selhání. Ty by měly indikovat selhání v aktuální aktivitě, nikoli selhání celé aplikace.</value>
   </data>
   <data name="Enum_LogLevel_Information_Description" xml:space="preserve">
-    <value>Registri che tengono traccia del flusso generale dell'applicazione. Questi registri dovrebbero avere un valore a lungo termine.</value>
+    <value>Protokoly, které sledují obecný tok aplikace. Tyto protokoly by měly mít dlouhodobou hodnotu.</value>
   </data>
   <data name="Enum_LogLevel_None_Description" xml:space="preserve">
-    <value>Non utilizzato per la scrittura di messaggi di registro. Specifica che una categoria di registrazione non deve scrivere alcun messaggio.</value>
+    <value>Nepoužívá se pro psaní zpráv protokolu. Určuje, že kategorie protokolování by neměla psát žádné zprávy.</value>
   </data>
   <data name="Enum_LogLevel_Trace_Description" xml:space="preserve">
-    <value>Registri che contengono i messaggi più dettagliati. Questi messaggi possono contenere dati sensibili dell'applicazione. Questi messaggi sono disabilitati per impostazione predefinita e non devono mai essere abilitati in un ambiente di produzione.</value>
+    <value>Protokoly, které obsahují nejpodrobnější zprávy. Tyto zprávy mohou obsahovat citlivá data aplikace. Tyto zprávy jsou ve výchozím nastavení zakázány a v provozním prostředí by nikdy neměly být povoleny.</value>
   </data>
   <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
-    <value>Log che evidenziano un evento anomalo o imprevisto nel flusso dell'applicazione, ma che non causano altrimenti l'arresto dell'esecuzione dell'applicazione.</value>
+    <value>Protokoly, které zvýrazňují neobvyklou nebo neočekávanou událost v toku aplikace, ale jinak nezpůsobují zastavení provádění aplikace.</value>
   </data>
   <data name="Enum_LoopChannels_1" xml:space="preserve">
-    <value>Loop Canale 1</value>
+    <value>Smyčkový kanál 1</value>
   </data>
   <data name="Enum_LoopChannels_2" xml:space="preserve">
-    <value>Loop Canale 2</value>
+    <value>Smyčkový kanál 2</value>
   </data>
   <data name="Enum_LoopChannels_3" xml:space="preserve">
-    <value>Loop Canale 3</value>
+    <value>Smyčkový kanál 3</value>
   </data>
   <data name="Enum_LoopChannels_4" xml:space="preserve">
-    <value>Loop Canale 4</value>
+    <value>Smyčkový kanál 4</value>
   </data>
   <data name="Enum_LoopChannels_5" xml:space="preserve">
-    <value>Loop Canale 5</value>
+    <value>Smyčkový kanál 5</value>
   </data>
   <data name="Enum_LoopChannels_6" xml:space="preserve">
-    <value>Loop Canale 6</value>
+    <value>Smyčkový kanál 6</value>
   </data>
   <data name="Enum_LoopChannels_7" xml:space="preserve">
-    <value>Loop Canale 7</value>
+    <value>Smyčkový kanál 7</value>
   </data>
   <data name="Enum_LoopChannels_8" xml:space="preserve">
-    <value>Loop Canale 8</value>
+    <value>Smyčkový kanál 8</value>
   </data>
   <data name="Enum_MidiChannel_1" xml:space="preserve">
-    <value>Midi Canale 1</value>
+    <value>Midi kanál 1</value>
   </data>
   <data name="Enum_MidiChannel_10" xml:space="preserve">
-    <value>Midi Canale 10</value>
+    <value>Midi kanál 10</value>
   </data>
   <data name="Enum_MidiChannel_11" xml:space="preserve">
-    <value>Canale Midi 11</value>
+    <value>Midi kanál 11</value>
   </data>
   <data name="Enum_MidiChannel_12" xml:space="preserve">
-    <value>Midi Canale 12</value>
+    <value>Midi kanál 12</value>
   </data>
   <data name="Enum_MidiChannel_13" xml:space="preserve">
-    <value>Canale Midi 13</value>
+    <value>Midi kanál 13</value>
   </data>
   <data name="Enum_MidiChannel_14" xml:space="preserve">
-    <value>Midi Canale 14</value>
+    <value>Midi kanál 14</value>
   </data>
   <data name="Enum_MidiChannel_15" xml:space="preserve">
-    <value>Midi Canale 15</value>
+    <value>Midi kanál 15</value>
   </data>
   <data name="Enum_MidiChannel_16" xml:space="preserve">
-    <value>Canale Midi 16</value>
+    <value>Midi kanál 16</value>
   </data>
   <data name="Enum_MidiChannel_2" xml:space="preserve">
-    <value>Midi Canale 2</value>
+    <value>Midi kanál 2</value>
   </data>
   <data name="Enum_MidiChannel_3" xml:space="preserve">
-    <value>Midi Canale 3</value>
+    <value>Midi kanál 3</value>
   </data>
   <data name="Enum_MidiChannel_4" xml:space="preserve">
-    <value>Midi Canale 4</value>
+    <value>Midi kanál 4</value>
   </data>
   <data name="Enum_MidiChannel_5" xml:space="preserve">
-    <value>Midi Canale 5</value>
+    <value>Midi kanál 5</value>
   </data>
   <data name="Enum_MidiChannel_6" xml:space="preserve">
-    <value>Midi Canale 6</value>
+    <value>Midi kanál 6</value>
   </data>
   <data name="Enum_MidiChannel_7" xml:space="preserve">
-    <value>Midi Canale 7</value>
+    <value>Midi kanál 7</value>
   </data>
   <data name="Enum_MidiChannel_8" xml:space="preserve">
-    <value>Midi Canale 8</value>
+    <value>Midi kanál 8</value>
   </data>
   <data name="Enum_MidiChannel_9" xml:space="preserve">
-    <value>Midi Canale 9</value>
+    <value>Midi kanál 9</value>
   </data>
   <data name="Enum_MidiMessageType_CCM" xml:space="preserve">
-    <value>Messaggio di modifica del controllo</value>
+    <value>Zpráva o změně ovládacího prvku</value>
   </data>
   <data name="Enum_MidiMessageType_PCM" xml:space="preserve">
-    <value>Messaggio di modifica del programma</value>
+    <value>Zpráva o změně programu</value>
   </data>
   <data name="Enum_SwitchChannels_1" xml:space="preserve">
-    <value>Cambia canale 1</value>
+    <value>Přepnout kanál 1</value>
   </data>
   <data name="Enum_SwitchChannels_2" xml:space="preserve">
-    <value>Cambia canale 2</value>
+    <value>Přepnout kanál 2</value>
   </data>
   <data name="Enum_SwitchChannels_3" xml:space="preserve">
-    <value>Cambia canale 3</value>
+    <value>Přepnout kanál 3</value>
   </data>
   <data name="Enum_SwitchChannels_4" xml:space="preserve">
-    <value>Cambia canale 4</value>
+    <value>Spínací kanál 4</value>
   </data>
   <data name="Enum_SwitchChannels_5" xml:space="preserve">
-    <value>Cambia canale 5</value>
+    <value>Přepněte kanál 5</value>
   </data>
   <data name="Enum_SwitchChannels_6" xml:space="preserve">
-    <value>Cambia canale 6</value>
+    <value>Přepnout kanál 6</value>
   </data>
   <data name="Enum_SwitchChannels_7" xml:space="preserve">
-    <value>Cambia canale 7</value>
+    <value>Přepínací kanál 7</value>
   </data>
   <data name="Enum_SwitchChannels_8" xml:space="preserve">
-    <value>Cambia canale 8</value>
+    <value>Přepnout kanál 8</value>
   </data>
   <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">
-    <value>Errore durante la deserializzazione. Attributo Sconosciuto trovato. Nome: '{0}' in linea: {1} e posizione: {2}.</value>
+    <value>Chyba během deserializace. Byl nalezen neznámý atribut. Jméno: "{0}" na řádku: {1} a pozice: {2}.</value>
   </data>
   <data name="Error_Xml_Unknown_Element" xml:space="preserve">
-    <value>Errore durante la deserializzazione. Elemento sconosciuto trovato. Nome: '{0}' in linea: {1} e posizione: {2}.</value>
+    <value>Chyba během deserializace. Nalezen neznámý prvek. Jméno: "{0}" na řádku: {1} a pozice: {2}.</value>
   </data>
   <data name="Error_Xml_Unknown_Node" xml:space="preserve">
-    <value>Errore durante la deserializzazione. Nodo sconosciuto trovato. Nome: '{0}' del tipo: '{1}'</value>
+    <value>Chyba během deserializace. Byl nalezen neznámý uzel. Název: "{0}" typu "{1}"</value>
   </data>
   <data name="File_Service_Error_Directory" xml:space="preserve">
-    <value>La directory non è stata trovata.</value>
+    <value>Adresář nebyl nalezen.</value>
   </data>
   <data name="File_Service_Error_File" xml:space="preserve">
-    <value>Il file non è stato trovato.</value>
+    <value>Soubor nebyl nalezen.</value>
   </data>
   <data name="File_Service_File_Created" xml:space="preserve">
-    <value>Il file '{0}' è stato creato.</value>
+    <value>Byl vytvořen soubor '{0}'.</value>
   </data>
   <data name="File_Service_File_Deleted" xml:space="preserve">
-    <value>Il file "{0}" è stato eliminato.</value>
+    <value>Soubor "{0}" byl odstraněn.</value>
   </data>
   <data name="File_Service_File_Read" xml:space="preserve">
-    <value>Il file '{0}' è stato caricato.</value>
+    <value>Soubor "{0}" byl načten.</value>
   </data>
   <data name="Model_Field_Range_Generic" xml:space="preserve">
-    <value>{0} deve essere compreso in un intervallo tra {2} e {1}.</value>
+    <value>{0} musí být v rozmezí od {2} do {1}.</value>
   </data>
   <data name="Model_Field_Required_Generic" xml:space="preserve">
-    <value>{0} è un campo obbligatorio.</value>
+    <value>{0} je povinné pole.</value>
   </data>
   <data name="Model_Field_StringLength_Generic" xml:space="preserve">
-    <value>{0} deve avere una lunghezza compresa tra {2} e {1} caratteri.</value>
+    <value>{0} musí být dlouhý mezi {2} a {1} znaky.</value>
   </data>
 </root>
