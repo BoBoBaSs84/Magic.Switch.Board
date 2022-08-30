@@ -21,7 +21,7 @@ public class SwitchesVM : ViewModelBase<Switches>
 	public SwitchesVM(Switches model) : base(model)
 	{
 		Initialize();
-		PropertyChanged += OnViewModelPropertyChanged;
+		PropertyChanged += OnPropertyChangedPropagate;
 	}
 
 	/// <summary>The <see cref="Channels"/> property.</summary>

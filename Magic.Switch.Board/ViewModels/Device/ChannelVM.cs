@@ -25,7 +25,7 @@ public sealed class ChannelVM : ViewModelBase<Channel>
 	public ChannelVM(Channel channel) : base(channel)
 	{
 		Initialize();
-		PropertyChanged += OnViewModelPropertyChanged;
+		PropertyChanged += OnPropertyChangedPropagate;
 	}
 
 	/// <summary>The <see cref="Id"/> property.</summary>

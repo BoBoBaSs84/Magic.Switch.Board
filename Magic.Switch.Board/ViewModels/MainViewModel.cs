@@ -128,4 +128,34 @@ public sealed class MainViewModel : ViewModelBase
 	private void PerformCmdShowAbout()
 	{
 	}
+
+	private RelayCommand? cmdCheckUpdates;
+	/// <summary>
+	/// 
+	/// </summary>
+	public ICommand CmdCheckUpdates => cmdCheckUpdates ??= new RelayCommand(PerformCmdCheckUpdates);
+
+	private void PerformCmdCheckUpdates()
+	{
+	}
+
+	private RelayCommand? cmdWhatsNew;
+	/// <summary>
+	/// 
+	/// </summary>
+	public ICommand CmdWhatsNew => cmdWhatsNew ??= new RelayCommand(PerformCmdWhatsNew);
+
+	private void PerformCmdWhatsNew()
+	{
+	}
+
+	private RelayCommand? cmdHelpCenter;
+	/// <summary>
+	/// 
+	/// </summary>
+	public ICommand CmdHelpCenter => cmdHelpCenter ??= new RelayCommand(PerformCmdHelpCenter);
+
+	private void PerformCmdHelpCenter()
+	{
+	}
 }

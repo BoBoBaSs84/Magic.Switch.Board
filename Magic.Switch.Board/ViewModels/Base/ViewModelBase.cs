@@ -119,12 +119,15 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	}
 
 	/// <summary>
-	/// The <see cref="OnViewModelPropertyChanged(object?, PropertyChangedEventArgs)"/> method
+	/// The <see cref="OnPropertyChangedPropagate(object?, PropertyChangedEventArgs)"/> method
 	/// propagates the changes in the view model through to the domain model.
 	/// </summary>
-	/// <param name="sender"></param>
+	/// <remarks>
+	/// The method can only / should be called from the derived class.
+	/// </remarks>
+	/// <param name="sender">The sender will/should be <see cref="ViewModelBase{TModel}"/>.</param>
 	/// <param name="e"></param>
-	public void OnViewModelPropertyChanged(object? sender, PropertyChangedEventArgs e)
+	protected virtual void OnPropertyChangedPropagate(object? sender, PropertyChangedEventArgs e)
 	{
 		if (sender is not ViewModelBase<TModel> modelBase)
 			return;
@@ -213,7 +216,7 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	/// <typeparam name="T"></typeparam>
 	/// <param name="value">The value of the property.</param>
 	/// <param name="propertyName">The property name.</param>
-	public void Validate<T>(T value, string propertyName)
+	protected void Validate<T>(T value, string propertyName)
 	{
 		ValidationContext context = new(Model) { MemberName = propertyName };
 		List<ValidationResult> results = new();
