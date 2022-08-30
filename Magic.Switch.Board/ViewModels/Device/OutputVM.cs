@@ -23,7 +23,7 @@ public class OutputVM : ViewModelBase<Output>
 	public OutputVM(Output model) : base(model)
 	{
 		Initialize();
-		PropertyChanged += OnViewModelPropertyChanged;
+		PropertyChanged += OnPropertyChangedPropagate;
 	}
 
 	/// <summary>The <see cref="MidiChannel"/> property.</summary>

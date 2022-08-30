@@ -117,6 +117,138 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Enum_LogLevel_Critical_Description" xml:space="preserve">
+    <value>Protokolle, die einen nicht wiederherstellbaren Anwendungs- oder Systemabsturz oder einen katastrophalen Fehler beschreiben, der sofortige Aufmerksamkeit erfordert.</value>
+  </data>
+  <data name="Enum_LogLevel_Debug_Description" xml:space="preserve">
+    <value>Protokolle, die für die interaktive Untersuchung während der Entwicklung verwendet werden. Diese Protokolle sollten in erster Linie Informationen enthalten, die für das Debuggen nützlich sind und keinen langfristigen Wert haben.</value>
+  </data>
+  <data name="Enum_LogLevel_Error_Description" xml:space="preserve">
+    <value>Protokolle, die hervorheben, wenn der aktuelle Ausführungsfluss aufgrund eines Fehlers gestoppt wird. Diese sollten auf einen Fehler in der aktuellen Aktivität hinweisen, nicht auf einen anwendungsweiten Fehler.</value>
+  </data>
+  <data name="Enum_LogLevel_Information_Description" xml:space="preserve">
+    <value>Protokolle, die den allgemeinen Ablauf der Anwendung verfolgen. Diese Protokolle sollten einen langfristigen Wert haben.</value>
+  </data>
+  <data name="Enum_LogLevel_None_Description" xml:space="preserve">
+    <value>Wird nicht zum Schreiben von Protokollmeldungen verwendet. Gibt an, dass eine Protokollierungskategorie keine Meldungen schreiben soll.</value>
+  </data>
+  <data name="Enum_LogLevel_Trace_Description" xml:space="preserve">
+    <value>Protokolle, die die detailliertesten Meldungen enthalten. Diese Meldungen können sensible Anwendungsdaten enthalten. Diese Meldungen sind standardmäßig deaktiviert und sollten niemals in einer Produktionsumgebung aktiviert werden.</value>
+  </data>
+  <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
+    <value>Protokolle, die ein ungewöhnliches oder unerwartetes Ereignis im Anwendungsfluss hervorheben, aber ansonsten nicht dazu führen, dass die Anwendungsausführung beendet wird.</value>
+  </data>
+  <data name="Enum_LoopChannels_1" xml:space="preserve">
+    <value>Schleifenkanal 1</value>
+  </data>
+  <data name="Enum_LoopChannels_2" xml:space="preserve">
+    <value>Schleifenkanal 2</value>
+  </data>
+  <data name="Enum_LoopChannels_3" xml:space="preserve">
+    <value>Schleifenkanal 3</value>
+  </data>
+  <data name="Enum_LoopChannels_4" xml:space="preserve">
+    <value>Schleifenkanal 4</value>
+  </data>
+  <data name="Enum_LoopChannels_5" xml:space="preserve">
+    <value>Schleifenkanal 5</value>
+  </data>
+  <data name="Enum_LoopChannels_6" xml:space="preserve">
+    <value>Schleifenkanal 6</value>
+  </data>
+  <data name="Enum_LoopChannels_7" xml:space="preserve">
+    <value>Schleifenkanal 7</value>
+  </data>
+  <data name="Enum_LoopChannels_8" xml:space="preserve">
+    <value>Schleifenkanal 8</value>
+  </data>
+  <data name="Enum_MidiChannel_1" xml:space="preserve">
+    <value>Midikanal 1</value>
+  </data>
+  <data name="Enum_MidiChannel_10" xml:space="preserve">
+    <value>Midikanal 10</value>
+  </data>
+  <data name="Enum_MidiChannel_11" xml:space="preserve">
+    <value>Midikanal 11</value>
+  </data>
+  <data name="Enum_MidiChannel_12" xml:space="preserve">
+    <value>Midikanal 12</value>
+  </data>
+  <data name="Enum_MidiChannel_13" xml:space="preserve">
+    <value>Midikanal 13</value>
+  </data>
+  <data name="Enum_MidiChannel_14" xml:space="preserve">
+    <value>Midikanal 14</value>
+  </data>
+  <data name="Enum_MidiChannel_15" xml:space="preserve">
+    <value>Midikanal 15</value>
+  </data>
+  <data name="Enum_MidiChannel_16" xml:space="preserve">
+    <value>Midikanal 16</value>
+  </data>
+  <data name="Enum_MidiChannel_2" xml:space="preserve">
+    <value>Midikanal 2</value>
+  </data>
+  <data name="Enum_MidiChannel_3" xml:space="preserve">
+    <value>Midikanal 3</value>
+  </data>
+  <data name="Enum_MidiChannel_4" xml:space="preserve">
+    <value>Midikanal 4</value>
+  </data>
+  <data name="Enum_MidiChannel_5" xml:space="preserve">
+    <value>Midikanal 5</value>
+  </data>
+  <data name="Enum_MidiChannel_6" xml:space="preserve">
+    <value>Midikanal 6</value>
+  </data>
+  <data name="Enum_MidiChannel_7" xml:space="preserve">
+    <value>Midikanal 7</value>
+  </data>
+  <data name="Enum_MidiChannel_8" xml:space="preserve">
+    <value>Midikanal 8</value>
+  </data>
+  <data name="Enum_MidiChannel_9" xml:space="preserve">
+    <value>Midikanal 9</value>
+  </data>
+  <data name="Enum_MidiMessageType_CCM" xml:space="preserve">
+    <value>Kontrolländerungsmeldung</value>
+  </data>
+  <data name="Enum_MidiMessageType_PCM" xml:space="preserve">
+    <value>Programmänderungsmeldung</value>
+  </data>
+  <data name="Enum_SwitchChannels_1" xml:space="preserve">
+    <value>Schaltkanal 1</value>
+  </data>
+  <data name="Enum_SwitchChannels_2" xml:space="preserve">
+    <value>Schaltkanal 2</value>
+  </data>
+  <data name="Enum_SwitchChannels_3" xml:space="preserve">
+    <value>Schaltkanal 3</value>
+  </data>
+  <data name="Enum_SwitchChannels_4" xml:space="preserve">
+    <value>Schaltkanal 4</value>
+  </data>
+  <data name="Enum_SwitchChannels_5" xml:space="preserve">
+    <value>Schaltkanal 5</value>
+  </data>
+  <data name="Enum_SwitchChannels_6" xml:space="preserve">
+    <value>Schaltkanal 6</value>
+  </data>
+  <data name="Enum_SwitchChannels_7" xml:space="preserve">
+    <value>Schaltkanal 7</value>
+  </data>
+  <data name="Enum_SwitchChannels_8" xml:space="preserve">
+    <value>Schaltkanal 8</value>
+  </data>
+  <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">
+    <value>Fehler bei der Deserialisierung. Unbekanntes Attribut gefunden. Name: '{0}' in der Zeile: {1} und Position: {2}.</value>
+  </data>
+  <data name="Error_Xml_Unknown_Element" xml:space="preserve">
+    <value>Fehler bei der Deserialisierung. Unbekanntes Element gefunden. Name: '{0}' in der Zeile: {1} und Position: {2}.</value>
+  </data>
+  <data name="Error_Xml_Unknown_Node" xml:space="preserve">
+    <value>Fehler bei der Deserialisierung. Unbekannter Knoten gefunden. Name: '{0}' vom Typ: '{1}'</value>
+  </data>
   <data name="File_Service_Error_Directory" xml:space="preserve">
     <value>Das Verzeichnis konnte nicht gefunden werden.</value>
   </data>

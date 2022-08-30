@@ -3,20 +3,9 @@
 	<PropertyGroup>
 		<OutputType>WinExe</OutputType>
 		<TargetFramework>net6.0-windows</TargetFramework>
-		<Platforms>AnyCPU;x64;x86;arm64</Platforms>
-		<AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
 		<UseWPF>true</UseWPF>
-		<LangVersion>latest</LangVersion>
-		<Nullable>enable</Nullable>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-		<EnableNETAnalyzers>true</EnableNETAnalyzers>
-		<AnalysisLevel>latest</AnalysisLevel>
-		<AnalysisMode>recommended</AnalysisMode>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<GeneratedAssemblyInfoFile>Properties\AssemblyInfo.cs</GeneratedAssemblyInfoFile>
-		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
-		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<PackageProjectUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
@@ -28,38 +17,6 @@
 		<PlatformTarget>AnyCPU</PlatformTarget>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-		<Deterministic>False</Deterministic>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-		<Deterministic>False</Deterministic>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-		<Deterministic>False</Deterministic>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-		<Deterministic>False</Deterministic>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
-		<Deterministic>False</Deterministic>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
-		<Deterministic>False</Deterministic>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|arm64'">
-		<Deterministic>False</Deterministic>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|arm64'">
-		<Deterministic>False</Deterministic>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -114,7 +71,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Magic.Switch.Board.Core\Magic.Switch.Board.Core.csproj" />
+		<ProjectReference Include="..\Magic.Switch.Board.Core\Magic.Switch.Board.Core.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -23,7 +23,7 @@ public class InputVM : ViewModelBase<Input>
 	public InputVM(Input model) : base(model)
 	{
 		Initialize();
-		PropertyChanged += OnViewModelPropertyChanged;
+		PropertyChanged += OnPropertyChangedPropagate;
 	}
 
 	/// <summary>The <see cref="MidiChannel"/> property.</summary>

@@ -118,39 +118,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ViewModel_Display_Name_Application_Version" xml:space="preserve">
-    <value>Version de l'application</value>
+    <value>Wersja aplikacji</value>
   </data>
   <data name="ViewModel_Display_Name_Channels" xml:space="preserve">
-    <value>Canaux</value>
+    <value>Kanały</value>
   </data>
   <data name="ViewModel_Display_Name_Configuration_Version" xml:space="preserve">
-    <value>Version de la configuration</value>
+    <value>Wersja konfiguracyjna</value>
   </data>
   <data name="ViewModel_Display_Name_Id" xml:space="preserve">
-    <value>Identificateur</value>
+    <value>Identyfikator</value>
   </data>
   <data name="ViewModel_Display_Name_Input" xml:space="preserve">
-    <value>Entrée</value>
+    <value>Wkład</value>
   </data>
   <data name="ViewModel_Display_Name_Loops" xml:space="preserve">
-    <value>Boucles</value>
+    <value>Pętle</value>
   </data>
   <data name="ViewModel_Display_Name_MessageType" xml:space="preserve">
-    <value>Type de message</value>
+    <value>Typ wiadomości</value>
   </data>
   <data name="ViewModel_Display_Name_MidiChannel" xml:space="preserve">
-    <value>Canal Midi</value>
+    <value>Kanał Midi</value>
   </data>
   <data name="ViewModel_Display_Name_Name" xml:space="preserve">
-    <value>Nom</value>
+    <value>Nazwa</value>
   </data>
   <data name="ViewModel_Display_Name_Number" xml:space="preserve">
-    <value>Nombre</value>
+    <value>Numer</value>
   </data>
   <data name="ViewModel_Display_Name_Output" xml:space="preserve">
-    <value>Sortie</value>
+    <value>Wyjście</value>
   </data>
   <data name="ViewModel_Display_Name_Switches" xml:space="preserve">
-    <value>Commutateurs</value>
+    <value>Przełączniki</value>
   </data>
 </root>

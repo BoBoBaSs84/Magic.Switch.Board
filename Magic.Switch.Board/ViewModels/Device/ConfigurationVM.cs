@@ -24,7 +24,7 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 	public ConfigurationVM(Configuration configuration) : base(configuration)
 	{
 		Initialize();
-		PropertyChanged += OnViewModelPropertyChanged;
+		PropertyChanged += OnPropertyChangedPropagate;
 	}
 
 	/// <summary>The <see cref="Id"/> property.</summary>

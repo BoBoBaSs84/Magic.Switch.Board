@@ -21,7 +21,7 @@ public class LoopsVM : ViewModelBase<Loops>
 	public LoopsVM(Loops model) : base(model)
 	{
 		Initialize();
-		PropertyChanged += OnViewModelPropertyChanged;
+		PropertyChanged += OnPropertyChangedPropagate;
 	}
 
 	/// <summary>The <see cref="Channels"/> property.</summary>

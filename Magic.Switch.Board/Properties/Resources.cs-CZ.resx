@@ -118,39 +118,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ViewModel_Display_Name_Application_Version" xml:space="preserve">
-    <value>Version de l'application</value>
+    <value>Verze aplikace</value>
   </data>
   <data name="ViewModel_Display_Name_Channels" xml:space="preserve">
-    <value>Canaux</value>
+    <value>Kanály</value>
   </data>
   <data name="ViewModel_Display_Name_Configuration_Version" xml:space="preserve">
-    <value>Version de la configuration</value>
+    <value>Verze konfigurace</value>
   </data>
   <data name="ViewModel_Display_Name_Id" xml:space="preserve">
-    <value>Identificateur</value>
+    <value>Identifikátor</value>
   </data>
   <data name="ViewModel_Display_Name_Input" xml:space="preserve">
-    <value>Entrée</value>
+    <value>Vstup</value>
   </data>
   <data name="ViewModel_Display_Name_Loops" xml:space="preserve">
-    <value>Boucles</value>
+    <value>Smyčky</value>
   </data>
   <data name="ViewModel_Display_Name_MessageType" xml:space="preserve">
-    <value>Type de message</value>
+    <value>Typ zprávy</value>
   </data>
   <data name="ViewModel_Display_Name_MidiChannel" xml:space="preserve">
-    <value>Canal Midi</value>
+    <value>Midi kanál</value>
   </data>
   <data name="ViewModel_Display_Name_Name" xml:space="preserve">
-    <value>Nom</value>
+    <value>Jméno</value>
   </data>
   <data name="ViewModel_Display_Name_Number" xml:space="preserve">
-    <value>Nombre</value>
+    <value>Číslo</value>
   </data>
   <data name="ViewModel_Display_Name_Output" xml:space="preserve">
-    <value>Sortie</value>
+    <value>Výstup</value>
   </data>
   <data name="ViewModel_Display_Name_Switches" xml:space="preserve">
-    <value>Commutateurs</value>
+    <value>Přepínače</value>
   </data>
 </root>

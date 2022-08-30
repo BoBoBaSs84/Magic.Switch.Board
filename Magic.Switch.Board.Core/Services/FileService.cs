@@ -97,7 +97,7 @@ public sealed class FileService : IFileService
 			string fullpath = Path.Combine(folderPath, fileName);
 
 			File.WriteAllText(fullpath, fileContent, Encoding.UTF8);
-			message = string.Format(Culture, File_Service_File_Deleted, fullpath);
+			message = string.Format(Culture, File_Service_File_Created, fullpath);
 			_logger.Information(message);
 			return (true, message);
 		}

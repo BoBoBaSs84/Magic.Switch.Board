@@ -118,159 +118,159 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Enum_LogLevel_Critical_Description" xml:space="preserve">
-    <value>Registri che descrivono un'applicazione o un arresto anomalo del sistema irreversibile o un errore irreversibile che richiede attenzione immediata.</value>
+    <value>Dzienniki opisujące nieodwracalną awarię aplikacji lub systemu lub katastrofalną awarię wymagającą natychmiastowej uwagi.</value>
   </data>
   <data name="Enum_LogLevel_Debug_Description" xml:space="preserve">
-    <value>Registri utilizzati per l'indagine interattiva durante lo sviluppo. Questi registri devono contenere principalmente informazioni utili per il debug e non hanno alcun valore a lungo termine.</value>
+    <value>Dzienniki używane do interaktywnego badania podczas programowania. Dzienniki te powinny przede wszystkim zawierać informacje przydatne do debugowania i nie mieć wartości długoterminowej.</value>
   </data>
   <data name="Enum_LogLevel_Error_Description" xml:space="preserve">
-    <value>Log che evidenziano quando il flusso corrente di esecuzione viene interrotto a causa di un errore. Questi dovrebbero indicare un errore nell'attività corrente, non un errore a livello di applicazione.</value>
+    <value>Dzienniki, które podświetlają, gdy bieżący przepływ wykonania jest zatrzymany z powodu awarii. Powinny one wskazywać na awarię w bieżącym działaniu, a nie awarię w całej aplikacji.</value>
   </data>
   <data name="Enum_LogLevel_Information_Description" xml:space="preserve">
-    <value>Registri che tengono traccia del flusso generale dell'applicazione. Questi registri dovrebbero avere un valore a lungo termine.</value>
+    <value>Dzienniki śledzące ogólny przepływ aplikacji. Dzienniki te powinny mieć wartość długoterminową.</value>
   </data>
   <data name="Enum_LogLevel_None_Description" xml:space="preserve">
-    <value>Non utilizzato per la scrittura di messaggi di registro. Specifica che una categoria di registrazione non deve scrivere alcun messaggio.</value>
+    <value>Nie jest używany do pisania komunikatów dziennika. Określa, że kategoria rejestrowania nie powinna pisać żadnych komunikatów.</value>
   </data>
   <data name="Enum_LogLevel_Trace_Description" xml:space="preserve">
-    <value>Registri che contengono i messaggi più dettagliati. Questi messaggi possono contenere dati sensibili dell'applicazione. Questi messaggi sono disabilitati per impostazione predefinita e non devono mai essere abilitati in un ambiente di produzione.</value>
+    <value>Dzienniki zawierające najbardziej szczegółowe komunikaty. Komunikaty te mogą zawierać poufne dane aplikacji. Te komunikaty są domyślnie wyłączone i nigdy nie powinny być włączane w środowisku produkcyjnym.</value>
   </data>
   <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
-    <value>Log che evidenziano un evento anomalo o imprevisto nel flusso dell'applicazione, ma che non causano altrimenti l'arresto dell'esecuzione dell'applicazione.</value>
+    <value>Dzienniki, które wyróżniają nietypowe lub nieoczekiwane zdarzenie w przepływie aplikacji, ale w inny sposób nie powodują zatrzymania wykonywania aplikacji.</value>
   </data>
   <data name="Enum_LoopChannels_1" xml:space="preserve">
-    <value>Loop Canale 1</value>
+    <value>Kanał pętli 1</value>
   </data>
   <data name="Enum_LoopChannels_2" xml:space="preserve">
-    <value>Loop Canale 2</value>
+    <value>Kanał pętli 2</value>
   </data>
   <data name="Enum_LoopChannels_3" xml:space="preserve">
-    <value>Loop Canale 3</value>
+    <value>Kanał pętli 3</value>
   </data>
   <data name="Enum_LoopChannels_4" xml:space="preserve">
-    <value>Loop Canale 4</value>
+    <value>Kanał pętli 4</value>
   </data>
   <data name="Enum_LoopChannels_5" xml:space="preserve">
-    <value>Loop Canale 5</value>
+    <value>Pętla kanał 5</value>
   </data>
   <data name="Enum_LoopChannels_6" xml:space="preserve">
-    <value>Loop Canale 6</value>
+    <value>Kanał pętli 6</value>
   </data>
   <data name="Enum_LoopChannels_7" xml:space="preserve">
-    <value>Loop Canale 7</value>
+    <value>Kanał pętli 7</value>
   </data>
   <data name="Enum_LoopChannels_8" xml:space="preserve">
-    <value>Loop Canale 8</value>
+    <value>Kanał pętli 8</value>
   </data>
   <data name="Enum_MidiChannel_1" xml:space="preserve">
-    <value>Midi Canale 1</value>
+    <value>Kanał Midi 1</value>
   </data>
   <data name="Enum_MidiChannel_10" xml:space="preserve">
-    <value>Midi Canale 10</value>
+    <value>Midi Kanał 10</value>
   </data>
   <data name="Enum_MidiChannel_11" xml:space="preserve">
-    <value>Canale Midi 11</value>
+    <value>Kanał Midi 11</value>
   </data>
   <data name="Enum_MidiChannel_12" xml:space="preserve">
-    <value>Midi Canale 12</value>
+    <value>Kanał Midi 12</value>
   </data>
   <data name="Enum_MidiChannel_13" xml:space="preserve">
-    <value>Canale Midi 13</value>
+    <value>Kanał Midi 13</value>
   </data>
   <data name="Enum_MidiChannel_14" xml:space="preserve">
-    <value>Midi Canale 14</value>
+    <value>Kanał Midi 14</value>
   </data>
   <data name="Enum_MidiChannel_15" xml:space="preserve">
-    <value>Midi Canale 15</value>
+    <value>Kanał Midi 15</value>
   </data>
   <data name="Enum_MidiChannel_16" xml:space="preserve">
-    <value>Canale Midi 16</value>
+    <value>Midi Kanał 16</value>
   </data>
   <data name="Enum_MidiChannel_2" xml:space="preserve">
-    <value>Midi Canale 2</value>
+    <value>Kanał Midi 2</value>
   </data>
   <data name="Enum_MidiChannel_3" xml:space="preserve">
-    <value>Midi Canale 3</value>
+    <value>Midi Channel 3</value>
   </data>
   <data name="Enum_MidiChannel_4" xml:space="preserve">
-    <value>Midi Canale 4</value>
+    <value>Kanał Midi 4</value>
   </data>
   <data name="Enum_MidiChannel_5" xml:space="preserve">
-    <value>Midi Canale 5</value>
+    <value>Midi Channel 5</value>
   </data>
   <data name="Enum_MidiChannel_6" xml:space="preserve">
-    <value>Midi Canale 6</value>
+    <value>Kanał Midi 6</value>
   </data>
   <data name="Enum_MidiChannel_7" xml:space="preserve">
-    <value>Midi Canale 7</value>
+    <value>Kanał Midi 7</value>
   </data>
   <data name="Enum_MidiChannel_8" xml:space="preserve">
-    <value>Midi Canale 8</value>
+    <value>Kanał Midi 8</value>
   </data>
   <data name="Enum_MidiChannel_9" xml:space="preserve">
-    <value>Midi Canale 9</value>
+    <value>Kanał Midi 9</value>
   </data>
   <data name="Enum_MidiMessageType_CCM" xml:space="preserve">
-    <value>Messaggio di modifica del controllo</value>
+    <value>Wiadomość o zmianie sterowania</value>
   </data>
   <data name="Enum_MidiMessageType_PCM" xml:space="preserve">
-    <value>Messaggio di modifica del programma</value>
+    <value>Komunikat o zmianie programu</value>
   </data>
   <data name="Enum_SwitchChannels_1" xml:space="preserve">
-    <value>Cambia canale 1</value>
+    <value>Przełącz kanał 1</value>
   </data>
   <data name="Enum_SwitchChannels_2" xml:space="preserve">
-    <value>Cambia canale 2</value>
+    <value>Przełącz kanał 2</value>
   </data>
   <data name="Enum_SwitchChannels_3" xml:space="preserve">
-    <value>Cambia canale 3</value>
+    <value>Przełącz kanał 3</value>
   </data>
   <data name="Enum_SwitchChannels_4" xml:space="preserve">
-    <value>Cambia canale 4</value>
+    <value>Przełącz kanał 4</value>
   </data>
   <data name="Enum_SwitchChannels_5" xml:space="preserve">
-    <value>Cambia canale 5</value>
+    <value>Przełącz kanał 5</value>
   </data>
   <data name="Enum_SwitchChannels_6" xml:space="preserve">
-    <value>Cambia canale 6</value>
+    <value>Przełącz kanał 6</value>
   </data>
   <data name="Enum_SwitchChannels_7" xml:space="preserve">
-    <value>Cambia canale 7</value>
+    <value>Przełącz kanał 7</value>
   </data>
   <data name="Enum_SwitchChannels_8" xml:space="preserve">
-    <value>Cambia canale 8</value>
+    <value>Przełącz kanał 8</value>
   </data>
   <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">
-    <value>Errore durante la deserializzazione. Attributo Sconosciuto trovato. Nome: '{0}' in linea: {1} e posizione: {2}.</value>
+    <value>Błąd podczas deserializacji. Znaleziono nieznany atrybut. Nazwa: "{0}" w wierszu: {1} i pozycja: {2}.</value>
   </data>
   <data name="Error_Xml_Unknown_Element" xml:space="preserve">
-    <value>Errore durante la deserializzazione. Elemento sconosciuto trovato. Nome: '{0}' in linea: {1} e posizione: {2}.</value>
+    <value>Błąd podczas deserializacji. Znaleziono nieznany element. Nazwa: "{0}" w wierszu: {1} i pozycja: {2}.</value>
   </data>
   <data name="Error_Xml_Unknown_Node" xml:space="preserve">
-    <value>Errore durante la deserializzazione. Nodo sconosciuto trovato. Nome: '{0}' del tipo: '{1}'</value>
+    <value>Błąd podczas deserializacji. Znaleziono niezadany węzeł. Nazwa: "{0}" typu: "{1}"</value>
   </data>
   <data name="File_Service_Error_Directory" xml:space="preserve">
-    <value>La directory non è stata trovata.</value>
+    <value>Nie można odnaleźć katalogu.</value>
   </data>
   <data name="File_Service_Error_File" xml:space="preserve">
-    <value>Il file non è stato trovato.</value>
+    <value>Nie można odnaleźć pliku.</value>
   </data>
   <data name="File_Service_File_Created" xml:space="preserve">
-    <value>Il file '{0}' è stato creato.</value>
+    <value>Plik '{0}' został utworzony.</value>
   </data>
   <data name="File_Service_File_Deleted" xml:space="preserve">
-    <value>Il file "{0}" è stato eliminato.</value>
+    <value>Plik "{0}" został usunięty.</value>
   </data>
   <data name="File_Service_File_Read" xml:space="preserve">
-    <value>Il file '{0}' è stato caricato.</value>
+    <value>Plik "{0}" został załadowany.</value>
   </data>
   <data name="Model_Field_Range_Generic" xml:space="preserve">
-    <value>{0} deve essere compreso in un intervallo tra {2} e {1}.</value>
+    <value>{0} musi mieścić się w przedziale od {2} do {1}.</value>
   </data>
   <data name="Model_Field_Required_Generic" xml:space="preserve">
-    <value>{0} è un campo obbligatorio.</value>
+    <value>{0} jest pole wymagane.</value>
   </data>
   <data name="Model_Field_StringLength_Generic" xml:space="preserve">
-    <value>{0} deve avere una lunghezza compresa tra {2} e {1} caratteri.</value>
+    <value>{0} musi zawierać od {2} do {1} znaków.</value>
   </data>
 </root>

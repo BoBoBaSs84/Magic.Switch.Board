@@ -17,7 +17,7 @@ public abstract class InputOutputBase
 	/// <summary>
 	/// The empty <see cref="InputOutputBase"/> class constructor.
 	/// </summary>
-	public InputOutputBase()
+	protected InputOutputBase()
 	{
 		MidiChannel = MidiChannel.Ch1;
 		MessageType = MidiMessageType.PCM;
