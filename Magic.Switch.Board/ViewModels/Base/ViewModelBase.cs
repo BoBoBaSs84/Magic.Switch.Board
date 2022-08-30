@@ -107,7 +107,7 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	/// Initializes a new instance of the <see cref="ViewModelBase{TModel}"/> class.
 	/// </summary>
 	/// <param name="model">The domain model class.</param>
-	public ViewModelBase(TModel model) => this.model = model;
+	protected ViewModelBase(TModel model) => this.model = model;
 
 	/// <summary>
 	/// The <see cref="Model"/> property.
