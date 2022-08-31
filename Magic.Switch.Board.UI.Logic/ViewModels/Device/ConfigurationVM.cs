@@ -1,7 +1,6 @@
 ﻿using Magic.Switch.Board.Core.Models.Device;
 using Magic.Switch.Board.UI.Logic.BaseTypes;
 using Magic.Switch.Board.UI.Logic.Properties;
-using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using static Magic.Switch.Board.UI.Logic.Properties.Resources;
 
@@ -15,7 +14,7 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 	private Guid id;
 	private string applicationVersion = default!;
 	private string configurationVersion = default!;
-	private ObservableCollection<ChannelVM> channels = new();
+	private List<ChannelVM> channels = new();
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ConfigurationVM"/> class.
@@ -41,7 +40,7 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 
 	/// <summary>The <see cref="Channels"/> property.</summary>
 	[Display(Name = nameof(ViewModel_Display_Name_Channels), ResourceType = typeof(Resources))]
-	public ObservableCollection<ChannelVM> Channels { get => channels; set => SetProperty(ref channels, value); }
+	public List<ChannelVM> Channels { get => channels; set => SetProperty(ref channels, value); }
 
 	private void Initialize()
 	{

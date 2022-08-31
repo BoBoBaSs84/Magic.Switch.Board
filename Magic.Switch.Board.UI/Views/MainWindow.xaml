@@ -1,21 +1,68 @@
-﻿<Window x:Class="Magic.Switch.Board.Views.MainWindow"
+﻿<Window x:Class="Magic.Switch.Board.UI.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+				xmlns:vm="clr-namespace:Magic.Switch.Board.UI.Logic.ViewModels;assembly=Magic.Switch.Board.UI.Logic"
+				d:DataContext="{d:DesignInstance Type=vm:MainViewModel}"
 				mc:Ignorable="d"
         Title="Magic.Switch.Board" Width="1280" Height="720"
 				Padding="2,2,2,2">
-	<DockPanel>
-		<Grid x:Name="MainGrid">
+	<DockPanel LastChildFill="true">
+		<Menu DockPanel.Dock="Top">
+			<MenuItem Header="_File">
+				<MenuItem Command="{Binding OpenChildCommand}" Header="_Open Child"/>
+				<MenuItem Command="{Binding AddPersonCommand}" Header="_Add Person"/>
+			</MenuItem>
+		</Menu>
+		<Grid Margin="10" DockPanel.Dock="Bottom" Grid.ColumnSpan="2">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="*"/>
 				<ColumnDefinition Width="4*"/>
 			</Grid.ColumnDefinitions>
 			<Grid.RowDefinitions>
-				<RowDefinition Height="20px"/>
-				<RowDefinition Height="*"/>
-			</Grid.RowDefinitions>			
+				<RowDefinition Height="Auto"/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<GroupBox Grid.Column="0" Grid.Row="0" Header="Progress-Bar with binding">
+				<ProgressBar Value="{Binding Progress}" MinHeight="20"/>
+			</GroupBox>
+			<GroupBox Grid.Column="0" Grid.Row="1" Header="Binding &amp; IDataErrorInfo">
+				<Grid>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="200"/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="Auto"/>
+					</Grid.RowDefinitions>
+					<!-- Header -->
+					<TextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" Style="{DynamicResource Hint}">
+						This area demonstrates the automatic display of error messages and validation. Ensure to enter something in Firstname and Lastname
+						and that the Birthday has a value that results in an age greater or equal than 18 years.
+					</TextBlock>
+					<!-- Firstname -->
+					<Label Grid.Column="0" Grid.Row="1" Content="Configuration Id:"/>
+					<TextBox Grid.Column="1" Grid.Row="1" Text="{Binding ConfigurationView.Id, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" IsEnabled="False"/>
+					<!-- Lastname -->
+					<Label Grid.Column="0" Grid.Row="2" Content="ApplicationVersion:"/>
+					<TextBox Grid.Column="1" Grid.Row="2" Text="{Binding ConfigurationView.ApplicationVersion, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" IsEnabled="False"/>
+					<!-- Age -->
+					<Label Grid.Column="0" Grid.Row="3" Content="ConfigurationVersion:"/>
+					<TextBox Grid.Column="1" Grid.Row="3" Text="{Binding ConfigurationView.ConfigurationVersion, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" IsEnabled="False"/>
+				</Grid>
+			</GroupBox>
+			<GroupBox Grid.Column="1" Grid.Row="0" Header="Item Sources" Grid.RowSpan="2">
+				<DataGrid ItemsSource="{Binding ConfigurationsView}"
+									IsSynchronizedWithCurrentItem="True"/>
+			</GroupBox>
 		</Grid>
 	</DockPanel>
 </Window>

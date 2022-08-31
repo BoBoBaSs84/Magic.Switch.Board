@@ -1,12 +1,12 @@
 ﻿using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.UI.Extensions;
-using Magic.Switch.Board.Views;
+using Magic.Switch.Board.UI.Views;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Windows;
 using System.Windows.Threading;
 
-namespace Magic.Switch.Board;
+namespace Magic.Switch.Board.UI;
 
 /// <summary>
 /// Interaction logic for App.xaml
@@ -70,9 +70,7 @@ public partial class App : Application
 	{
 		_logger.Information("Apllication exiting...");
 		using (_host)
-		{
 			await _host.StopAsync(TimeSpan.FromSeconds(5)).ConfigureAwait(false);
-		}
 	}
 
 	private void OnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e) =>

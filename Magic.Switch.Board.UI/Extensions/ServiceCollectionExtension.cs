@@ -1,7 +1,7 @@
 ﻿using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.Core.Services;
 using Magic.Switch.Board.UI.Logic.ViewModels;
-using Magic.Switch.Board.Views;
+using Magic.Switch.Board.UI.Views;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Magic.Switch.Board.UI.Extensions;

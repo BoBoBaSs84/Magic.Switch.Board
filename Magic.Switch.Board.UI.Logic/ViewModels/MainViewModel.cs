@@ -2,10 +2,9 @@
 using Magic.Switch.Board.Core.Models.Device;
 using Magic.Switch.Board.UI.Logic.BaseTypes;
 using Magic.Switch.Board.UI.Logic.ViewModels.Device;
-using System.Windows;
+using System.ComponentModel;
+using System.Windows.Data;
 using System.Windows.Input;
-using static Magic.Switch.Board.Core.Enums;
-using static Magic.Switch.Board.UI.Logic.Statics;
 
 namespace Magic.Switch.Board.UI.Logic.ViewModels;
 
@@ -16,146 +15,62 @@ public sealed class MainViewModel : ViewModelBase
 {
 	private readonly ILoggerService _logger;
 	private readonly IDeviceConfigService _deviceConfigService;
-	private ConfigurationVM? configurationVM;
-	private Configuration? configuration;
 
 	/// <summary>
 	/// The <see cref="MainViewModel"/> class constructor.
 	/// </summary>
-	/// <param name="logger">The logger service.</param>
-	/// <param name="deviceConfigService">The device configuration service.</param>
 	public MainViewModel(ILoggerService logger, IDeviceConfigService deviceConfigService)
 	{
 		_logger = logger;
 		_deviceConfigService = deviceConfigService;
+		IList<ConfigurationVM> configurations = GetConfigurations();
+		ConfigurationsView = CollectionViewSource.GetDefaultView(configurations);
+		ConfigurationsView.CurrentChanged += OnConfigurationSelectionChanged;
 	}
 
-	private RelayCommand? cmdNewFile;
-	/// <summary>
-	/// The <see cref="CmdNewFile"/> command for creating a new file.
-	/// </summary>
-	public ICommand CmdNewFile => cmdNewFile ??= new RelayCommand(PerformCmdNewFile);
-
-	private void PerformCmdNewFile()
+	public void OnConfigurationSelectionChanged(object? sender, EventArgs e)
 	{
-		_logger.Trace("Started.");
-		configuration = _deviceConfigService.Create(AssemblyVersion);
-		_logger.Information("New device configuration created.");
-		if (configuration is not null)
+		if (sender is not ICollectionView configurationsView)
+			return;
+		if (configurationsView.CurrentItem is not ConfigurationVM configuration)
+			return;
+
+		ConfigurationView = configuration;
+	}
+
+
+
+	public ICollectionView ConfigurationsView { get; }
+
+	public ConfigurationVM ConfigurationView { get; set; }
+
+	// TODO: Some random configs for now ...
+	private List<ConfigurationVM> GetConfigurations()
+	{
+		List<ConfigurationVM> configList = new();
+		for (int i = 0; i < 100; i++)
 		{
-			if (configuration.Channels.Count == 0)
-			{
-				configuration.Channels.Add(new Channel()
-				{
-					Id = Guid.NewGuid(),
-					Name = "This is the first test channel.",
-					Input = new Input(MidiChannel.Ch1, MidiMessageType.PCM, 1),
-					Output = new Output(MidiChannel.Ch2, MidiMessageType.CCM, 67),
-					Switches = new Switches(SwitchChannels.Ch1 | SwitchChannels.Ch3),
-					Loops = new Loops(LoopChannels.Ch5 | LoopChannels.Ch7)
-				});
-				configuration.Channels.Add(new Channel()
-				{
-					Id = Guid.NewGuid(),
-					Name = "This is the second test channel.",
-					Input = new Input(MidiChannel.Ch11, MidiMessageType.PCM, 3),
-					Output = new Output(MidiChannel.Ch2, MidiMessageType.CCM, 45),
-					Switches = new Switches(SwitchChannels.Ch3 | SwitchChannels.Ch2)
-				});
-			}
-			_deviceConfigService.Write($"D:\\", "Test.xml", configuration);
-			_logger.Information("New device configuration saved.");
-			configuration = _deviceConfigService.Read($"D:\\", "Test.xml");
-			_logger.Information("Device configuration loaded.");
-
-			if (configuration is null)
-				return;
-
-			configurationVM = new(configuration);
-
-			configurationVM.ApplicationVersion = "1.0";
+			Configuration config = _deviceConfigService.Create(Statics.AssemblyVersion);
+			configList.Add(new ConfigurationVM(config));
 		}
+		return configList;
 	}
 
-	private RelayCommand? cmdOpenFile;
-	/// <summary>
-	/// The <see cref="CmdOpenFile"/> command for opening an existing file.
-	/// </summary>
-	public ICommand CmdOpenFile => cmdOpenFile ??= new RelayCommand(PerformCmdOpenFile);
+	private RelayCommand openChildCommand;
+	public ICommand OpenChildCommand => openChildCommand ??= new RelayCommand(OpenChild);
 
-	private void PerformCmdOpenFile()
-	{
-		_logger.Trace("Started.");
-		MessageBox.Show("This is a message box message", "message box", MessageBoxButton.OK, MessageBoxImage.Information);
-	}
-
-	private RelayCommand? cmdOpenSettings;
-	/// <summary>
-	/// The <see cref="CmdOpenFile"/> command for opening the settings.
-	/// </summary>
-	public ICommand CmdOpenSettings => cmdOpenSettings ??= new RelayCommand(PerformCmdOpenSettings);
-
-	private void PerformCmdOpenSettings()
-	{
-		_logger.Trace("Started.");
-		MessageBox.Show("This is a message box message", "message box", MessageBoxButton.OK, MessageBoxImage.Information);
-	}
-
-	private RelayCommand? cmdQuitApplication;
-	/// <summary>
-	/// The <see cref="CmdQuitApplication"/> command for exiting the apllication.
-	/// </summary>
-	public ICommand CmdQuitApplication => cmdQuitApplication ??= new RelayCommand(PerformCmdQuitApplication);
-
-	private void PerformCmdQuitApplication()
-	{
-		_logger.Trace("Application shut down reqeusted.");
-		if (MessageBox.Show("do you really want to quit?", "Quit", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
-			_logger.Trace("Application shut down aborted.");
-		else
-		{
-			_logger.Trace("Application shut down confirmed.");
-			Application.Current.Shutdown();
-		}
-	}
-
-	private RelayCommand? cmdShowAbout;
-	/// <summary>
-	/// The <see cref="CmdShowAbout"/> command for showing the about Message.
-	/// </summary>
-	public ICommand CmdShowAbout => cmdShowAbout ??= new RelayCommand(PerformCmdShowAbout);
-
-	private void PerformCmdShowAbout()
+	private void OpenChild()
 	{
 	}
 
-	private RelayCommand? cmdCheckUpdates;
-	/// <summary>
-	/// 
-	/// </summary>
-	public ICommand CmdCheckUpdates => cmdCheckUpdates ??= new RelayCommand(PerformCmdCheckUpdates);
+	private RelayCommand addPersonCommand;
+	public ICommand AddPersonCommand => addPersonCommand ??= new RelayCommand(AddPerson);
 
-	private void PerformCmdCheckUpdates()
+	private void AddPerson()
 	{
 	}
 
-	private RelayCommand? cmdWhatsNew;
-	/// <summary>
-	/// 
-	/// </summary>
-	public ICommand CmdWhatsNew => cmdWhatsNew ??= new RelayCommand(PerformCmdWhatsNew);
+	private double progress;
 
-	private void PerformCmdWhatsNew()
-	{
-	}
-
-	private RelayCommand? cmdHelpCenter;
-	/// <summary>
-	/// 
-	/// </summary>
-	public ICommand CmdHelpCenter => cmdHelpCenter ??= new RelayCommand(PerformCmdHelpCenter);
-
-	private void PerformCmdHelpCenter()
-	{
-	}
+	public double Progress { get => progress; set => SetProperty(ref progress, value); }
 }
