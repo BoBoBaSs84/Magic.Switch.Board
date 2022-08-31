@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 
 namespace Magic.Switch.Board.UI.Logic.BaseTypes;
@@ -14,6 +15,8 @@ namespace Magic.Switch.Board.UI.Logic.BaseTypes;
 ///		<item>The members of the <see cref="INotifyPropertyChanged"/> interface.</item>
 ///		<item>The members of the <see cref="INotifyPropertyChanging"/> interface.</item>
 /// </list>
+/// The class also provides attributes for decorating properties, in turn informing other
+/// properties of their value changes. See <see cref="NotifyPropertyChangedAttribute"/>.
 /// </remarks>
 public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyChanging
 {
@@ -34,8 +37,10 @@ public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyCha
 		if (!Equals(field, newValue))
 		{
 			RaisePropertyChanging(propertyName);
+			NotifyAttributeChangingProperty(propertyName);
 			field = newValue;
 			RaisePropertyChanged(propertyName);
+			NotifyAttributeChangedProperty(propertyName);
 		}
 	}
 
@@ -87,6 +92,132 @@ public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyCha
 	protected virtual void RaisePropertyChanging([CallerMemberName] string? propertyName = null) =>
 		PropertyChanging?.Invoke(this, new PropertyChangingEventArgs(propertyName));
 	#endregion
+
+	#region Notify property attributes
+	/// <summary>
+	/// The <see cref="NotifyPropertyChangedAttribute"/> class.
+	/// </summary>
+	/// <remarks>
+	/// A property decorated with this attribute propagates its change to the property defined in the attribute.
+	/// </remarks>
+	[AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
+	public sealed class NotifyPropertyChangedAttribute : Attribute
+	{
+		private string propertyName = string.Empty;
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="NotifyPropertyChangedAttribute"/> class.
+		/// </summary>
+		/// <remarks>
+		/// Will throw an exception if <paramref name="propertyName"/> is <see langword="null"/> or empty.
+		/// </remarks>
+		/// <param name="propertyName">The name of the property to notify.</param>
+		/// <exception cref="ArgumentException"></exception>
+		public NotifyPropertyChangedAttribute(string propertyName)
+		{
+			if (string.IsNullOrEmpty(propertyName))
+				throw new ArgumentException("Can not be null or empty.", nameof(propertyName));
+
+			this.propertyName = propertyName;
+		}
+
+		/// <summary>
+		/// The <see cref="PropertyName"/> property.
+		/// </summary>
+		public string PropertyName
+		{
+			get => propertyName;
+			set
+			{
+				if (propertyName != value)
+					propertyName = value;
+			}
+		}
+	}
+
+	/// <summary>
+	/// The <see cref="NotifyPropertyChangingAttribute"/> class.
+	/// </summary>
+	/// <remarks>
+	/// A property decorated with this attribute propagates its pending change to the property defined in the attribute.
+	/// </remarks>
+	[AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
+	public sealed class NotifyPropertyChangingAttribute : Attribute
+	{
+		private string propertyName = string.Empty;
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="NotifyPropertyChangedAttribute"/> class.
+		/// </summary>
+		/// <remarks>
+		/// Will throw an exception if <paramref name="propertyName"/> is <see langword="null"/> or empty.
+		/// </remarks>
+		/// <param name="propertyName">The name of the property to notify.</param>
+		/// <exception cref="ArgumentException"></exception>
+		public NotifyPropertyChangingAttribute(string propertyName)
+		{
+			if (string.IsNullOrEmpty(propertyName))
+				throw new ArgumentException("Can not be null or empty.", nameof(propertyName));
+
+			this.propertyName = propertyName;
+		}
+
+		/// <summary>
+		/// The <see cref="PropertyName"/> property.
+		/// </summary>
+		public string PropertyName
+		{
+			get => propertyName;
+			set
+			{
+				if (propertyName != value)
+					propertyName = value;
+			}
+		}
+	}
+	#endregion
+
+	#region Notify property attribute methods
+	/// <summary>
+	/// The <see cref="NotifyAttributeChangedProperty(string)"/> method will notify all properties
+	/// which have been defined by the <see cref="NotifyPropertyChangedAttribute"/> as to be informed.
+	/// </summary>
+	/// <param name="propertyName">The property name.</param>
+	private void NotifyAttributeChangedProperty(string propertyName)
+	{
+		PropertyInfo? propertyInfo = GetType().GetProperty(propertyName);
+		if (propertyInfo is not null)
+		{
+			NotifyPropertyChangedAttribute[]? attributes =
+				propertyInfo.GetCustomAttributes(typeof(NotifyPropertyChangedAttribute), false) as NotifyPropertyChangedAttribute[];
+			if (attributes is not null && attributes.Length > 0)
+			{
+				foreach (NotifyPropertyChangedAttribute attribute in attributes)
+					RaisePropertyChanged(attribute.PropertyName);
+			}
+		}
+	}
+
+	/// <summary>
+	/// The <see cref="NotifyAttributeChangingProperty(string)"/> method will notify all properties
+	/// which have been defined by the <see cref="NotifyPropertyChangedAttribute"/> as to be informed.
+	/// </summary>
+	/// <param name="propertyName">The property name.</param>
+	private void NotifyAttributeChangingProperty(string propertyName)
+	{
+		PropertyInfo? propertyInfo = GetType().GetProperty(propertyName);
+		if (propertyInfo is not null)
+		{
+			NotifyPropertyChangingAttribute[]? attributes =
+				propertyInfo.GetCustomAttributes(typeof(NotifyPropertyChangingAttribute), false) as NotifyPropertyChangingAttribute[];
+			if (attributes is not null && attributes.Length > 0)
+			{
+				foreach (NotifyPropertyChangingAttribute attribute in attributes)
+					RaisePropertyChanged(attribute.PropertyName);
+			}
+		}
+	}
+	#endregion
 }
 
 /// <summary>
@@ -97,6 +228,7 @@ public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyCha
 /// <list type="bullet">
 ///		<item>The members of the <see cref="INotifyDataErrorInfo"/> interface.</item>
 /// </list>
+/// It inherits the fields and methods from the <see cref="ViewModelBase"/> class.
 /// </remarks>
 /// <typeparam name="TModel">The domain model class.</typeparam>
 public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInfo where TModel : class
@@ -112,6 +244,10 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	/// <summary>
 	/// The <see cref="Model"/> property.
 	/// </summary>
+	/// <remarks>
+	/// Immutable types are those whose data members can not be changed after the instance is created.
+	/// At the first choice of design, for now the property is mutable.
+	/// </remarks>
 	public TModel Model
 	{
 		get => model;
@@ -129,13 +265,13 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	/// <param name="e"></param>
 	protected virtual void OnPropertyChangedPropagate(object? sender, PropertyChangedEventArgs e)
 	{
-		if (sender is not ViewModelBase<TModel> modelBase)
+		if (sender is not ViewModelBase<TModel> viewModelBase)
 			return;
 
 		if (e.PropertyName is not null)
 		{
-			object? propertyValue = modelBase.GetType().GetProperty(e.PropertyName)!.GetValue(modelBase, null);
-			modelBase.Model.GetType().GetProperty(e.PropertyName)!.SetValue(modelBase.Model, propertyValue, null);
+			object? propertyValue = viewModelBase.GetType().GetProperty(e.PropertyName)!.GetValue(viewModelBase, null);
+			viewModelBase.Model.GetType().GetProperty(e.PropertyName)!.SetValue(viewModelBase.Model, propertyValue, null);
 		}
 	}
 
@@ -224,8 +360,10 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 		ClearErrors(propertyName);
 
 		if (!Validator.TryValidateProperty(value, context, results))
+		{
 			foreach (ValidationResult error in results)
 				AddError(propertyName, error.ErrorMessage!);
+		}
 	}
 
 	/// <summary>
