@@ -1,7 +1,9 @@
 ﻿using Magic.Switch.Board.Core.Contracts.Services;
+using Magic.Switch.Board.Core.Exceptions;
 using Magic.Switch.Board.Core.Helpers;
 using Magic.Switch.Board.Core.Models.Device;
 using System.Text;
+using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core.Services;
 
@@ -14,10 +16,10 @@ public sealed class DeviceConfigService : IDeviceConfigService
 	private readonly IFileService _fileService;
 
 	/// <summary>
-	/// The standard <see cref="DeviceConfigService"/> class constructor.
+	/// Initializes a new instance of the <see cref="DeviceConfigService"/> class.
 	/// </summary>
-	/// <param name="logger"></param>
-	/// <param name="fileService"></param>
+	/// <param name="logger">The logger service.</param>
+	/// <param name="fileService">The file service.</param>
 	public DeviceConfigService(ILoggerService logger, IFileService fileService)
 	{
 		_logger = logger;
@@ -25,33 +27,51 @@ public sealed class DeviceConfigService : IDeviceConfigService
 	}
 
 	/// <inheritdoc/>	
-	public Configuration Create(string name, string applicationVersion) =>
-		name is null
-			? throw new ArgumentNullException(nameof(name))
-			: applicationVersion is null
-				? throw new ArgumentNullException(nameof(applicationVersion))
-				: (new(name, applicationVersion));
+	/// <exception cref="ArgumentNullException"></exception>
+	/// <exception cref="ServiceException"></exception>
+	public Configuration Create(string name, string applicationVersion)
+	{
+		try
+		{
+			if (name is null)
+				throw new ArgumentNullException(nameof(name));
+			if (applicationVersion is null)
+				throw new ArgumentNullException(nameof(applicationVersion));
+			return new(name, applicationVersion);
+		}
+		catch (Exception ex)
+		{
+			_logger.Error(ex.Message);
+			string message = string.Format(Culture, Error_While_Creating_A_New_Device_Configuration);
+			throw new ServiceException(message, ex);
+		}
+	}
 
 	/// <inheritdoc/>
+	/// <exception cref="ServiceException"></exception>
 	public Configuration? Read(string folderPath, string fileName)
 	{
 		try
 		{
-			(bool success, string content) = _fileService.Read(folderPath, fileName);
-			if (!success)
+			string content = _fileService.Read(folderPath, fileName);
+			if (string.IsNullOrWhiteSpace(content))
 				return default;
+
 			XmlHelper<Configuration> serializer = new();
 			return serializer.Deserialize(content);
 		}
 		catch (Exception ex)
 		{
 			_logger.Error(ex.Message);
+			string message = string.Format(Culture, Error_While_Reading_A_Existing_Device_Configuration);
+			throw new ServiceException(message, ex);
 		}
-		return default;
 	}
 
 	/// <inheritdoc/>
-	public (bool success, string message) Write(string folderPath, string fileName, Configuration configuration, Encoding? encoding)
+	/// <exception cref="ArgumentNullException"></exception>
+	/// <exception cref="ServiceException"></exception>
+	public bool Write(string folderPath, string fileName, Configuration configuration, Encoding? encoding)
 	{
 		try
 		{
@@ -61,17 +81,20 @@ public sealed class DeviceConfigService : IDeviceConfigService
 			XmlHelper<Configuration> serializer = new();
 			string fileContent = serializer.StringSerialize(configuration, encoding);
 
-			(bool success, string message) result = _fileService.Save(folderPath, fileName, fileContent);
-			return result;
+			_fileService.Save(folderPath, fileName, fileContent);
+			return true;
 		}
 		catch (Exception ex)
 		{
 			_logger.Error(ex.Message);
-			return (false, ex.Message);
+			string message = string.Format(Culture, Error_While_Saving_Device_Configuration);
+			throw new ServiceException(message, ex);
 		}
 	}
 
 	/// <inheritdoc/>
-	public (bool success, string message) Write(string folderPath, string fileName, Configuration configuration) =>
+	/// <exception cref="ArgumentNullException"></exception>
+	/// <exception cref="ServiceException"></exception>
+	public bool Write(string folderPath, string fileName, Configuration configuration) =>
 		Write(folderPath, fileName, configuration, Encoding.UTF8);
 }

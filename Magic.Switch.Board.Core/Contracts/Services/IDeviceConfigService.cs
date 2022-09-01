@@ -13,8 +13,7 @@ public interface IDeviceConfigService
 	/// </summary>
 	/// <param name="applicationVersion">The Version of the application that creates the device configuration.</param>
 	/// <param name="name">The name of the configuration.</param>
-	/// <returns>A device configurastion of type <see cref="Configuration"/>.</returns>
-	/// <exception cref="ArgumentNullException"></exception>
+	/// <returns>A device configurastion of type <see cref="Configuration"/>.</returns>	
 	public Configuration Create(string name, string applicationVersion);
 
 	/// <summary>
@@ -35,9 +34,8 @@ public interface IDeviceConfigService
 	/// <param name="folderPath"></param>
 	/// <param name="fileName"></param>
 	/// <param name="configuration">The device configuration.</param>
-	/// <returns><see langword="true"/> or <see langword="false"/> as success message.</returns>
-	/// <exception cref="ArgumentNullException"></exception>
-	public (bool success, string message) Write(string folderPath, string fileName, Configuration configuration);
+	/// <returns><see langword="true"/> or <see langword="false"/> as success or failure.</returns>
+	public bool Write(string folderPath, string fileName, Configuration configuration);
 
 	/// <summary>
 	/// The <see cref="Write(string, string, Configuration, Encoding?)"/> method writes the device configuration to file.
@@ -50,7 +48,6 @@ public interface IDeviceConfigService
 	/// <param name="fileName"></param>
 	/// <param name="configuration">The device configuration.</param>
 	/// <param name="encoding">The desired encoding type.</param>
-	/// <returns><see langword="true"/> or <see langword="false"/> as success message.</returns>
-	/// <exception cref="ArgumentNullException"></exception>
-	public (bool success, string message) Write(string folderPath, string fileName, Configuration configuration, Encoding? encoding);
+	/// <returns><see langword="true"/> or <see langword="false"/> as success or failure.</returns>
+	public bool Write(string folderPath, string fileName, Configuration configuration, Encoding? encoding);
 }

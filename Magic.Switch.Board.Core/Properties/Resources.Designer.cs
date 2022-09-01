@@ -511,6 +511,69 @@ namespace Magic.Switch.Board.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error while creating a new device configuration..
+        /// </summary>
+        public static string Error_While_Creating_A_New_Device_Configuration {
+            get {
+                return ResourceManager.GetString("Error_While_Creating_A_New_Device_Configuration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error while creating file. &apos;{0}&apos;.
+        /// </summary>
+        public static string Error_While_Creating_File {
+            get {
+                return ResourceManager.GetString("Error_While_Creating_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error while deleting file. &apos;{0}.
+        /// </summary>
+        public static string Error_While_Deleting_File {
+            get {
+                return ResourceManager.GetString("Error_While_Deleting_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error while fetching enum list..
+        /// </summary>
+        public static string Error_While_Fetching_Enum_List {
+            get {
+                return ResourceManager.GetString("Error_While_Fetching_Enum_List", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error while reading a existing device configuration..
+        /// </summary>
+        public static string Error_While_Reading_A_Existing_Device_Configuration {
+            get {
+                return ResourceManager.GetString("Error_While_Reading_A_Existing_Device_Configuration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error while reading file. &apos;{0}&apos;.
+        /// </summary>
+        public static string Error_While_Reading_File {
+            get {
+                return ResourceManager.GetString("Error_While_Reading_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error while saving device configuration..
+        /// </summary>
+        public static string Error_While_Saving_Device_Configuration {
+            get {
+                return ResourceManager.GetString("Error_While_Saving_Device_Configuration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error during deserialisation. Unkown attribute found. Name: &apos;{0}&apos; at line: {1} and position: {2}..
         /// </summary>
         public static string Error_Xml_Unknown_Attribute {

@@ -11,8 +11,51 @@
 	<DockPanel LastChildFill="true">
 		<Menu DockPanel.Dock="Top">
 			<MenuItem Header="_File">
-				<MenuItem Command="{Binding OpenChildCommand}" Header="_Open Child"/>
-				<MenuItem Command="{Binding AddPersonCommand}" Header="_Add Person"/>
+				<MenuItem Header="_New" Command="{Binding CmdNewFile}">
+					<MenuItem.Icon>
+						<Image Source="/Assets/Icons/File_New.ico"/>
+					</MenuItem.Icon>
+				</MenuItem>
+				<MenuItem Header="_Open" Command="{Binding CmdOpenFile}">
+					<MenuItem.Icon>
+						<Image Source="/Assets/Icons/File_Open.ico"/>
+					</MenuItem.Icon>
+				</MenuItem>
+				<Separator/>
+				<MenuItem Header="_Settings" Command="{Binding CmdOpenSettings}">
+					<MenuItem.Icon>
+						<Image Source="/Assets/Icons/File_Settings.ico"/>
+					</MenuItem.Icon>
+				</MenuItem>
+				<Separator/>
+				<MenuItem Header="_Quit" Command="{Binding CmdQuitApplication}">
+					<MenuItem.Icon>
+						<Image Source="/Assets/Icons/File_Quit.ico"/>
+					</MenuItem.Icon>
+				</MenuItem>
+			</MenuItem>
+			<MenuItem Header="_Help">
+				<MenuItem Header="_About" Command="{Binding CmdShowAbout}">
+					<MenuItem.Icon>
+						<Image Source="/Assets/Icons/Help_About.ico"/>
+					</MenuItem.Icon>
+				</MenuItem>
+				<MenuItem Header="_Check for Updates..." Command="{Binding CmdCheckUpdates}">
+					<MenuItem.Icon>
+						<Image Source="/Assets/Icons/Help_Update.ico"/>
+					</MenuItem.Icon>
+				</MenuItem>
+				<MenuItem Header="_What's new..." Command="{Binding CmdWhatsNew}">
+					<MenuItem.Icon>
+						<Image Source="/Assets/Icons/Help_News.ico"/>
+					</MenuItem.Icon>
+				</MenuItem>
+				<Separator/>
+				<MenuItem Header="_Help Center" Command="{Binding CmdHelpCenter}">
+					<MenuItem.Icon>
+						<Image Source="/Assets/Icons/Help_Center.ico"/>
+					</MenuItem.Icon>
+				</MenuItem>
 			</MenuItem>
 		</Menu>
 		<Grid Margin="10" DockPanel.Dock="Bottom" Grid.ColumnSpan="2">

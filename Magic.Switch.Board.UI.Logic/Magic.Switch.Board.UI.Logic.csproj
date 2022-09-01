@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFramework>net6.0-windows</TargetFramework>
 		<UseWPF>true</UseWPF>
-		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<GeneratedAssemblyInfoFile>Properties\AssemblyInfo.cs</GeneratedAssemblyInfoFile>
 		<PackageProjectUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</RepositoryUrl>
@@ -14,6 +14,11 @@
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+		<UICulture>en-US</UICulture>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DocumentationMarkdown>$(MSBuildProjectDirectory)\Docs\API.md</DocumentationMarkdown>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -21,22 +26,29 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Magic.Switch.Board.Core\Magic.Switch.Board.Core.csproj" />
+		<PackageReference Include="Vsxmd" Version="1.4.5">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Properties\Resources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Resources.resx</DependentUpon>
-	  </Compile>
+		<ProjectReference Include="..\Magic.Switch.Board.Core\Magic.Switch.Board.Core.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Update="Properties\Resources.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
+		<Compile Update="Properties\Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
 	</ItemGroup>
 
 </Project>

@@ -7,7 +7,7 @@ using static Magic.Switch.Board.Core.Properties.Resources;
 namespace Magic.Switch.Board.Core;
 
 /// <summary>
-/// The <see cref="Enums"/> class
+/// The <see cref="Enums"/> class.
 /// </summary>
 public static class Enums
 {
@@ -267,13 +267,7 @@ public static class Enums
 		List<EnumModel<T>> listToReturn = new();
 		foreach (T e in enumList)
 		{
-			EnumModel<T> em = new()
-			{
-				Enum = e,
-				Name = e.GetEnumName(),
-				ShortName = e.GetEnumShortName(),
-				Description = e.GetEnumDescription(),
-			};
+			EnumModel<T> em = new(e, e.GetEnumName(), e.GetEnumShortName(), e.GetEnumDescription());
 			listToReturn.Add(em);
 		}
 		return listToReturn;

@@ -1,22 +1,96 @@
 ﻿using Magic.Switch.Board.Core.Contracts.Services;
+using Magic.Switch.Board.Core.Exceptions;
 using Magic.Switch.Board.Core.Models;
+using static Magic.Switch.Board.Core.Enums;
+using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core.Services;
 
+/// <summary>
+/// The <see cref="EnumService"/> class implements the members of the <see cref="IEnumService"/> interface.
+/// </summary>
 public class EnumService : IEnumService
 {
-	public IReadOnlyList<EnumModel<Enums.LogLevel>> GetLogLevels() =>
-		Enums.LogLevel.None.GetEnumModelList();
+	private readonly ILoggerService _logger;
 
-	public IReadOnlyList<EnumModel<Enums.LoopChannels>> GetLoopChannels() =>
-		Enums.LoopChannels.CH01.GetEnumModelList();
+	/// <summary>
+	/// Initializes a new instance of the <see cref="EnumService"/> class.
+	/// </summary>
+	/// <param name="logger">The logger service.</param>
+	public EnumService(ILoggerService logger) => _logger = logger;
 
-	public IReadOnlyList<EnumModel<Enums.MidiChannel>> GetMidiChannels() =>
-		Enums.MidiChannel.CH01.GetEnumModelList();
+	/// <inheritdoc/>
+	/// <exception cref="ServiceException"></exception>
+	public IReadOnlyList<EnumModel<LogLevel>> GetLogLevels()
+	{
+		try
+		{
+			return LogLevel.None.GetEnumModelList();
+		}
+		catch (Exception ex)
+		{
+			_logger.Error($"{ex.Message}");
+			throw new ServiceException(Error_While_Fetching_Enum_List, ex);
+		}
+	}
 
-	public IReadOnlyList<EnumModel<Enums.MidiMessageType>> GetMidiMessageTypes() =>
-		Enums.MidiMessageType.PCM.GetEnumModelList();
+	/// <inheritdoc/>
+	/// <exception cref="ServiceException"></exception>
+	public IReadOnlyList<EnumModel<LoopChannels>> GetLoopChannels()
+	{
+		try
+		{
+			return LoopChannels.CH01.GetEnumModelList();
+		}
+		catch (Exception ex)
+		{
+			_logger.Error($"{ex.Message}");
+			throw new ServiceException(Error_While_Fetching_Enum_List, ex);
+		}
+	}
 
-	public IReadOnlyList<EnumModel<Enums.SwitchChannels>> GetSwitchChannels() =>
-		Enums.SwitchChannels.CH01.GetEnumModelList();
+	/// <inheritdoc/>
+	/// <exception cref="ServiceException"></exception>
+	public IReadOnlyList<EnumModel<MidiChannel>> GetMidiChannels()
+	{
+		try
+		{
+			return MidiChannel.CH01.GetEnumModelList();
+		}
+		catch (Exception ex)
+		{
+			_logger.Error($"{ex.Message}");
+			throw new ServiceException(Error_While_Fetching_Enum_List, ex);
+		}
+	}
+
+	/// <inheritdoc/>
+	/// <exception cref="ServiceException"></exception>
+	public IReadOnlyList<EnumModel<MidiMessageType>> GetMidiMessageTypes()
+	{
+		try
+		{
+			return MidiMessageType.PCM.GetEnumModelList();
+		}
+		catch (Exception ex)
+		{
+			_logger.Error($"{ex.Message}");
+			throw new ServiceException(Error_While_Fetching_Enum_List, ex);
+		}
+	}
+
+	/// <inheritdoc/>
+	/// <exception cref="ServiceException"></exception>
+	public IReadOnlyList<EnumModel<SwitchChannels>> GetSwitchChannels()
+	{
+		try
+		{
+			return SwitchChannels.CH01.GetEnumModelList();
+		}
+		catch (Exception ex)
+		{
+			_logger.Error($"{ex.Message}");
+			throw new ServiceException(Error_While_Fetching_Enum_List, ex);
+		}
+	}
 }

@@ -11,39 +11,39 @@
 		<RepositoryType>git</RepositoryType>
 		<Authors>https://github.com/BoBoBaSs84</Authors>
 		<Copyright>© 2022 BoBoBaSs84</Copyright>
-		<ApplicationIcon>Resources\Magic.Switch.Board.ico</ApplicationIcon>
+		<ApplicationIcon>Assets\Icons\Magic_Switch_Board.ico</ApplicationIcon>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+		<StartupObject>Magic.Switch.Board.UI.App</StartupObject>
+		<UICulture>en-US</UICulture>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DocumentationMarkdown>$(MSBuildProjectDirectory)\Docs\API.md</DocumentationMarkdown>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<None Remove="Resources\Magic.Switch.Board.ico" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Content Include="Resources\Magic.Switch.Board.ico" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Resource Include="Resources\Magic.Switch.Board.ico" />
+		<None Remove="Assets\Icons\File_New.ico" />
+		<None Remove="Assets\Icons\File_Open.ico" />
+		<None Remove="Assets\Icons\File_Quit.ico" />
+		<None Remove="Assets\Icons\File_Settings.ico" />
+		<None Remove="Assets\Icons\Help_About.ico" />
+		<None Remove="Assets\Icons\Help_Center.ico" />
+		<None Remove="Assets\Icons\Help_News.ico" />
+		<None Remove="Assets\Icons\Help_Update.ico" />
+		<None Remove="Assets\Icons\Magic_Switch_Board.ico" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
 		<PackageReference Include="System.Drawing.Common" Version="6.0.0" />
 		<PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Update="appsettings.Development.json">
-			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-		</None>
-		<None Update="Properties\Settings.settings">
-			<Generator>SettingsSingleFileGenerator</Generator>
-			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
-		</None>
+		<PackageReference Include="Vsxmd" Version="1.4.5">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -52,6 +52,25 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Magic.Switch.Board.UI.Logic\Magic.Switch.Board.UI.Logic.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Assets\Icons\File_New.ico" />
+		<Resource Include="Assets\Icons\File_Open.ico" />
+		<Resource Include="Assets\Icons\File_Quit.ico" />
+		<Resource Include="Assets\Icons\File_Settings.ico" />
+		<Resource Include="Assets\Icons\Help_About.ico" />
+		<Resource Include="Assets\Icons\Help_Center.ico" />
+		<Resource Include="Assets\Icons\Help_News.ico" />
+		<Resource Include="Assets\Icons\Help_Update.ico" />
+		<Resource Include="Assets\Icons\Magic_Switch_Board.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Properties\Settings.settings">
+			<Generator>SettingsSingleFileGenerator</Generator>
+			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
 	</ItemGroup>
 
 	<ItemGroup>

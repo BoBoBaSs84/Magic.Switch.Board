@@ -4,7 +4,6 @@ using Magic.Switch.Board.UI.Logic.BaseTypes;
 using Magic.Switch.Board.UI.Logic.ViewModels.Device;
 using System.ComponentModel;
 using System.Windows.Data;
-using System.Windows.Input;
 using static Magic.Switch.Board.UI.Logic.Statics;
 
 namespace Magic.Switch.Board.UI.Logic.ViewModels;
@@ -19,29 +18,29 @@ public sealed class MainViewModel : ViewModelBase
 	private readonly IEnumService _enumService;
 
 	/// <summary>
-	/// The <see cref="MainViewModel"/> class constructor.
+	/// Initializes a new instance of the <see cref="MainViewModel"/> class.
 	/// </summary>
+	/// <param name="logger">The logger service.</param>
+	/// <param name="deviceConfigService">the device configuration service.</param>
+	/// <param name="enumService">The enumerator service.</param>
 	public MainViewModel(ILoggerService logger, IDeviceConfigService deviceConfigService, IEnumService enumService)
 	{
 		_logger = logger;
 		_deviceConfigService = deviceConfigService;
 		_enumService = enumService;
-		IList<Configuration> configurations = GetConfigurations();
+		IList<ConfigurationVM> configurations = GetConfigurations();
 		ConfigurationsView = CollectionViewSource.GetDefaultView(configurations);
 		ConfigurationsView.CurrentChanged += OnConfigurationSelectionChanged;
-
-		IReadOnlyList<Core.Models.EnumModel<Core.Enums.MidiMessageType>> list = _enumService.GetMidiMessageTypes();
 	}
 
 	public void OnConfigurationSelectionChanged(object? sender, EventArgs e)
 	{
 		if (sender is not ICollectionView configurationsView)
 			return;
-		if (configurationsView.CurrentItem is not Configuration configuration)
+		if (configurationsView.CurrentItem is not ConfigurationVM configuration)
 			return;
 
-		Progress = configurationsView.CurrentPosition;
-		ConfigurationView = new(configuration);
+		ConfigurationView = configuration;
 	}
 
 	/// <summary>The <see cref="ApplicationVersion"/> property.</summary>
@@ -54,10 +53,10 @@ public sealed class MainViewModel : ViewModelBase
 	public ConfigurationVM ConfigurationView { get => configurationView; set => SetProperty(ref configurationView, value); }
 
 	// TODO: Some random configs for now ...
-	private List<Configuration> GetConfigurations()
+	private List<ConfigurationVM> GetConfigurations()
 	{
-		List<Configuration> configList = new();
-		for (int i = 1; i <= 10; i++)
+		List<ConfigurationVM> configList = new();
+		for (int i = 1; i <= 100000; i++)
 		{
 			Configuration config = _deviceConfigService.Create(Guid.NewGuid().ToString(), AssemblyVersion);
 			if (i == 10)
@@ -76,25 +75,11 @@ public sealed class MainViewModel : ViewModelBase
 					new Output(Core.Enums.MidiChannel.CH03, Core.Enums.MidiMessageType.PCM, 146),
 					new Switches(Core.Enums.SwitchChannels.CH01 | Core.Enums.SwitchChannels.CH02 | Core.Enums.SwitchChannels.CH03),
 					new Loops(Core.Enums.LoopChannels.CH01 | Core.Enums.LoopChannels.CH02)));
-				(bool success, string message) = _deviceConfigService.Write("D:\\", "Test.xml", config);
+				bool success = _deviceConfigService.Write("D:\\", "Test.xml", config);
 			}
-			configList.Add(config);
+			configList.Add(new(config));
 		}
 		return configList;
-	}
-
-	private RelayCommand? openChildCommand;
-	public ICommand OpenChildCommand => openChildCommand ??= new RelayCommand(OpenChild);
-
-	private void OpenChild()
-	{
-	}
-
-	private RelayCommand? addPersonCommand;
-	public ICommand AddPersonCommand => addPersonCommand ??= new RelayCommand(AddPerson);
-
-	private void AddPerson()
-	{
 	}
 
 	private double progress;

@@ -183,9 +183,6 @@
   <data name="Enum_LoopChannel_8_Name" xml:space="preserve">
     <value>Loop Channel 8</value>
   </data>
-  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
-    <value>Midi Channel 1</value>
-  </data>
   <data name="Enum_MidiChannel_10_Name" xml:space="preserve">
     <value>Midi Channel 10</value>
   </data>
@@ -206,6 +203,9 @@
   </data>
   <data name="Enum_MidiChannel_16_Name" xml:space="preserve">
     <value>Midi Channel 16</value>
+  </data>
+  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
+    <value>Midi Channel 1</value>
   </data>
   <data name="Enum_MidiChannel_2_Name" xml:space="preserve">
     <value>Midi Channel 2</value>
@@ -266,6 +266,27 @@
   </data>
   <data name="Enum_SwitchChannel_8_Name" xml:space="preserve">
     <value>Switch Channel 8</value>
+  </data>
+  <data name="Error_While_Creating_A_New_Device_Configuration" xml:space="preserve">
+    <value>Error while creating a new device configuration.</value>
+  </data>
+  <data name="Error_While_Creating_File" xml:space="preserve">
+    <value>Error while creating file. '{0}'</value>
+  </data>
+  <data name="Error_While_Deleting_File" xml:space="preserve">
+    <value>Error while deleting file. '{0}</value>
+  </data>
+  <data name="Error_While_Fetching_Enum_List" xml:space="preserve">
+    <value>Error while fetching enum list.</value>
+  </data>
+  <data name="Error_While_Reading_A_Existing_Device_Configuration" xml:space="preserve">
+    <value>Error while reading a existing device configuration.</value>
+  </data>
+  <data name="Error_While_Reading_File" xml:space="preserve">
+    <value>Error while reading file. '{0}'</value>
+  </data>
+  <data name="Error_While_Saving_Device_Configuration" xml:space="preserve">
+    <value>Error while saving device configuration.</value>
   </data>
   <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">
     <value>Error during deserialisation. Unkown attribute found. Name: '{0}' at line: {1} and position: {2}.</value>
