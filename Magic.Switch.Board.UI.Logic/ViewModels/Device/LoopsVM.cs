@@ -25,8 +25,8 @@ public class LoopsVM : ViewModelBase<Loops>
 	}
 
 	/// <summary>The <see cref="Channels"/> property.</summary>
-	[Display(Name = nameof(ViewModel_Display_Name_Channels), ResourceType = typeof(Resources))]
-	public LoopChannels Channels { get => channels; set => SetPropertyAndValidate(ref channels, value); }
+	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Channels))]
+	public LoopChannels Channels { get => channels; set => SetProperty(ref channels, value); }
 
 	private void Initialize() => Channels = Model.Channels;
 }

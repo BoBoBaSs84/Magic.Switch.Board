@@ -35,43 +35,40 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 	{
 		if (sender is not ConfigurationVM configurationVM)
 			return;
-		if (e.PropertyName is not null && !e.PropertyName.Equals(nameof(Updated)))
+		if (e.PropertyName is not null && !e.PropertyName.Equals(nameof(Updated), StringComparison.Ordinal))
 			configurationVM.Updated = DateTime.Now;
 	}
 
 	/// <summary>The <see cref="Id"/> property.</summary>
-	[Display(ResourceType = typeof(Resources),
-		Name = nameof(ViewModel_Display_Name_Id),
-		ShortName = nameof(ViewModel_Display_Name_Id),
-		Description = nameof(ViewModel_Display_Name_Id))]
+	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Id))]
 	public Guid Id { get => id; private set => SetPropertyNoNotify(ref id, value); }
 
 	/// <summary>The <see cref="Name"/> property.</summary>
-	[Display(Name = nameof(ViewModel_Display_Name_Name), ResourceType = typeof(Resources))]
+	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Name))]
 	public string Name { get => name; set => SetPropertyAndValidate(ref name, value); }
 
 	/// <summary>The <see cref="Description"/> property.</summary>
-	[Display(Name = nameof(ViewModel_Display_Name_Description), ResourceType = typeof(Resources))]
+	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Description))]
 	public string? Description { get => description; set => SetPropertyAndValidate(ref description, value); }
 
 	/// <summary>The <see cref="Created"/> property.</summary>
-	[Display(Name = nameof(ViewModel_Display_Name_Created), ResourceType = typeof(Resources))]
+	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Created))]
 	public DateTime Created { get => created; set => SetPropertyNoNotify(ref created, value); }
 
 	/// <summary>The <see cref="Updated"/> property.</summary>
-	[Display(Name = nameof(ViewModel_Display_Name_Updated), ResourceType = typeof(Resources))]
+	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Updated))]
 	public DateTime Updated { get => updated; set => SetProperty(ref updated, value); }
 
 	/// <summary>The <see cref="ApplicationVersion"/> property.</summary>
-	[Display(Name = nameof(ViewModel_Display_Name_Application_Version), ResourceType = typeof(Resources))]
+	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Application_Version))]
 	public string ApplicationVersion { get => applicationVersion; private set => SetPropertyNoNotify(ref applicationVersion, value); }
 
 	/// <summary>The <see cref="ConfigurationVersion"/> property.</summary>
-	[Display(Name = nameof(ViewModel_Display_Name_Configuration_Version), ResourceType = typeof(Resources))]
+	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Configuration_Version))]
 	public string ConfigurationVersion { get => configurationVersion; private set => SetPropertyNoNotify(ref configurationVersion, value); }
 
 	/// <summary>The <see cref="Channels"/> property.</summary>
-	[Display(Name = nameof(ViewModel_Display_Name_Channels), ResourceType = typeof(Resources))]
+	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Channels))]
 	public List<ChannelVM> Channels { get => channels; set => SetProperty(ref channels, value); }
 
 	private void Initialize()

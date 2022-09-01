@@ -27,15 +27,15 @@ public class InputVM : ViewModelBase<Input>
 	}
 
 	/// <summary>The <see cref="MidiChannel"/> property.</summary>
-	[Display(Name = nameof(ViewModel_Display_Name_MidiChannel), ResourceType = typeof(Resources))]
-	public MidiChannel MidiChannel { get => midiChannel; set => SetPropertyAndValidate(ref midiChannel, value); }
+	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_MidiChannel))]
+	public MidiChannel MidiChannel { get => midiChannel; set => SetProperty(ref midiChannel, value); }
 
 	/// <summary>The <see cref="MessageType"/> property.</summary>
-	[Display(Name = nameof(ViewModel_Display_Name_MessageType), ResourceType = typeof(Resources))]
-	public MidiMessageType MessageType { get => messageType; set => SetPropertyAndValidate(ref messageType, value); }
+	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_MessageType))]
+	public MidiMessageType MessageType { get => messageType; set => SetProperty(ref messageType, value); }
 
 	/// <summary>The <see cref="Number"/> property.</summary>
-	[Display(Name = nameof(ViewModel_Display_Name_Number), ResourceType = typeof(Resources))]
+	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Number))]
 	public int Number { get => number; set => SetPropertyAndValidate(ref number, value); }
 
 	private void Initialize()
