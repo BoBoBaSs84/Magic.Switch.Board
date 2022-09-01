@@ -1,4 +1,5 @@
-﻿using Magic.Switch.Board.Core.Properties;
+﻿using Magic.Switch.Board.Core.Models.Device.Base;
+using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
@@ -9,16 +10,17 @@ namespace Magic.Switch.Board.Core.Models.Device;
 /// <summary>
 /// The <see cref="Channel"/> class.
 /// </summary>
+/// <remarks>
+/// Inherits the properties from <see cref="AuditBase"/> class.
+/// </remarks>
 [XmlRoot(ElementName = nameof(Channel), IsNullable = false)]
-public class Channel
+public class Channel : AuditBase
 {
 	/// <summary>
 	/// Initializes a new parameterless instance of the <see cref="Channel"/> class.
 	/// </summary>
-	public Channel()
+	public Channel() : base()
 	{
-		Id = Guid.NewGuid();
-		Name = string.Empty;
 		Input = new();
 		Output = default;
 		Switches = default;
@@ -28,38 +30,19 @@ public class Channel
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Channel"/> class.
 	/// </summary>
-	/// <param name="name">The name of the channel configuration.</param>
-	/// <param name="input">The input parameters the channel listens to.</param>
-	/// <param name="output">The output parameters the channel should send.</param>
-	/// <param name="switches">The switches the channel should switch.</param>
-	/// <param name="loops">The loops the channel should switch.</param>
+	/// <param name="name">The name of the channel configuration. Will throw an exception if <see langword="null"/></param>
+	/// <param name="input">The input parameters the channel listens to. Will throw an exception if <see langword="null"/></param>
+	/// <param name="output">The output parameters the channel should send. Will throw an exception if <see langword="null"/></param>
+	/// <param name="switches">The switches the channel should switch. Will throw an exception if <see langword="null"/></param>
+	/// <param name="loops">The loops the channel should switch. Will throw an exception if <see langword="null"/></param>
 	/// <exception cref="ArgumentNullException"></exception>
-	public Channel(string name, Input input, Output output, Switches switches, Loops loops)
+	public Channel(string name, Input input, Output output, Switches switches, Loops loops) : base(name)
 	{
-		Id = Guid.NewGuid();
-		Name = name ?? throw new ArgumentNullException(nameof(name)); ;
 		Input = input ?? throw new ArgumentNullException(nameof(input));
 		Output = output ?? throw new ArgumentNullException(nameof(output));
 		Switches = switches ?? throw new ArgumentNullException(nameof(switches));
 		Loops = loops ?? throw new ArgumentNullException(nameof(loops));
 	}
-
-	/// <summary>
-	/// The <see cref="Id"/> property.
-	/// </summary>
-	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
-	[JsonPropertyName(nameof(Id))]
-	[XmlAttribute(AttributeName = nameof(Id))]
-	public Guid Id { get; set; }
-
-	/// <summary>
-	/// The <see cref="Name"/> property, can not be <see langword="null"/>.
-	/// </summary>
-	[Required(AllowEmptyStrings = false, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
-	[StringLength(50, MinimumLength = 5, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_StringLength_Generic))]
-	[JsonPropertyName(nameof(Name))]
-	[XmlElement(ElementName = nameof(Name), IsNullable = false)]
-	public string Name { get; set; }
 
 	/// <summary>
 	/// The <see cref="Input"/> property, can not be <see langword="null"/>.

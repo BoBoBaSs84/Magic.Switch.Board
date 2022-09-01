@@ -70,11 +70,29 @@ namespace Magic.Switch.Board.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Critical.
+        /// </summary>
+        public static string Enum_LogLevel_Critical_Name {
+            get {
+                return ResourceManager.GetString("Enum_LogLevel_Critical_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Logs that are used for interactive investigation during development. These logs should primarily contain information useful for debugging and have no long-term value..
         /// </summary>
         public static string Enum_LogLevel_Debug_Description {
             get {
                 return ResourceManager.GetString("Enum_LogLevel_Debug_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debug.
+        /// </summary>
+        public static string Enum_LogLevel_Debug_Name {
+            get {
+                return ResourceManager.GetString("Enum_LogLevel_Debug_Name", resourceCulture);
             }
         }
         
@@ -88,11 +106,29 @@ namespace Magic.Switch.Board.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string Enum_LogLevel_Error_Name {
+            get {
+                return ResourceManager.GetString("Enum_LogLevel_Error_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Logs that track the general flow of the application. These logs should have long-term value..
         /// </summary>
         public static string Enum_LogLevel_Information_Description {
             get {
                 return ResourceManager.GetString("Enum_LogLevel_Information_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        public static string Enum_LogLevel_Information_Name {
+            get {
+                return ResourceManager.GetString("Enum_LogLevel_Information_Name", resourceCulture);
             }
         }
         
@@ -106,11 +142,29 @@ namespace Magic.Switch.Board.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to None.
+        /// </summary>
+        public static string Enum_LogLevel_None_Name {
+            get {
+                return ResourceManager.GetString("Enum_LogLevel_None_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Logs that contain the most detailed messages. These messages may contain sensitive application data. These messages are disabled by default and should never be enabled in a production environment..
         /// </summary>
         public static string Enum_LogLevel_Trace_Description {
             get {
                 return ResourceManager.GetString("Enum_LogLevel_Trace_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trace.
+        /// </summary>
+        public static string Enum_LogLevel_Trace_Name {
+            get {
+                return ResourceManager.GetString("Enum_LogLevel_Trace_Name", resourceCulture);
             }
         }
         
@@ -124,308 +178,335 @@ namespace Magic.Switch.Board.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        public static string Enum_LogLevel_Warning_Name {
+            get {
+                return ResourceManager.GetString("Enum_LogLevel_Warning_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loop Channel 1.
         /// </summary>
-        public static string Enum_LoopChannels_1 {
+        public static string Enum_LoopChannel_1_Name {
             get {
-                return ResourceManager.GetString("Enum_LoopChannels_1", resourceCulture);
+                return ResourceManager.GetString("Enum_LoopChannel_1_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Loop Channel 2.
         /// </summary>
-        public static string Enum_LoopChannels_2 {
+        public static string Enum_LoopChannel_2_Name {
             get {
-                return ResourceManager.GetString("Enum_LoopChannels_2", resourceCulture);
+                return ResourceManager.GetString("Enum_LoopChannel_2_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Loop Channel 3.
         /// </summary>
-        public static string Enum_LoopChannels_3 {
+        public static string Enum_LoopChannel_3_Name {
             get {
-                return ResourceManager.GetString("Enum_LoopChannels_3", resourceCulture);
+                return ResourceManager.GetString("Enum_LoopChannel_3_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Loop Channel 4.
         /// </summary>
-        public static string Enum_LoopChannels_4 {
+        public static string Enum_LoopChannel_4_Name {
             get {
-                return ResourceManager.GetString("Enum_LoopChannels_4", resourceCulture);
+                return ResourceManager.GetString("Enum_LoopChannel_4_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Loop Channel 5.
         /// </summary>
-        public static string Enum_LoopChannels_5 {
+        public static string Enum_LoopChannel_5_Name {
             get {
-                return ResourceManager.GetString("Enum_LoopChannels_5", resourceCulture);
+                return ResourceManager.GetString("Enum_LoopChannel_5_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Loop Channel 6.
         /// </summary>
-        public static string Enum_LoopChannels_6 {
+        public static string Enum_LoopChannel_6_Name {
             get {
-                return ResourceManager.GetString("Enum_LoopChannels_6", resourceCulture);
+                return ResourceManager.GetString("Enum_LoopChannel_6_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Loop Channel 7.
         /// </summary>
-        public static string Enum_LoopChannels_7 {
+        public static string Enum_LoopChannel_7_Name {
             get {
-                return ResourceManager.GetString("Enum_LoopChannels_7", resourceCulture);
+                return ResourceManager.GetString("Enum_LoopChannel_7_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Loop Channel 8.
         /// </summary>
-        public static string Enum_LoopChannels_8 {
+        public static string Enum_LoopChannel_8_Name {
             get {
-                return ResourceManager.GetString("Enum_LoopChannels_8", resourceCulture);
+                return ResourceManager.GetString("Enum_LoopChannel_8_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 1.
         /// </summary>
-        public static string Enum_MidiChannel_1 {
+        public static string Enum_MidiChannel_1_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_1", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_1_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 10.
         /// </summary>
-        public static string Enum_MidiChannel_10 {
+        public static string Enum_MidiChannel_10_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_10", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_10_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 11.
         /// </summary>
-        public static string Enum_MidiChannel_11 {
+        public static string Enum_MidiChannel_11_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_11", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_11_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 12.
         /// </summary>
-        public static string Enum_MidiChannel_12 {
+        public static string Enum_MidiChannel_12_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_12", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_12_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 13.
         /// </summary>
-        public static string Enum_MidiChannel_13 {
+        public static string Enum_MidiChannel_13_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_13", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_13_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 14.
         /// </summary>
-        public static string Enum_MidiChannel_14 {
+        public static string Enum_MidiChannel_14_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_14", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_14_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 15.
         /// </summary>
-        public static string Enum_MidiChannel_15 {
+        public static string Enum_MidiChannel_15_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_15", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_15_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 16.
         /// </summary>
-        public static string Enum_MidiChannel_16 {
+        public static string Enum_MidiChannel_16_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_16", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_16_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 2.
         /// </summary>
-        public static string Enum_MidiChannel_2 {
+        public static string Enum_MidiChannel_2_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_2", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_2_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 3.
         /// </summary>
-        public static string Enum_MidiChannel_3 {
+        public static string Enum_MidiChannel_3_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_3", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_3_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 4.
         /// </summary>
-        public static string Enum_MidiChannel_4 {
+        public static string Enum_MidiChannel_4_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_4", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_4_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 5.
         /// </summary>
-        public static string Enum_MidiChannel_5 {
+        public static string Enum_MidiChannel_5_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_5", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_5_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 6.
         /// </summary>
-        public static string Enum_MidiChannel_6 {
+        public static string Enum_MidiChannel_6_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_6", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_6_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 7.
         /// </summary>
-        public static string Enum_MidiChannel_7 {
+        public static string Enum_MidiChannel_7_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_7", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_7_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 8.
         /// </summary>
-        public static string Enum_MidiChannel_8 {
+        public static string Enum_MidiChannel_8_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_8", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_8_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Midi Channel 9.
         /// </summary>
-        public static string Enum_MidiChannel_9 {
+        public static string Enum_MidiChannel_9_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiChannel_9", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiChannel_9_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Control Change messages are usually used to change function parameters or call functions in your Midi devices..
+        /// </summary>
+        public static string Enum_MidiMessageType_CCM_Description {
+            get {
+                return ResourceManager.GetString("Enum_MidiMessageType_CCM_Description", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Control Change Message.
         /// </summary>
-        public static string Enum_MidiMessageType_CCM {
+        public static string Enum_MidiMessageType_CCM_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiMessageType_CCM", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiMessageType_CCM_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The Program Change message is used to specify the type of instrument which should be used to play sounds on a given Channel..
+        /// </summary>
+        public static string Enum_MidiMessageType_PCM_Description {
+            get {
+                return ResourceManager.GetString("Enum_MidiMessageType_PCM_Description", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Program Change Message.
         /// </summary>
-        public static string Enum_MidiMessageType_PCM {
+        public static string Enum_MidiMessageType_PCM_Name {
             get {
-                return ResourceManager.GetString("Enum_MidiMessageType_PCM", resourceCulture);
+                return ResourceManager.GetString("Enum_MidiMessageType_PCM_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Switch Channel 1.
         /// </summary>
-        public static string Enum_SwitchChannels_1 {
+        public static string Enum_SwitchChannel_1_Name {
             get {
-                return ResourceManager.GetString("Enum_SwitchChannels_1", resourceCulture);
+                return ResourceManager.GetString("Enum_SwitchChannel_1_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Switch Channel 2.
         /// </summary>
-        public static string Enum_SwitchChannels_2 {
+        public static string Enum_SwitchChannel_2_Name {
             get {
-                return ResourceManager.GetString("Enum_SwitchChannels_2", resourceCulture);
+                return ResourceManager.GetString("Enum_SwitchChannel_2_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Switch Channel 3.
         /// </summary>
-        public static string Enum_SwitchChannels_3 {
+        public static string Enum_SwitchChannel_3_Name {
             get {
-                return ResourceManager.GetString("Enum_SwitchChannels_3", resourceCulture);
+                return ResourceManager.GetString("Enum_SwitchChannel_3_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Switch Channel 4.
         /// </summary>
-        public static string Enum_SwitchChannels_4 {
+        public static string Enum_SwitchChannel_4_Name {
             get {
-                return ResourceManager.GetString("Enum_SwitchChannels_4", resourceCulture);
+                return ResourceManager.GetString("Enum_SwitchChannel_4_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Switch Channel 5.
         /// </summary>
-        public static string Enum_SwitchChannels_5 {
+        public static string Enum_SwitchChannel_5_Name {
             get {
-                return ResourceManager.GetString("Enum_SwitchChannels_5", resourceCulture);
+                return ResourceManager.GetString("Enum_SwitchChannel_5_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Switch Channel 6.
         /// </summary>
-        public static string Enum_SwitchChannels_6 {
+        public static string Enum_SwitchChannel_6_Name {
             get {
-                return ResourceManager.GetString("Enum_SwitchChannels_6", resourceCulture);
+                return ResourceManager.GetString("Enum_SwitchChannel_6_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Switch Channel 7.
         /// </summary>
-        public static string Enum_SwitchChannels_7 {
+        public static string Enum_SwitchChannel_7_Name {
             get {
-                return ResourceManager.GetString("Enum_SwitchChannels_7", resourceCulture);
+                return ResourceManager.GetString("Enum_SwitchChannel_7_Name", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Switch Channel 8.
         /// </summary>
-        public static string Enum_SwitchChannels_8 {
+        public static string Enum_SwitchChannel_8_Name {
             get {
-                return ResourceManager.GetString("Enum_SwitchChannels_8", resourceCulture);
+                return ResourceManager.GetString("Enum_SwitchChannel_8_Name", resourceCulture);
             }
         }
         
@@ -498,6 +579,15 @@ namespace Magic.Switch.Board.Core.Properties {
         public static string File_Service_File_Read {
             get {
                 return ResourceManager.GetString("File_Service_File_Read", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} cannot be longer than {1} characters..
+        /// </summary>
+        public static string Model_Field_MaxLength_Generic {
+            get {
+                return ResourceManager.GetString("Model_Field_MaxLength_Generic", resourceCulture);
             }
         }
         

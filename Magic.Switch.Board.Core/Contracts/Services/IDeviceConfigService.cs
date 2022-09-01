@@ -12,9 +12,10 @@ public interface IDeviceConfigService
 	/// The <see cref="Create"/> method should create a new device configuration.
 	/// </summary>
 	/// <param name="applicationVersion">The Version of the application that creates the device configuration.</param>
+	/// <param name="name">The name of the configuration.</param>
 	/// <returns>A device configurastion of type <see cref="Configuration"/>.</returns>
 	/// <exception cref="ArgumentNullException"></exception>
-	public Configuration Create(string applicationVersion);
+	public Configuration Create(string name, string applicationVersion);
 
 	/// <summary>
 	/// The <see cref="Read(string, string)"/> method should read the device configuration from file.

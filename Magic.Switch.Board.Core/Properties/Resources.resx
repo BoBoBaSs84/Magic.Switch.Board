@@ -120,124 +120,151 @@
   <data name="Enum_LogLevel_Critical_Description" xml:space="preserve">
     <value>Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention.</value>
   </data>
+  <data name="Enum_LogLevel_Critical_Name" xml:space="preserve">
+    <value>Critical</value>
+  </data>
   <data name="Enum_LogLevel_Debug_Description" xml:space="preserve">
     <value>Logs that are used for interactive investigation during development. These logs should primarily contain information useful for debugging and have no long-term value.</value>
+  </data>
+  <data name="Enum_LogLevel_Debug_Name" xml:space="preserve">
+    <value>Debug</value>
   </data>
   <data name="Enum_LogLevel_Error_Description" xml:space="preserve">
     <value>Logs that highlight when the current flow of execution is stopped due to a failure. These should indicate a failure in the current activity, not an application-wide failure.</value>
   </data>
+  <data name="Enum_LogLevel_Error_Name" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="Enum_LogLevel_Information_Description" xml:space="preserve">
     <value>Logs that track the general flow of the application. These logs should have long-term value.</value>
+  </data>
+  <data name="Enum_LogLevel_Information_Name" xml:space="preserve">
+    <value>Information</value>
   </data>
   <data name="Enum_LogLevel_None_Description" xml:space="preserve">
     <value>Not used for writing log messages. Specifies that a logging category should not write any messages.</value>
   </data>
+  <data name="Enum_LogLevel_None_Name" xml:space="preserve">
+    <value>None</value>
+  </data>
   <data name="Enum_LogLevel_Trace_Description" xml:space="preserve">
     <value>Logs that contain the most detailed messages. These messages may contain sensitive application data. These messages are disabled by default and should never be enabled in a production environment.</value>
+  </data>
+  <data name="Enum_LogLevel_Trace_Name" xml:space="preserve">
+    <value>Trace</value>
   </data>
   <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
     <value>Logs that highlight an abnormal or unexpected event in the application flow, but do not otherwise cause the application execution to stop.</value>
   </data>
-  <data name="Enum_LoopChannels_1" xml:space="preserve">
+  <data name="Enum_LogLevel_Warning_Name" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="Enum_LoopChannel_1_Name" xml:space="preserve">
     <value>Loop Channel 1</value>
   </data>
-  <data name="Enum_LoopChannels_2" xml:space="preserve">
+  <data name="Enum_LoopChannel_2_Name" xml:space="preserve">
     <value>Loop Channel 2</value>
   </data>
-  <data name="Enum_LoopChannels_3" xml:space="preserve">
+  <data name="Enum_LoopChannel_3_Name" xml:space="preserve">
     <value>Loop Channel 3</value>
   </data>
-  <data name="Enum_LoopChannels_4" xml:space="preserve">
+  <data name="Enum_LoopChannel_4_Name" xml:space="preserve">
     <value>Loop Channel 4</value>
   </data>
-  <data name="Enum_LoopChannels_5" xml:space="preserve">
+  <data name="Enum_LoopChannel_5_Name" xml:space="preserve">
     <value>Loop Channel 5</value>
   </data>
-  <data name="Enum_LoopChannels_6" xml:space="preserve">
+  <data name="Enum_LoopChannel_6_Name" xml:space="preserve">
     <value>Loop Channel 6</value>
   </data>
-  <data name="Enum_LoopChannels_7" xml:space="preserve">
+  <data name="Enum_LoopChannel_7_Name" xml:space="preserve">
     <value>Loop Channel 7</value>
   </data>
-  <data name="Enum_LoopChannels_8" xml:space="preserve">
+  <data name="Enum_LoopChannel_8_Name" xml:space="preserve">
     <value>Loop Channel 8</value>
   </data>
-  <data name="Enum_MidiChannel_1" xml:space="preserve">
+  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
     <value>Midi Channel 1</value>
   </data>
-  <data name="Enum_MidiChannel_10" xml:space="preserve">
+  <data name="Enum_MidiChannel_10_Name" xml:space="preserve">
     <value>Midi Channel 10</value>
   </data>
-  <data name="Enum_MidiChannel_11" xml:space="preserve">
+  <data name="Enum_MidiChannel_11_Name" xml:space="preserve">
     <value>Midi Channel 11</value>
   </data>
-  <data name="Enum_MidiChannel_12" xml:space="preserve">
+  <data name="Enum_MidiChannel_12_Name" xml:space="preserve">
     <value>Midi Channel 12</value>
   </data>
-  <data name="Enum_MidiChannel_13" xml:space="preserve">
+  <data name="Enum_MidiChannel_13_Name" xml:space="preserve">
     <value>Midi Channel 13</value>
   </data>
-  <data name="Enum_MidiChannel_14" xml:space="preserve">
+  <data name="Enum_MidiChannel_14_Name" xml:space="preserve">
     <value>Midi Channel 14</value>
   </data>
-  <data name="Enum_MidiChannel_15" xml:space="preserve">
+  <data name="Enum_MidiChannel_15_Name" xml:space="preserve">
     <value>Midi Channel 15</value>
   </data>
-  <data name="Enum_MidiChannel_16" xml:space="preserve">
+  <data name="Enum_MidiChannel_16_Name" xml:space="preserve">
     <value>Midi Channel 16</value>
   </data>
-  <data name="Enum_MidiChannel_2" xml:space="preserve">
+  <data name="Enum_MidiChannel_2_Name" xml:space="preserve">
     <value>Midi Channel 2</value>
   </data>
-  <data name="Enum_MidiChannel_3" xml:space="preserve">
+  <data name="Enum_MidiChannel_3_Name" xml:space="preserve">
     <value>Midi Channel 3</value>
   </data>
-  <data name="Enum_MidiChannel_4" xml:space="preserve">
+  <data name="Enum_MidiChannel_4_Name" xml:space="preserve">
     <value>Midi Channel 4</value>
   </data>
-  <data name="Enum_MidiChannel_5" xml:space="preserve">
+  <data name="Enum_MidiChannel_5_Name" xml:space="preserve">
     <value>Midi Channel 5</value>
   </data>
-  <data name="Enum_MidiChannel_6" xml:space="preserve">
+  <data name="Enum_MidiChannel_6_Name" xml:space="preserve">
     <value>Midi Channel 6</value>
   </data>
-  <data name="Enum_MidiChannel_7" xml:space="preserve">
+  <data name="Enum_MidiChannel_7_Name" xml:space="preserve">
     <value>Midi Channel 7</value>
   </data>
-  <data name="Enum_MidiChannel_8" xml:space="preserve">
+  <data name="Enum_MidiChannel_8_Name" xml:space="preserve">
     <value>Midi Channel 8</value>
   </data>
-  <data name="Enum_MidiChannel_9" xml:space="preserve">
+  <data name="Enum_MidiChannel_9_Name" xml:space="preserve">
     <value>Midi Channel 9</value>
   </data>
-  <data name="Enum_MidiMessageType_CCM" xml:space="preserve">
+  <data name="Enum_MidiMessageType_CCM_Description" xml:space="preserve">
+    <value>Control Change messages are usually used to change function parameters or call functions in your Midi devices.</value>
+  </data>
+  <data name="Enum_MidiMessageType_CCM_Name" xml:space="preserve">
     <value>Control Change Message</value>
   </data>
-  <data name="Enum_MidiMessageType_PCM" xml:space="preserve">
+  <data name="Enum_MidiMessageType_PCM_Description" xml:space="preserve">
+    <value>The Program Change message is used to specify the type of instrument which should be used to play sounds on a given Channel.</value>
+  </data>
+  <data name="Enum_MidiMessageType_PCM_Name" xml:space="preserve">
     <value>Program Change Message</value>
   </data>
-  <data name="Enum_SwitchChannels_1" xml:space="preserve">
+  <data name="Enum_SwitchChannel_1_Name" xml:space="preserve">
     <value>Switch Channel 1</value>
   </data>
-  <data name="Enum_SwitchChannels_2" xml:space="preserve">
+  <data name="Enum_SwitchChannel_2_Name" xml:space="preserve">
     <value>Switch Channel 2</value>
   </data>
-  <data name="Enum_SwitchChannels_3" xml:space="preserve">
+  <data name="Enum_SwitchChannel_3_Name" xml:space="preserve">
     <value>Switch Channel 3</value>
   </data>
-  <data name="Enum_SwitchChannels_4" xml:space="preserve">
+  <data name="Enum_SwitchChannel_4_Name" xml:space="preserve">
     <value>Switch Channel 4</value>
   </data>
-  <data name="Enum_SwitchChannels_5" xml:space="preserve">
+  <data name="Enum_SwitchChannel_5_Name" xml:space="preserve">
     <value>Switch Channel 5</value>
   </data>
-  <data name="Enum_SwitchChannels_6" xml:space="preserve">
+  <data name="Enum_SwitchChannel_6_Name" xml:space="preserve">
     <value>Switch Channel 6</value>
   </data>
-  <data name="Enum_SwitchChannels_7" xml:space="preserve">
+  <data name="Enum_SwitchChannel_7_Name" xml:space="preserve">
     <value>Switch Channel 7</value>
   </data>
-  <data name="Enum_SwitchChannels_8" xml:space="preserve">
+  <data name="Enum_SwitchChannel_8_Name" xml:space="preserve">
     <value>Switch Channel 8</value>
   </data>
   <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">
@@ -263,6 +290,9 @@
   </data>
   <data name="File_Service_File_Read" xml:space="preserve">
     <value>The file '{0}' has been loaded.</value>
+  </data>
+  <data name="Model_Field_MaxLength_Generic" xml:space="preserve">
+    <value>{0} cannot be longer than {1} characters.</value>
   </data>
   <data name="Model_Field_Range_Generic" xml:space="preserve">
     <value>{0} must be in a range between {2} and {1}.</value>

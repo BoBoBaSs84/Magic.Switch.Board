@@ -48,20 +48,34 @@
 						This area demonstrates the automatic display of error messages and validation. Ensure to enter something in Firstname and Lastname
 						and that the Birthday has a value that results in an age greater or equal than 18 years.
 					</TextBlock>
-					<!-- Firstname -->
-					<Label Grid.Column="0" Grid.Row="1" Content="Configuration Id:"/>
-					<TextBox Grid.Column="1" Grid.Row="1" Text="{Binding ConfigurationView.Id, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" IsEnabled="False"/>
-					<!-- Lastname -->
+					<!-- Id -->
+					<Label Grid.Column="0" Grid.Row="1" Content="Id:"/>
+					<TextBox Grid.Column="1" Grid.Row="1" Text="{Binding ConfigurationView.Id, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+					<!-- ApplicationVersion -->
 					<Label Grid.Column="0" Grid.Row="2" Content="ApplicationVersion:"/>
-					<TextBox Grid.Column="1" Grid.Row="2" Text="{Binding ConfigurationView.ApplicationVersion, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" IsEnabled="False"/>
-					<!-- Age -->
+					<TextBox Grid.Column="1" Grid.Row="2" Text="{Binding ConfigurationView.ApplicationVersion, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+					<!-- ConfigurationVersion -->
 					<Label Grid.Column="0" Grid.Row="3" Content="ConfigurationVersion:"/>
-					<TextBox Grid.Column="1" Grid.Row="3" Text="{Binding ConfigurationView.ConfigurationVersion, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" IsEnabled="False"/>
+					<TextBox Grid.Column="1" Grid.Row="3" Text="{Binding ConfigurationView.ConfigurationVersion, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+					<!-- ConfigurationVersion -->
+					<Label Grid.Column="0" Grid.Row="4" Content="Name:"/>
+					<TextBox Grid.Column="1" Grid.Row="4" Text="{Binding ConfigurationView.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+					<!-- ConfigurationVersion -->
+					<Label Grid.Column="0" Grid.Row="5" Content="Remarks:"/>
+					<TextBox Grid.Column="1" Grid.Row="5" Text="{Binding ConfigurationView.Remarks, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 				</Grid>
 			</GroupBox>
 			<GroupBox Grid.Column="1" Grid.Row="0" Header="Item Sources" Grid.RowSpan="2">
 				<DataGrid ItemsSource="{Binding ConfigurationsView}"
-									IsSynchronizedWithCurrentItem="True"/>
+									IsSynchronizedWithCurrentItem="True"
+									EnableRowVirtualization="True"
+									AutoGenerateColumns="False">
+					<DataGrid.Columns>
+						<DataGridTextColumn Header="Id" Binding="{Binding Id}" IsReadOnly="True"/>
+						<DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"/>
+						<DataGridTextColumn Header="Remarks" Binding="{Binding Remarks}" IsReadOnly="True"/>
+					</DataGrid.Columns>
+				</DataGrid>
 			</GroupBox>
 		</Grid>
 	</DockPanel>

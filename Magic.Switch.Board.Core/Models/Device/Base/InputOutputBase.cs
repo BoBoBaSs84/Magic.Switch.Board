@@ -19,9 +19,9 @@ public abstract class InputOutputBase
 	/// </summary>
 	protected InputOutputBase()
 	{
-		MidiChannel = MidiChannel.Ch1;
+		MidiChannel = MidiChannel.CH01;
 		MessageType = MidiMessageType.PCM;
-		Number = default;
+		Number = 1;
 	}
 
 	/// <summary>
@@ -30,7 +30,7 @@ public abstract class InputOutputBase
 	/// <param name="midiChannel"></param>
 	/// <param name="messageType"></param>
 	/// <param name="number"></param>
-	public InputOutputBase(MidiChannel midiChannel, MidiMessageType messageType, int number)
+	protected InputOutputBase(MidiChannel midiChannel, MidiMessageType messageType, int number)
 	{
 		MidiChannel = midiChannel;
 		MessageType = messageType;

@@ -25,10 +25,12 @@ public sealed class DeviceConfigService : IDeviceConfigService
 	}
 
 	/// <inheritdoc/>	
-	public Configuration Create(string applicationVersion) =>
-		applicationVersion is null
-		? throw new ArgumentNullException(nameof(applicationVersion))
-		: (new(applicationVersion));
+	public Configuration Create(string name, string applicationVersion) =>
+		name is null
+			? throw new ArgumentNullException(nameof(name))
+			: applicationVersion is null
+				? throw new ArgumentNullException(nameof(applicationVersion))
+				: (new(name, applicationVersion));
 
 	/// <inheritdoc/>
 	public Configuration? Read(string folderPath, string fileName)

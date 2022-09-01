@@ -138,106 +138,106 @@
   <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
     <value>Αρχεία καταγραφής που επισημαίνουν ένα μη φυσιολογικό ή μη αναμενόμενο συμβάν στη ροή της εφαρμογής, αλλά δεν προκαλούν τη διακοπή της εκτέλεσης της εφαρμογής.</value>
   </data>
-  <data name="Enum_LoopChannels_1" xml:space="preserve">
+  <data name="Enum_LoopChannel_1_Name" xml:space="preserve">
     <value>Κανάλι βρόχου 1</value>
   </data>
-  <data name="Enum_LoopChannels_2" xml:space="preserve">
+  <data name="Enum_LoopChannel_2_Name" xml:space="preserve">
     <value>Κανάλι βρόχου 2</value>
   </data>
-  <data name="Enum_LoopChannels_3" xml:space="preserve">
+  <data name="Enum_LoopChannel_3_Name" xml:space="preserve">
     <value>Κανάλι βρόχου 3</value>
   </data>
-  <data name="Enum_LoopChannels_4" xml:space="preserve">
+  <data name="Enum_LoopChannel_4_Name" xml:space="preserve">
     <value>Κανάλι βρόχου 4</value>
   </data>
-  <data name="Enum_LoopChannels_5" xml:space="preserve">
+  <data name="Enum_LoopChannel_5_Name" xml:space="preserve">
     <value>Κανάλι βρόχου 5</value>
   </data>
-  <data name="Enum_LoopChannels_6" xml:space="preserve">
+  <data name="Enum_LoopChannel_6_Name" xml:space="preserve">
     <value>Κανάλι βρόχου 6</value>
   </data>
-  <data name="Enum_LoopChannels_7" xml:space="preserve">
+  <data name="Enum_LoopChannel_7_Name" xml:space="preserve">
     <value>Κανάλι βρόχου 7</value>
   </data>
-  <data name="Enum_LoopChannels_8" xml:space="preserve">
+  <data name="Enum_LoopChannel_8_Name" xml:space="preserve">
     <value>Κανάλι βρόχου 8</value>
   </data>
-  <data name="Enum_MidiChannel_1" xml:space="preserve">
+  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 1</value>
   </data>
-  <data name="Enum_MidiChannel_10" xml:space="preserve">
+  <data name="Enum_MidiChannel_10_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 10</value>
   </data>
-  <data name="Enum_MidiChannel_11" xml:space="preserve">
+  <data name="Enum_MidiChannel_11_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 11</value>
   </data>
-  <data name="Enum_MidiChannel_12" xml:space="preserve">
+  <data name="Enum_MidiChannel_12_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 12</value>
   </data>
-  <data name="Enum_MidiChannel_13" xml:space="preserve">
+  <data name="Enum_MidiChannel_13_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 13</value>
   </data>
-  <data name="Enum_MidiChannel_14" xml:space="preserve">
+  <data name="Enum_MidiChannel_14_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 14</value>
   </data>
-  <data name="Enum_MidiChannel_15" xml:space="preserve">
+  <data name="Enum_MidiChannel_15_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 15</value>
   </data>
-  <data name="Enum_MidiChannel_16" xml:space="preserve">
+  <data name="Enum_MidiChannel_16_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 16</value>
   </data>
-  <data name="Enum_MidiChannel_2" xml:space="preserve">
+  <data name="Enum_MidiChannel_2_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 2</value>
   </data>
-  <data name="Enum_MidiChannel_3" xml:space="preserve">
+  <data name="Enum_MidiChannel_3_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 3</value>
   </data>
-  <data name="Enum_MidiChannel_4" xml:space="preserve">
+  <data name="Enum_MidiChannel_4_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 4</value>
   </data>
-  <data name="Enum_MidiChannel_5" xml:space="preserve">
+  <data name="Enum_MidiChannel_5_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 5</value>
   </data>
-  <data name="Enum_MidiChannel_6" xml:space="preserve">
+  <data name="Enum_MidiChannel_6_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 6</value>
   </data>
-  <data name="Enum_MidiChannel_7" xml:space="preserve">
+  <data name="Enum_MidiChannel_7_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 7</value>
   </data>
-  <data name="Enum_MidiChannel_8" xml:space="preserve">
+  <data name="Enum_MidiChannel_8_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 8</value>
   </data>
-  <data name="Enum_MidiChannel_9" xml:space="preserve">
+  <data name="Enum_MidiChannel_9_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 9</value>
   </data>
-  <data name="Enum_MidiMessageType_CCM" xml:space="preserve">
+  <data name="Enum_MidiMessageType_CCM_Name" xml:space="preserve">
     <value>Μήνυμα αλλαγής ελέγχου</value>
   </data>
-  <data name="Enum_MidiMessageType_PCM" xml:space="preserve">
+  <data name="Enum_MidiMessageType_PCM_Name" xml:space="preserve">
     <value>Μήνυμα αλλαγής προγράμματος</value>
   </data>
-  <data name="Enum_SwitchChannels_1" xml:space="preserve">
+  <data name="Enum_SwitchChannel_1_Name" xml:space="preserve">
     <value>Εναλλαγή καναλιού 1</value>
   </data>
-  <data name="Enum_SwitchChannels_2" xml:space="preserve">
+  <data name="Enum_SwitchChannel_2_Name" xml:space="preserve">
     <value>Εναλλαγή καναλιού 2</value>
   </data>
-  <data name="Enum_SwitchChannels_3" xml:space="preserve">
+  <data name="Enum_SwitchChannel_3_Name" xml:space="preserve">
     <value>Εναλλαγή καναλιού 3</value>
   </data>
-  <data name="Enum_SwitchChannels_4" xml:space="preserve">
+  <data name="Enum_SwitchChannel_4_Name" xml:space="preserve">
     <value>Εναλλαγή καναλιού 4</value>
   </data>
-  <data name="Enum_SwitchChannels_5" xml:space="preserve">
+  <data name="Enum_SwitchChannel_5_Name" xml:space="preserve">
     <value>Εναλλαγή καναλιού 5</value>
   </data>
-  <data name="Enum_SwitchChannels_6" xml:space="preserve">
+  <data name="Enum_SwitchChannel_6_Name" xml:space="preserve">
     <value>Εναλλαγή καναλιού 6</value>
   </data>
-  <data name="Enum_SwitchChannels_7" xml:space="preserve">
+  <data name="Enum_SwitchChannel_7_Name" xml:space="preserve">
     <value>Εναλλαγή καναλιού 7</value>
   </data>
-  <data name="Enum_SwitchChannels_8" xml:space="preserve">
+  <data name="Enum_SwitchChannel_8_Name" xml:space="preserve">
     <value>Εναλλαγή καναλιού 8</value>
   </data>
   <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">

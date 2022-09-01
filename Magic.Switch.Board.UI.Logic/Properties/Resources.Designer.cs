@@ -88,6 +88,15 @@ namespace Magic.Switch.Board.UI.Logic.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Created.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Created {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Created", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Identifier.
         /// </summary>
         internal static string ViewModel_Display_Name_Id {
@@ -160,11 +169,29 @@ namespace Magic.Switch.Board.UI.Logic.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remarks.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Remarks {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Remarks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Switches.
         /// </summary>
         internal static string ViewModel_Display_Name_Switches {
             get {
                 return ResourceManager.GetString("ViewModel_Display_Name_Switches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updated.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Updated {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Updated", resourceCulture);
             }
         }
     }

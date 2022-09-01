@@ -1,4 +1,5 @@
-﻿using Magic.Switch.Board.Core.Properties;
+﻿using Magic.Switch.Board.Core.Models.Device.Base;
+using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
@@ -10,17 +11,19 @@ namespace Magic.Switch.Board.Core.Models.Device;
 /// <summary>
 /// The <see cref="Configuration"/> class is the root element of the device configuration file.
 /// </summary>
+/// <remarks>
+/// Inherits the properties from <see cref="AuditBase"/> class.
+/// </remarks>
 [XmlRoot(ElementName = nameof(Configuration), IsNullable = false, Namespace = DeviceNamespace)]
-public class Configuration
+public class Configuration : AuditBase
 {
 	private const string DeviceNamespace = "http://magic.switch.board.com/configuration/device";
 
 	/// <summary>
 	/// The empty <see cref="Configuration"/> class constructor.
 	/// </summary>
-	public Configuration()
+	public Configuration() : base()
 	{
-		Id = Guid.NewGuid();
 		ApplicationVersion = string.Empty;
 		Channels = new();
 		ConfigurationVersion = AssemblyVersion;
@@ -32,41 +35,36 @@ public class Configuration
 	/// <remarks>
 	/// Will throw an exception if <paramref name="applicationVersion"/> is <see langword="null"/>.
 	/// </remarks>
-	/// <param name="applicationVersion">The version of the application that creates the configuration.</param>
+	/// <param name="name">The name of the configuration. Will throw an exception if <see langword="null"/>.</param>
+	/// <param name="applicationVersion">The version of the application that creates the configuration. Will throw an exception if <see langword="null"/>.</param>
 	/// <exception cref="ArgumentNullException"></exception>
-	public Configuration(string applicationVersion)
+	public Configuration(string name, string applicationVersion) : base(name)
 	{
 		Id = Guid.NewGuid();
 		ApplicationVersion = applicationVersion ?? throw new ArgumentNullException(nameof(applicationVersion));
 		Channels = new();
 		ConfigurationVersion = AssemblyVersion;
+		Created = DateTime.Now;
+		Updated = DateTime.Now;
 	}
 
 	/// <summary>
 	/// The advanced <see cref="Configuration"/> class constructor.
 	/// </summary>
-	/// <remarks>
-	/// Will throw an exception if <paramref name="applicationVersion"/> is <see langword="null"/>.
-	/// Will throw an exception if <paramref name="channels"/> is <see langword="null"/>.
-	/// </remarks>	
-	/// <param name="applicationVersion">The version of the application that creates the configuration.</param>
-	/// <param name="channels">The list of channels that should be added.</param>
+	/// <param name="name">The name of the configuration. Will throw an exception if <see langword="null"/>.</param>
+	/// <param name="applicationVersion">The version of the application that creates the configuration. Will throw an exception if <see langword="null"/>.</param>
+	/// <param name="channels">The list of channels that should be added. Will throw an exception if <see langword="null"/>.</param>
 	/// <exception cref="ArgumentNullException"></exception>
-	public Configuration(string applicationVersion, List<Channel> channels)
+	public Configuration(string name, string applicationVersion, List<Channel> channels) : base(name)
 	{
 		Id = Guid.NewGuid();
 		ApplicationVersion = applicationVersion ?? throw new ArgumentNullException(nameof(applicationVersion));
 		Channels = channels ?? throw new ArgumentNullException(nameof(channels));
 		ConfigurationVersion = AssemblyVersion;
+		Created = DateTime.Now;
+		Updated = DateTime.Now;
 	}
 
-	/// <summary>
-	/// The <see cref="Id"/> property.
-	/// </summary>
-	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
-	[JsonPropertyName(nameof(Id))]
-	[XmlAttribute(AttributeName = nameof(Id))]
-	public Guid Id { get; set; }
 
 	/// <summary>
 	/// The <see cref="ApplicationVersion"/> property, can not be <see langword="null"/>.
