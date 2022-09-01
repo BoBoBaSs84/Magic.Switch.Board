@@ -97,6 +97,15 @@ namespace Magic.Switch.Board.UI.Logic.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        internal static string ViewModel_Display_Name_Description {
+            get {
+                return ResourceManager.GetString("ViewModel_Display_Name_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Identifier.
         /// </summary>
         internal static string ViewModel_Display_Name_Id {
@@ -165,15 +174,6 @@ namespace Magic.Switch.Board.UI.Logic.Properties {
         internal static string ViewModel_Display_Name_Output {
             get {
                 return ResourceManager.GetString("ViewModel_Display_Name_Output", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Remarks.
-        /// </summary>
-        internal static string ViewModel_Display_Name_Remarks {
-            get {
-                return ResourceManager.GetString("ViewModel_Display_Name_Remarks", resourceCulture);
             }
         }
         

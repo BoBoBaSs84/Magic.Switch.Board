@@ -153,8 +153,8 @@
   <data name="ViewModel_Display_Name_Output" xml:space="preserve">
     <value>Output</value>
   </data>
-  <data name="ViewModel_Display_Name_Remarks" xml:space="preserve">
-    <value>Remarks</value>
+  <data name="ViewModel_Display_Name_Description" xml:space="preserve">
+    <value>Description</value>
   </data>
   <data name="ViewModel_Display_Name_Switches" xml:space="preserve">
     <value>Switches</value>

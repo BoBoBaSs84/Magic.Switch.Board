@@ -57,10 +57,10 @@ public sealed class MainViewModel : ViewModelBase
 	private List<Configuration> GetConfigurations()
 	{
 		List<Configuration> configList = new();
-		for (int i = 0; i < 10000; i++)
+		for (int i = 1; i <= 10; i++)
 		{
 			Configuration config = _deviceConfigService.Create(Guid.NewGuid().ToString(), AssemblyVersion);
-			if (i == 1000)
+			if (i == 10)
 			{
 				config.Name = "Super War RIG";
 				config.Description = "The Tatra T815, aka the \"The War Rig\", is a custom vehicle driven by Imperator Furiosa in Mad Max Fury Road.";

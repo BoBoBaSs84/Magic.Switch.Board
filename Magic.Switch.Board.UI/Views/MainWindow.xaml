@@ -57,12 +57,18 @@
 					<!-- ConfigurationVersion -->
 					<Label Grid.Column="0" Grid.Row="3" Content="ConfigurationVersion:"/>
 					<TextBox Grid.Column="1" Grid.Row="3" Text="{Binding ConfigurationView.ConfigurationVersion, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
-					<!-- ConfigurationVersion -->
+					<!-- Name -->
 					<Label Grid.Column="0" Grid.Row="4" Content="Name:"/>
 					<TextBox Grid.Column="1" Grid.Row="4" Text="{Binding ConfigurationView.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-					<!-- ConfigurationVersion -->
-					<Label Grid.Column="0" Grid.Row="5" Content="Remarks:"/>
-					<TextBox Grid.Column="1" Grid.Row="5" Text="{Binding ConfigurationView.Remarks, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+					<!-- Description -->
+					<Label Grid.Column="0" Grid.Row="5" Content="Description:"/>
+					<TextBox Grid.Column="1" Grid.Row="5" Text="{Binding ConfigurationView.Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap"/>
+					<!-- Created -->
+					<Label Grid.Column="0" Grid.Row="6" Content="Created:"/>
+					<TextBox Grid.Column="1" Grid.Row="6" Text="{Binding ConfigurationView.Created, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
+					<!-- Updated -->
+					<Label Grid.Column="0" Grid.Row="7" Content="Updated:"/>
+					<TextBox Grid.Column="1" Grid.Row="7" Text="{Binding ConfigurationView.Updated, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True"/>
 				</Grid>
 			</GroupBox>
 			<GroupBox Grid.Column="1" Grid.Row="0" Header="Item Sources" Grid.RowSpan="2">
@@ -73,7 +79,8 @@
 					<DataGrid.Columns>
 						<DataGridTextColumn Header="Id" Binding="{Binding Id}" IsReadOnly="True"/>
 						<DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"/>
-						<DataGridTextColumn Header="Remarks" Binding="{Binding Remarks}" IsReadOnly="True"/>
+						<DataGridTextColumn Header="Created" Binding="{Binding Created}" IsReadOnly="True"/>
+						<DataGridTextColumn Header="Updated" Binding="{Binding Updated}" IsReadOnly="True"/>
 					</DataGrid.Columns>
 				</DataGrid>
 			</GroupBox>
