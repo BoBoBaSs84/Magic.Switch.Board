@@ -138,106 +138,106 @@
   <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
     <value>Journaux qui mettent en évidence un événement anormal ou inattendu dans le flux d’application, mais qui n’entraînent pas autrement l’arrêt de l’exécution de l’application.</value>
   </data>
-  <data name="Enum_LoopChannels_1" xml:space="preserve">
+  <data name="Enum_LoopChannel_1_Name" xml:space="preserve">
     <value>Canal de boucle 1</value>
   </data>
-  <data name="Enum_LoopChannels_2" xml:space="preserve">
+  <data name="Enum_LoopChannel_2_Name" xml:space="preserve">
     <value>Canal de boucle 2</value>
   </data>
-  <data name="Enum_LoopChannels_3" xml:space="preserve">
+  <data name="Enum_LoopChannel_3_Name" xml:space="preserve">
     <value>Canal de boucle 3</value>
   </data>
-  <data name="Enum_LoopChannels_4" xml:space="preserve">
+  <data name="Enum_LoopChannel_4_Name" xml:space="preserve">
     <value>Canal de boucle 4</value>
   </data>
-  <data name="Enum_LoopChannels_5" xml:space="preserve">
+  <data name="Enum_LoopChannel_5_Name" xml:space="preserve">
     <value>Canal de boucle 5</value>
   </data>
-  <data name="Enum_LoopChannels_6" xml:space="preserve">
+  <data name="Enum_LoopChannel_6_Name" xml:space="preserve">
     <value>Canal de boucle 6</value>
   </data>
-  <data name="Enum_LoopChannels_7" xml:space="preserve">
+  <data name="Enum_LoopChannel_7_Name" xml:space="preserve">
     <value>Canal de boucle 7</value>
   </data>
-  <data name="Enum_LoopChannels_8" xml:space="preserve">
+  <data name="Enum_LoopChannel_8_Name" xml:space="preserve">
     <value>Canal de boucle 8</value>
   </data>
-  <data name="Enum_MidiChannel_1" xml:space="preserve">
+  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
     <value>Canal Midi 1</value>
   </data>
-  <data name="Enum_MidiChannel_10" xml:space="preserve">
+  <data name="Enum_MidiChannel_10_Name" xml:space="preserve">
     <value>Canal Midi 10</value>
   </data>
-  <data name="Enum_MidiChannel_11" xml:space="preserve">
+  <data name="Enum_MidiChannel_11_Name" xml:space="preserve">
     <value>Canal Midi 11</value>
   </data>
-  <data name="Enum_MidiChannel_12" xml:space="preserve">
+  <data name="Enum_MidiChannel_12_Name" xml:space="preserve">
     <value>Canal Midi 12</value>
   </data>
-  <data name="Enum_MidiChannel_13" xml:space="preserve">
+  <data name="Enum_MidiChannel_13_Name" xml:space="preserve">
     <value>Canal Midi 13</value>
   </data>
-  <data name="Enum_MidiChannel_14" xml:space="preserve">
+  <data name="Enum_MidiChannel_14_Name" xml:space="preserve">
     <value>Canal Midi 14</value>
   </data>
-  <data name="Enum_MidiChannel_15" xml:space="preserve">
+  <data name="Enum_MidiChannel_15_Name" xml:space="preserve">
     <value>Canal Midi 15</value>
   </data>
-  <data name="Enum_MidiChannel_16" xml:space="preserve">
+  <data name="Enum_MidiChannel_16_Name" xml:space="preserve">
     <value>Canal Midi 16</value>
   </data>
-  <data name="Enum_MidiChannel_2" xml:space="preserve">
+  <data name="Enum_MidiChannel_2_Name" xml:space="preserve">
     <value>Canal Midi 2</value>
   </data>
-  <data name="Enum_MidiChannel_3" xml:space="preserve">
+  <data name="Enum_MidiChannel_3_Name" xml:space="preserve">
     <value>Canal Midi 3</value>
   </data>
-  <data name="Enum_MidiChannel_4" xml:space="preserve">
+  <data name="Enum_MidiChannel_4_Name" xml:space="preserve">
     <value>Canal Midi 4</value>
   </data>
-  <data name="Enum_MidiChannel_5" xml:space="preserve">
+  <data name="Enum_MidiChannel_5_Name" xml:space="preserve">
     <value>Canal Midi 5</value>
   </data>
-  <data name="Enum_MidiChannel_6" xml:space="preserve">
+  <data name="Enum_MidiChannel_6_Name" xml:space="preserve">
     <value>Canal Midi 6</value>
   </data>
-  <data name="Enum_MidiChannel_7" xml:space="preserve">
+  <data name="Enum_MidiChannel_7_Name" xml:space="preserve">
     <value>Canal Midi 7</value>
   </data>
-  <data name="Enum_MidiChannel_8" xml:space="preserve">
+  <data name="Enum_MidiChannel_8_Name" xml:space="preserve">
     <value>Canal Midi 8</value>
   </data>
-  <data name="Enum_MidiChannel_9" xml:space="preserve">
+  <data name="Enum_MidiChannel_9_Name" xml:space="preserve">
     <value>Canal Midi 9</value>
   </data>
-  <data name="Enum_MidiMessageType_CCM" xml:space="preserve">
+  <data name="Enum_MidiMessageType_CCM_Name" xml:space="preserve">
     <value>Message de modification du contrôle</value>
   </data>
-  <data name="Enum_MidiMessageType_PCM" xml:space="preserve">
+  <data name="Enum_MidiMessageType_PCM_Name" xml:space="preserve">
     <value>Message de modification du programme</value>
   </data>
-  <data name="Enum_SwitchChannels_1" xml:space="preserve">
+  <data name="Enum_SwitchChannel_1_Name" xml:space="preserve">
     <value>Commutateur Canal 1</value>
   </data>
-  <data name="Enum_SwitchChannels_2" xml:space="preserve">
+  <data name="Enum_SwitchChannel_2_Name" xml:space="preserve">
     <value>Commutateur Canal 2</value>
   </data>
-  <data name="Enum_SwitchChannels_3" xml:space="preserve">
+  <data name="Enum_SwitchChannel_3_Name" xml:space="preserve">
     <value>Commutateur Canal 3</value>
   </data>
-  <data name="Enum_SwitchChannels_4" xml:space="preserve">
+  <data name="Enum_SwitchChannel_4_Name" xml:space="preserve">
     <value>Commutateur Canal 4</value>
   </data>
-  <data name="Enum_SwitchChannels_5" xml:space="preserve">
+  <data name="Enum_SwitchChannel_5_Name" xml:space="preserve">
     <value>Commutateur Canal 5</value>
   </data>
-  <data name="Enum_SwitchChannels_6" xml:space="preserve">
+  <data name="Enum_SwitchChannel_6_Name" xml:space="preserve">
     <value>Commutateur Canal 6</value>
   </data>
-  <data name="Enum_SwitchChannels_7" xml:space="preserve">
+  <data name="Enum_SwitchChannel_7_Name" xml:space="preserve">
     <value>Commutateur Canal 7</value>
   </data>
-  <data name="Enum_SwitchChannels_8" xml:space="preserve">
+  <data name="Enum_SwitchChannel_8_Name" xml:space="preserve">
     <value>Commutateur Canal 8</value>
   </data>
   <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">

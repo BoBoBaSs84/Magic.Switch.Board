@@ -1,139 +1,202 @@
-﻿using Magic.Switch.Board.Core.Properties;
-using System.ComponentModel;
+﻿using Magic.Switch.Board.Core.Models;
+using Magic.Switch.Board.Core.Properties;
+using System.ComponentModel.DataAnnotations;
 using System.Reflection;
+using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core;
 
 /// <summary>
-/// The <see cref="Enums"/> class
+/// The <see cref="Enums"/> class.
 /// </summary>
 public static class Enums
 {
+	#region enums
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 	public enum LogLevel
 	{
-		[LocalizedDescription("Enum_LogLevel_Trace_Description")]
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LogLevel_Trace_Name),
+			Description = nameof(Enum_LogLevel_Trace_Description))]
 		Trace = 0,
-		[LocalizedDescription("Enum_LogLevel_Debug_Description")]
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LogLevel_Debug_Name),
+			Description = nameof(Enum_LogLevel_Debug_Description))]
 		Debug = 1,
-		[LocalizedDescription("Enum_LogLevel_Information_Description")]
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LogLevel_Information_Name),
+			Description = nameof(Enum_LogLevel_Information_Description))]
 		Information = 2,
-		[LocalizedDescription("Enum_LogLevel_Warning_Description")]
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LogLevel_Warning_Name),
+			Description = nameof(Enum_LogLevel_Warning_Description))]
 		Warning = 3,
-		[LocalizedDescription("Enum_LogLevel_Error_Description")]
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LogLevel_Error_Name),
+			Description = nameof(Enum_LogLevel_Error_Description))]
 		Error = 4,
-		[LocalizedDescription("Enum_LogLevel_Critical_Description")]
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LogLevel_Critical_Name),
+			Description = nameof(Enum_LogLevel_Critical_Description))]
 		Critical = 5,
-		[LocalizedDescription("Enum_LogLevel_None_Description")]
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LogLevel_None_Name),
+			Description = nameof(Enum_LogLevel_None_Description))]
 		None = 6
 	}
 
 	[Flags]
 	public enum SwitchChannels
 	{
-		[LocalizedDescription("Enum_SwitchChannels_1")]
-		Ch1 = 1,
-		[LocalizedDescription("Enum_SwitchChannels_2")]
-		Ch2 = 2,
-		[LocalizedDescription("Enum_SwitchChannels_3")]
-		Ch3 = 4,
-		[LocalizedDescription("Enum_SwitchChannels_4")]
-		Ch4 = 8,
-		[LocalizedDescription("Enum_SwitchChannels_5")]
-		Ch5 = 16,
-		[LocalizedDescription("Enum_SwitchChannels_6")]
-		Ch6 = 32,
-		[LocalizedDescription("Enum_SwitchChannels_7")]
-		Ch7 = 64,
-		[LocalizedDescription("Enum_SwitchChannels_8")]
-		Ch8 = 128
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_SwitchChannel_1_Name))]
+		CH01 = 1,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_SwitchChannel_2_Name))]
+		CH02 = 2,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_SwitchChannel_3_Name))]
+		CH03 = 4,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_SwitchChannel_4_Name))]
+		CH04 = 8,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_SwitchChannel_5_Name))]
+		CH05 = 16,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_SwitchChannel_6_Name))]
+		CH06 = 32,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_SwitchChannel_7_Name))]
+		CH07 = 64,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_SwitchChannel_8_Name))]
+		CH08 = 128
 	}
 
 	[Flags]
 	public enum LoopChannels
 	{
-		[LocalizedDescription("Enum_LoopChannels_1")]
-		Ch1 = 1,
-		[LocalizedDescription("Enum_LoopChannels_2")]
-		Ch2 = 2,
-		[LocalizedDescription("Enum_LoopChannels_3")]
-		Ch3 = 4,
-		[LocalizedDescription("Enum_LoopChannels_4")]
-		Ch4 = 8,
-		[LocalizedDescription("Enum_LoopChannels_5")]
-		Ch5 = 16,
-		[LocalizedDescription("Enum_LoopChannels_6")]
-		Ch6 = 32,
-		[LocalizedDescription("Enum_LoopChannels_7")]
-		Ch7 = 64,
-		[LocalizedDescription("Enum_LoopChannels_8")]
-		Ch8 = 128
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LoopChannel_1_Name))]
+		CH01 = 1,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LoopChannel_2_Name))]
+		CH02 = 2,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LoopChannel_3_Name))]
+		CH03 = 4,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LoopChannel_4_Name))]
+		CH04 = 8,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LoopChannel_5_Name))]
+		CH05 = 16,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LoopChannel_6_Name))]
+		CH06 = 32,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LoopChannel_7_Name))]
+		CH07 = 64,
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_LoopChannel_8_Name))]
+		CH08 = 128
 	}
 
 	public enum MidiMessageType
 	{
-		[LocalizedDescription("Enum_MidiMessageType_PCM")]
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_MidiMessageType_PCM_Name),
+			Description = nameof(Enum_MidiMessageType_PCM_Description))]
 		PCM = 1,
-		[LocalizedDescription("Enum_MidiMessageType_CCM")]
+		[Display(ResourceType = typeof(Resources),
+			Name = nameof(Enum_MidiMessageType_CCM_Name),
+			Description = nameof(Enum_MidiMessageType_CCM_Description))]
 		CCM = 2
 	}
 
 	public enum MidiChannel
 	{
-		[Description("Enum_MidiChannel_1")]
-		Ch1 = 1,
-		[Description("Enum_MidiChannel_2")]
-		Ch2 = 2,
-		[Description("Enum_MidiChannel_3")]
-		Ch3 = 3,
-		[Description("Enum_MidiChannel_4")]
-		Ch4 = 4,
-		[Description("Enum_MidiChannel_5")]
-		Ch5 = 5,
-		[Description("Enum_MidiChannel_6")]
-		Ch6 = 6,
-		[Description("Enum_MidiChannel_7")]
-		Ch7 = 7,
-		[Description("Enum_MidiChannel_8")]
-		Ch8 = 8,
-		[Description("Enum_MidiChannel_9")]
-		Ch9 = 9,
-		[Description("Enum_MidiChannel_10")]
-		Ch10 = 10,
-		[Description("Enum_MidiChannel_11")]
-		Ch11 = 11,
-		[Description("Enum_MidiChannel_12")]
-		Ch12 = 12,
-		[Description("Enum_MidiChannel_13")]
-		Ch13 = 13,
-		[Description("Enum_MidiChannel_14")]
-		Ch14 = 14,
-		[Description("Enum_MidiChannel_15")]
-		Ch15 = 15,
-		[Description("Enum_MidiChannel_16")]
-		Ch16 = 16
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_1_Name))]
+		CH01 = 1,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_2_Name))]
+		CH02 = 2,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_3_Name))]
+		CH03 = 3,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_4_Name))]
+		CH04 = 4,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_5_Name))]
+		CH05 = 5,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_6_Name))]
+		CH06 = 6,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_7_Name))]
+		CH07 = 7,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_8_Name))]
+		CH08 = 8,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_9_Name))]
+		CH09 = 9,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_10_Name))]
+		CH10 = 10,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_11_Name))]
+		CH11 = 11,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_12_Name))]
+		CH12 = 12,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_13_Name))]
+		CH13 = 13,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_14_Name))]
+		CH14 = 14,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_15_Name))]
+		CH15 = 15,
+		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_16_Name))]
+		CH16 = 16
 	}
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+	#endregion
+
+	#region enum extension methods
 	/// <summary>
-	/// The <see cref="GetDescription{T}(T)"/> extension method will try to get the <see cref="DescriptionAttribute"/> of an enum if used
+	/// The <see cref="GetEnumDescription{T}(T)"/> extension method will try to get the <see cref="DisplayAttribute.Description"/>.
 	/// </summary>
 	/// <remarks>
-	/// If the enum has no description property, the enum name will be returned.
+	/// The <see cref="DisplayAttribute.GetDescription"/> method is used, so strings will be returned localized.
 	/// </remarks>
 	/// <typeparam name="T"></typeparam>
 	/// <param name="enumValue"></param>
-	/// <returns><see cref="string"/> which can be <see cref="Nullable"/></returns>
-	public static string GetDescription<T>(this T enumValue) where T : Enum, IConvertible
+	/// <returns>The <see cref="DisplayAttribute.Description"/> or the <paramref name="enumValue"/> as string.</returns>
+	public static string GetEnumDescription<T>(this T enumValue) where T : Enum, IConvertible
 	{
-		FieldInfo? fieldInfo = enumValue.GetType().GetField(enumValue.ToString());
+		DisplayAttribute? attribute = enumValue.GetDisplayAttribute();
+		return attribute is not null ? attribute.GetDescription() ?? enumValue.ToString() : enumValue.ToString();
+	}
 
-		if (fieldInfo is not null)
-		{
-			DescriptionAttribute[]? attributes = fieldInfo.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];
-			if (attributes is not null && attributes.Length > 0)
-				return attributes[0].Description;
-		}
-		return enumValue.ToString();
+	/// <summary>
+	/// The <see cref="GetEnumName{T}(T)"/> extension method will try to get the <see cref="DisplayAttribute.Name"/>.
+	/// </summary>
+	/// <remarks>
+	/// The <see cref="DisplayAttribute.GetName"/> method is used, so strings will be returned localized.
+	/// </remarks>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="enumValue"></param>
+	/// <returns>The <see cref="DisplayAttribute.Name"/> or the <paramref name="enumValue"/> as string.</returns>
+	public static string GetEnumName<T>(this T enumValue) where T : Enum, IConvertible
+	{
+		DisplayAttribute? attribute = enumValue.GetDisplayAttribute();
+		return attribute is not null ? attribute.GetName() ?? enumValue.ToString() : enumValue.ToString();
+	}
+
+	/// <summary>
+	/// The <see cref="GetEnumShortName{T}(T)"/> extension method will try to get the <see cref="DisplayAttribute.ShortName"/>.
+	/// </summary>
+	/// <remarks>
+	/// The <see cref="DisplayAttribute.GetShortName"/> method is used, so strings will be returned localized.
+	/// </remarks>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="enumValue"></param>
+	/// <returns>The <see cref="DisplayAttribute.ShortName"/> or the <paramref name="enumValue"/> as string.</returns>
+	public static string GetEnumShortName<T>(this T enumValue) where T : Enum, IConvertible
+	{
+		DisplayAttribute? attribute = enumValue.GetDisplayAttribute();
+		return attribute is not null ? attribute.GetShortName() ?? enumValue.ToString() : enumValue.ToString();
 	}
 
 	/// <summary>
@@ -156,8 +219,8 @@ public static class Enums
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <returns>A <see cref="List{T}"/> of the provided enum.</returns>
-	public static List<T> GetListFromEnum<T>(this T @enum) where T : Enum
-		=> Enum.GetValues(@enum.GetType()).Cast<T>().ToList();
+	public static List<T> GetListFromEnum<T>(this T enumValue) where T : Enum
+		=> Enum.GetValues(enumValue.GetType()).Cast<T>().ToList();
 
 	/// <summary>
 	/// The <see cref="GetEnumsWithDescription{T}(T)"/> method should return a dictornary with enums and their description.
@@ -166,39 +229,48 @@ public static class Enums
 	/// If the enum has no description property, the enum name will be returned.
 	/// </remarks>
 	/// <typeparam name="T"></typeparam>
-	/// <param name="enum"></param>
+	/// <param name="enumValue"></param>
 	/// <returns>A dictionary with enums and their description.</returns>
-	public static Dictionary<T, string> GetEnumsWithDescription<T>(this T @enum) where T : Enum, IConvertible
+	public static Dictionary<T, string> GetEnumsWithDescription<T>(this T enumValue) where T : Enum, IConvertible
 	{
-		List<T> enumList = Enum.GetValues(@enum.GetType()).Cast<T>().ToList();
+		List<T> enumList = Enum.GetValues(enumValue.GetType()).Cast<T>().ToList();
 		Dictionary<T, string> dictToReturn = new();
 		foreach (T e in enumList)
-			dictToReturn.Add(e, e.GetDescription());
+			dictToReturn.Add(e, e.GetEnumDescription());
 		return dictToReturn;
 	}
 
 	/// <summary>
-	/// The <see cref="LocalizedDescriptionAttribute"/> class.
-	/// </summary>	
-	private class LocalizedDescriptionAttribute : DescriptionAttribute
+	/// The <see cref="GetDisplayAttribute{T}(T)"/> method should return the <see cref="DisplayAttribute"/> from the enum.
+	/// </summary>
+	/// <remarks>
+	/// Will return null if the enum is not decorated with the <see cref="DisplayAttribute"/>.
+	/// </remarks>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="enumValue">The enum.</param>
+	/// <returns>The <see cref="DisplayAttribute"/> or <see langword="null"/>.</returns>
+	private static DisplayAttribute? GetDisplayAttribute<T>(this T enumValue) where T : Enum, IConvertible
 	{
-		/// <summary>
-		/// Initializes a new instance of the <see cref="LocalizedDescriptionAttribute"/> class.
-		/// </summary>
-		/// <param name="resKey">The resource key to look up.</param>
-		public LocalizedDescriptionAttribute(string resKey) : base(Localize(resKey))
-		{
-		}
-
-		/// <summary>
-		/// The <see cref="Localize(string)"/> method will try to find the localized string for the <paramref name="resKey"/>.
-		/// </summary>
-		/// <param name="resKey"></param>
-		/// <returns>The localized looked up string.</returns>
-		private static string Localize(string resKey)
-		{
-			string stringToReturn = Resources.ResourceManager.GetString(resKey, Resources.Culture)!;
-			return stringToReturn ?? "Not found.";
-		}
+		FieldInfo? fieldInfo = enumValue.GetType().GetField(enumValue.ToString());
+		return fieldInfo is not null ? fieldInfo.GetCustomAttribute<DisplayAttribute>() : default;
 	}
+
+	/// <summary>
+	/// The <see cref="GetEnumModelList{T}(T)"/> should return a list of the <see cref="EnumModel{T}"/>.
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <param name="enumValue">The enum.</param>
+	/// <returns>A list of type <see cref="EnumModel{T}"/></returns>
+	public static List<EnumModel<T>> GetEnumModelList<T>(this T enumValue) where T : Enum, IConvertible
+	{
+		List<T> enumList = Enum.GetValues(enumValue.GetType()).Cast<T>().ToList();
+		List<EnumModel<T>> listToReturn = new();
+		foreach (T e in enumList)
+		{
+			EnumModel<T> em = new(e, e.GetEnumName(), e.GetEnumShortName(), e.GetEnumDescription());
+			listToReturn.Add(em);
+		}
+		return listToReturn;
+	}
+	#endregion
 }
