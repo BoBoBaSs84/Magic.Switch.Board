@@ -19,7 +19,7 @@ public class EnumService : IEnumService
 	/// <param name="logger">The logger service.</param>
 	public EnumService(ILoggerService logger) => _logger = logger;
 
-	/// <inheritdoc/>
+	/// <inheritdoc cref="IEnumService.GetLogLevels"/>
 	/// <exception cref="ServiceException"></exception>
 	public IReadOnlyList<EnumModel<LogLevel>> GetLogLevels()
 	{
@@ -34,7 +34,7 @@ public class EnumService : IEnumService
 		}
 	}
 
-	/// <inheritdoc/>
+	/// <inheritdoc cref="IEnumService.GetLoopChannels"/>
 	/// <exception cref="ServiceException"></exception>
 	public IReadOnlyList<EnumModel<LoopChannels>> GetLoopChannels()
 	{
@@ -49,7 +49,7 @@ public class EnumService : IEnumService
 		}
 	}
 
-	/// <inheritdoc/>
+	/// <inheritdoc cref="IEnumService.GetMidiChannels"/>
 	/// <exception cref="ServiceException"></exception>
 	public IReadOnlyList<EnumModel<MidiChannel>> GetMidiChannels()
 	{
@@ -64,7 +64,7 @@ public class EnumService : IEnumService
 		}
 	}
 
-	/// <inheritdoc/>
+	/// <inheritdoc cref="IEnumService.GetMidiMessageTypes"/>
 	/// <exception cref="ServiceException"></exception>
 	public IReadOnlyList<EnumModel<MidiMessageType>> GetMidiMessageTypes()
 	{
@@ -79,7 +79,7 @@ public class EnumService : IEnumService
 		}
 	}
 
-	/// <inheritdoc/>
+	/// <inheritdoc cref="IEnumService.GetSwitchChannels"/>
 	/// <exception cref="ServiceException"></exception>
 	public IReadOnlyList<EnumModel<SwitchChannels>> GetSwitchChannels()
 	{
