@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Magic.Switch.Board.Core.Contracts.Models.Auditing;
+﻿namespace Magic.Switch.Board.Core.Contracts.Models.Auditing;
 
 /// <summary>
 /// The <see cref="IIdentityModel"/> interface.
@@ -11,8 +9,7 @@ public interface IIdentityModel
 	/// The <see cref="Id"/> property.
 	/// </summary>
 	/// <remarks>
-	/// Of type <see cref="Guid"/>.
-	/// </remarks>
-	[Key]
+	/// The model entry identifier of type <see cref="Guid"/>.
+	/// </remarks>	
 	public Guid Id { get; }
 }

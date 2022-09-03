@@ -9,7 +9,7 @@ public interface IAuditedModel
 	/// The <see cref="CreatedAt"/> property.
 	/// </summary>
 	/// <remarks>
-	/// Of type <see cref="DateTime"/>, defines when the entry was created.
+	/// Of type <see cref="DateTime"/>, indicates when the model entry was created.
 	/// </remarks>
 	public DateTime CreatedAt { get; }
 
@@ -17,7 +17,7 @@ public interface IAuditedModel
 	///The <see cref="UpdatedAt"/> property.
 	/// </summary>
 	/// <remarks>
-	/// Of type <see cref="DateTime"/>, defines when the entry was updated.
+	/// Of type <see cref="DateTime"/>, indicates when the model entry was updated.
 	/// Since no update has to be performed, can be <see langword="null"/>.
 	/// </remarks>
 	public DateTime? UpdatedAt { get; set; }
