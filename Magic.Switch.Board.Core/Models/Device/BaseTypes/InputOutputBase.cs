@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 using static Magic.Switch.Board.Core.Enums;
 using static Magic.Switch.Board.Core.Properties.Resources;
 
-namespace Magic.Switch.Board.Core.Models.Device.Base;
+namespace Magic.Switch.Board.Core.Models.Device.BaseTypes;
 
 /// <summary>
 /// The <see cref="InputOutputBase"/> class.

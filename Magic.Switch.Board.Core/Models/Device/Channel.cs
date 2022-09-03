@@ -1,4 +1,4 @@
-﻿using Magic.Switch.Board.Core.Models.Device.Base;
+﻿using Magic.Switch.Board.Core.Models.Device.BaseTypes;
 using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
@@ -11,10 +11,10 @@ namespace Magic.Switch.Board.Core.Models.Device;
 /// The <see cref="Channel"/> class.
 /// </summary>
 /// <remarks>
-/// Inherits the properties from <see cref="AuditBase"/> class.
+/// Inherits the properties from <see cref="NamingBase"/> class.
 /// </remarks>
 [XmlRoot(ElementName = nameof(Channel), IsNullable = false)]
-public class Channel : AuditBase
+public class Channel : NamingBase
 {
 	/// <summary>
 	/// Initializes a new parameterless instance of the <see cref="Channel"/> class.

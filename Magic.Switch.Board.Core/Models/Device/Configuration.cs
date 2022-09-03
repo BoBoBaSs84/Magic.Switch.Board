@@ -1,4 +1,4 @@
-﻿using Magic.Switch.Board.Core.Models.Device.Base;
+﻿using Magic.Switch.Board.Core.Models.Device.BaseTypes;
 using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
@@ -12,10 +12,10 @@ namespace Magic.Switch.Board.Core.Models.Device;
 /// The <see cref="Configuration"/> class is the root element of the device configuration file.
 /// </summary>
 /// <remarks>
-/// Inherits the properties from <see cref="AuditBase"/> class.
+/// Inherits the properties from <see cref="NamingBase"/> class.
 /// </remarks>
 [XmlRoot(ElementName = nameof(Configuration), IsNullable = false, Namespace = DeviceNamespace)]
-public class Configuration : AuditBase
+public class Configuration : NamingBase
 {
 	private const string DeviceNamespace = "http://magic.switch.board.com/configuration/device";
 
@@ -44,8 +44,8 @@ public class Configuration : AuditBase
 		ApplicationVersion = applicationVersion ?? throw new ArgumentNullException(nameof(applicationVersion));
 		Channels = new();
 		ConfigurationVersion = AssemblyVersion;
-		Created = DateTime.Now;
-		Updated = DateTime.Now;
+		CreatedAt = DateTime.Now;
+		UpdatedAt = DateTime.Now;
 	}
 
 	/// <summary>
@@ -61,8 +61,8 @@ public class Configuration : AuditBase
 		ApplicationVersion = applicationVersion ?? throw new ArgumentNullException(nameof(applicationVersion));
 		Channels = channels ?? throw new ArgumentNullException(nameof(channels));
 		ConfigurationVersion = AssemblyVersion;
-		Created = DateTime.Now;
-		Updated = DateTime.Now;
+		CreatedAt = DateTime.Now;
+		UpdatedAt = DateTime.Now;
 	}
 
 

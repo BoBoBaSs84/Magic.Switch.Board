@@ -9,7 +9,7 @@ public interface IActivatableModel
 	/// The <see cref="IsActive"/> property.
 	/// </summary>
 	/// <remarks>
-	/// Of type <see cref="bool"/>, will be used to see if a record is active or not.
+	/// Indicates by <see langword="true"/> or <see langword="false"/> if an model entry is active or not.
 	/// </remarks>
 	public bool IsActive { get; }
 }
