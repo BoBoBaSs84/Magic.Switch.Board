@@ -72,8 +72,8 @@ public sealed class ChannelVM : ViewModelBase<Channel>
 		Id = Model.Id;
 		Name = Model.Name;
 		Description = Model.Description;
-		Created = Model.CreatedAt;
-		Updated = Model.UpdatedAt;
+		Created = Model.Created;
+		Updated = Model.Updated;
 		Input = new(Model.Input);
 		if (Model.Output is not null)
 			Output = new(Model.Output);

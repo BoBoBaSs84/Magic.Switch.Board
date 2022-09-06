@@ -1,5 +1,5 @@
 ﻿using Magic.Switch.Board.Core.Contracts.Models.Auditing;
-using Magic.Switch.Board.Core.Models.Device.BaseTypes;
+using Magic.Switch.Board.Core.Models.BaseTypes.Device;
 using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
@@ -11,7 +11,7 @@ namespace Magic.Switch.Board.Core.Models.BaseTypes.Auditing;
 /// <summary>
 /// The <see cref="FullAuditModel"/> class.
 /// </summary>
-[XmlInclude(typeof(NamingBase))]
+[XmlInclude(typeof(NamedBase))]
 public abstract class FullAuditModel : IIdentityModel, IAuditedModel, IActivatableModel
 {
 	/// <summary>
@@ -20,7 +20,7 @@ public abstract class FullAuditModel : IIdentityModel, IAuditedModel, IActivatab
 	protected FullAuditModel()
 	{
 		Id = Guid.NewGuid();
-		CreatedAt = DateTime.Now;
+		Created = DateTime.Now;
 		IsActive = true;
 	}
 
@@ -31,16 +31,16 @@ public abstract class FullAuditModel : IIdentityModel, IAuditedModel, IActivatab
 	[Key]
 	public Guid Id { get; set; }
 
-	/// <inheritdoc cref="IAuditedModel.CreatedAt"/>
+	/// <inheritdoc cref="IAuditedModel.Created"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
-	[JsonPropertyName(nameof(CreatedAt))]
-	[XmlAttribute(AttributeName = nameof(CreatedAt), DataType = "date")]
-	public DateTime CreatedAt { get; set; }
+	[JsonPropertyName(nameof(Created))]
+	[XmlAttribute(AttributeName = nameof(Created), DataType = "date")]
+	public DateTime Created { get; set; }
 
-	/// <inheritdoc cref="IAuditedModel.UpdatedAt"/>
-	[JsonPropertyName(nameof(UpdatedAt))]
-	[XmlAttribute(AttributeName = nameof(UpdatedAt), DataType = "date")]
-	public DateTime? UpdatedAt { get; set; }
+	/// <inheritdoc cref="IAuditedModel.Updated"/>
+	[JsonPropertyName(nameof(Updated))]
+	[XmlAttribute(AttributeName = nameof(Updated), DataType = "date")]
+	public DateTime? Updated { get; set; }
 
 	/// <inheritdoc cref="IActivatableModel.IsActive"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
