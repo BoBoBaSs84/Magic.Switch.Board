@@ -1,6 +1,5 @@
 ﻿using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.Core.Exceptions;
-using Magic.Switch.Board.Core.Helpers;
 using Magic.Switch.Board.Core.Models.Device;
 using System.Text;
 using static Magic.Switch.Board.Core.Properties.Resources;
@@ -14,16 +13,19 @@ public sealed class DeviceConfigService : IDeviceConfigService
 {
 	private readonly ILoggerService _logger;
 	private readonly IFileService _fileService;
+	private readonly ISerializerDeserializerService _xmlService;
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="DeviceConfigService"/> class.
 	/// </summary>
 	/// <param name="logger">The logger service.</param>
 	/// <param name="fileService">The file service.</param>
-	public DeviceConfigService(ILoggerService logger, IFileService fileService)
+	/// <param name="xmlService"></param>
+	public DeviceConfigService(ILoggerService logger, IFileService fileService, ISerializerDeserializerService xmlService)
 	{
 		_logger = logger;
 		_fileService = fileService;
+		_xmlService = xmlService;
 	}
 
 	/// <inheritdoc/>	
@@ -54,11 +56,7 @@ public sealed class DeviceConfigService : IDeviceConfigService
 		try
 		{
 			string content = _fileService.Read(folderPath, fileName);
-			if (string.IsNullOrWhiteSpace(content))
-				return default;
-
-			XmlHelper<Configuration> serializer = new();
-			return serializer.Deserialize(content);
+			return string.IsNullOrWhiteSpace(content) ? default : _xmlService.Deserialize<Configuration>(content);
 		}
 		catch (Exception ex)
 		{
@@ -78,9 +76,7 @@ public sealed class DeviceConfigService : IDeviceConfigService
 			if (configuration is null)
 				throw new ArgumentNullException(nameof(configuration));
 
-			XmlHelper<Configuration> serializer = new();
-			string fileContent = serializer.StringSerialize(configuration, encoding);
-
+			string fileContent = _xmlService.Serialize(configuration, encoding);
 			_fileService.Save(folderPath, fileName, fileContent);
 			return true;
 		}

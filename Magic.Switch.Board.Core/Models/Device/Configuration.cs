@@ -1,4 +1,4 @@
-﻿using Magic.Switch.Board.Core.Models.Device.Base;
+﻿using Magic.Switch.Board.Core.Models.BaseTypes.Device;
 using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
@@ -12,10 +12,10 @@ namespace Magic.Switch.Board.Core.Models.Device;
 /// The <see cref="Configuration"/> class is the root element of the device configuration file.
 /// </summary>
 /// <remarks>
-/// Inherits the properties from <see cref="AuditBase"/> class.
+/// Inherits the properties from <see cref="NamedBase"/> class.
 /// </remarks>
 [XmlRoot(ElementName = nameof(Configuration), IsNullable = false, Namespace = DeviceNamespace)]
-public class Configuration : AuditBase
+public class Configuration : NamedBase
 {
 	private const string DeviceNamespace = "http://magic.switch.board.com/configuration/device";
 
@@ -40,12 +40,9 @@ public class Configuration : AuditBase
 	/// <exception cref="ArgumentNullException"></exception>
 	public Configuration(string name, string applicationVersion) : base(name)
 	{
-		Id = Guid.NewGuid();
 		ApplicationVersion = applicationVersion ?? throw new ArgumentNullException(nameof(applicationVersion));
 		Channels = new();
 		ConfigurationVersion = AssemblyVersion;
-		Created = DateTime.Now;
-		Updated = DateTime.Now;
 	}
 
 	/// <summary>
@@ -57,12 +54,9 @@ public class Configuration : AuditBase
 	/// <exception cref="ArgumentNullException"></exception>
 	public Configuration(string name, string applicationVersion, List<Channel> channels) : base(name)
 	{
-		Id = Guid.NewGuid();
 		ApplicationVersion = applicationVersion ?? throw new ArgumentNullException(nameof(applicationVersion));
 		Channels = channels ?? throw new ArgumentNullException(nameof(channels));
 		ConfigurationVersion = AssemblyVersion;
-		Created = DateTime.Now;
-		Updated = DateTime.Now;
 	}
 
 

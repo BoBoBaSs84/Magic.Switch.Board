@@ -10,15 +10,15 @@
 public class EnumModel<T> where T : Enum, IConvertible
 {
 	/// <summary>
-	/// Initializes a new parameterless instance of the <see cref="EnumModel{T}"/> class.
+	/// Initializes a new instance of the <see cref="EnumModel{T}"/> class.
 	/// </summary>
-	/// <param name="enum">The enumerator itself.</param>
+	/// <param name="enumValue">The enumerator itself.</param>
 	/// <param name="name">The localized enumerator name.</param>
 	/// <param name="shortName">The localized enumerator short name.</param>
 	/// <param name="description">The localized enumerator short name.</param>
-	public EnumModel(T @enum, string name, string shortName, string description)
+	public EnumModel(T enumValue, string name, string shortName, string description)
 	{
-		Enum = @enum;
+		Enum = enumValue;
 		Name = name;
 		ShortName = shortName;
 		Description = description;
@@ -30,7 +30,7 @@ public class EnumModel<T> where T : Enum, IConvertible
 	/// <remarks>
 	/// The enumerator itself.
 	/// </remarks>
-	public T Enum { get; set; }
+	public T Enum { get; private set; }
 
 	/// <summary>
 	/// The <see cref="Name"/> property.
@@ -38,7 +38,7 @@ public class EnumModel<T> where T : Enum, IConvertible
 	/// <remarks>
 	/// The localized enumerator name.
 	/// </remarks>
-	public string Name { get; set; }
+	public string Name { get; private set; }
 
 	/// <summary>
 	/// The <see cref="ShortName"/> property.
@@ -46,7 +46,7 @@ public class EnumModel<T> where T : Enum, IConvertible
 	/// <remarks>
 	/// The localized enumerator short name.
 	/// </remarks>
-	public string ShortName { get; set; }
+	public string ShortName { get; private set; }
 
 	/// <summary>
 	/// The <see cref="Description"/> property.
@@ -54,5 +54,5 @@ public class EnumModel<T> where T : Enum, IConvertible
 	/// <remarks>
 	/// The localized enumerator short name.
 	/// </remarks>
-	public string Description { get; set; }
+	public string Description { get; private set; }
 }

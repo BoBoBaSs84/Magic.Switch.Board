@@ -26,6 +26,7 @@ internal static class ServiceCollectionExtension
 		_ = services.AddSingleton<IFileService, FileService>();
 		_ = services.AddSingleton<IDeviceConfigService, DeviceConfigService>();
 		_ = services.AddSingleton<IEnumService, EnumService>();
+		_ = services.AddSingleton<ISerializerDeserializerService, XmlService>();
 	}
 
 	public static void ConfigureViewsModels(this IServiceCollection services)

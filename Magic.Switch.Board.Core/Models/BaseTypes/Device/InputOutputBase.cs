@@ -1,11 +1,12 @@
-﻿using Magic.Switch.Board.Core.Properties;
+﻿using Magic.Switch.Board.Core.Models.Device;
+using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 using static Magic.Switch.Board.Core.Enums;
 using static Magic.Switch.Board.Core.Properties.Resources;
 
-namespace Magic.Switch.Board.Core.Models.Device.Base;
+namespace Magic.Switch.Board.Core.Models.BaseTypes.Device;
 
 /// <summary>
 /// The <see cref="InputOutputBase"/> class.

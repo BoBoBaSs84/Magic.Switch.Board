@@ -1,4 +1,4 @@
-﻿using Magic.Switch.Board.Core.Models.Device.Base;
+﻿using Magic.Switch.Board.Core.Models.BaseTypes.Device;
 using System.Xml.Serialization;
 using static Magic.Switch.Board.Core.Enums;
 

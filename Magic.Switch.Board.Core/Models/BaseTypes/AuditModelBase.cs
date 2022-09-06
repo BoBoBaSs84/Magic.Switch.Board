@@ -1,4 +1,10 @@
 ﻿using Magic.Switch.Board.Core.Contracts.Models.Auditing;
+using Magic.Switch.Board.Core.Models.BaseTypes.Device;
+using Magic.Switch.Board.Core.Properties;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+using System.Xml.Serialization;
+using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core.Models.BaseTypes;
 
@@ -13,6 +19,7 @@ namespace Magic.Switch.Board.Core.Models.BaseTypes;
 /// <item>The <see cref="IActivatableModel"/> interface.</item>
 /// </list>
 /// </remarks>
+[XmlInclude(typeof(NamedBase))]
 public abstract class AuditModelBase : IIdentityModel, IAuditedModel, IActivatableModel
 {
 	/// <summary>
@@ -21,15 +28,29 @@ public abstract class AuditModelBase : IIdentityModel, IAuditedModel, IActivatab
 	protected AuditModelBase()
 	{
 		Id = Guid.NewGuid();
-		CreatedAt = DateTime.Now;
+		Created = DateTime.Now;
 	}
 
 	/// <inheritdoc cref="IIdentityModel.Id"/>
+	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
+	[JsonPropertyName(nameof(Id))]
+	[XmlAttribute(AttributeName = nameof(Id))]
 	public Guid Id { get; private set; }
-	/// <inheritdoc cref="IAuditedModel.CreatedAt"/>
-	public DateTime CreatedAt { get; private set; }
-	/// <inheritdoc cref="IAuditedModel.UpdatedAt"/>
-	public DateTime? UpdatedAt { get; set; }
+
+	/// <inheritdoc cref="IAuditedModel.Created"/>
+	[Required(ErrorMessageResourceType = typeof(Resources),
+		ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
+	[JsonPropertyName(nameof(Created))]
+	[XmlAttribute(AttributeName = nameof(Created), DataType = "date")]
+	public DateTime Created { get; private set; }
+
+	/// <inheritdoc cref="IAuditedModel.Updated"/>
+	[JsonPropertyName(nameof(Updated))]
+	[XmlAttribute(AttributeName = nameof(Updated), DataType = "date")]
+	public DateTime? Updated { get; set; }
+
 	/// <inheritdoc cref="IActivatableModel.IsActive"/>
+	[JsonPropertyName(nameof(IsActive))]
+	[XmlAttribute(AttributeName = nameof(IsActive))]
 	public bool IsActive { get; set; }
 }

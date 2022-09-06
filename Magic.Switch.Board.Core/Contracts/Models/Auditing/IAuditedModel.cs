@@ -6,19 +6,19 @@
 public interface IAuditedModel
 {
 	/// <summary>
-	/// The <see cref="CreatedAt"/> property.
+	/// The <see cref="Created"/> property.
 	/// </summary>
 	/// <remarks>
 	/// Of type <see cref="DateTime"/>, defines when the record entry was created.
 	/// </remarks>
-	public DateTime CreatedAt { get; }
+	public DateTime Created { get; }
 
 	/// <summary>
-	///The <see cref="UpdatedAt"/> property.
+	///The <see cref="Updated"/> property.
 	/// </summary>
 	/// <remarks>
 	/// Of type <see cref="DateTime"/>, defines when the record entry was updated.
 	/// Since no update has to be performed, can be <see langword="null"/>.
 	/// </remarks>
-	public DateTime? UpdatedAt { get; set; }
+	public DateTime? Updated { get; set; }
 }
