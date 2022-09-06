@@ -145,7 +145,7 @@
     <value>Não é usado para escrever mensagens de registo. Especifica que uma categoria de registo não deve escrever nenhuma mensagem.</value>
   </data>
   <data name="Enum_LogLevel_None_Name" xml:space="preserve">
-    <value>Nenhum.</value>
+    <value>Nenhum</value>
   </data>
   <data name="Enum_LogLevel_Trace_Description" xml:space="preserve">
     <value>Registos que contêm as mensagens mais detalhadas. Estas mensagens podem conter dados de aplicação sensíveis. Estas mensagens são desativadas por padrão e nunca devem ser ativadas num ambiente de produção.</value>
