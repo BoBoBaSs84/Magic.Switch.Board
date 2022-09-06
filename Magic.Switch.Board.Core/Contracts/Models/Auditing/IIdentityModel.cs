@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Magic.Switch.Board.Core.Contracts.Models.Auditing;
+﻿namespace Magic.Switch.Board.Core.Contracts.Models.Auditing;
 
 /// <summary>
 /// The <see cref="IIdentityModel"/> interface.

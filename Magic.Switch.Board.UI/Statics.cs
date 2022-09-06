@@ -2,7 +2,7 @@
 using System.IO;
 using System.Reflection;
 
-namespace Magic.Switch.Board;
+namespace Magic.Switch.Board.UI;
 
 internal static class Statics
 {
