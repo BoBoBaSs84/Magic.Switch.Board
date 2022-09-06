@@ -13,12 +13,7 @@
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
-		<UICulture>en-US</UICulture>
 	</PropertyGroup>
-
-	<ItemGroup>
-		<PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<Compile Update="Properties\Resources.Designer.cs">

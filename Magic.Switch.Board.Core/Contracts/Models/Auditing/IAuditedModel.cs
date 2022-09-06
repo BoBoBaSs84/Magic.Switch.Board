@@ -10,6 +10,7 @@ public interface IAuditedModel
 	/// </summary>
 	/// <remarks>
 	/// Of type <see cref="DateTime"/>, defines when the record entry was created.
+	/// Cannot be <see langword="null"/>.
 	/// </remarks>
 	public DateTime Created { get; }
 
@@ -18,7 +19,7 @@ public interface IAuditedModel
 	/// </summary>
 	/// <remarks>
 	/// Of type <see cref="DateTime"/>, defines when the record entry was updated.
-	/// Since no update has to be performed, can be <see langword="null"/>.
+	/// Cannot be <see langword="null"/>.
 	/// </remarks>
-	public DateTime? Updated { get; set; }
+	public DateTime Updated { get; set; }
 }

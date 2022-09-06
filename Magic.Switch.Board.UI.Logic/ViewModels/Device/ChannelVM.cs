@@ -15,7 +15,7 @@ public sealed class ChannelVM : ViewModelBase<Channel>
 	private string name = string.Empty;
 	private string? description;
 	private DateTime created;
-	private DateTime? updated;
+	private DateTime updated;
 	private InputVM input = default!;
 	private OutputVM? output;
 	private SwitchesVM? switches;
@@ -49,7 +49,7 @@ public sealed class ChannelVM : ViewModelBase<Channel>
 
 	/// <summary>The <see cref="Updated"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Updated))]
-	public DateTime? Updated { get => updated; set => SetProperty(ref updated, value); }
+	public DateTime Updated { get => updated; set => SetProperty(ref updated, value); }
 
 	/// <summary>The <see cref="Input"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Input))]

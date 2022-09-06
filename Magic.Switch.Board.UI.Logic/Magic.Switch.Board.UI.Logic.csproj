@@ -14,7 +14,6 @@
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
-		<UICulture>en-US</UICulture>
 	</PropertyGroup>
 
 	<ItemGroup>

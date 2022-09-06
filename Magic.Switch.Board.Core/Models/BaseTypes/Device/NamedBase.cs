@@ -1,4 +1,5 @@
-﻿using Magic.Switch.Board.Core.Models.Device;
+﻿using Magic.Switch.Board.Core.Models.BaseTypes.Auditing;
+using Magic.Switch.Board.Core.Models.Device;
 using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
@@ -12,7 +13,7 @@ namespace Magic.Switch.Board.Core.Models.BaseTypes.Device;
 /// </summary>
 [XmlInclude(typeof(Configuration))]
 [XmlInclude(typeof(Channel))]
-public abstract class NamedBase : AuditModelBase
+public abstract class NamedBase : FullAuditModel
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="NamedBase"/> class.

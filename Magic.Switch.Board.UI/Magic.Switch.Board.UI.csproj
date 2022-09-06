@@ -17,7 +17,6 @@
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
 		<StartupObject>Magic.Switch.Board.UI.App</StartupObject>
-		<UICulture>en-US</UICulture>
 	</PropertyGroup>
 
 	<ItemGroup>

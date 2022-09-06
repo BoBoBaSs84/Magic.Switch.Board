@@ -28,7 +28,6 @@ public abstract class FullAuditModel : IIdentityModel, IAuditedModel, IActivatab
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Id))]
 	[XmlAttribute(AttributeName = nameof(Id))]
-	[Key]
 	public Guid Id { get; set; }
 
 	/// <inheritdoc cref="IAuditedModel.Created"/>
@@ -40,7 +39,7 @@ public abstract class FullAuditModel : IIdentityModel, IAuditedModel, IActivatab
 	/// <inheritdoc cref="IAuditedModel.Updated"/>
 	[JsonPropertyName(nameof(Updated))]
 	[XmlAttribute(AttributeName = nameof(Updated), DataType = "date")]
-	public DateTime? Updated { get; set; }
+	public DateTime Updated { get; set; }
 
 	/// <inheritdoc cref="IActivatableModel.IsActive"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
