@@ -76,8 +76,8 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 		Id = Model.Id;
 		Name = Model.Name;
 		Description = Model.Description;
-		Created = Model.Created;
-		Updated = Model.Updated;
+		Created = Model.CreatedAt;
+		Updated = Model.UpdatedAt;
 		ApplicationVersion = Model.ApplicationVersion;
 		ConfigurationVersion = Model.ConfigurationVersion;
 		foreach (Channel channel in Model.Channels)
