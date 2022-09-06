@@ -120,23 +120,44 @@
   <data name="Enum_LogLevel_Critical_Description" xml:space="preserve">
     <value>Registros que describen un bloqueo irrecuperable de la aplicación o del sistema, o una falla catastrófica que requiere atención inmediata.</value>
   </data>
+  <data name="Enum_LogLevel_Critical_Name" xml:space="preserve">
+    <value>Crítico</value>
+  </data>
   <data name="Enum_LogLevel_Debug_Description" xml:space="preserve">
     <value>Registros que se utilizan para la investigación interactiva durante el desarrollo. Estos registros deben contener principalmente información útil para la depuración y no tienen valor a largo plazo.</value>
+  </data>
+  <data name="Enum_LogLevel_Debug_Name" xml:space="preserve">
+    <value>Depurar</value>
   </data>
   <data name="Enum_LogLevel_Error_Description" xml:space="preserve">
     <value>Registros que resaltan cuando el flujo actual de ejecución se detiene debido a un error. Estos deben indicar un error en la actividad actual, no un error en toda la aplicación.</value>
   </data>
+  <data name="Enum_LogLevel_Error_Name" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="Enum_LogLevel_Information_Description" xml:space="preserve">
     <value>Registros que rastrean el flujo general de la aplicación. Estos registros deben tener un valor a largo plazo.</value>
+  </data>
+  <data name="Enum_LogLevel_Information_Name" xml:space="preserve">
+    <value>Información</value>
   </data>
   <data name="Enum_LogLevel_None_Description" xml:space="preserve">
     <value>No se utiliza para escribir mensajes de registro. Especifica que una categoría de registro no debe escribir ningún mensaje.</value>
   </data>
+  <data name="Enum_LogLevel_None_Name" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
   <data name="Enum_LogLevel_Trace_Description" xml:space="preserve">
     <value>Registros que contienen los mensajes más detallados. Estos mensajes pueden contener datos confidenciales de la aplicación. Estos mensajes están deshabilitados de forma predeterminada y nunca deben habilitarse en un entorno de producción.</value>
   </data>
+  <data name="Enum_LogLevel_Trace_Name" xml:space="preserve">
+    <value>Rastro</value>
+  </data>
   <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
     <value>Registros que resaltan un evento anormal o inesperado en el flujo de la aplicación, pero que de otro modo no hacen que se detenga la ejecución de la aplicación.</value>
+  </data>
+  <data name="Enum_LogLevel_Warning_Name" xml:space="preserve">
+    <value>Advertencia</value>
   </data>
   <data name="Enum_LoopChannel_1_Name" xml:space="preserve">
     <value>Canal de bucle 1</value>
@@ -162,9 +183,6 @@
   <data name="Enum_LoopChannel_8_Name" xml:space="preserve">
     <value>Canal de bucle 8</value>
   </data>
-  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
-    <value>Midi Canal 1</value>
-  </data>
   <data name="Enum_MidiChannel_10_Name" xml:space="preserve">
     <value>Midi Canal 10</value>
   </data>
@@ -185,6 +203,9 @@
   </data>
   <data name="Enum_MidiChannel_16_Name" xml:space="preserve">
     <value>Midi Canal 16</value>
+  </data>
+  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
+    <value>Midi Canal 1</value>
   </data>
   <data name="Enum_MidiChannel_2_Name" xml:space="preserve">
     <value>Midi Canal 2</value>
@@ -210,8 +231,14 @@
   <data name="Enum_MidiChannel_9_Name" xml:space="preserve">
     <value>Midi Canal 9</value>
   </data>
+  <data name="Enum_MidiMessageType_CCM_Description" xml:space="preserve">
+    <value>Los mensajes de cambio de control se utilizan generalmente para cambiar los parámetros de función o las funciones de llamada en sus dispositivos Midi.</value>
+  </data>
   <data name="Enum_MidiMessageType_CCM_Name" xml:space="preserve">
     <value>Mensaje de cambio de control</value>
+  </data>
+  <data name="Enum_MidiMessageType_PCM_Description" xml:space="preserve">
+    <value>El mensaje Cambio de programa se utiliza para especificar el tipo de instrumento que se debe utilizar para reproducir sonidos en un canal determinado.</value>
   </data>
   <data name="Enum_MidiMessageType_PCM_Name" xml:space="preserve">
     <value>Mensaje de cambio de programa</value>
@@ -240,6 +267,27 @@
   <data name="Enum_SwitchChannel_8_Name" xml:space="preserve">
     <value>Cambiar canal 8</value>
   </data>
+  <data name="Error_While_Creating_A_New_Device_Configuration" xml:space="preserve">
+    <value>Error al crear una nueva configuración de dispositivo.</value>
+  </data>
+  <data name="Error_While_Creating_File" xml:space="preserve">
+    <value>Error al crear el archivo. '{0}'</value>
+  </data>
+  <data name="Error_While_Deleting_File" xml:space="preserve">
+    <value>Error al eliminar el archivo. '{0}'</value>
+  </data>
+  <data name="Error_While_Fetching_Enum_List" xml:space="preserve">
+    <value>Error al obtener la lista de enumeradores.</value>
+  </data>
+  <data name="Error_While_Reading_A_Existing_Device_Configuration" xml:space="preserve">
+    <value>Error al leer una configuración de dispositivo existente.</value>
+  </data>
+  <data name="Error_While_Reading_File" xml:space="preserve">
+    <value>Error al leer el archivo. '{0}'</value>
+  </data>
+  <data name="Error_While_Saving_Device_Configuration" xml:space="preserve">
+    <value>Error al guardar la configuración del dispositivo.</value>
+  </data>
   <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">
     <value>Error durante la deserialización. Atributo desconocido encontrado. Nombre: '{0}' en línea: {1} y posición: {2}.</value>
   </data>
@@ -248,6 +296,9 @@
   </data>
   <data name="Error_Xml_Unknown_Node" xml:space="preserve">
     <value>Error durante la deserialización. Nodo desconocido encontrado. Nombre: '{0}' de tipo: '{1}'</value>
+  </data>
+  <data name="Error_Xml_Unreferenced_Object" xml:space="preserve">
+    <value>Error durante la deserialización. Objeto no referenciado encontrado, nombre: '{0}' con id: {1}</value>
   </data>
   <data name="File_Service_Error_Directory" xml:space="preserve">
     <value>No se pudo encontrar el directorio.</value>
@@ -263,6 +314,9 @@
   </data>
   <data name="File_Service_File_Read" xml:space="preserve">
     <value>El archivo '{0}' ha sido cargado.</value>
+  </data>
+  <data name="Model_Field_MaxLength_Generic" xml:space="preserve">
+    <value>{0} no puede ser más largo que {1} caracteres.</value>
   </data>
   <data name="Model_Field_Range_Generic" xml:space="preserve">
     <value>{0} debe estar en un rango entre {2} y {1}.</value>

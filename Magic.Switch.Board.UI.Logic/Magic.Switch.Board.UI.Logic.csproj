@@ -17,10 +17,6 @@
 		<UICulture>en-US</UICulture>
 	</PropertyGroup>
 
-	<PropertyGroup>
-		<DocumentationMarkdown>$(MSBuildProjectDirectory)\Docs\API.md</DocumentationMarkdown>
-	</PropertyGroup>
-
 	<ItemGroup>
 		<None Include="LICENSE" Pack="true" PackagePath="" />
 	</ItemGroup>

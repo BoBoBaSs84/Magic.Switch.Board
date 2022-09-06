@@ -20,10 +20,6 @@
 		<UICulture>en-US</UICulture>
 	</PropertyGroup>
 
-	<PropertyGroup>
-		<DocumentationMarkdown>$(MSBuildProjectDirectory)\Docs\API.md</DocumentationMarkdown>
-	</PropertyGroup>
-
 	<ItemGroup>
 		<None Remove="Assets\Icons\File_New.ico" />
 		<None Remove="Assets\Icons\File_Open.ico" />

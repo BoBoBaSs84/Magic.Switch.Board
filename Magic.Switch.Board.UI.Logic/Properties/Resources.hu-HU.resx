@@ -126,6 +126,12 @@
   <data name="ViewModel_Display_Name_Configuration_Version" xml:space="preserve">
     <value>Konfigurációs verzió</value>
   </data>
+  <data name="ViewModel_Display_Name_Created" xml:space="preserve">
+    <value>Létrehozott</value>
+  </data>
+  <data name="ViewModel_Display_Name_Description" xml:space="preserve">
+    <value>Leírás</value>
+  </data>
   <data name="ViewModel_Display_Name_Id" xml:space="preserve">
     <value>Azonosító</value>
   </data>
@@ -152,5 +158,8 @@
   </data>
   <data name="ViewModel_Display_Name_Switches" xml:space="preserve">
     <value>Kapcsolók</value>
+  </data>
+  <data name="ViewModel_Display_Name_Updated" xml:space="preserve">
+    <value>Frissül</value>
   </data>
 </root>

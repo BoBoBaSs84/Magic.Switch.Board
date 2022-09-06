@@ -6,15 +6,15 @@ namespace Magic.Switch.Board.Core.Helpers;
 /// <inheritdoc/>
 internal sealed class StringWriterHelper : StringWriter
 {
-	private readonly Encoding m_Encoding;
+	private readonly Encoding _encoding;
 
 	/// <summary>
-	/// The <see cref="StringWriterHelper"/> class constructor.
+	/// Initializes a new instance of the <see cref="StringWriterHelper"/> class.
 	/// </summary>
 	/// <param name="encoding"></param>
-	public StringWriterHelper(Encoding encoding)
-		: base(new StringBuilder(), CurrentCulture) => m_Encoding = encoding;
+	public StringWriterHelper(Encoding encoding) : base(new StringBuilder(), CurrentCulture)
+		=> _encoding = encoding;
 
 	/// <inheritdoc/>
-	public override Encoding Encoding => m_Encoding;
+	public override Encoding Encoding => _encoding;
 }

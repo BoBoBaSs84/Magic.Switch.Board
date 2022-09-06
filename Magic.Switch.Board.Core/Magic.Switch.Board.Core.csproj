@@ -16,10 +16,6 @@
 		<UICulture>en-US</UICulture>
 	</PropertyGroup>
 
-	<PropertyGroup>
-		<DocumentationMarkdown>$(MSBuildProjectDirectory)\Docs\API.md</DocumentationMarkdown>
-	</PropertyGroup>
-
 	<ItemGroup>
 		<PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
 	</ItemGroup>

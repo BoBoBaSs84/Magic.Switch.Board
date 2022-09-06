@@ -126,6 +126,12 @@
   <data name="ViewModel_Display_Name_Configuration_Version" xml:space="preserve">
     <value>Version der Konfiguration</value>
   </data>
+  <data name="ViewModel_Display_Name_Created" xml:space="preserve">
+    <value>Erstellt</value>
+  </data>
+  <data name="ViewModel_Display_Name_Description" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
   <data name="ViewModel_Display_Name_Id" xml:space="preserve">
     <value>Bezeichner</value>
   </data>
@@ -152,5 +158,8 @@
   </data>
   <data name="ViewModel_Display_Name_Switches" xml:space="preserve">
     <value>Schalter</value>
+  </data>
+  <data name="ViewModel_Display_Name_Updated" xml:space="preserve">
+    <value>Aktualisierte</value>
   </data>
 </root>

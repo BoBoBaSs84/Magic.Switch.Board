@@ -120,23 +120,44 @@
   <data name="Enum_LogLevel_Critical_Description" xml:space="preserve">
     <value>Dzienniki opisujące nieodwracalną awarię aplikacji lub systemu lub katastrofalną awarię wymagającą natychmiastowej uwagi.</value>
   </data>
+  <data name="Enum_LogLevel_Critical_Name" xml:space="preserve">
+    <value>Krytyczny</value>
+  </data>
   <data name="Enum_LogLevel_Debug_Description" xml:space="preserve">
     <value>Dzienniki używane do interaktywnego badania podczas programowania. Dzienniki te powinny przede wszystkim zawierać informacje przydatne do debugowania i nie mieć wartości długoterminowej.</value>
+  </data>
+  <data name="Enum_LogLevel_Debug_Name" xml:space="preserve">
+    <value>Debugować</value>
   </data>
   <data name="Enum_LogLevel_Error_Description" xml:space="preserve">
     <value>Dzienniki, które podświetlają, gdy bieżący przepływ wykonania jest zatrzymany z powodu awarii. Powinny one wskazywać na awarię w bieżącym działaniu, a nie awarię w całej aplikacji.</value>
   </data>
+  <data name="Enum_LogLevel_Error_Name" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
   <data name="Enum_LogLevel_Information_Description" xml:space="preserve">
     <value>Dzienniki śledzące ogólny przepływ aplikacji. Dzienniki te powinny mieć wartość długoterminową.</value>
+  </data>
+  <data name="Enum_LogLevel_Information_Name" xml:space="preserve">
+    <value>Informacja</value>
   </data>
   <data name="Enum_LogLevel_None_Description" xml:space="preserve">
     <value>Nie jest używany do pisania komunikatów dziennika. Określa, że kategoria rejestrowania nie powinna pisać żadnych komunikatów.</value>
   </data>
+  <data name="Enum_LogLevel_None_Name" xml:space="preserve">
+    <value>Żaden</value>
+  </data>
   <data name="Enum_LogLevel_Trace_Description" xml:space="preserve">
     <value>Dzienniki zawierające najbardziej szczegółowe komunikaty. Komunikaty te mogą zawierać poufne dane aplikacji. Te komunikaty są domyślnie wyłączone i nigdy nie powinny być włączane w środowisku produkcyjnym.</value>
   </data>
+  <data name="Enum_LogLevel_Trace_Name" xml:space="preserve">
+    <value>Ślad</value>
+  </data>
   <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
     <value>Dzienniki, które wyróżniają nietypowe lub nieoczekiwane zdarzenie w przepływie aplikacji, ale w inny sposób nie powodują zatrzymania wykonywania aplikacji.</value>
+  </data>
+  <data name="Enum_LogLevel_Warning_Name" xml:space="preserve">
+    <value>Ostrzeżenie</value>
   </data>
   <data name="Enum_LoopChannel_1_Name" xml:space="preserve">
     <value>Kanał pętli 1</value>
@@ -162,9 +183,6 @@
   <data name="Enum_LoopChannel_8_Name" xml:space="preserve">
     <value>Kanał pętli 8</value>
   </data>
-  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
-    <value>Kanał Midi 1</value>
-  </data>
   <data name="Enum_MidiChannel_10_Name" xml:space="preserve">
     <value>Midi Kanał 10</value>
   </data>
@@ -185,6 +203,9 @@
   </data>
   <data name="Enum_MidiChannel_16_Name" xml:space="preserve">
     <value>Midi Kanał 16</value>
+  </data>
+  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
+    <value>Kanał Midi 1</value>
   </data>
   <data name="Enum_MidiChannel_2_Name" xml:space="preserve">
     <value>Kanał Midi 2</value>
@@ -210,8 +231,14 @@
   <data name="Enum_MidiChannel_9_Name" xml:space="preserve">
     <value>Kanał Midi 9</value>
   </data>
+  <data name="Enum_MidiMessageType_CCM_Description" xml:space="preserve">
+    <value>Komunikaty zmiany sterowania są zwykle używane do zmiany parametrów funkcji lub wywoływania funkcji w urządzeniach Midi.</value>
+  </data>
   <data name="Enum_MidiMessageType_CCM_Name" xml:space="preserve">
     <value>Wiadomość o zmianie sterowania</value>
+  </data>
+  <data name="Enum_MidiMessageType_PCM_Description" xml:space="preserve">
+    <value>Komunikat Zmiana programu służy do określenia typu instrumentu, który ma być używany do odtwarzania dźwięków na danym kanale.</value>
   </data>
   <data name="Enum_MidiMessageType_PCM_Name" xml:space="preserve">
     <value>Komunikat o zmianie programu</value>
@@ -240,6 +267,27 @@
   <data name="Enum_SwitchChannel_8_Name" xml:space="preserve">
     <value>Przełącz kanał 8</value>
   </data>
+  <data name="Error_While_Creating_A_New_Device_Configuration" xml:space="preserve">
+    <value>Błąd podczas tworzenia nowej konfiguracji urządzenia.</value>
+  </data>
+  <data name="Error_While_Creating_File" xml:space="preserve">
+    <value>Błąd podczas tworzenia pliku. '{0}'</value>
+  </data>
+  <data name="Error_While_Deleting_File" xml:space="preserve">
+    <value>Błąd podczas usuwania pliku. '{0}'</value>
+  </data>
+  <data name="Error_While_Fetching_Enum_List" xml:space="preserve">
+    <value>Błąd podczas pobierania listy wyliczników.</value>
+  </data>
+  <data name="Error_While_Reading_A_Existing_Device_Configuration" xml:space="preserve">
+    <value>Błąd podczas odczytywania istniejącej konfiguracji urządzenia.</value>
+  </data>
+  <data name="Error_While_Reading_File" xml:space="preserve">
+    <value>Błąd podczas odczytu pliku. '{0}'</value>
+  </data>
+  <data name="Error_While_Saving_Device_Configuration" xml:space="preserve">
+    <value>Błąd podczas zapisywania konfiguracji urządzenia.</value>
+  </data>
   <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">
     <value>Błąd podczas deserializacji. Znaleziono nieznany atrybut. Nazwa: "{0}" w wierszu: {1} i pozycja: {2}.</value>
   </data>
@@ -248,6 +296,9 @@
   </data>
   <data name="Error_Xml_Unknown_Node" xml:space="preserve">
     <value>Błąd podczas deserializacji. Znaleziono niezadany węzeł. Nazwa: "{0}" typu: "{1}"</value>
+  </data>
+  <data name="Error_Xml_Unreferenced_Object" xml:space="preserve">
+    <value>Błąd podczas deserializacji. Znaleziono obiekt bez odniesień, nazwa: "{0}" z id: {1}</value>
   </data>
   <data name="File_Service_Error_Directory" xml:space="preserve">
     <value>Nie można odnaleźć katalogu.</value>
@@ -263,6 +314,9 @@
   </data>
   <data name="File_Service_File_Read" xml:space="preserve">
     <value>Plik "{0}" został załadowany.</value>
+  </data>
+  <data name="Model_Field_MaxLength_Generic" xml:space="preserve">
+    <value>{0} nie może być dłuższy niż {1} znaków.</value>
   </data>
   <data name="Model_Field_Range_Generic" xml:space="preserve">
     <value>{0} musi mieścić się w przedziale od {2} do {1}.</value>

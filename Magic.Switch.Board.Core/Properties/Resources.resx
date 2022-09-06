@@ -274,10 +274,10 @@
     <value>Error while creating file. '{0}'</value>
   </data>
   <data name="Error_While_Deleting_File" xml:space="preserve">
-    <value>Error while deleting file. '{0}</value>
+    <value>Error while deleting file. '{0}'</value>
   </data>
   <data name="Error_While_Fetching_Enum_List" xml:space="preserve">
-    <value>Error while fetching enum list.</value>
+    <value>Error while fetching enumerator list.</value>
   </data>
   <data name="Error_While_Reading_A_Existing_Device_Configuration" xml:space="preserve">
     <value>Error while reading a existing device configuration.</value>
@@ -296,6 +296,9 @@
   </data>
   <data name="Error_Xml_Unknown_Node" xml:space="preserve">
     <value>Error during deserialisation. Unkown node found. Name: '{0}' of type: '{1}'</value>
+  </data>
+  <data name="Error_Xml_Unreferenced_Object" xml:space="preserve">
+    <value>Error during deserialisation. Unreferenced object found, name: '{0}' with id: {1}</value>
   </data>
   <data name="File_Service_Error_Directory" xml:space="preserve">
     <value>The directory could not be found.</value>

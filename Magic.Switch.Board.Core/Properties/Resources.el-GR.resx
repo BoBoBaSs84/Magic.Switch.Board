@@ -120,23 +120,44 @@
   <data name="Enum_LogLevel_Critical_Description" xml:space="preserve">
     <value>Αρχεία καταγραφής που περιγράφουν μια μη ανακτήσιμη εφαρμογή ή κατάρρευση του συστήματος ή μια καταστροφική αποτυχία που απαιτεί άμεση προσοχή.</value>
   </data>
+  <data name="Enum_LogLevel_Critical_Name" xml:space="preserve">
+    <value>Κρίσιμος</value>
+  </data>
   <data name="Enum_LogLevel_Debug_Description" xml:space="preserve">
     <value>Αρχεία καταγραφής που χρησιμοποιούνται για διαδραστική έρευνα κατά τη διάρκεια της ανάπτυξης. Αυτά τα αρχεία καταγραφής θα πρέπει να περιέχουν κυρίως πληροφορίες χρήσιμες για τον εντοπισμό σφαλμάτων και να μην έχουν μακροπρόθεσμη αξία.</value>
+  </data>
+  <data name="Enum_LogLevel_Debug_Name" xml:space="preserve">
+    <value>Εντοπισμού σφαλμάτων</value>
   </data>
   <data name="Enum_LogLevel_Error_Description" xml:space="preserve">
     <value>Αρχεία καταγραφής που επισημαίνουν πότε διακόπτεται η τρέχουσα ροή εκτέλεσης λόγω αποτυχίας. Αυτά θα πρέπει να υποδεικνύουν αποτυχία στην τρέχουσα δραστηριότητα, όχι αποτυχία σε ολόκληρη την εφαρμογή.</value>
   </data>
+  <data name="Enum_LogLevel_Error_Name" xml:space="preserve">
+    <value>Λάθος</value>
+  </data>
   <data name="Enum_LogLevel_Information_Description" xml:space="preserve">
     <value>Αρχεία καταγραφής που παρακολουθούν τη γενική ροή της εφαρμογής. Αυτά τα αρχεία καταγραφής πρέπει να έχουν μακροπρόθεσμη αξία.</value>
+  </data>
+  <data name="Enum_LogLevel_Information_Name" xml:space="preserve">
+    <value>Πληροφορία</value>
   </data>
   <data name="Enum_LogLevel_None_Description" xml:space="preserve">
     <value>Δεν χρησιμοποιείται για τη σύνταξη μηνυμάτων καταγραφής. Καθορίζει ότι μια κατηγορία καταγραφής δεν πρέπει να γράφει μηνύματα.</value>
   </data>
+  <data name="Enum_LogLevel_None_Name" xml:space="preserve">
+    <value>Κανένας</value>
+  </data>
   <data name="Enum_LogLevel_Trace_Description" xml:space="preserve">
     <value>Αρχεία καταγραφής που περιέχουν τα πιο λεπτομερή μηνύματα. Αυτά τα μηνύματα ενδέχεται να περιέχουν ευαίσθητα δεδομένα εφαρμογών. Αυτά τα μηνύματα είναι απενεργοποιημένα από προεπιλογή και δεν πρέπει ποτέ να ενεργοποιούνται σε περιβάλλον παραγωγής.</value>
   </data>
+  <data name="Enum_LogLevel_Trace_Name" xml:space="preserve">
+    <value>Ίχνος</value>
+  </data>
   <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
     <value>Αρχεία καταγραφής που επισημαίνουν ένα μη φυσιολογικό ή μη αναμενόμενο συμβάν στη ροή της εφαρμογής, αλλά δεν προκαλούν τη διακοπή της εκτέλεσης της εφαρμογής.</value>
+  </data>
+  <data name="Enum_LogLevel_Warning_Name" xml:space="preserve">
+    <value>Προειδοποίηση</value>
   </data>
   <data name="Enum_LoopChannel_1_Name" xml:space="preserve">
     <value>Κανάλι βρόχου 1</value>
@@ -162,9 +183,6 @@
   <data name="Enum_LoopChannel_8_Name" xml:space="preserve">
     <value>Κανάλι βρόχου 8</value>
   </data>
-  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
-    <value>Κανάλι Μίντι 1</value>
-  </data>
   <data name="Enum_MidiChannel_10_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 10</value>
   </data>
@@ -185,6 +203,9 @@
   </data>
   <data name="Enum_MidiChannel_16_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 16</value>
+  </data>
+  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
+    <value>Κανάλι Μίντι 1</value>
   </data>
   <data name="Enum_MidiChannel_2_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 2</value>
@@ -210,8 +231,14 @@
   <data name="Enum_MidiChannel_9_Name" xml:space="preserve">
     <value>Κανάλι Μίντι 9</value>
   </data>
+  <data name="Enum_MidiMessageType_CCM_Description" xml:space="preserve">
+    <value>Τα μηνύματα αλλαγής ελέγχου χρησιμοποιούνται συνήθως για την αλλαγή παραμέτρων λειτουργίας ή λειτουργιών κλήσης στις συσκευές Midi.</value>
+  </data>
   <data name="Enum_MidiMessageType_CCM_Name" xml:space="preserve">
     <value>Μήνυμα αλλαγής ελέγχου</value>
+  </data>
+  <data name="Enum_MidiMessageType_PCM_Description" xml:space="preserve">
+    <value>Το μήνυμα "Αλλαγή προγράμματος" χρησιμοποιείται για τον καθορισμό του τύπου του οργάνου που θα πρέπει να χρησιμοποιείται για την αναπαραγωγή ήχων σε ένα δεδομένο κανάλι.</value>
   </data>
   <data name="Enum_MidiMessageType_PCM_Name" xml:space="preserve">
     <value>Μήνυμα αλλαγής προγράμματος</value>
@@ -240,6 +267,27 @@
   <data name="Enum_SwitchChannel_8_Name" xml:space="preserve">
     <value>Εναλλαγή καναλιού 8</value>
   </data>
+  <data name="Error_While_Creating_A_New_Device_Configuration" xml:space="preserve">
+    <value>Σφάλμα κατά τη δημιουργία μιας νέας διαμόρφωσης συσκευής.</value>
+  </data>
+  <data name="Error_While_Creating_File" xml:space="preserve">
+    <value>Σφάλμα κατά τη δημιουργία αρχείου. '{0}'</value>
+  </data>
+  <data name="Error_While_Deleting_File" xml:space="preserve">
+    <value>Σφάλμα κατά τη διαγραφή αρχείου. '{0}'</value>
+  </data>
+  <data name="Error_While_Fetching_Enum_List" xml:space="preserve">
+    <value>Σφάλμα κατά τη λήψη της λίστας απαριθμητών.</value>
+  </data>
+  <data name="Error_While_Reading_A_Existing_Device_Configuration" xml:space="preserve">
+    <value>Σφάλμα κατά την ανάγνωση μιας υπάρχουσας διαμόρφωσης συσκευής.</value>
+  </data>
+  <data name="Error_While_Reading_File" xml:space="preserve">
+    <value>Σφάλμα κατά την ανάγνωση του αρχείου. '{0}'</value>
+  </data>
+  <data name="Error_While_Saving_Device_Configuration" xml:space="preserve">
+    <value>Σφάλμα κατά την αποθήκευση της διαμόρφωσης της συσκευής.</value>
+  </data>
   <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">
     <value>Σφάλμα κατά την αποσειροποίηση. Βρέθηκε άγνωστο χαρακτηριστικό. Όνομα: «{0}» στη γραμμή: {1} και θέση: {2}.</value>
   </data>
@@ -248,6 +296,9 @@
   </data>
   <data name="Error_Xml_Unknown_Node" xml:space="preserve">
     <value>Σφάλμα κατά την αποσειροποίηση. Βρέθηκε άγνωστος κόμβος. Ονομασία: «{0}» τύπου: «{1}»</value>
+  </data>
+  <data name="Error_Xml_Unreferenced_Object" xml:space="preserve">
+    <value>Σφάλμα κατά την αποσειροποίηση. Βρέθηκε μη αναφερόμενο αντικείμενο, όνομα: '{0}' με αναγνωριστικό: {1}</value>
   </data>
   <data name="File_Service_Error_Directory" xml:space="preserve">
     <value>Δεν ήταν δυνατή η εύρεση του καταλόγου.</value>
@@ -263,6 +314,9 @@
   </data>
   <data name="File_Service_File_Read" xml:space="preserve">
     <value>Το αρχείο '{0}' έχει φορτωθεί.</value>
+  </data>
+  <data name="Model_Field_MaxLength_Generic" xml:space="preserve">
+    <value>{0} δεν μπορεί να είναι μεγαλύτερο από {1} χαρακτήρες.</value>
   </data>
   <data name="Model_Field_Range_Generic" xml:space="preserve">
     <value>{0} πρέπει να κυμαίνεται μεταξύ {2} και {1}.</value>

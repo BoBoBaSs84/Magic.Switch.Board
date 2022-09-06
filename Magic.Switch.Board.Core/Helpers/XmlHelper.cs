@@ -6,9 +6,9 @@ using static Magic.Switch.Board.Core.Properties.Resources;
 namespace Magic.Switch.Board.Core.Helpers;
 
 /// <summary>
-/// The <see cref="XmlHelper{T}"/> class
+/// The <see cref="XmlHelper{T}"/> class.
 /// </summary>
-/// <typeparam name="T"></typeparam>
+/// <typeparam name="T">The object to transform.</typeparam>
 internal sealed class XmlHelper<T> where T : class
 {
 	private readonly XmlSerializer xmlSerializer;
@@ -16,17 +16,28 @@ internal sealed class XmlHelper<T> where T : class
 	private readonly XmlReaderSettings xmlReaderSettings;
 
 	/// <summary>
-	/// The <see cref="XmlHelper{T}"/> constructor
+	/// Initializes a new instance of the <see cref="XmlHelper{T}"/> class.
 	/// </summary>
 	public XmlHelper()
 	{
 		xmlSerializer = new XmlSerializer(typeof(T));
-		xmlWriterSettings = new XmlWriterSettings() { NewLineHandling = NewLineHandling.None };
-		xmlReaderSettings = new XmlReaderSettings() { IgnoreWhitespace = true };
+		xmlWriterSettings = new XmlWriterSettings()
+		{
+			CheckCharacters = true,
+			CloseOutput = true,
+			NewLineHandling = NewLineHandling.None
+		};
+		xmlReaderSettings = new XmlReaderSettings()
+		{
+			CheckCharacters = true,
+			CloseInput = true,
+			IgnoreWhitespace = true
+		};
 
 		xmlSerializer.UnknownAttribute += OnUnknownAttribute;
 		xmlSerializer.UnknownElement += OnUnknownElement;
 		xmlSerializer.UnknownNode += OnUnknownNode;
+		xmlSerializer.UnreferencedObject += OnUnreferencedObject;
 	}
 
 	/// <summary>
@@ -158,6 +169,7 @@ internal sealed class XmlHelper<T> where T : class
 		return stringWriter;
 	}
 
+	#region private methods
 	/// <summary>
 	/// The <see cref="OnUnknownNode(object?, XmlNodeEventArgs)"/> method.
 	/// </summary>
@@ -196,4 +208,18 @@ internal sealed class XmlHelper<T> where T : class
 	/// <exception cref="XmlException"></exception>
 	private void OnUnknownAttribute(object? sender, XmlAttributeEventArgs e) =>
 		throw new XmlException(string.Format(Culture, Error_Xml_Unknown_Attribute, e.Attr.Name, e.LineNumber, e.LinePosition));
+
+	/// <summary>
+	/// The <see cref="OnUnreferencedObject(object?, UnreferencedObjectEventArgs)"/> method.
+	/// </summary>
+	/// <remarks>
+	/// Occurs during deserialization of a SOAP-encoded XML stream, when the System.Xml.Serialization.XmlSerializer
+	/// encounters a recognized type that is not used or is unreferenced.
+	/// </remarks>
+	/// <param name="sender"></param>
+	/// <param name="e"></param>
+	/// <exception cref="XmlException"></exception>
+	private void OnUnreferencedObject(object? sender, UnreferencedObjectEventArgs e) =>
+		throw new XmlException(string.Format(Culture, Error_Xml_Unreferenced_Object, e.UnreferencedObject, e.UnreferencedId));
+	#endregion
 }

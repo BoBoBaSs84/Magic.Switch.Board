@@ -120,23 +120,44 @@
   <data name="Enum_LogLevel_Critical_Description" xml:space="preserve">
     <value>Protokoly, které popisují neopravitelnou chybu aplikace nebo systému nebo závažné selhání, které vyžaduje okamžitou pozornost.</value>
   </data>
+  <data name="Enum_LogLevel_Critical_Name" xml:space="preserve">
+    <value>Kritický</value>
+  </data>
   <data name="Enum_LogLevel_Debug_Description" xml:space="preserve">
     <value>Protokoly, které se používají pro interaktivní šetření během vývoje. Tyto protokoly by měly primárně obsahovat informace užitečné pro ladění a neměly by mít žádnou dlouhodobou hodnotu.</value>
+  </data>
+  <data name="Enum_LogLevel_Debug_Name" xml:space="preserve">
+    <value>Ladicí</value>
   </data>
   <data name="Enum_LogLevel_Error_Description" xml:space="preserve">
     <value>Protokoly, které zvýrazní, když je aktuální tok provádění zastaven z důvodu selhání. Ty by měly indikovat selhání v aktuální aktivitě, nikoli selhání celé aplikace.</value>
   </data>
+  <data name="Enum_LogLevel_Error_Name" xml:space="preserve">
+    <value>Chyba</value>
+  </data>
   <data name="Enum_LogLevel_Information_Description" xml:space="preserve">
     <value>Protokoly, které sledují obecný tok aplikace. Tyto protokoly by měly mít dlouhodobou hodnotu.</value>
+  </data>
+  <data name="Enum_LogLevel_Information_Name" xml:space="preserve">
+    <value>Informace</value>
   </data>
   <data name="Enum_LogLevel_None_Description" xml:space="preserve">
     <value>Nepoužívá se pro psaní zpráv protokolu. Určuje, že kategorie protokolování by neměla psát žádné zprávy.</value>
   </data>
+  <data name="Enum_LogLevel_None_Name" xml:space="preserve">
+    <value>Žádný</value>
+  </data>
   <data name="Enum_LogLevel_Trace_Description" xml:space="preserve">
     <value>Protokoly, které obsahují nejpodrobnější zprávy. Tyto zprávy mohou obsahovat citlivá data aplikace. Tyto zprávy jsou ve výchozím nastavení zakázány a v provozním prostředí by nikdy neměly být povoleny.</value>
   </data>
+  <data name="Enum_LogLevel_Trace_Name" xml:space="preserve">
+    <value>Stopa</value>
+  </data>
   <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
     <value>Protokoly, které zvýrazňují neobvyklou nebo neočekávanou událost v toku aplikace, ale jinak nezpůsobují zastavení provádění aplikace.</value>
+  </data>
+  <data name="Enum_LogLevel_Warning_Name" xml:space="preserve">
+    <value>Varování</value>
   </data>
   <data name="Enum_LoopChannel_1_Name" xml:space="preserve">
     <value>Smyčkový kanál 1</value>
@@ -162,9 +183,6 @@
   <data name="Enum_LoopChannel_8_Name" xml:space="preserve">
     <value>Smyčkový kanál 8</value>
   </data>
-  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
-    <value>Midi kanál 1</value>
-  </data>
   <data name="Enum_MidiChannel_10_Name" xml:space="preserve">
     <value>Midi kanál 10</value>
   </data>
@@ -185,6 +203,9 @@
   </data>
   <data name="Enum_MidiChannel_16_Name" xml:space="preserve">
     <value>Midi kanál 16</value>
+  </data>
+  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
+    <value>Midi kanál 1</value>
   </data>
   <data name="Enum_MidiChannel_2_Name" xml:space="preserve">
     <value>Midi kanál 2</value>
@@ -210,8 +231,14 @@
   <data name="Enum_MidiChannel_9_Name" xml:space="preserve">
     <value>Midi kanál 9</value>
   </data>
+  <data name="Enum_MidiMessageType_CCM_Description" xml:space="preserve">
+    <value>Zprávy Control Change se obvykle používají ke změně parametrů funkcí nebo volání funkcí ve vašich Midi zařízeních.</value>
+  </data>
   <data name="Enum_MidiMessageType_CCM_Name" xml:space="preserve">
     <value>Zpráva o změně ovládacího prvku</value>
+  </data>
+  <data name="Enum_MidiMessageType_PCM_Description" xml:space="preserve">
+    <value>Zpráva Změna programu slouží k určení typu nástroje, který má být použit k přehrávání zvuků na daném kanálu.</value>
   </data>
   <data name="Enum_MidiMessageType_PCM_Name" xml:space="preserve">
     <value>Zpráva o změně programu</value>
@@ -240,6 +267,27 @@
   <data name="Enum_SwitchChannel_8_Name" xml:space="preserve">
     <value>Přepnout kanál 8</value>
   </data>
+  <data name="Error_While_Creating_A_New_Device_Configuration" xml:space="preserve">
+    <value>Chyba při vytváření nové konfigurace zařízení.</value>
+  </data>
+  <data name="Error_While_Creating_File" xml:space="preserve">
+    <value>Chyba při vytváření souboru. '{0}'</value>
+  </data>
+  <data name="Error_While_Deleting_File" xml:space="preserve">
+    <value>Chyba při odstraňování souboru. '{0}'</value>
+  </data>
+  <data name="Error_While_Fetching_Enum_List" xml:space="preserve">
+    <value>Chyba při načítání seznamu sčítacího kalendáře.</value>
+  </data>
+  <data name="Error_While_Reading_A_Existing_Device_Configuration" xml:space="preserve">
+    <value>Chyba při čtení existující konfigurace zařízení.</value>
+  </data>
+  <data name="Error_While_Reading_File" xml:space="preserve">
+    <value>Chyba při čtení souboru. '{0}'</value>
+  </data>
+  <data name="Error_While_Saving_Device_Configuration" xml:space="preserve">
+    <value>Chyba při ukládání konfigurace zařízení.</value>
+  </data>
   <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">
     <value>Chyba během deserializace. Byl nalezen neznámý atribut. Jméno: "{0}" na řádku: {1} a pozice: {2}.</value>
   </data>
@@ -248,6 +296,9 @@
   </data>
   <data name="Error_Xml_Unknown_Node" xml:space="preserve">
     <value>Chyba během deserializace. Byl nalezen neznámý uzel. Název: "{0}" typu "{1}"</value>
+  </data>
+  <data name="Error_Xml_Unreferenced_Object" xml:space="preserve">
+    <value>Chyba během deserializace. Nalezen neodkazovaný objekt, název: "{0}" s id: {1}</value>
   </data>
   <data name="File_Service_Error_Directory" xml:space="preserve">
     <value>Adresář nebyl nalezen.</value>
@@ -263,6 +314,9 @@
   </data>
   <data name="File_Service_File_Read" xml:space="preserve">
     <value>Soubor "{0}" byl načten.</value>
+  </data>
+  <data name="Model_Field_MaxLength_Generic" xml:space="preserve">
+    <value>{0} nesmí být delší než {1} znaků.</value>
   </data>
   <data name="Model_Field_Range_Generic" xml:space="preserve">
     <value>{0} musí být v rozmezí od {2} do {1}.</value>

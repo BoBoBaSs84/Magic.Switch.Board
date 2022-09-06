@@ -529,7 +529,7 @@ namespace Magic.Switch.Board.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Error while deleting file. &apos;{0}.
+        ///   Looks up a localized string similar to Error while deleting file. &apos;{0}&apos;.
         /// </summary>
         public static string Error_While_Deleting_File {
             get {
@@ -538,7 +538,7 @@ namespace Magic.Switch.Board.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Error while fetching enum list..
+        ///   Looks up a localized string similar to Error while fetching enumerator list..
         /// </summary>
         public static string Error_While_Fetching_Enum_List {
             get {
@@ -597,6 +597,15 @@ namespace Magic.Switch.Board.Core.Properties {
         public static string Error_Xml_Unknown_Node {
             get {
                 return ResourceManager.GetString("Error_Xml_Unknown_Node", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error during deserialisation. Unreferenced object found, name: &apos;{0}&apos; with id: {1}.
+        /// </summary>
+        public static string Error_Xml_Unreferenced_Object {
+            get {
+                return ResourceManager.GetString("Error_Xml_Unreferenced_Object", resourceCulture);
             }
         }
         

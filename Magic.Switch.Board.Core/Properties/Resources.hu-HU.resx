@@ -120,23 +120,44 @@
   <data name="Enum_LogLevel_Critical_Description" xml:space="preserve">
     <value>Olyan naplók, amelyek helyrehozhatatlan alkalmazást vagy rendszerösszeomlást, vagy azonnali figyelmet igénylő katasztrofális hibát írnak le.</value>
   </data>
+  <data name="Enum_LogLevel_Critical_Name" xml:space="preserve">
+    <value>Kritikus</value>
+  </data>
   <data name="Enum_LogLevel_Debug_Description" xml:space="preserve">
     <value>A fejlesztés során az interaktív vizsgálathoz használt naplók. Ezeknek a naplóknak elsősorban a hibakereséshez hasznos információkat kell tartalmazniuk, és nem lehetnek hosszú távú értékük.</value>
+  </data>
+  <data name="Enum_LogLevel_Debug_Name" xml:space="preserve">
+    <value>Debug</value>
   </data>
   <data name="Enum_LogLevel_Error_Description" xml:space="preserve">
     <value>Naplók, amelyek kiemelik, ha az aktuális végrehajtási folyamat hiba miatt leáll. Ezeknek az aktuális tevékenység hibáját kell jelezniük, nem pedig az egész alkalmazásra kiterjedő hibát.</value>
   </data>
+  <data name="Enum_LogLevel_Error_Name" xml:space="preserve">
+    <value>Hiba</value>
+  </data>
   <data name="Enum_LogLevel_Information_Description" xml:space="preserve">
     <value>Naplók, amelyek nyomon követik az alkalmazás általános folyamatát. Ezeknek a naplóknak hosszú távú értékkel kell rendelkezniük.</value>
+  </data>
+  <data name="Enum_LogLevel_Information_Name" xml:space="preserve">
+    <value>Információ</value>
   </data>
   <data name="Enum_LogLevel_None_Description" xml:space="preserve">
     <value>Nem használható naplóüzenetek írására. Megadja, hogy a naplózási kategóriák nem írhatnak üzeneteket.</value>
   </data>
+  <data name="Enum_LogLevel_None_Name" xml:space="preserve">
+    <value>Egyik sem</value>
+  </data>
   <data name="Enum_LogLevel_Trace_Description" xml:space="preserve">
     <value>A legrészletesebb üzeneteket tartalmazó naplók. Ezek az üzenetek bizalmas alkalmazásadatokat tartalmazhatnak. Ezek az üzenetek alapértelmezés szerint le vannak tiltva, és soha nem szabad engedélyezni őket éles környezetben.</value>
   </data>
+  <data name="Enum_LogLevel_Trace_Name" xml:space="preserve">
+    <value>Nyom</value>
+  </data>
   <data name="Enum_LogLevel_Warning_Description" xml:space="preserve">
     <value>Azok a naplók, amelyek egy rendellenes vagy váratlan eseményt emelnek ki az alkalmazásfolyamatban, de egyébként nem okozzák az alkalmazás végrehajtásának leállítását.</value>
+  </data>
+  <data name="Enum_LogLevel_Warning_Name" xml:space="preserve">
+    <value>Figyelmeztetés</value>
   </data>
   <data name="Enum_LoopChannel_1_Name" xml:space="preserve">
     <value>Hurok csatorna 1</value>
@@ -162,9 +183,6 @@
   <data name="Enum_LoopChannel_8_Name" xml:space="preserve">
     <value>Hurok csatorna 8</value>
   </data>
-  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
-    <value>Midi 1-es csatorna</value>
-  </data>
   <data name="Enum_MidiChannel_10_Name" xml:space="preserve">
     <value>Midi 10-es csatorna</value>
   </data>
@@ -185,6 +203,9 @@
   </data>
   <data name="Enum_MidiChannel_16_Name" xml:space="preserve">
     <value>Midi 16-os csatorna</value>
+  </data>
+  <data name="Enum_MidiChannel_1_Name" xml:space="preserve">
+    <value>Midi 1-es csatorna</value>
   </data>
   <data name="Enum_MidiChannel_2_Name" xml:space="preserve">
     <value>Midi 2. csatorna</value>
@@ -210,8 +231,14 @@
   <data name="Enum_MidiChannel_9_Name" xml:space="preserve">
     <value>Midi 9-es csatorna</value>
   </data>
+  <data name="Enum_MidiMessageType_CCM_Description" xml:space="preserve">
+    <value>A Control Change üzeneteket általában a Midi-eszközök funkcióparamétereinek vagy hívási funkcióinak megváltoztatására használják.</value>
+  </data>
   <data name="Enum_MidiMessageType_CCM_Name" xml:space="preserve">
     <value>Vezérlőváltási üzenet</value>
+  </data>
+  <data name="Enum_MidiMessageType_PCM_Description" xml:space="preserve">
+    <value>A Programváltás üzenet segítségével adhatja meg, hogy milyen típusú hangszert kell használni az adott csatornán lévő hangok lejátszásához.</value>
   </data>
   <data name="Enum_MidiMessageType_PCM_Name" xml:space="preserve">
     <value>Programmódosítási üzenet</value>
@@ -240,6 +267,27 @@
   <data name="Enum_SwitchChannel_8_Name" xml:space="preserve">
     <value>Váltson 8-as csatornára</value>
   </data>
+  <data name="Error_While_Creating_A_New_Device_Configuration" xml:space="preserve">
+    <value>Hiba történt új eszközkonfiguráció létrehozásakor.</value>
+  </data>
+  <data name="Error_While_Creating_File" xml:space="preserve">
+    <value>Hiba történt a fájl létrehozásakor. '{0}'</value>
+  </data>
+  <data name="Error_While_Deleting_File" xml:space="preserve">
+    <value>Hiba a fájl törlésekor. '{0}'</value>
+  </data>
+  <data name="Error_While_Fetching_Enum_List" xml:space="preserve">
+    <value>Hiba az enumerátorlista lekérésekor.</value>
+  </data>
+  <data name="Error_While_Reading_A_Existing_Device_Configuration" xml:space="preserve">
+    <value>Hiba egy meglévő eszközkonfiguráció olvasásakor.</value>
+  </data>
+  <data name="Error_While_Reading_File" xml:space="preserve">
+    <value>Hiba a fájl olvasása közben. '{0}'</value>
+  </data>
+  <data name="Error_While_Saving_Device_Configuration" xml:space="preserve">
+    <value>Hiba az eszköz konfigurációjának mentése közben.</value>
+  </data>
   <data name="Error_Xml_Unknown_Attribute" xml:space="preserve">
     <value>Hiba a deszerializáció során. Ismeretlen attribútum található. Név: "{0}" a sorban: {1} és beosztás: {2}.</value>
   </data>
@@ -248,6 +296,9 @@
   </data>
   <data name="Error_Xml_Unknown_Node" xml:space="preserve">
     <value>Hiba a deszerializáció során. Ismeretlen csomópont található. Név típusa: "{0}" típus: "{1}"</value>
+  </data>
+  <data name="Error_Xml_Unreferenced_Object" xml:space="preserve">
+    <value>Hiba a deszerializáció során. Nem hivatkozott objektum található, név: "{0}" azonosítóval: {1}</value>
   </data>
   <data name="File_Service_Error_Directory" xml:space="preserve">
     <value>A könyvtár nem található.</value>
@@ -263,6 +314,9 @@
   </data>
   <data name="File_Service_File_Read" xml:space="preserve">
     <value>A "{0}" fájl betöltődött.</value>
+  </data>
+  <data name="Model_Field_MaxLength_Generic" xml:space="preserve">
+    <value>{0} nem lehet hosszabb {1} karakternél.</value>
   </data>
   <data name="Model_Field_Range_Generic" xml:space="preserve">
     <value>{0} {2} és {1} közötti tartományban kell lennie.</value>

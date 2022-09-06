@@ -11,8 +11,7 @@ public interface IIdentityModel
 	/// The <see cref="Id"/> property.
 	/// </summary>
 	/// <remarks>
-	/// Of type <see cref="Guid"/>.
+	/// Of type <see cref="Guid"/>, serves as the identifier of a record set.
 	/// </remarks>
-	[Key]
 	public Guid Id { get; }
 }
