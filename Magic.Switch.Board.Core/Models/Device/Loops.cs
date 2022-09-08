@@ -14,12 +14,12 @@ namespace Magic.Switch.Board.Core.Models.Device;
 public class Loops
 {
 	/// <summary>
-	/// The empty <see cref="Loops"/> class constructor.
+	/// Initializes a new instance of the <see cref="Loops"/> class.
 	/// </summary>
 	public Loops() => Channels = default;
 
 	/// <summary>
-	/// The standard <see cref="Loops"/> class constructor.
+	/// Initializes a new instance of the <see cref="Loops"/> class.
 	/// </summary>
 	/// <param name="channels"></param>
 	public Loops(LoopChannels channels) => Channels = channels;

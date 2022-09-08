@@ -16,7 +16,7 @@ namespace Magic.Switch.Board.Core.Models.BaseTypes.Device;
 public abstract class InputOutputBase
 {
 	/// <summary>
-	/// The empty <see cref="InputOutputBase"/> class constructor.
+	/// Initializes a new instance of the <see cref="InputOutputBase"/> class.
 	/// </summary>
 	protected InputOutputBase()
 	{

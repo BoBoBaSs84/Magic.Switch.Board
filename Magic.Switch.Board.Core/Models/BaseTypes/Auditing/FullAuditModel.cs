@@ -1,4 +1,5 @@
 ﻿using Magic.Switch.Board.Core.Contracts.Models.Auditing;
+using Magic.Switch.Board.Core.Extensions;
 using Magic.Switch.Board.Core.Models.BaseTypes.Device;
 using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
@@ -14,6 +15,9 @@ namespace Magic.Switch.Board.Core.Models.BaseTypes.Auditing;
 [XmlInclude(typeof(NamedBase))]
 public abstract class FullAuditModel : IIdentityModel, IAuditedModel, IActivatableModel
 {
+	private DateTime created;
+	private DateTime updated;
+
 	/// <summary>
 	/// Initializes a new instance of the <see cref="FullAuditModel"/> class.
 	/// </summary>
@@ -33,17 +37,34 @@ public abstract class FullAuditModel : IIdentityModel, IAuditedModel, IActivatab
 	/// <inheritdoc cref="IAuditedModel.Created"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Created))]
-	[XmlAttribute(AttributeName = nameof(Created), DataType = "date")]
-	public DateTime Created { get; set; }
+	[JsonConverter(typeof(JsonIsoDateTimeConverter))]
+	[XmlAttribute(AttributeName = nameof(Created))]
+	public DateTime Created
+	{
+		get => created.AddTicks(-(created.Ticks % TimeSpan.TicksPerSecond));
+		set => created = DateTime.SpecifyKind(value, DateTimeKind.Unspecified);
+	}
 
 	/// <inheritdoc cref="IAuditedModel.Updated"/>
 	[JsonPropertyName(nameof(Updated))]
-	[XmlAttribute(AttributeName = nameof(Updated), DataType = "date")]
-	public DateTime Updated { get; set; }
+	[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+	[JsonConverter(typeof(JsonIsoDateTimeConverter))]
+	[XmlAttribute(AttributeName = nameof(Updated))]
+	public DateTime Updated
+	{
+		get => updated.AddTicks(-(updated.Ticks % TimeSpan.TicksPerSecond));
+		set => updated = DateTime.SpecifyKind(value, DateTimeKind.Unspecified);
+	}
 
 	/// <inheritdoc cref="IActivatableModel.IsActive"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(IsActive))]
 	[XmlAttribute(AttributeName = nameof(IsActive))]
 	public bool IsActive { get; set; }
+
+	/// <inheritdoc cref="IActivatableModel.ShouldSerializeIsActive"/>
+	public bool ShouldSerializeIsActive() => !Equals(IsActive, true);
+
+	/// <inheritdoc cref="IAuditedModel.ShouldSerializeUpdated"/>
+	public bool ShouldSerializeUpdated() => !Equals(Updated, DateTime.MinValue);
 }

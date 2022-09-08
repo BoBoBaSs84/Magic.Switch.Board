@@ -16,9 +16,9 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 	private string? description;
 	private string applicationVersion = string.Empty;
 	private string configurationVersion = string.Empty;
-	private List<ChannelVM> channels = new();
+	private ICollection<ChannelVM> channels = new List<ChannelVM>();
 	private DateTime created;
-	private DateTime updated;
+	private DateTime? updated;
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ConfigurationVM"/> class.
@@ -57,7 +57,7 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 
 	/// <summary>The <see cref="Updated"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Updated))]
-	public DateTime Updated { get => updated; set => SetProperty(ref updated, value); }
+	public DateTime? Updated { get => updated; set => SetProperty(ref updated, value); }
 
 	/// <summary>The <see cref="ApplicationVersion"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Application_Version))]
@@ -69,7 +69,7 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 
 	/// <summary>The <see cref="Channels"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Channels))]
-	public List<ChannelVM> Channels { get => channels; set => SetProperty(ref channels, value); }
+	public ICollection<ChannelVM> Channels { get => channels; set => SetProperty(ref channels, value); }
 
 	private void Initialize()
 	{

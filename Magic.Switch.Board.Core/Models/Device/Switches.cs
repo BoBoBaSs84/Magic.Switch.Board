@@ -14,18 +14,18 @@ namespace Magic.Switch.Board.Core.Models.Device;
 public class Switches
 {
 	/// <summary>
-	/// The empty <see cref="Switches"/> class constructor.
+	/// Initializes a new instance of the <see cref="Switches"/> class.
 	/// </summary>
 	public Switches() => Channels = default;
 
 	/// <summary>
-	/// The standard <see cref="Switches"/> class constructor.
+	/// Initializes a new instance of the <see cref="Switches"/> class.
 	/// </summary>
 	/// <param name="channels"></param>
 	public Switches(SwitchChannels channels) => Channels = channels;
 
 	/// <summary>
-	/// The <see cref="Channels"/> property
+	/// The <see cref="Channels"/> property.
 	/// </summary>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Channels))]

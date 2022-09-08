@@ -84,6 +84,6 @@ public class Configuration : NamedBase
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Channels))]
 	[XmlArray(ElementName = nameof(Channels), IsNullable = true)]
-	[XmlArrayItem(ElementName = nameof(Channel), IsNullable = false)]
+	[XmlArrayItem(ElementName = nameof(Channel), IsNullable = true)]
 	public List<Channel> Channels { get; set; }
 }
