@@ -14,7 +14,7 @@ namespace Magic.Switch.Board.Core.Models.Device;
 public class Output : InputOutputBase
 {
 	/// <summary>
-	/// The empty <see cref="Output"/> class contructor.
+	/// Initializes a new instance of the <see cref="Output"/> class.
 	/// </summary>
 	public Output() : base()
 	{

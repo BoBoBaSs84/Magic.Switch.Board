@@ -7,7 +7,7 @@
 /// The class contains all additional information about an enumerator.
 /// </remarks>
 /// <typeparam name="T"></typeparam>
-public class EnumModel<T> where T : Enum, IConvertible
+public class EnumModel<T> where T : Enum
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="EnumModel{T}"/> class.

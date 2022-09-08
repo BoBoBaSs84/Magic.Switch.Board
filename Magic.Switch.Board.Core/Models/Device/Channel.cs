@@ -17,7 +17,7 @@ namespace Magic.Switch.Board.Core.Models.Device;
 public class Channel : NamedBase
 {
 	/// <summary>
-	/// Initializes a new parameterless instance of the <see cref="Channel"/> class.
+	/// Initializes a new instance of the <see cref="Channel"/> class.
 	/// </summary>
 	public Channel() : base()
 	{
