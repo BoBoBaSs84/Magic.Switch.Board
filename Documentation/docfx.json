@@ -1,0 +1,65 @@
+{
+	"metadata": [
+		{
+			"src": [
+				{
+					"files": [
+						"**/*.csproj"
+					],
+					"exclude": [
+						"**/bin/**",
+						"**/obj/**"
+					],
+					"src": ".."
+				}
+			],
+			//"filter": "filterConfig.yml",
+			"dest": "api",
+			"disableGitFeatures": false,
+			"disableDefaultFilter": false
+		}
+	],
+	"build": {
+		"xrefService": [
+			"https://xref.docs.microsoft.com/query?uid={uid}"
+		],
+		"content": [
+			{
+				"files": [
+					"api/**.yml",
+					"api/index.md"
+				]
+			},
+			{
+				"files": [
+					"toc.yml",
+					"*.md"
+				]
+			}
+		],
+		"overwrite": [
+			{
+				"files": [
+					"apidoc/**.md"
+				],
+				"exclude": [
+					"obj/**",
+					"public/**"
+				]
+			}
+		],
+		"dest": "public",
+		"globalMetadataFiles": [
+		],
+		"fileMetadataFiles": [
+		],
+		"template": "default",
+		"postProcessors": [
+		],
+		"markdownEngineName": "markdig",
+		"noLangKeyword": false,
+		"keepFileLink": false,
+		"cleanupCacheHistory": true,
+		"disableGitFeatures": false
+	}
+}

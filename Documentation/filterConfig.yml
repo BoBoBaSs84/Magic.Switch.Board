@@ -1,0 +1,5 @@
+# apiRules:
+#   # mentioning types from Microsoft.* namespace
+#   - exclude:      
+#       uidRegex: ^Microsoft\..*$
+#       type: Type
