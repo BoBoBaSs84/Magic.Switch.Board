@@ -237,11 +237,17 @@
   <data name="Enum_MidiMessageType_CCM_Name" xml:space="preserve">
     <value>Messaggio di modifica del controllo</value>
   </data>
+  <data name="Enum_MidiMessageType_CCM_ShortName" xml:space="preserve">
+    <value>CCM</value>
+  </data>
   <data name="Enum_MidiMessageType_PCM_Description" xml:space="preserve">
     <value>Il messaggio Di modifica del programma viene utilizzato per specificare il tipo di strumento che deve essere utilizzato per riprodurre i suoni su un determinato canale.</value>
   </data>
   <data name="Enum_MidiMessageType_PCM_Name" xml:space="preserve">
     <value>Messaggio di modifica del programma</value>
+  </data>
+  <data name="Enum_MidiMessageType_PCM_ShortName" xml:space="preserve">
+    <value>PCM</value>
   </data>
   <data name="Enum_SwitchChannel_1_Name" xml:space="preserve">
     <value>Cambia canale 1</value>

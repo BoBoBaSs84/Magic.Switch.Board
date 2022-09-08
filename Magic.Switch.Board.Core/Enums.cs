@@ -10,12 +10,11 @@ namespace Magic.Switch.Board.Core;
 /// The <see cref="Enums"/> class.
 /// </summary>
 /// <remarks>
-/// 
+/// The static class contains all enumerators required for the core component.
 /// </remarks>
 public static class Enums
 {
 	#region enums
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 	/// <summary>
 	/// The <see cref="LogLevel"/> enums.
 	/// </summary>
@@ -72,6 +71,9 @@ public static class Enums
 		None = 6
 	}
 
+	/// <summary>
+	/// The <see cref="SwitchChannels"/> enums.
+	/// </summary>
 	[Flags]
 	public enum SwitchChannels
 	{
@@ -117,6 +119,9 @@ public static class Enums
 		CH08 = 128
 	}
 
+	/// <summary>
+	/// The <see cref="LoopChannels"/> enums.
+	/// </summary>
 	[Flags]
 	public enum LoopChannels
 	{
@@ -162,6 +167,9 @@ public static class Enums
 		CH08 = 128
 	}
 
+	/// <summary>
+	/// The <see cref="MidiMessageType"/> enums.
+	/// </summary>
 	public enum MidiMessageType
 	{
 		/// <summary>
@@ -169,6 +177,7 @@ public static class Enums
 		/// </summary>
 		[Display(ResourceType = typeof(Resources),
 			Name = nameof(Enum_MidiMessageType_PCM_Name),
+			ShortName = nameof(Enum_MidiMessageType_PCM_ShortName),
 			Description = nameof(Enum_MidiMessageType_PCM_Description))]
 		PCM = 1,
 		/// <summary>
@@ -176,46 +185,97 @@ public static class Enums
 		/// </summary>
 		[Display(ResourceType = typeof(Resources),
 			Name = nameof(Enum_MidiMessageType_CCM_Name),
+			ShortName = nameof(Enum_MidiMessageType_CCM_ShortName),
 			Description = nameof(Enum_MidiMessageType_CCM_Description))]
 		CCM = 2
 	}
 
+	/// <summary>
+	/// The <see cref="MidiChannel"/> enums.
+	/// </summary>
 	public enum MidiChannel
 	{
+		/// <summary>
+		/// The <see cref="CH01"/> enum is the "Midi Channel 1".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_1_Name))]
 		CH01 = 1,
+		/// <summary>
+		/// The <see cref="CH02"/> enum is the "Midi Channel 2".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_2_Name))]
 		CH02 = 2,
+		/// <summary>
+		/// The <see cref="CH03"/> enum is the "Midi Channel 3".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_3_Name))]
 		CH03 = 3,
+		/// <summary>
+		/// The <see cref="CH04"/> enum is the "Midi Channel 4".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_4_Name))]
 		CH04 = 4,
+		/// <summary>
+		/// The <see cref="CH05"/> enum is the "Midi Channel 5".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_5_Name))]
 		CH05 = 5,
+		/// <summary>
+		/// The <see cref="CH06"/> enum is the "Midi Channel 6".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_6_Name))]
 		CH06 = 6,
+		/// <summary>
+		/// The <see cref="CH07"/> enum is the "Midi Channel 7".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_7_Name))]
 		CH07 = 7,
+		/// <summary>
+		/// The <see cref="CH08"/> enum is the "Midi Channel 8".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_8_Name))]
 		CH08 = 8,
+		/// <summary>
+		/// The <see cref="CH09"/> enum is the "Midi Channel 9".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_9_Name))]
 		CH09 = 9,
+		/// <summary>
+		/// The <see cref="CH10"/> enum is the "Midi Channel 10".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_10_Name))]
 		CH10 = 10,
+		/// <summary>
+		/// The <see cref="CH11"/> enum is the "Midi Channel 11".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_11_Name))]
 		CH11 = 11,
+		/// <summary>
+		/// The <see cref="CH12"/> enum is the "Midi Channel 12".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_12_Name))]
 		CH12 = 12,
+		/// <summary>
+		/// The <see cref="CH13"/> enum is the "Midi Channel 13".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_13_Name))]
 		CH13 = 13,
+		/// <summary>
+		/// The <see cref="CH14"/> enum is the "Midi Channel 14".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_14_Name))]
 		CH14 = 14,
+		/// <summary>
+		/// The <see cref="CH15"/> enum is the "Midi Channel 15".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_15_Name))]
 		CH15 = 15,
+		/// <summary>
+		/// The <see cref="CH16"/> enum is the "Midi Channel 16".
+		/// </summary>
 		[Display(ResourceType = typeof(Resources), Name = nameof(Enum_MidiChannel_16_Name))]
 		CH16 = 16
 	}
-#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
 	#endregion
 
 	#region enum extension methods

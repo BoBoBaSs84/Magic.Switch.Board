@@ -237,11 +237,17 @@
   <data name="Enum_MidiMessageType_CCM_Name" xml:space="preserve">
     <value>Zpráva o změně ovládacího prvku</value>
   </data>
+  <data name="Enum_MidiMessageType_CCM_ShortName" xml:space="preserve">
+    <value>CCM</value>
+  </data>
   <data name="Enum_MidiMessageType_PCM_Description" xml:space="preserve">
     <value>Zpráva Změna programu slouží k určení typu nástroje, který má být použit k přehrávání zvuků na daném kanálu.</value>
   </data>
   <data name="Enum_MidiMessageType_PCM_Name" xml:space="preserve">
     <value>Zpráva o změně programu</value>
+  </data>
+  <data name="Enum_MidiMessageType_PCM_ShortName" xml:space="preserve">
+    <value>PCM</value>
   </data>
   <data name="Enum_SwitchChannel_1_Name" xml:space="preserve">
     <value>Přepnout kanál 1</value>

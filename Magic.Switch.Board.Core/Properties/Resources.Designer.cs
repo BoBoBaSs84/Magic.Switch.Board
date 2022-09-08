@@ -421,6 +421,15 @@ namespace Magic.Switch.Board.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CCM.
+        /// </summary>
+        public static string Enum_MidiMessageType_CCM_ShortName {
+            get {
+                return ResourceManager.GetString("Enum_MidiMessageType_CCM_ShortName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The Program Change message is used to specify the type of instrument which should be used to play sounds on a given Channel..
         /// </summary>
         public static string Enum_MidiMessageType_PCM_Description {
@@ -435,6 +444,15 @@ namespace Magic.Switch.Board.Core.Properties {
         public static string Enum_MidiMessageType_PCM_Name {
             get {
                 return ResourceManager.GetString("Enum_MidiMessageType_PCM_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PCM.
+        /// </summary>
+        public static string Enum_MidiMessageType_PCM_ShortName {
+            get {
+                return ResourceManager.GetString("Enum_MidiMessageType_PCM_ShortName", resourceCulture);
             }
         }
         
