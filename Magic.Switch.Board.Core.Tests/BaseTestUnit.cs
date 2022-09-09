@@ -31,5 +31,14 @@ public class BaseTestUnit
 		return host.Start();
 	}
 
-	public static T GetService<T>() => (T)TestHost.Services.GetService(typeof(T));
+	/// <summary>
+	/// The method should return the requested service.
+	/// </summary>
+	/// <typeparam name="TService">The requested service.</typeparam>
+	/// <returns>The registered service.</returns>
+	/// <exception cref="ArgumentException">If the requested service is not registered.</exception>
+	public static TService GetService<TService>() where TService : class =>
+		TestHost!.Services.GetService(typeof(TService)) is not TService service
+		? throw new ArgumentException($"{typeof(TService)} needs to be registered service.")
+		: service;
 }

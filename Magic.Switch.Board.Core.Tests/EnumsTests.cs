@@ -9,7 +9,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void GetEnumDescriptionTestPass()
 	{
-		// arrange
+		
 		string midiMessageTypeDescription = Enums.MidiMessageType.PCM.GetEnumDescription();
 		// act and assert
 		Assert.AreEqual(midiMessageTypeDescription, Resources.Enum_MidiMessageType_PCM_Description);
@@ -18,7 +18,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void GetEnumDescriptionTestFail()
 	{
-		// arrange
+		
 		string midiMessageTypeDescription = Enums.MidiMessageType.PCM.GetEnumDescription();
 		// act and assert
 		Assert.AreNotEqual(midiMessageTypeDescription, Enums.MidiMessageType.PCM.ToString());
@@ -27,7 +27,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void GetEnumNameTestPass()
 	{
-		// arrange
+		
 		string midiMessageTypeName = Enums.MidiMessageType.PCM.GetEnumName();
 		// act and assert
 		Assert.AreEqual(midiMessageTypeName, Resources.Enum_MidiMessageType_PCM_Name);
@@ -36,7 +36,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void GetEnumNameTestFail()
 	{
-		// arrange
+		
 		string midiMessageTypeName = Enums.MidiMessageType.PCM.GetEnumName();
 		// act and assert
 		Assert.AreNotEqual(midiMessageTypeName, Enums.MidiMessageType.PCM.ToString());
@@ -45,7 +45,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void GetEnumShortNameTestPass()
 	{
-		// arrange
+		
 		string midiMessageTypeShortName = Enums.MidiMessageType.PCM.GetEnumShortName();
 		// act and assert
 		Assert.AreEqual(midiMessageTypeShortName, Enums.MidiMessageType.PCM.ToString());
@@ -54,7 +54,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void GetEnumShortNameTestFail()
 	{
-		// arrange
+		
 		string midiMessageTypeShortName = Enums.MidiMessageType.PCM.GetEnumShortName();
 		// act and assert
 		Assert.AreNotEqual(midiMessageTypeShortName, Enums.MidiMessageType.PCM.GetEnumName());
@@ -63,7 +63,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void GetListFromEnumTestPass()
 	{
-		// arrange
+		
 		Enums.MidiMessageType enumValue = Enums.MidiMessageType.CCM;
 		// act
 		List<Enums.MidiMessageType> enumList = enumValue.GetListFromEnum();
@@ -74,7 +74,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void GetListFromEnumTestFail()
 	{
-		// arrange
+		
 		Enums.MidiMessageType enumValue = Enums.MidiMessageType.CCM;
 		// act
 		List<Enums.MidiMessageType> enumList = enumValue.GetListFromEnum();
@@ -85,7 +85,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void FlagsToListTestPass()
 	{
-		// arrange
+		
 		Enums.SwitchChannels switchChannels = Enums.SwitchChannels.CH01 | Enums.SwitchChannels.CH02;
 		// act
 		List<Enums.SwitchChannels> enumFlags = switchChannels.FlagsToList();
@@ -96,7 +96,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void FlagsToListTestFail()
 	{
-		// arrange
+		
 		Enums.SwitchChannels switchChannels = Enums.SwitchChannels.CH01;
 		// act
 		List<Enums.SwitchChannels> enumFlags = switchChannels.FlagsToList();
@@ -107,7 +107,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void GetEnumsWithDescriptionTestFail()
 	{
-		// arrange
+		
 		Enums.LogLevel enumValue = Enums.LogLevel.None;
 		Dictionary<Enums.LogLevel, string> falseDict = new() { { enumValue, Resources.Enum_LogLevel_Critical_Description } };
 		// act
@@ -119,7 +119,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void GetEnumsWithDescriptionTestPass()
 	{
-		// arrange
+		
 		Enums.LogLevel enumValue = Enums.LogLevel.Critical;
 		Dictionary<Enums.LogLevel, string> rightDict = new() { { enumValue, Resources.Enum_LogLevel_Critical_Description } };
 		// act
@@ -131,7 +131,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void GetEnumModelListTestPass()
 	{
-		// arrange
+		
 		Enums.MidiChannel midiChannel = Enums.MidiChannel.CH01;
 		// act
 		List<EnumModel<Enums.MidiChannel>> enumModel = midiChannel.GetEnumModelList();
@@ -142,7 +142,7 @@ public class EnumsTests
 	[TestMethod()]
 	public void GetEnumModelListTestFail()
 	{
-		// arrange
+		
 		Enums.MidiChannel midiChannel = Enums.MidiChannel.CH01;
 		// act
 		List<EnumModel<Enums.MidiChannel>> enumModel = midiChannel.GetEnumModelList();
