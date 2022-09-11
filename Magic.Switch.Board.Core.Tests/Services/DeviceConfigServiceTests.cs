@@ -1,6 +1,4 @@
-﻿using Magic.Switch.Board.Core.Contracts.Services;
-using Magic.Switch.Board.Core.Exceptions;
-using Magic.Switch.Board.Core.Models.Device;
+﻿using Magic.Switch.Board.Core.Models.Device;
 using System.Text;
 
 namespace Magic.Switch.Board.Core.Tests.Services;
@@ -43,7 +41,7 @@ public class DeviceConfigServiceTests : BaseTestUnit
 	}
 
 	[TestMethod()]
-	public void CreateNameMissingFailTest()
+	public void CreateNameMissingExceptionTest()
 	{
 		Configuration? config;
 		try
@@ -52,12 +50,12 @@ public class DeviceConfigServiceTests : BaseTestUnit
 		}
 		catch (ServiceException ex)
 		{
-			Assert.AreEqual(ex.InnerException!.Message, "Value cannot be null. (Parameter 'name')");
+			Assert.IsInstanceOfType(ex.InnerException, typeof(ArgumentNullException));
 		}
 	}
 
 	[TestMethod()]
-	public void CreateNameMissingAppVersionFailTest()
+	public void CreateNameMissingAppVersionExceptionTest()
 	{
 		Configuration? config;
 		try
@@ -66,7 +64,7 @@ public class DeviceConfigServiceTests : BaseTestUnit
 		}
 		catch (ServiceException ex)
 		{
-			Assert.AreEqual(ex.InnerException!.Message, "Value cannot be null. (Parameter 'applicationVersion')");
+			Assert.IsInstanceOfType(ex.InnerException, typeof(ArgumentNullException));
 		}
 	}
 
