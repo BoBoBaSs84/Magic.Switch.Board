@@ -1,65 +1,53 @@
 {
 	"metadata": [
 		{
+			"dest": "api",
+			"disableDefaultFilter": false,
+			"disableGitFeatures": false,
 			"src": [
 				{
 					"files": [
-						"**/*.csproj"
+						"**/**.csproj"
 					],
-					"exclude": [
-						"**/bin/**",
-						"**/obj/**"
-					],
-					"src": ".."
+					"src": "..",
+					"exclude": [ "**.*Tests.csproj" ]
 				}
-			],
-			//"filter": "filterConfig.yml",
-			"dest": "api",
-			"disableGitFeatures": false,
-			"disableDefaultFilter": false
+			]
 		}
 	],
 	"build": {
-		"xrefService": [
-			"https://xref.docs.microsoft.com/query?uid={uid}"
-		],
+		"cleanupCacheHistory": true,
 		"content": [
 			{
-				"files": [
-					"api/**.yml",
-					"api/index.md"
-				]
+				"files": [ "api/**.yml", "api/index.md" ]
 			},
 			{
-				"files": [
-					"toc.yml",
-					"*.md"
-				]
-			}
-		],
-		"overwrite": [
-			{
-				"files": [
-					"apidoc/**.md"
-				],
-				"exclude": [
-					"obj/**",
-					"public/**"
-				]
+				"files": [ "toc.yml", "*.md" ]
 			}
 		],
 		"dest": "public",
-		"globalMetadataFiles": [
-		],
-		"fileMetadataFiles": [
-		],
-		"template": "default",
-		"postProcessors": [
-		],
+		"disableGitFeatures": false,
+		"globalMetadata": {
+			"_appFaviconPath": "images/favicon.ico",
+			"_appFooter": "Copyright © BoBoBaSs84.",
+			"_appLogoPath": "images/logo.png",
+			"_appTitle": "Magic.Switch.Board",
+			"_enableSearch": "true"
+		},
+		"keepFileLink": false,
 		"markdownEngineName": "markdig",
 		"noLangKeyword": false,
-		"keepFileLink": false,
-		"cleanupCacheHistory": true,
-		"disableGitFeatures": false
+		"overwrite": [
+			{
+				"files": [ "apidoc/**.md" ],
+				"exclude": [ "obj/**", "public/**" ]
+			}
+		],
+		"resource": [
+			{
+				"files": [ "images/**" ]
+			}
+		],
+		"template": [ "default" ]
 	}
 }
