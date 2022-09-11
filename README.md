@@ -4,3 +4,7 @@
 # Magic.Switch.Board
 
 The "Magic Switch Board" .. device kina like ...
+
+## Api-Docs
+
+[Here](https://bobobass84.github.io/Magic.Switch.Board)
