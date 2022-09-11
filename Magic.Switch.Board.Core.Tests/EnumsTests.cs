@@ -48,18 +48,22 @@ public class EnumsTests
 		Assert.AreNotEqual(midiMessageTypeShortName, MidiMessageType.PCM.GetEnumName());
 	}
 
-	[TestMethod()]
-	public void GetListFromEnumTestPass()
+	[DataTestMethod()]
+	[DataRow(MidiMessageType.PCM)]
+	[DataRow(MidiMessageType.CCM)]
+	public void GetListFromEnumTestPass(MidiMessageType midiMessageType)
 	{
-		MidiMessageType enumValue = MidiMessageType.CCM;
+		MidiMessageType enumValue = midiMessageType;
 		List<MidiMessageType> enumList = enumValue.GetListFromEnum();
 		Assert.AreEqual(enumList.Count, 2);
 	}
 
-	[TestMethod()]
-	public void GetListFromEnumTestFail()
+	[DataTestMethod()]
+	[DataRow(MidiMessageType.PCM)]
+	[DataRow(MidiMessageType.CCM)]
+	public void GetListFromEnumTestFail(MidiMessageType midiMessageType)
 	{
-		MidiMessageType enumValue = MidiMessageType.CCM;
+		MidiMessageType enumValue = midiMessageType;
 		List<MidiMessageType> enumList = enumValue.GetListFromEnum();
 		Assert.AreNotEqual(enumList.Count, 1);
 	}

@@ -9,20 +9,7 @@ public class DeviceConfigServiceTests : BaseTestUnit
 	private readonly IDeviceConfigService _deviceConfigService = GetService<IDeviceConfigService>();
 
 	[TestMethod()]
-	public void DeviceConfigServicePassTest()
-	{
-		IDeviceConfigService? deviceConfigService;
-		deviceConfigService = GetService<IDeviceConfigService>();
-		Assert.IsNotNull(deviceConfigService);
-	}
-
-	[TestMethod()]
-	public void DeviceConfigServiceFailTest()
-	{
-		IDeviceConfigService? deviceConfigService;
-		deviceConfigService = null;
-		Assert.IsNull(deviceConfigService);
-	}
+	public void DeviceConfigServiceNotNullTest() => Assert.IsNotNull(_deviceConfigService);
 
 	[TestMethod()]
 	public void CreatePassTest()
@@ -132,7 +119,7 @@ public class DeviceConfigServiceTests : BaseTestUnit
 	}
 
 	[TestMethod()]
-	public void WriteConfigurationFileWhithoutEncodingEncodingUtf8Test()
+	public void WriteConfigurationFileWithEncodingUtf8Test()
 	{
 		try
 		{
@@ -148,7 +135,7 @@ public class DeviceConfigServiceTests : BaseTestUnit
 	}
 
 	[TestMethod()]
-	public void WriteConfigurationFileWhithoutEncodingEncodingUniCodeTest()
+	public void WriteConfigurationFileWithEncodingUniCodeTest()
 	{
 		try
 		{

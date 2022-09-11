@@ -9,20 +9,7 @@ public class EnumServiceTests : BaseTestUnit
 	private readonly IEnumService _enumService = GetService<IEnumService>();
 
 	[TestMethod()]
-	public void EnumServiceTestPass()
-	{
-		IEnumService? enumService;
-		enumService = GetService<IEnumService>();
-		Assert.IsNotNull(enumService);
-	}
-
-	[TestMethod()]
-	public void EnumServiceTestFail()
-	{
-		IEnumService? enumService;
-		enumService = null;
-		Assert.IsNull(enumService);
-	}
+	public void EnumServiceNotNullTest() => Assert.IsNotNull(_enumService);
 
 	[TestMethod()]
 	public void GetLogLevelsTestPass()

@@ -1,29 +1,62 @@
 ﻿namespace Magic.Switch.Board.Core.Tests.Services;
 
 [TestClass()]
-public class FileServiceTests
+public class FileServiceTests : BaseTestUnit
 {
-	[TestMethod()]
-	public void FileServiceTest()
-	{
-		Assert.Fail();
-	}
+	private readonly IFileService _fileService = GetService<IFileService>();
+	private const string FolderPath = "D:\\UnitTest";
+	private const string FileName = "UnitTest.txt";
+	private const string NotExistentFileName = "NotExistentUnitTest.txt";
+	private const string FileContent = "This is a unit test.";
 
 	[TestMethod()]
-	public void DeleteTest()
+	public void FileServiceNotNullTest() => Assert.IsNotNull(_fileService);
+
+	[DataTestMethod()]
+	[DataRow(FolderPath, FileName, FileContent)]
+	[DataRow(FolderPath, NotExistentFileName, FileContent)]
+	public void DeleteTest(string folderpath, string fileName, string fileContent)
 	{
-		Assert.Fail();
+		try
+		{
+			_fileService.Save(folderpath, fileName, fileContent);
+			_fileService.Delete(folderpath, fileName);
+		}
+		catch (ServiceException ex)
+		{
+			Assert.IsInstanceOfType(ex, typeof(ServiceException));
+		}
 	}
 
-	[TestMethod()]
-	public void ReadTest()
+	[DataTestMethod()]
+	[DataRow(FolderPath, FileName, FileContent)]
+	[DataRow(FolderPath, NotExistentFileName, FileContent)]
+	public void ReadTest(string folderpath, string fileName, string fileContent)
 	{
-		Assert.Fail();
+		try
+		{
+			_fileService.Save(folderpath, fileName, fileContent);
+			string readContent = _fileService.Read(folderpath, fileName);
+			Assert.AreEqual(fileContent, readContent);
+		}
+		catch (ServiceException ex)
+		{
+			Assert.IsInstanceOfType(ex, typeof(ServiceException));
+		}
 	}
 
-	[TestMethod()]
-	public void SaveTest()
+	[DataTestMethod()]
+	[DataRow(FolderPath, FileName, FileContent)]
+	[DataRow(FolderPath, NotExistentFileName, FileContent)]
+	public void SaveTest(string folderpath, string fileName, string fileContent)
 	{
-		Assert.Fail();
+		try
+		{
+			_fileService.Save(folderpath, fileName, fileContent);
+		}
+		catch (ServiceException ex)
+		{
+			Assert.IsInstanceOfType(ex, typeof(ServiceException));
+		}
 	}
 }
