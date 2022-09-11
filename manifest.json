@@ -1,0 +1,890 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/Magic.Switch.Board/Magic.Switch.Board/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Contracts.Models.Auditing.IActivatableModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Contracts.Models.Auditing.IActivatableModel.html",
+          "hash": "EZ/9L1EUiKgFOSZUQSlwrxYBWy3Q15P/W6YG+mktxfw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Contracts.Models.Auditing.IAuditedModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Contracts.Models.Auditing.IAuditedModel.html",
+          "hash": "ePpD2nXhEjWzpT+KnNJSIimMFjg54Ag2dUuErBuyQsE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Contracts.Models.Auditing.IIdentityModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Contracts.Models.Auditing.IIdentityModel.html",
+          "hash": "5HyJcEicGlIV60HVP7TynwNkGOCqpCPc5oemGonShT8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Contracts.Models.Auditing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Contracts.Models.Auditing.html",
+          "hash": "U5mWfp1YWE9yHxfF5TB40i/IO06u0dVnLciiCipU4vI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Contracts.Services.IDeviceConfigService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Contracts.Services.IDeviceConfigService.html",
+          "hash": "Uf37xQiu4jMbyYppblPF2dG/ig2SuY8oSXKCwwi+v3M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Contracts.Services.IEnumService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Contracts.Services.IEnumService.html",
+          "hash": "Cm3wKUI+MWT5JQUM865AAsMXdZr4fGPeMohNsCHdR30="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Contracts.Services.IFileService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Contracts.Services.IFileService.html",
+          "hash": "SafBd074Pn0kGzR2eL9VofV4dZd/+mA7sKxJ/ynlrt0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Contracts.Services.ILoggerService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Contracts.Services.ILoggerService.html",
+          "hash": "djvCdwb8kFipllPYxm2TAcQDtB8Q+i1A8tPVDYTFGnE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Contracts.Services.ISerializerDeserializerService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Contracts.Services.ISerializerDeserializerService.html",
+          "hash": "GRn0xE+IAPAbZV2PKHLXdwKHTJX2btfyhsDpMo7mK2I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Contracts.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Contracts.Services.html",
+          "hash": "r6C+RqOomjGxVB1BTPtJehg9ZhsmtsozXaYcfVPJVLQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Enums.LogLevel.html",
+          "hash": "kmlYeDfWXAEQDABBG24Y/fZSMFU/OAraRBaAJYkVhHA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.LoopChannels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Enums.LoopChannels.html",
+          "hash": "sJ3IvmIQzrFGBedG1gvQvhT4HfFspcK/tvnbsTkLf/c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.MidiChannel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Enums.MidiChannel.html",
+          "hash": "DTwMVku0soZ5jJwqg70V0ozTIsZWHBwFVl4DJikYTPU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.MidiMessageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Enums.MidiMessageType.html",
+          "hash": "iSKV7Z0OVksfzMTUBEB3ZAE5vitD8TPIDJ90PJUHs/U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.SwitchChannels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Enums.SwitchChannels.html",
+          "hash": "Va3PVC7lNyjlWosv5kWsm5NqzXZAJ7a2plR9pQ5bFMk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Enums.html",
+          "hash": "lHeVSbiGf7uxyUv6G3xc1/rdURHcQZkFqoQtvLndp3Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Exceptions.ServiceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Exceptions.ServiceException.html",
+          "hash": "Y7iccCBUiBCH4eEpNngzM+Fd2ZvA0e15qoN7PEUzWmI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Exceptions.html",
+          "hash": "ptRVCT9W/RAaSevGQUWkQCxx9GoPwAIVejXp9KrMz7I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Extensions.JsonIsoDateTimeConverter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Extensions.JsonIsoDateTimeConverter.html",
+          "hash": "jRTr8a/BSXjFuWQ83FBVU02DMWw6x1j92AI+XiKOjXk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Extensions.html",
+          "hash": "rAlLkE7cDkmVjhZUOYi9M3CyIAVcdtMSU3sDUusInkM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.BaseTypes.Auditing.FullAuditModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.BaseTypes.Auditing.FullAuditModel.html",
+          "hash": "lcqbCOz3pLFkztL3vi4YgR2z2Hp6vsmhONmnXSy0+jc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.BaseTypes.Auditing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.BaseTypes.Auditing.html",
+          "hash": "9IHs02nAask7jz6VVIOLW/nd6J1qB75Ffe7Erfm/6T0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.html",
+          "hash": "OsRjasRqpfeilczpR8iPOyovmSE/hH2X9nNIE8EiJWY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.BaseTypes.Device.NamedBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.BaseTypes.Device.NamedBase.html",
+          "hash": "Qa3t7FpFA4fTjIz58a0R4P3D+hpVZ/2BlI5TVLbuVGo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.BaseTypes.Device.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.BaseTypes.Device.html",
+          "hash": "tgUEDAkActxFmLSJIlgoUCajVBIwu8XIiVQQNa3+JaE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.Device.Channel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.Device.Channel.html",
+          "hash": "yQWxkPyIvGVTpF9KGT8aNt2RCwvbCOanhL8d+QXWJLw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.Device.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.Device.Configuration.html",
+          "hash": "ax64cHcPcBwXHtsPn8hLqDQeL2yVZqN9sZXP07TDxv4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.Device.Input.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.Device.Input.html",
+          "hash": "n8CYOvthNn9f87t+BXWvX0mTTl85TBHHor5TwdMRCgE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.Device.Loops.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.Device.Loops.html",
+          "hash": "qchBbL5O7o3Q2Coz/R8tHd+XgOM+P5UrzMgQYrNaQhI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.Device.Output.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.Device.Output.html",
+          "hash": "lqqzGMRNqR3rKgJjyFShbIgmFkvZM46FN4N954LknRU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.Device.Switches.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.Device.Switches.html",
+          "hash": "ymle9MNmGowbCJFFEZnJqPj5gzKeKcc8N5f2e5CrRE8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.Device.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.Device.html",
+          "hash": "mpnFIHGvqfw3x4bn6GRS8OF+nHg8+cnOd44YPaNep+I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.EnumModel-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.EnumModel-1.html",
+          "hash": "srJ76rRT6p6gRD4I2uKxBJgy1jOD/B/EZuLvQFbZZtE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Models.html",
+          "hash": "pwahrNdhrhAg8S6CK/UWehxLn9TNACkPmLb1NDy85fs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Properties.Resources.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Properties.Resources.html",
+          "hash": "KvhdRLT0x4FpsXG8v+z7Z0az+yma/I5UIiL2m6MZwEQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Properties.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Properties.html",
+          "hash": "1vCYTRhamTtgZ5255bb8sfx5QyqfuZhlgse6/Gb5p0s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Services.ConsoleLoggerService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Services.ConsoleLoggerService.html",
+          "hash": "uM5xDgv+dGuWNXFo0pZiwyf+ULyzf1PZOi42jT6Foyo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Services.DeviceConfigService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Services.DeviceConfigService.html",
+          "hash": "FETqalxRpTaXMwEs30Bc+WKvmvAM4zHf3k699paihoQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Services.EnumService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Services.EnumService.html",
+          "hash": "IoNyE9Hg/BTcdUo+BvSJQA9FBBvWpSU1A0puh0R7Iyc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Services.FileLoggerService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Services.FileLoggerService.html",
+          "hash": "N2ivstQ9SrBMUE09xRHuOqs1/rE04IhJyq+dql9EJwg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Services.FileService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Services.FileService.html",
+          "hash": "4pUOFq2xa3XxChytXc+ArWQlPR/Rl04KQShFOiphe80="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Services.JsonService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Services.JsonService.html",
+          "hash": "hLjqoEkjtUfQFJOanivInyjO0gDIIUwi/mXVb8tQ5hA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Services.XmlService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Services.XmlService.html",
+          "hash": "zSV8W0NUH87eyuOINgyRuyCz27UeiSRM/ySK7624tAI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.Services.html",
+          "hash": "XPLqEso7uo/ZWmgGcIfQcOrXYjkov2DDYgfQRVRWiz0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.Core.html",
+          "hash": "MOCeRrU9dSUt2/CQGdXiPIL10Sk60XSzF8h5OlCgTCQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.App.html",
+          "hash": "E2S39kbwrcFRczrBzx8buJKO6FC5h3RTYDejViDktAQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.RelayCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.RelayCommand.html",
+          "hash": "ENdfr2tiNGc+IgMx8shtVlcHquHvWNO3ObP8o773Nxg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.html",
+          "hash": "w8S2Y2eT6ROZNjTWDkZW8SvoQEE/C/9sWWZW86UOsig="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.NotifyPropertyChangedAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.NotifyPropertyChangedAttribute.html",
+          "hash": "SyGs8JVBl7mVJiVjHBuh1rfBJesz+w81ej69UN583rc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.NotifyPropertyChangingAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.NotifyPropertyChangingAttribute.html",
+          "hash": "Z00+kcBiOXoR2E0dfS4ON3/OJBoIDnKLTjjIiKSeNbw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html",
+          "hash": "VJzWYoP2Dz1MUwwc5gq/NslKa7g7+JfVNeCz2I5BAAs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.html",
+          "hash": "14ru7dl5H16QxT9nmASRVAil+ElT/KYqQadMjb7Hut0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.ChannelVM.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.ChannelVM.html",
+          "hash": "sbzJuWv45Ovam0Uqx6xPVC781D7FTVFTWySC6+DrtEM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.ConfigurationVM.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.ConfigurationVM.html",
+          "hash": "FRdzykShwC8YMTOIymKqgzTRxeqP96vuC9pZWE3fAq0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.InputVM.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.InputVM.html",
+          "hash": "K/4Sg4yA68pu4vmg/ftb2HAFrp50SPYSZqCAkfXv3WQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.LoopsVM.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.LoopsVM.html",
+          "hash": "Fj5GMzlm/dKQhvJKK7Xjt+n8Lmk7/svfUHezkHRvO5Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.OutputVM.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.OutputVM.html",
+          "hash": "bObMdhrX1P2PleqoF9KeMhXgVhB1W1YAmWlzVPKGZ88="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.SwitchesVM.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.SwitchesVM.html",
+          "hash": "FPQR5nxQMKy+KyJ8AuvfgvRt0N6Y4gE/3n4CUpjAK+k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.Device.html",
+          "hash": "hiBAyA1q8NOH/HGnaifWswXiI3NnLf2jb5ShWXrrKGw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.html",
+          "hash": "igJSI+7k//pRnD/UOuxGBNkQsM+xksc90lemYh3ajXA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Logic.ViewModels.html",
+          "hash": "Y3qXyFnsSi7n4R52ho3ne0KV84sxU4NhG9a3zXWKnT4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Views.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Views.MainWindow.html",
+          "hash": "ec9ZNkv7qo18Bz9iZn/yBADk1wivzIDk/g57v2yrunY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.Views.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.Views.html",
+          "hash": "3ICr50zukFX59djMm7oTbVKWsBewwxFJXnlbKi3hCY4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Magic.Switch.Board.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Magic.Switch.Board.UI.html",
+          "hash": "YFJ7kKanLQf9rZacENxg96IrOuOx0CxiJwtZ4/aqJuM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "egsKx1mIKaCbA6tczw9qAP4kwPlkuLXBsnhGNMlRHfQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "gLfnsCfSavQqyZ7lY/vKnLkSYuCrKc89LtMRHHpI7kw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "8WxDWwDN8qmoPoimeiCjTfwkW2e7Eg7vzic1FC+t1IM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "s+UecGKJLe11K3w4+MJjx6QoiqktkO8teeQG06lk8L0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 64,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
