@@ -237,11 +237,17 @@
   <data name="Enum_MidiMessageType_CCM_Name" xml:space="preserve">
     <value>Kontrolländerungsmeldung</value>
   </data>
+  <data name="Enum_MidiMessageType_CCM_ShortName" xml:space="preserve">
+    <value>CCM</value>
+  </data>
   <data name="Enum_MidiMessageType_PCM_Description" xml:space="preserve">
     <value>Die Programmänderungsmeldung wird verwendet, um den Typ des Instruments anzugeben, das zum Abspielen von Sounds auf einem bestimmten Kanal verwendet werden soll.</value>
   </data>
   <data name="Enum_MidiMessageType_PCM_Name" xml:space="preserve">
     <value>Programmänderungsmeldung</value>
+  </data>
+  <data name="Enum_MidiMessageType_PCM_ShortName" xml:space="preserve">
+    <value>PCM</value>
   </data>
   <data name="Enum_SwitchChannel_1_Name" xml:space="preserve">
     <value>Schaltkanal 1</value>

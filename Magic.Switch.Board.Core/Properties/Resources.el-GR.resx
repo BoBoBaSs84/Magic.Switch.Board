@@ -237,11 +237,17 @@
   <data name="Enum_MidiMessageType_CCM_Name" xml:space="preserve">
     <value>Μήνυμα αλλαγής ελέγχου</value>
   </data>
+  <data name="Enum_MidiMessageType_CCM_ShortName" xml:space="preserve">
+    <value>CCM</value>
+  </data>
   <data name="Enum_MidiMessageType_PCM_Description" xml:space="preserve">
     <value>Το μήνυμα "Αλλαγή προγράμματος" χρησιμοποιείται για τον καθορισμό του τύπου του οργάνου που θα πρέπει να χρησιμοποιείται για την αναπαραγωγή ήχων σε ένα δεδομένο κανάλι.</value>
   </data>
   <data name="Enum_MidiMessageType_PCM_Name" xml:space="preserve">
     <value>Μήνυμα αλλαγής προγράμματος</value>
+  </data>
+  <data name="Enum_MidiMessageType_PCM_ShortName" xml:space="preserve">
+    <value>PCM</value>
   </data>
   <data name="Enum_SwitchChannel_1_Name" xml:space="preserve">
     <value>Εναλλαγή καναλιού 1</value>
