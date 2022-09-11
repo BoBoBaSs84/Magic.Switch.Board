@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Diagnostics;
 
 namespace Magic.Switch.Board.Core.Tests;
 
@@ -9,10 +10,19 @@ public class BaseTestUnit
 	protected static IHost? TestHost { get; set; }
 
 	[AssemblyInitialize]
-	public static void ClassInitialize(TestContext context) => TestHost = AssemblyInit(context);
+	public static void AssemblyInitialize(TestContext context)
+	{
+		Debug.WriteLine(nameof(AssemblyInitialize));
+		TestHost = AssemblyInit(context);
+	}
+
+	[ClassInitialize]
+	public static void ClassInitialize(TestContext context) => Debug.WriteLine(nameof(ClassInitialize));
 
 	private static IHost AssemblyInit(TestContext context)
 	{
+		Debug.WriteLine(context.TestName);
+
 		IHostBuilder host = Host.CreateDefaultBuilder()
 			.ConfigureServices(services =>
 			{

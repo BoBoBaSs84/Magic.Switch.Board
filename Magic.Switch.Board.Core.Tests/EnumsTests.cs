@@ -1,4 +1,5 @@
 ﻿using Magic.Switch.Board.Core.Models;
+using System.Diagnostics;
 using static Magic.Switch.Board.Core.Enums;
 
 namespace Magic.Switch.Board.Core.Tests;
@@ -6,6 +7,9 @@ namespace Magic.Switch.Board.Core.Tests;
 [TestClass()]
 public class EnumsTests
 {
+	[ClassInitialize]
+	public static void ClassInitialize(TestContext context) => Debug.WriteLine(nameof(ClassInitialize));
+
 	[TestMethod()]
 	public void GetEnumDescriptionTestPass()
 	{
@@ -68,20 +72,25 @@ public class EnumsTests
 		Assert.AreNotEqual(enumList.Count, 1);
 	}
 
-	[TestMethod()]
-	public void FlagsToListTestPass()
+	[DataTestMethod()]
+	[DataRow(SwitchChannels.CH01 | SwitchChannels.CH02)]
+	[DataRow(SwitchChannels.CH03 | SwitchChannels.CH04)]
+	[DataRow(SwitchChannels.CH05 | SwitchChannels.CH06)]
+	[DataRow(SwitchChannels.CH07 | SwitchChannels.CH08)]
+	public void FlagsToListTestPass(SwitchChannels switchChannels)
 	{
-		SwitchChannels switchChannels = SwitchChannels.CH01 | SwitchChannels.CH02;
 		List<SwitchChannels> enumFlags = switchChannels.FlagsToList();
 		Assert.AreEqual(enumFlags.Count, 2);
 	}
 
-	[TestMethod()]
-	public void FlagsToListTestFail()
+	[DataTestMethod()]
+	[DataRow(SwitchChannels.CH01)]
+	[DataRow(SwitchChannels.CH02 | SwitchChannels.CH03)]
+	[DataRow(SwitchChannels.CH04 | SwitchChannels.CH05 | SwitchChannels.CH06)]
+	public void FlagsToListTestFail(SwitchChannels switchChannels)
 	{
-		SwitchChannels switchChannels = SwitchChannels.CH01;
 		List<SwitchChannels> enumFlags = switchChannels.FlagsToList();
-		Assert.AreNotEqual(enumFlags.Count, 2);
+		Assert.AreNotEqual(enumFlags.Count, 0);
 	}
 
 	[TestMethod()]
