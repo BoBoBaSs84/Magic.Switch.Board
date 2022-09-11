@@ -4,9 +4,8 @@
 public class FileServiceTests : BaseTestUnit
 {
 	private readonly IFileService _fileService = GetService<IFileService>();
-	private const string FolderPath = "D:\\UnitTest";
+	private const string FolderPath = "D:\\";
 	private const string FileName = "UnitTest.txt";
-	private const string NotExistentFileName = "NotExistentUnitTest.txt";
 	private const string FileContent = "This is a unit test.";
 
 	[TestMethod()]
@@ -14,7 +13,7 @@ public class FileServiceTests : BaseTestUnit
 
 	[DataTestMethod()]
 	[DataRow(FolderPath, FileName, FileContent)]
-	[DataRow(FolderPath, NotExistentFileName, FileContent)]
+	[DataRow(FolderPath, null, FileContent)]
 	public void DeleteTest(string folderpath, string fileName, string fileContent)
 	{
 		try
@@ -30,7 +29,7 @@ public class FileServiceTests : BaseTestUnit
 
 	[DataTestMethod()]
 	[DataRow(FolderPath, FileName, FileContent)]
-	[DataRow(FolderPath, NotExistentFileName, FileContent)]
+	[DataRow(FolderPath, null, FileContent)]
 	public void ReadTest(string folderpath, string fileName, string fileContent)
 	{
 		try
@@ -47,7 +46,7 @@ public class FileServiceTests : BaseTestUnit
 
 	[DataTestMethod()]
 	[DataRow(FolderPath, FileName, FileContent)]
-	[DataRow(FolderPath, NotExistentFileName, FileContent)]
+	[DataRow(FolderPath, null, FileContent)]
 	public void SaveTest(string folderpath, string fileName, string fileContent)
 	{
 		try
@@ -58,5 +57,13 @@ public class FileServiceTests : BaseTestUnit
 		{
 			Assert.IsInstanceOfType(ex, typeof(ServiceException));
 		}
+	}
+
+	[TestCleanup()]
+	public void CleanUp()
+	{
+		string filePath = Path.Combine(FolderPath, FileName);
+		if (File.Exists(filePath))
+			File.Delete(filePath);
 	}
 }

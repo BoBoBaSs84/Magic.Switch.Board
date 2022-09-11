@@ -6,12 +6,12 @@ namespace Magic.Switch.Board.Core.Tests;
 [TestClass]
 public class BaseTestUnit
 {
-	public static IHost? TestHost { get; set; }
+	protected static IHost? TestHost { get; set; }
 
 	[AssemblyInitialize]
 	public static void ClassInitialize(TestContext context) => TestHost = AssemblyInit(context);
 
-	public static IHost AssemblyInit(TestContext context)
+	private static IHost AssemblyInit(TestContext context)
 	{
 		IHostBuilder host = Host.CreateDefaultBuilder()
 			.ConfigureServices(services =>
@@ -32,8 +32,19 @@ public class BaseTestUnit
 	/// <typeparam name="TService">The requested service.</typeparam>
 	/// <returns>The registered service.</returns>
 	/// <exception cref="ArgumentException">If the requested service is not registered.</exception>
-	public static TService GetService<TService>() where TService : class =>
+	protected static TService GetService<TService>() where TService : class =>
 		TestHost!.Services.GetService(typeof(TService)) is not TService service
 		? throw new ArgumentException($"{typeof(TService)} needs to be registered service.")
 		: service;
+
+	/// <summary>
+	/// The method should return the requested services.
+	/// </summary>
+	/// <typeparam name="TService">The requested service.</typeparam>
+	/// <returns>The registered services.</returns>
+	/// <exception cref="ArgumentException">If the requested service is not registered.</exception>
+	protected static IEnumerable<TService> GetServices<TService>() where TService : class =>
+		TestHost!.Services.GetServices<TService>() is not IEnumerable<TService> services
+		? throw new ArgumentException($"{typeof(TService)} needs to be registered service.")
+		: services;
 }

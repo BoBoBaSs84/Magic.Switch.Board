@@ -1,23 +1,53 @@
-﻿namespace Magic.Switch.Board.Core.Tests.Services;
+﻿using Magic.Switch.Board.Core.Models.Device;
+
+namespace Magic.Switch.Board.Core.Tests.Services;
 
 [TestClass()]
-public class JsonServiceTests
+public class JsonServiceTests : BaseTestUnit
 {
-	[TestMethod()]
-	public void JsonServiceTest()
-	{
-		Assert.Fail();
-	}
+	private const string ConfigurationName = "UnitTest";
+	private const string ConfigurationVersion = "1.0.0.0";
+	private readonly IDeviceConfigService _deviceConfigService = GetService<IDeviceConfigService>();
+	private readonly ISerializerDeserializerService _jsonService =
+		GetServices<ISerializerDeserializerService>().First(x => x.GetType().Equals(typeof(JsonService)));
 
 	[TestMethod()]
-	public void DeserializeTest()
+	public void JsonServiceNotNullTest() => Assert.IsNotNull(_jsonService);
+
+	[DataTestMethod()]
+	[DataRow(ConfigurationName, ConfigurationVersion)]
+	[DataRow(null, ConfigurationVersion)]
+	[DataRow(ConfigurationName, null)]
+	public void DeserializeTest(string configurationName, string configurationVersion)
 	{
-		Assert.Fail();
+		try
+		{
+			Configuration newConfig = _deviceConfigService.Create(configurationName, configurationVersion);
+			string jsonString = _jsonService.Serialize(newConfig);
+			Configuration? configFromJson = _jsonService.Deserialize<Configuration>(jsonString);
+			Assert.IsNotNull(configFromJson);
+		}
+		catch (ServiceException ex)
+		{
+			Assert.IsInstanceOfType(ex, typeof(ServiceException));
+		}
 	}
 
-	[TestMethod()]
-	public void SerializeTest()
+	[DataTestMethod()]
+	[DataRow(ConfigurationName, ConfigurationVersion)]
+	[DataRow(null, ConfigurationVersion)]
+	[DataRow(ConfigurationName, null)]
+	public void SerializeTest(string configurationName, string configurationVersion)
 	{
-		Assert.Fail();
+		try
+		{
+			Configuration config = _deviceConfigService.Create(configurationName, configurationVersion);
+			string jsonString = _jsonService.Serialize(config);
+			Assert.IsNotNull(jsonString);
+		}
+		catch (ServiceException ex)
+		{
+			Assert.IsInstanceOfType(ex, typeof(ServiceException));
+		}
 	}
 }

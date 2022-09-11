@@ -7,61 +7,25 @@ namespace Magic.Switch.Board.Core.Tests.Services;
 public class DeviceConfigServiceTests : BaseTestUnit
 {
 	private readonly IDeviceConfigService _deviceConfigService = GetService<IDeviceConfigService>();
+	private const string ConfigurationFileName = "DeviceConfiguration.xml";
+	private const string ConfigurationName = "UnitTest";
+	private const string ConfigurationVersion = "1.0.0.0";
+	private const string FolderPath = "D:\\";
 
 	[TestMethod()]
 	public void DeviceConfigServiceNotNullTest() => Assert.IsNotNull(_deviceConfigService);
 
-	[TestMethod()]
-	public void CreatePassTest()
+	[DataTestMethod()]
+	[DataRow(ConfigurationName, ConfigurationVersion)]
+	[DataRow(null, ConfigurationVersion)]
+	[DataRow(ConfigurationName, null)]
+	public void CreateConfigurationTest(string configurationName, string configurationVersinon)
 	{
-		Configuration? config;
-		config = _deviceConfigService.Create("UnitTest", "1.0.0.0");
-		Assert.IsNotNull(config);
-	}
-
-	[TestMethod()]
-	public void CreateFailTest()
-	{
-		Configuration? config;
-		config = null;
-		Assert.IsNull(config);
-	}
-
-	[TestMethod()]
-	public void CreateNameMissingExceptionTest()
-	{
-		Configuration? config;
 		try
 		{
-			config = _deviceConfigService.Create(null!, "1.0.0.0");
-		}
-		catch (ServiceException ex)
-		{
-			Assert.IsInstanceOfType(ex.InnerException, typeof(ArgumentNullException));
-		}
-	}
-
-	[TestMethod()]
-	public void CreateNameMissingAppVersionExceptionTest()
-	{
-		Configuration? config;
-		try
-		{
-			config = _deviceConfigService.Create("UnitTest", null!);
-		}
-		catch (ServiceException ex)
-		{
-			Assert.IsInstanceOfType(ex.InnerException, typeof(ArgumentNullException));
-		}
-	}
-
-	[TestMethod()]
-	public void CreateExceptionTypeTest()
-	{
-		Configuration? config;
-		try
-		{
-			config = _deviceConfigService.Create("UnitTest", null!);
+			Configuration? config;
+			config = _deviceConfigService.Create(configurationName, configurationVersinon);
+			Assert.IsNotNull(config);
 		}
 		catch (ServiceException ex)
 		{
@@ -69,32 +33,42 @@ public class DeviceConfigServiceTests : BaseTestUnit
 		}
 	}
 
-	[TestMethod()]
-	public void ReadConfigurationFromFileTest()
+	[DataTestMethod()]
+	[DataRow(ConfigurationName, ConfigurationVersion, ConfigurationFileName)]
+	[DataRow(null, ConfigurationVersion, ConfigurationFileName)]
+	[DataRow(ConfigurationName, null, ConfigurationFileName)]
+	[DataRow(ConfigurationName, ConfigurationVersion, null)]
+	public void ReadConfigurationTest(string configuratioName, string configurationVersion, string configurationFileName)
 	{
 		try
 		{
-			Configuration? config = _deviceConfigService.Create("UnitTest", "1.0.0.0");
-			bool success = _deviceConfigService.Write("D:\\", "UnitTest.xml", config);
+			Configuration? config = _deviceConfigService.Create(configuratioName, configurationVersion);
+			bool success = _deviceConfigService.Write(FolderPath, configurationFileName, config);
 			if (success)
 			{
-				Configuration? newConfig = _deviceConfigService.Read("D:\\", "UnitTest.xml");
+				Configuration? newConfig = _deviceConfigService.Read(FolderPath, configurationFileName);
 				Assert.IsNotNull(newConfig);
 			}
 		}
-		catch (Exception ex)
+		catch (ServiceException ex)
 		{
-			Assert.Fail(ex.Message);
+			Assert.IsInstanceOfType(ex, typeof(ServiceException));
 		}
 	}
 
-	[TestMethod()]
-	public void ReadConfigurationFromFileDoesNotExistsTest()
+	[DataTestMethod()]
+	[DataRow(ConfigurationName, ConfigurationVersion, ConfigurationFileName)]
+	[DataRow(null, ConfigurationVersion, ConfigurationFileName)]
+	[DataRow(ConfigurationName, null, ConfigurationFileName)]
+	[DataRow(ConfigurationName, ConfigurationVersion, null)]
+	public void WriteConfigurationWhithoutEncodingTest(string configuratioName, string configurationVersion, string configurationFileName)
 	{
 		try
 		{
-			Configuration? newConfig = _deviceConfigService.Read("D:\\", "UnitTest2.xml");
-			Assert.IsNotNull(newConfig);
+			Configuration? config = _deviceConfigService.Create(configuratioName, configurationVersion);
+			bool success = _deviceConfigService.Write(FolderPath, configurationFileName, config);
+			if (success)
+				Assert.IsTrue(success);
 		}
 		catch (ServiceException ex)
 		{
@@ -102,51 +76,31 @@ public class DeviceConfigServiceTests : BaseTestUnit
 		}
 	}
 
-	[TestMethod()]
-	public void WriteConfigurationFileWhithoutEncodingTest()
+	[DataTestMethod()]
+	[DataRow(ConfigurationName, ConfigurationVersion, ConfigurationFileName, "Utf-8")]
+	[DataRow(ConfigurationName, ConfigurationVersion, ConfigurationFileName, "UniCode")]
+	[DataRow(ConfigurationName, ConfigurationVersion, ConfigurationFileName, "Utf-16")]
+	[DataRow(ConfigurationName, ConfigurationVersion, ConfigurationFileName, "Utf-32")]
+	public void WriteConfigurationWithEncodingTest(string configuratioName, string configurationVersion, string configurationFileName, string encoding)
 	{
 		try
 		{
-			Configuration? config = _deviceConfigService.Create("UnitTest", "1.0.0.0");
-			bool success = _deviceConfigService.Write("D:\\", "UnitTest.xml", config);
+			Configuration? config = _deviceConfigService.Create(configuratioName, configurationVersion);
+			bool success = _deviceConfigService.Write(FolderPath, configurationFileName, config, Encoding.GetEncoding(encoding));
 			if (success)
 				Assert.IsTrue(success);
 		}
-		catch (Exception ex)
+		catch (ServiceException ex)
 		{
-			Assert.Fail(ex.Message);
+			Assert.IsInstanceOfType(ex, typeof(ServiceException));
 		}
 	}
 
-	[TestMethod()]
-	public void WriteConfigurationFileWithEncodingUtf8Test()
+	[TestCleanup()]
+	public void CleanUp()
 	{
-		try
-		{
-			Configuration? config = _deviceConfigService.Create("UnitTest", "1.0.0.0");
-			bool success = _deviceConfigService.Write("D:\\", "UnitTest.xml", config, Encoding.UTF8);
-			if (success)
-				Assert.IsTrue(success);
-		}
-		catch (Exception ex)
-		{
-			Assert.Fail(ex.Message);
-		}
-	}
-
-	[TestMethod()]
-	public void WriteConfigurationFileWithEncodingUniCodeTest()
-	{
-		try
-		{
-			Configuration? config = _deviceConfigService.Create("UnitTest", "1.0.0.0");
-			bool success = _deviceConfigService.Write("D:\\", "UnitTest.xml", config, Encoding.Unicode);
-			if (success)
-				Assert.IsTrue(success);
-		}
-		catch (Exception ex)
-		{
-			Assert.Fail(ex.Message);
-		}
+		string filePath = Path.Combine(FolderPath, ConfigurationFileName);
+		if (File.Exists(filePath))
+			File.Delete(filePath);
 	}
 }
