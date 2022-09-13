@@ -10,40 +10,58 @@ public class EnumsTests
 	[ClassInitialize]
 	public static void ClassInitialize(TestContext context) => Debug.WriteLine(nameof(ClassInitialize));
 
-	[TestMethod()]
-	public void GetEnumDescriptionTestPass()
-	{
-		string midiMessageTypeDescription = MidiMessageType.PCM.GetEnumDescription();
-		Assert.AreEqual(midiMessageTypeDescription, Resources.Enum_MidiMessageType_PCM_Description);
-	}
+	[DataTestMethod()]
+	[DataRow(MidiMessageType.PCM)]
+	[DataRow(MidiMessageType.CCM)]
+	public void GetMidiMessageTypeEnumDescriptionTest(MidiMessageType midiMessageType) => 
+		Assert.AreNotEqual(midiMessageType.GetEnumDescription(), midiMessageType.ToString());
 
-	[TestMethod()]
-	public void GetEnumDescriptionTestFail()
-	{
-		string midiMessageTypeDescription = MidiMessageType.PCM.GetEnumDescription();
-		Assert.AreNotEqual(midiMessageTypeDescription, MidiMessageType.PCM.ToString());
-	}
+	[DataTestMethod()]
+	[DataRow(MidiMessageType.PCM)]
+	[DataRow(MidiMessageType.CCM)]
+	public void GetMidiMessageTypeEnumNameTest(MidiMessageType midiMessageType) =>
+		Assert.AreNotEqual(midiMessageType.GetEnumName(), midiMessageType.ToString());
 
-	[TestMethod()]
-	public void GetEnumNameTestPass()
-	{
-		string midiMessageTypeName = MidiMessageType.PCM.GetEnumName();
-		Assert.AreEqual(midiMessageTypeName, Resources.Enum_MidiMessageType_PCM_Name);
-	}
+	[DataTestMethod]
+	[DataRow(LogLevel.None)]
+	[DataRow(LogLevel.Trace)]
+	[DataRow(LogLevel.Debug)]
+	[DataRow(LogLevel.Information)]
+	[DataRow(LogLevel.Warning)]
+	[DataRow(LogLevel.Error)]
+	[DataRow(LogLevel.Critical)]
+	public void GetLogLevelEnumDescriptionTest(LogLevel logLevel) =>
+		Assert.AreNotEqual(logLevel.GetEnumDescription(), logLevel.ToString());
 
-	[TestMethod()]
-	public void GetEnumNameTestFail()
-	{
-		string midiMessageTypeName = MidiMessageType.PCM.GetEnumName();
-		Assert.AreNotEqual(midiMessageTypeName, MidiMessageType.PCM.ToString());
-	}
+	[DataTestMethod]
+	[DataRow(LoopChannels.CH01)]
+	[DataRow(LoopChannels.CH02)]
+	[DataRow(LoopChannels.CH03)]
+	[DataRow(LoopChannels.CH04)]
+	[DataRow(LoopChannels.CH05)]
+	[DataRow(LoopChannels.CH06)]
+	[DataRow(LoopChannels.CH07)]
+	[DataRow(LoopChannels.CH08)]
+	public void GetLoopChannelsEnumNameTest(LoopChannels loopChannels) =>
+		Assert.AreNotEqual(loopChannels.GetEnumName(), loopChannels.ToString());
 
-	[TestMethod()]
-	public void GetEnumShortNameTestPass()
-	{
-		string midiMessageTypeShortName = MidiMessageType.PCM.GetEnumShortName();
-		Assert.AreEqual(midiMessageTypeShortName, MidiMessageType.PCM.ToString());
-	}
+	[DataTestMethod]
+	[DataRow(SwitchChannels.CH01)]
+	[DataRow(SwitchChannels.CH02)]
+	[DataRow(SwitchChannels.CH03)]
+	[DataRow(SwitchChannels.CH04)]
+	[DataRow(SwitchChannels.CH05)]
+	[DataRow(SwitchChannels.CH06)]
+	[DataRow(SwitchChannels.CH07)]
+	[DataRow(SwitchChannels.CH08)]
+	public void GetSwitchChannelsEnumNameTest(SwitchChannels switchChannels) =>
+		Assert.AreNotEqual(switchChannels.GetEnumName(), switchChannels.ToString());
+
+	[DataTestMethod()]
+	[DataRow(MidiMessageType.PCM)]
+	[DataRow(MidiMessageType.CCM)]
+	public void GetMidiMessageTypeEnumShortNameTest(MidiMessageType midiMessageType) =>
+		Assert.AreEqual(midiMessageType.GetEnumShortName(), midiMessageType.ToString());
 
 	[TestMethod()]
 	public void GetEnumShortNameTestFail()
@@ -55,21 +73,37 @@ public class EnumsTests
 	[DataTestMethod()]
 	[DataRow(MidiMessageType.PCM)]
 	[DataRow(MidiMessageType.CCM)]
-	public void GetListFromEnumTestPass(MidiMessageType midiMessageType)
+	public void GetListFromMidiMessageTypeEnumTest(MidiMessageType midiMessageType)
 	{
-		MidiMessageType enumValue = midiMessageType;
-		List<MidiMessageType> enumList = enumValue.GetListFromEnum();
+		List<MidiMessageType> enumList = midiMessageType.GetListFromEnum();
 		Assert.AreEqual(enumList.Count, 2);
 	}
 
 	[DataTestMethod()]
-	[DataRow(MidiMessageType.PCM)]
-	[DataRow(MidiMessageType.CCM)]
-	public void GetListFromEnumTestFail(MidiMessageType midiMessageType)
+	[DataRow(SwitchChannels.CH01)]
+	[DataRow(SwitchChannels.CH08)]
+	public void GetListFromSwitchChannelsEnumTest(SwitchChannels switchChannels)
 	{
-		MidiMessageType enumValue = midiMessageType;
-		List<MidiMessageType> enumList = enumValue.GetListFromEnum();
-		Assert.AreNotEqual(enumList.Count, 1);
+		List<SwitchChannels> enumList = switchChannels.GetListFromEnum();
+		Assert.AreEqual(enumList.Count, 8);
+	}
+
+	[DataTestMethod()]
+	[DataRow(LoopChannels.CH01)]
+	[DataRow(LoopChannels.CH08)]
+	public void GetListFromLoopChannelsEnumTest(LoopChannels loopChannels)
+	{
+		List<LoopChannels> enumList = loopChannels.GetListFromEnum();
+		Assert.AreEqual(enumList.Count, 8);
+	}
+
+	[DataTestMethod()]
+	[DataRow(MidiChannel.CH01)]
+	[DataRow(MidiChannel.CH16)]
+	public void GetListFromMidiChannelEnumTest(MidiChannel midiChannel)
+	{
+		List<MidiChannel> enumList = midiChannel.GetListFromEnum();
+		Assert.AreEqual(enumList.Count, 16);
 	}
 
 	[DataTestMethod()]
