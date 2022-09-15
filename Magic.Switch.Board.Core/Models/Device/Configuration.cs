@@ -1,4 +1,5 @@
-﻿using Magic.Switch.Board.Core.Models.BaseTypes.Device;
+﻿using Magic.Switch.Board.Core.Contracts.Models.Device;
+using Magic.Switch.Board.Core.Models.BaseTypes.Device;
 using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
@@ -13,9 +14,10 @@ namespace Magic.Switch.Board.Core.Models.Device;
 /// </summary>
 /// <remarks>
 /// Inherits the properties from <see cref="NamedBase"/> class.
+/// Implements the properties if the <see cref="IConfiguration"/> interface.
 /// </remarks>
 [XmlRoot(ElementName = nameof(Configuration), IsNullable = false, Namespace = DeviceNamespace)]
-public class Configuration : NamedBase
+public class Configuration : NamedBase, IConfiguration
 {
 	private const string DeviceNamespace = "http://magic.switch.board.com/configuration/device";
 
@@ -60,27 +62,21 @@ public class Configuration : NamedBase
 	}
 
 
-	/// <summary>
-	/// The <see cref="ApplicationVersion"/> property, can not be <see langword="null"/>.
-	/// </summary>
+	/// <inheritdoc cref="IConfiguration.ApplicationVersion"/>
 	[Required(AllowEmptyStrings = false, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[StringLength(25, MinimumLength = 8, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_StringLength_Generic))]
 	[JsonPropertyName(nameof(ApplicationVersion))]
 	[XmlAttribute(AttributeName = nameof(ApplicationVersion))]
 	public string ApplicationVersion { get; set; }
 
-	/// <summary>
-	/// <see cref="ConfigurationVersion"/> property, can not be <see langword="null"/>.
-	/// </summary>
+	/// <inheritdoc cref="IConfiguration.ConfigurationVersion"/>
 	[Required(AllowEmptyStrings = false, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[StringLength(25, MinimumLength = 8, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_StringLength_Generic))]
 	[JsonPropertyName(nameof(ConfigurationVersion))]
 	[XmlAttribute(AttributeName = nameof(ConfigurationVersion))]
 	public string ConfigurationVersion { get; set; }
 
-	/// <summary>
-	/// The <see cref="Channels"/> property.
-	/// </summary>
+	/// <inheritdoc cref="IConfiguration.Channels"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Channels))]
 	[XmlArray(ElementName = nameof(Channels), IsNullable = true)]

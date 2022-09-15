@@ -1,4 +1,5 @@
-﻿using Magic.Switch.Board.Core.Properties;
+﻿using Magic.Switch.Board.Core.Contracts.Models.Device;
+using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
@@ -10,8 +11,11 @@ namespace Magic.Switch.Board.Core.Models.Device;
 /// <summary>
 /// The <see cref="Loops"/> class.
 /// </summary>
+/// <remarks>
+/// Implements the properties if the <see cref="ILoops"/> interface.
+/// </remarks>
 [XmlRoot(ElementName = nameof(Loops), IsNullable = false)]
-public class Loops
+public class Loops : ILoops
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Loops"/> class.
@@ -24,9 +28,7 @@ public class Loops
 	/// <param name="channels"></param>
 	public Loops(LoopChannels channels) => Channels = channels;
 
-	/// <summary>
-	/// The <see cref="Channels"/> property.
-	/// </summary>
+	/// <inheritdoc cref="ILoops.Channels"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Channels))]
 	[XmlAttribute(AttributeName = nameof(Channels))]

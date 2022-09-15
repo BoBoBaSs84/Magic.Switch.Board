@@ -1,4 +1,4 @@
-﻿namespace Magic.Switch.Board.Core.Contracts.Models.Auditing;
+﻿namespace Magic.Switch.Board.Core.Contracts.Models.BaseTypes.Auditing;
 
 /// <summary>
 /// The <see cref="IIdentityModel"/> interface.

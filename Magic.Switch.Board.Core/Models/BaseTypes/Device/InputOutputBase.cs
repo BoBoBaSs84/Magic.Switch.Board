@@ -1,4 +1,5 @@
-﻿using Magic.Switch.Board.Core.Models.Device;
+﻿using Magic.Switch.Board.Core.Contracts.Models.BaseTypes.Device;
+using Magic.Switch.Board.Core.Models.Device;
 using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
@@ -13,7 +14,7 @@ namespace Magic.Switch.Board.Core.Models.BaseTypes.Device;
 /// </summary>
 [XmlInclude(typeof(Input))]
 [XmlInclude(typeof(Output))]
-public abstract class InputOutputBase
+public abstract class InputOutputBase : IInputOutputBase
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="InputOutputBase"/> class.
@@ -38,25 +39,19 @@ public abstract class InputOutputBase
 		Number = number;
 	}
 
-	/// <summary>
-	/// The <see cref="MidiChannel"/> property
-	/// </summary>
+	/// <inheritdoc cref="IInputOutputBase.MidiChannel"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(MidiChannel))]
 	[XmlAttribute(AttributeName = nameof(MidiChannel))]
 	public MidiChannel MidiChannel { get; set; }
 
-	/// <summary>
-	/// The <see cref="MessageType"/> property
-	/// </summary>
+	/// <inheritdoc cref="IInputOutputBase.MessageType"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(MessageType))]
 	[XmlAttribute(AttributeName = nameof(MessageType))]
 	public MidiMessageType MessageType { get; set; }
 
-	/// <summary>
-	/// The <see cref="Number"/> property
-	/// </summary>
+	/// <inheritdoc cref="IInputOutputBase.Number"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[Range(0, 127, ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Range_Generic))]
 	[JsonPropertyName(nameof(Number))]

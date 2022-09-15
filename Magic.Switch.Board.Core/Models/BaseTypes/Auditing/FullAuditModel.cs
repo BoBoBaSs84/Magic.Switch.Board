@@ -1,4 +1,4 @@
-﻿using Magic.Switch.Board.Core.Contracts.Models.Auditing;
+﻿using Magic.Switch.Board.Core.Contracts.Models.BaseTypes.Auditing;
 using Magic.Switch.Board.Core.Extensions;
 using Magic.Switch.Board.Core.Models.BaseTypes.Device;
 using Magic.Switch.Board.Core.Properties;

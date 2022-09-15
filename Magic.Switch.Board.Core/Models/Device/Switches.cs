@@ -1,4 +1,5 @@
-﻿using Magic.Switch.Board.Core.Properties;
+﻿using Magic.Switch.Board.Core.Contracts.Models.Device;
+using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
@@ -10,8 +11,11 @@ namespace Magic.Switch.Board.Core.Models.Device;
 /// <summary>
 /// The <see cref="Switches"/> class
 /// </summary>
+/// <remarks>
+/// Implements the properties if the <see cref="ISwitches"/> interface.
+/// </remarks>
 [XmlRoot(ElementName = nameof(Switches), IsNullable = false)]
-public class Switches
+public class Switches : ISwitches
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Switches"/> class.
@@ -24,9 +28,7 @@ public class Switches
 	/// <param name="channels"></param>
 	public Switches(SwitchChannels channels) => Channels = channels;
 
-	/// <summary>
-	/// The <see cref="Channels"/> property.
-	/// </summary>
+	/// <inheritdoc cref="ISwitches.Channels"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Channels))]
 	[XmlAttribute(AttributeName = nameof(Channels))]

@@ -1,4 +1,5 @@
-﻿using Magic.Switch.Board.Core.Models.BaseTypes.Device;
+﻿using Magic.Switch.Board.Core.Contracts.Models.Device;
+using Magic.Switch.Board.Core.Models.BaseTypes.Device;
 using Magic.Switch.Board.Core.Properties;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
@@ -12,9 +13,10 @@ namespace Magic.Switch.Board.Core.Models.Device;
 /// </summary>
 /// <remarks>
 /// Inherits the properties from <see cref="NamedBase"/> class.
+/// Implements the properties if the <see cref="IChannel"/> interface.
 /// </remarks>
 [XmlRoot(ElementName = nameof(Channel), IsNullable = false)]
-public class Channel : NamedBase
+public class Channel : NamedBase, IChannel
 {
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Channel"/> class.
@@ -44,31 +46,23 @@ public class Channel : NamedBase
 		Loops = loops ?? throw new ArgumentNullException(nameof(loops));
 	}
 
-	/// <summary>
-	/// The <see cref="Input"/> property, can not be <see langword="null"/>.
-	/// </summary>
+	/// <inheritdoc cref="IChannel.Input"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Input))]
 	[XmlElement(ElementName = nameof(Input), IsNullable = false)]
 	public Input Input { get; set; }
 
-	/// <summary>
-	/// The <see cref="Output"/> property, can be <see langword="null"/>.
-	/// </summary>
+	/// <inheritdoc cref="IChannel.Output"/>
 	[JsonPropertyName(nameof(Output))]
 	[XmlElement(ElementName = nameof(Output), IsNullable = false)]
 	public Output? Output { get; set; }
 
-	/// <summary>
-	/// The <see cref="Switches"/> property, can be <see langword="null"/>.
-	/// </summary>
+	/// <inheritdoc cref="IChannel.Switches"/>
 	[JsonPropertyName(nameof(Switches))]
 	[XmlElement(ElementName = nameof(Switches), IsNullable = false)]
 	public Switches? Switches { get; set; }
 
-	/// <summary>
-	/// The <see cref="Loops"/> property, can be <see langword="null"/>.
-	/// </summary>
+	/// <inheritdoc cref="IChannel.Loops"/>
 	[JsonPropertyName(nameof(Loops))]
 	[XmlElement(ElementName = nameof(Loops), IsNullable = false)]
 	public Loops? Loops { get; set; }

@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Magic.Switch.Board.Core.Exceptions;
+using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 using static Magic.Switch.Board.Core.Properties.Resources;
@@ -179,9 +180,14 @@ internal sealed class XmlHelper<T> where T : class
 	/// </remarks>
 	/// <param name="sender"></param>
 	/// <param name="e"></param>
-	/// <exception cref="XmlException"></exception>
-	private void OnUnknownNode(object? sender, XmlNodeEventArgs e) =>
-		throw new XmlException(string.Format(Culture, Error_Xml_Unknown_Node, e.Name, e.NodeType));
+	/// <exception cref="XmlHelperException"></exception>
+	private void OnUnknownNode(object? sender, XmlNodeEventArgs e)
+	{
+		string exceptionMessage =
+			string.Format(Culture, Error_Xml_Unknown_Node, e.Name, e.NodeType);
+		throw new XmlHelperException(exceptionMessage);
+	}
+
 
 	/// <summary>
 	/// The <see cref="OnUnknownElement(object?, XmlElementEventArgs)"/> method.
@@ -192,9 +198,14 @@ internal sealed class XmlHelper<T> where T : class
 	/// </remarks>
 	/// <param name="sender"></param>
 	/// <param name="e"></param>
-	/// <exception cref="XmlException"></exception>
-	private void OnUnknownElement(object? sender, XmlElementEventArgs e) =>
-		throw new XmlException(string.Format(Culture, Error_Xml_Unknown_Element, e.Element.Name, e.LineNumber, e.LinePosition));
+	/// <exception cref="XmlHelperException"></exception>
+	private void OnUnknownElement(object? sender, XmlElementEventArgs e)
+	{
+		string exceptionMessage =
+			string.Format(Culture, Error_Xml_Unknown_Element, e.Element.Name, e.LineNumber, e.LinePosition);
+		throw new XmlHelperException(exceptionMessage);
+	}
+
 
 	/// <summary>
 	/// The <see cref="OnUnknownAttribute(object?, XmlAttributeEventArgs)"/> method.
@@ -205,9 +216,14 @@ internal sealed class XmlHelper<T> where T : class
 	/// </remarks>
 	/// <param name="sender"></param>
 	/// <param name="e"></param>
-	/// <exception cref="XmlException"></exception>
-	private void OnUnknownAttribute(object? sender, XmlAttributeEventArgs e) =>
-		throw new XmlException(string.Format(Culture, Error_Xml_Unknown_Attribute, e.Attr.Name, e.LineNumber, e.LinePosition));
+	/// <exception cref="XmlHelperException"></exception>
+	private void OnUnknownAttribute(object? sender, XmlAttributeEventArgs e)
+	{
+		string exceptionMessage =
+			string.Format(Culture, Error_Xml_Unknown_Attribute, e.Attr.Name, e.LineNumber, e.LinePosition);
+		throw new XmlHelperException(exceptionMessage);
+	}
+
 
 	/// <summary>
 	/// The <see cref="OnUnreferencedObject(object?, UnreferencedObjectEventArgs)"/> method.
@@ -218,8 +234,12 @@ internal sealed class XmlHelper<T> where T : class
 	/// </remarks>
 	/// <param name="sender"></param>
 	/// <param name="e"></param>
-	/// <exception cref="XmlException"></exception>
-	private void OnUnreferencedObject(object? sender, UnreferencedObjectEventArgs e) =>
-		throw new XmlException(string.Format(Culture, Error_Xml_Unreferenced_Object, e.UnreferencedObject, e.UnreferencedId));
+	/// <exception cref="XmlHelperException"></exception>
+	private void OnUnreferencedObject(object? sender, UnreferencedObjectEventArgs e)
+	{
+		string exceptionMessage =
+			string.Format(Culture, Error_Xml_Unreferenced_Object, e.UnreferencedObject, e.UnreferencedId);
+		throw new XmlHelperException(exceptionMessage);
+	}
 	#endregion
 }
