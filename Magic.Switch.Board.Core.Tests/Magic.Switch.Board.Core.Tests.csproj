@@ -2,9 +2,6 @@
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
-		<IsPackable>false</IsPackable>
-		<GenerateDocumentationFile>false</GenerateDocumentationFile>
-		<ProduceReferenceAssemblies>false</ProduceReferenceAssemblies>
 	</PropertyGroup>
 
 	<ItemGroup>

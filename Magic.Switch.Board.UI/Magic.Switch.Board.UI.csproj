@@ -1,88 +1,76 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<OutputType>WinExe</OutputType>
-		<TargetFramework>net6.0-windows</TargetFramework>
-		<UseWPF>true</UseWPF>
-		<EnableWindowsTargeting>true</EnableWindowsTargeting>
-		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<GeneratedAssemblyInfoFile>Properties\AssemblyInfo.cs</GeneratedAssemblyInfoFile>
-		<PackageProjectUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</RepositoryUrl>
-		<RepositoryType>git</RepositoryType>
-		<Authors>https://github.com/BoBoBaSs84</Authors>
-		<Copyright>© 2022 BoBoBaSs84</Copyright>
-		<ApplicationIcon>Assets\Icons\Magic_Switch_Board.ico</ApplicationIcon>
-		<PackageLicenseFile>LICENSE</PackageLicenseFile>
-		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<SignAssembly>True</SignAssembly>
-		<AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
-		<StartupObject>Magic.Switch.Board.UI.App</StartupObject>
-	</PropertyGroup>
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ApplicationIcon>Assets\Icons\Magic_Switch_Board.ico</ApplicationIcon>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+    <Title>Magic.Switch.Board.UI</Title>
+    <StartupObject>Magic.Switch.Board.UI.App</StartupObject>
+  </PropertyGroup>
 
-	<ItemGroup>
-		<None Remove="Assets\Icons\File_New.ico" />
-		<None Remove="Assets\Icons\File_Open.ico" />
-		<None Remove="Assets\Icons\File_Quit.ico" />
-		<None Remove="Assets\Icons\File_Settings.ico" />
-		<None Remove="Assets\Icons\Help_About.ico" />
-		<None Remove="Assets\Icons\Help_Center.ico" />
-		<None Remove="Assets\Icons\Help_News.ico" />
-		<None Remove="Assets\Icons\Help_Update.ico" />
-		<None Remove="Assets\Icons\Magic_Switch_Board.ico" />
-	</ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\Icons\File_New.ico" />
+    <None Remove="Assets\Icons\File_Open.ico" />
+    <None Remove="Assets\Icons\File_Quit.ico" />
+    <None Remove="Assets\Icons\File_Settings.ico" />
+    <None Remove="Assets\Icons\Help_About.ico" />
+    <None Remove="Assets\Icons\Help_Center.ico" />
+    <None Remove="Assets\Icons\Help_News.ico" />
+    <None Remove="Assets\Icons\Help_Update.ico" />
+    <None Remove="Assets\Icons\Magic_Switch_Board.ico" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
-		<PackageReference Include="System.Drawing.Common" Version="7.0.0" />
-		<PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<None Include="LICENSE" Pack="true" PackagePath="" />
-	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Magic.Switch.Board.UI.Logic\Magic.Switch.Board.UI.Logic.csproj" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\Magic.Switch.Board.UI.Logic\Magic.Switch.Board.UI.Logic.csproj" />
-	</ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\File_New.ico" />
+    <Resource Include="Assets\Icons\File_Open.ico" />
+    <Resource Include="Assets\Icons\File_Quit.ico" />
+    <Resource Include="Assets\Icons\File_Settings.ico" />
+    <Resource Include="Assets\Icons\Help_About.ico" />
+    <Resource Include="Assets\Icons\Help_Center.ico" />
+    <Resource Include="Assets\Icons\Help_News.ico" />
+    <Resource Include="Assets\Icons\Help_Update.ico" />
+    <Resource Include="Assets\Icons\Magic_Switch_Board.ico" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<Resource Include="Assets\Icons\File_New.ico" />
-		<Resource Include="Assets\Icons\File_Open.ico" />
-		<Resource Include="Assets\Icons\File_Quit.ico" />
-		<Resource Include="Assets\Icons\File_Settings.ico" />
-		<Resource Include="Assets\Icons\Help_About.ico" />
-		<Resource Include="Assets\Icons\Help_Center.ico" />
-		<Resource Include="Assets\Icons\Help_News.ico" />
-		<Resource Include="Assets\Icons\Help_Update.ico" />
-		<Resource Include="Assets\Icons\Magic_Switch_Board.ico" />
-	</ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
 
-	<ItemGroup>
-		<None Update="Properties\Settings.settings">
-			<Generator>SettingsSingleFileGenerator</Generator>
-			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
-		</None>
-	</ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
 
-	<ItemGroup>
-		<Compile Update="Properties\Resources.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Resources.resx</DependentUpon>
-		</Compile>
-		<Compile Update="Properties\Settings.Designer.cs">
-			<DesignTimeSharedInput>True</DesignTimeSharedInput>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Settings.settings</DependentUpon>
-		</Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-		<EmbeddedResource Update="Properties\Resources.resx">
-			<Generator>ResXFileCodeGenerator</Generator>
-			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
-	</ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 
 </Project>
