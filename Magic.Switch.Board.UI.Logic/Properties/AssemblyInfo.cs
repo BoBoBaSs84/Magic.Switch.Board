@@ -12,14 +12,14 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("https://github.com/BoBoBaSs84")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright © 2023 BoBoBaSs84")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("The \"Magic Switch Board\" device kidna like ...")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("2023.6.30.1076")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2023.6.30.1076-dev")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2023.6.30.1084")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2023.6.30.1084")]
 [assembly: System.Reflection.AssemblyProductAttribute("Magic.Switch.Board")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Magic.Switch.Board.UI.Logic")]
-[assembly: System.Reflection.AssemblyVersionAttribute("2023.6.30.1076")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2023.6.30.1084")]
 [assembly: System.Reflection.AssemblyMetadataAttribute("RepositoryUrl", "https://github.com/BoBoBaSs84/Magic.Switch.Board")]
 [assembly: System.Resources.NeutralResourcesLanguageAttribute("en-US")]
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Magic.Switch.Board.UI.Logic.Tests")]

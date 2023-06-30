@@ -6,8 +6,6 @@
     <UseWPF>true</UseWPF>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <ApplicationIcon>Assets\Icons\Magic_Switch_Board.ico</ApplicationIcon>
-    <SignAssembly>True</SignAssembly>
-    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
     <Title>Magic.Switch.Board.UI</Title>
     <StartupObject>Magic.Switch.Board.UI.App</StartupObject>
   </PropertyGroup>
