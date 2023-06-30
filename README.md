@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/github/license/BoBoBaSs84/Magic.Switch.Board)](https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/LICENSE)
 # Magic.Switch.Board
 
-The "Magic Switch Board" .. device kina like ...
+The "Magic Switch Board" .. device kidna like ...
 
 ## Api-Docs
 
