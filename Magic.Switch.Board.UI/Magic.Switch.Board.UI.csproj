@@ -1,13 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <UseWPF>true</UseWPF>
-    <EnableWindowsTargeting>true</EnableWindowsTargeting>
-    <ApplicationIcon>Assets\Icons\Magic_Switch_Board.ico</ApplicationIcon>
-    <Title>Magic.Switch.Board.UI</Title>
-    <StartupObject>Magic.Switch.Board.UI.App</StartupObject>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<ApplicationIcon>Assets\Icons\Magic_Switch_Board.ico</ApplicationIcon>
+		<OutputType>Exe</OutputType>
+		<StartupObject>Magic.Switch.Board.UI.App</StartupObject>
+		<Title>Magic.Switch.Board.UI</Title>
+		<UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
