@@ -1,5 +1,7 @@
-﻿using Magic.Switch.Board.Core.Models.BaseTypes.Device;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
+
+using Magic.Switch.Board.Core.Models.BaseTypes.Device;
+
 using static Magic.Switch.Board.Core.Enums;
 
 namespace Magic.Switch.Board.Core.Models.Device;

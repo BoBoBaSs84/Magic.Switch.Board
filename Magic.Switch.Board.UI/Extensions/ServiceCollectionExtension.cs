@@ -2,6 +2,7 @@
 using Magic.Switch.Board.Core.Services;
 using Magic.Switch.Board.UI.Logic.ViewModels;
 using Magic.Switch.Board.UI.Views;
+
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Magic.Switch.Board.UI.Extensions;
@@ -31,13 +32,13 @@ internal static class ServiceCollectionExtension
 
 	public static void ConfigureViewsModels(this IServiceCollection services)
 	{
-		services.AddTransient<MainViewModel>();
+		_ = services.AddTransient<MainViewModel>();
 		//services.AddTransient<ConfigurationVM>();
 		//services.AddTransient<ChannelVM>();
 	}
 
 	public static void ConfigureViews(this IServiceCollection services)
 	{
-		services.AddTransient<MainWindow>();
+		_ = services.AddTransient<MainWindow>();
 	}
 }

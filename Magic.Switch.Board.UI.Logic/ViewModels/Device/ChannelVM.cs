@@ -1,7 +1,9 @@
-﻿using Magic.Switch.Board.Core.Models.Device;
+﻿using System.ComponentModel.DataAnnotations;
+
+using Magic.Switch.Board.Core.Models.Device;
 using Magic.Switch.Board.UI.Logic.BaseTypes;
 using Magic.Switch.Board.UI.Logic.Properties;
-using System.ComponentModel.DataAnnotations;
+
 using static Magic.Switch.Board.UI.Logic.Properties.Resources;
 
 namespace Magic.Switch.Board.UI.Logic.ViewModels.Device;

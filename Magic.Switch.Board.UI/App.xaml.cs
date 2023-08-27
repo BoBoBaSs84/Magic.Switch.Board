@@ -1,10 +1,12 @@
-﻿using Magic.Switch.Board.Core.Contracts.Services;
+﻿using System.Windows;
+using System.Windows.Threading;
+
+using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.UI.Extensions;
 using Magic.Switch.Board.UI.Views;
+
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.Windows;
-using System.Windows.Threading;
 
 namespace Magic.Switch.Board.UI;
 

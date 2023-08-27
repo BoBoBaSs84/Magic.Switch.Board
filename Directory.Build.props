@@ -1,76 +1,71 @@
 <Project>
 
-  <PropertyGroup>
-    <VersionMajor>$([System.DateTime]::UtcNow.Year)</VersionMajor>
-    <VersionMinor>$([System.DateTime]::UtcNow.Month)</VersionMinor>
-    <VersionPatch>$([System.DateTime]::UtcNow.Day)</VersionPatch>
-    <VersionRevision>$([System.DateTime]::UtcNow.TimeOfDay.TotalMinutes.ToString("0"))</VersionRevision>
-    <VersionPrefix>$(VersionMajor).$(VersionMinor).$(VersionPatch).$(VersionRevision)</VersionPrefix>
-    <VersionSuffix Condition="'$(Configuration)'=='Debug'">dev</VersionSuffix>
-  </PropertyGroup>
+	<PropertyGroup>
+		<VersionMajor>$([System.DateTime]::UtcNow.Year)</VersionMajor>
+		<VersionMinor>$([System.DateTime]::UtcNow.Month)</VersionMinor>
+		<VersionPatch>$([System.DateTime]::UtcNow.Day)</VersionPatch>
+		<VersionRevision>$([System.DateTime]::UtcNow.TimeOfDay.TotalMinutes.ToString("0"))</VersionRevision>
+		<VersionPrefix>$(VersionMajor).$(VersionMinor).$(VersionPatch).$(VersionRevision)</VersionPrefix>
+		<VersionSuffix Condition="'$(Configuration)'=='Debug'">dev</VersionSuffix>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <Platforms>AnyCPU;x64;x86</Platforms>
-    <AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
-    <LangVersion>latest</LangVersion>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
-    <EnableNETAnalyzers>true</EnableNETAnalyzers>
-    <AnalysisLevel>latest</AnalysisLevel>
-    <AnalysisMode>recommended</AnalysisMode>
-    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-    <Deterministic>true</Deterministic>
-    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NeutralLanguage>en-US</NeutralLanguage>
-    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <GeneratedAssemblyInfoFile>Properties\AssemblyInfo.cs</GeneratedAssemblyInfoFile>
-  </PropertyGroup>
+	<PropertyGroup>
+		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+		<AnalysisLevel>latest</AnalysisLevel>
+		<AnalysisMode>recommended</AnalysisMode>
+		<AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+		<DebugType>none</DebugType>
+		<Deterministic>true</Deterministic>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+		<GeneratedAssemblyInfoFile>Properties\AssemblyInfo.cs</GeneratedAssemblyInfoFile>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<LangVersion>latest</LangVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<Nullable>enable</Nullable>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)'=='Release'">
-    <DebugType>none</DebugType>
-    <GenerateDocumentationFile>false</GenerateDocumentationFile>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+		<DebugType>full</DebugType>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)'=='Debug'">
-    <DebugType>full</DebugType>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
+	<PropertyGroup Condition="!$(MSBuildProjectName.EndsWith('Tests'))" Label="Metadata">
+		<Authors>BoBoBaSs84</Authors>
+		<Company>https://github.com/BoBoBaSs84</Company>
+		<Copyright>Copyright © $(VersionMajor) BoBoBaSs84</Copyright>
+		<Description>The "Magic Switch Board" device kidna like ...</Description>
+		<Product>Magic.Switch.Board</Product>
+		<RepositoryUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>..\README.md</PackageReadmeFile>
+		<PackageProjectUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</PackageProjectUrl>
+		<PackageLicenseFile>..\LICENSE</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="!$(MSBuildProjectName.EndsWith('Tests'))" Label="Metadata">
-    <Authors>BoBoBaSs84</Authors>
-    <Company>https://github.com/BoBoBaSs84</Company>
-    <Copyright>Copyright © $(VersionMajor) BoBoBaSs84</Copyright>
-    <Description>The "Magic Switch Board" device kidna like ...</Description>
-    <Product>Magic.Switch.Board</Product>
-    <RepositoryUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageReadmeFile>..\README.md</PackageReadmeFile>
-    <PackageProjectUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</PackageProjectUrl>
-    <PackageLicenseFile>..\LICENSE</PackageLicenseFile>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-  </PropertyGroup>
+	<PropertyGroup Condition="$(MSBuildProjectName.EndsWith('Tests'))">
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
+		<GenerateDocumentationFile>false</GenerateDocumentationFile>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="$(MSBuildProjectName.EndsWith('Tests'))">
-    <IsPackable>false</IsPackable>
-    <IsTestProject>true</IsTestProject>
-    <GenerateDocumentationFile>false</GenerateDocumentationFile>
-  </PropertyGroup>
+	<ItemGroup Condition="!$(MSBuildProjectName.EndsWith('Tests'))">
+		<InternalsVisibleTo Include="$(AssemblyName).Tests" />
+		<None Include="..\LICENSE" Pack="true" PackagePath="\" />
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
+		<Using Include="System.ComponentModel"/>
+		<Using Include="System.Reflection"/>
+		<Using Include="System.Drawing"/>
+	</ItemGroup>
 
-  <ItemGroup Condition="!$(MSBuildProjectName.EndsWith('Tests'))">
-    <None Include="..\LICENSE" Pack="true" PackagePath="\" />
-    <None Include="..\README.md" Pack="true" PackagePath="\" />
-    <InternalsVisibleTo Include="$(AssemblyName).Tests" />
-    <Using Include="System.ComponentModel"/>
-    <Using Include="System.Reflection"/>
-    <Using Include="System.Drawing"/>
-  </ItemGroup>
-
-  <ItemGroup Condition="$(MSBuildProjectName.EndsWith('Tests'))">
-    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
-    <Using Include="System.Diagnostics.CodeAnalysis" />
-    <Using Include="System.Diagnostics" />
-  </ItemGroup>
+	<ItemGroup Condition="$(MSBuildProjectName.EndsWith('Tests'))">
+		<Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+		<Using Include="System.Diagnostics.CodeAnalysis" />
+		<Using Include="System.Diagnostics" />
+	</ItemGroup>
 
 </Project>

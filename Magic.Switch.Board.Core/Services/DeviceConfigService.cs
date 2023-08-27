@@ -1,7 +1,9 @@
-﻿using Magic.Switch.Board.Core.Contracts.Services;
+﻿using System.Text;
+
+using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.Core.Exceptions;
 using Magic.Switch.Board.Core.Models.Device;
-using System.Text;
+
 using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core.Services;
@@ -35,11 +37,9 @@ public sealed class DeviceConfigService : IDeviceConfigService
 	{
 		try
 		{
-			if (name is null)
-				throw new ArgumentNullException(nameof(name));
-			if (applicationVersion is null)
-				throw new ArgumentNullException(nameof(applicationVersion));
-			return new(name, applicationVersion);
+			return name is null
+				? throw new ArgumentNullException(nameof(name))
+				: applicationVersion is null ? throw new ArgumentNullException(nameof(applicationVersion)) : new(name, applicationVersion);
 		}
 		catch (Exception ex)
 		{

@@ -1,8 +1,9 @@
-﻿using Magic.Switch.Board.Core.Contracts.Services;
+﻿using System.Runtime.InteropServices;
+using System.Text;
+
+using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.Core.Exceptions;
 using Magic.Switch.Board.Core.Helpers;
-using System.Runtime.InteropServices;
-using System.Text;
 
 namespace Magic.Switch.Board.Core.Services;
 

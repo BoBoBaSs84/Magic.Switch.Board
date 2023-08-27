@@ -1,9 +1,10 @@
-﻿using Magic.Switch.Board.Core.Contracts.Services;
-using Magic.Switch.Board.Core.Exceptions;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+
+using Magic.Switch.Board.Core.Contracts.Services;
+using Magic.Switch.Board.Core.Exceptions;
 
 namespace Magic.Switch.Board.Core.Services;
 
