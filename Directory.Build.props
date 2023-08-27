@@ -14,10 +14,12 @@
 		<AnalysisLevel>latest</AnalysisLevel>
 		<AnalysisMode>recommended</AnalysisMode>
 		<AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
+		<AssemblyOriginatorKeyFile>..\PublicKey.snk</AssemblyOriginatorKeyFile>
 		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
 		<DebugType>none</DebugType>
 		<Deterministic>true</Deterministic>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<EnableWindowsTargeting>true</EnableWindowsTargeting>		
 		<GenerateAssemblyInfo>true</GenerateAssemblyInfo>
 		<GenerateDocumentationFile>false</GenerateDocumentationFile>
 		<GeneratedAssemblyInfoFile>Properties\AssemblyInfo.cs</GeneratedAssemblyInfoFile>
@@ -25,7 +27,12 @@
 		<LangVersion>latest</LangVersion>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Nullable>enable</Nullable>
-		<Platforms>AnyCPU;x64;x86</Platforms>
+		<PlatformTarget>x64</PlatformTarget>
+		<Platforms>x64</Platforms>
+		<RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+		<SignAssembly>true</SignAssembly>
+		<TargetFramework>net6.0</TargetFramework>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
@@ -38,13 +45,14 @@
 		<Company>https://github.com/BoBoBaSs84</Company>
 		<Copyright>Copyright © $(VersionMajor) BoBoBaSs84</Copyright>
 		<Description>The "Magic Switch Board" device kidna like ...</Description>
-		<Product>Magic.Switch.Board</Product>
-		<RepositoryUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</RepositoryUrl>
-		<RepositoryType>git</RepositoryType>
-		<PackageReadmeFile>..\README.md</PackageReadmeFile>
-		<PackageProjectUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</PackageProjectUrl>
+		<NeutralLanguage>en-US</NeutralLanguage>
 		<PackageLicenseFile>..\LICENSE</PackageLicenseFile>
+		<PackageProjectUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</PackageProjectUrl>
+		<PackageReadmeFile>..\README.md</PackageReadmeFile>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<Product>Magic.Switch.Board</Product>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/BoBoBaSs84/Magic.Switch.Board</RepositoryUrl>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="$(MSBuildProjectName.EndsWith('Tests'))">
@@ -54,7 +62,7 @@
 	</PropertyGroup>
 
 	<ItemGroup Condition="!$(MSBuildProjectName.EndsWith('Tests'))">
-		<InternalsVisibleTo Include="$(AssemblyName).Tests" />
+		<InternalsVisibleTo Include="$(AssemblyName).Tests" Key="002400000480000094000000060200000024000052534131000400000100010079781fed8396a2be130478f990ccf903cf09980be71d48d2e9cc166181194aaeba46350ad7204b51056df24995923798ebf0f851a013ba26bd2c7e7c298482cc3e98162988fbb3b9cf4e7fbdbeeed360a713c7b68566ad48f807e6e2efc437f9afefc4303749ef429e98a7e9723bbf0dcf13bd2a1e4f20809382009da9660a9e"/>
 		<None Include="..\LICENSE" Pack="true" PackagePath="\" />
 		<None Include="..\README.md" Pack="true" PackagePath="\" />
 		<Using Include="System.ComponentModel"/>
