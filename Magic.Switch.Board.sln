@@ -3,14 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Core", "Magic.Switch.Board.Core\Magic.Switch.Board.Core.csproj", "{021E056B-E7D7-4A0B-877A-902C8A5CD1A2}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.UI.Logic", "Magic.Switch.Board.UI.Logic\Magic.Switch.Board.UI.Logic.csproj", "{93F48055-DF04-450C-A3B0-38A56C416D13}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.UI", "Magic.Switch.Board.UI\Magic.Switch.Board.UI.csproj", "{E992E0B1-AA95-47A5-86B9-31BAE322E684}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Core.Tests", "Magic.Switch.Board.Core.Tests\Magic.Switch.Board.Core.Tests.csproj", "{B67D9F04-DA83-46A0-AB76-3563252D984A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B0E7F20D-C4DD-46B6-96C2-10356D19A711}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
@@ -21,33 +13,49 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DD0DA555-0774-4AAE-B767-5730D6BB0BF7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A6B3CB4E-F380-4B33-AF1C-A830B64FBCBF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Core", "src\Magic.Switch.Board.Core\Magic.Switch.Board.Core.csproj", "{BA3923DF-5815-405A-99DE-9B14E20A7F23}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.UI.Logic", "src\Magic.Switch.Board.UI.Logic\Magic.Switch.Board.UI.Logic.csproj", "{DA1EBD61-FBC0-4736-88E4-93C36BDA1695}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.UI", "src\Magic.Switch.Board.UI\Magic.Switch.Board.UI.csproj", "{0EFB1A09-372D-47DC-AE85-2D9B377A9395}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Core.Tests", "tests\Magic.Switch.Board.Core.Tests\Magic.Switch.Board.Core.Tests.csproj", "{084FEBA3-8E53-4C53-B61A-EA065D589FDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{021E056B-E7D7-4A0B-877A-902C8A5CD1A2}.Debug|x64.ActiveCfg = Debug|x64
-		{021E056B-E7D7-4A0B-877A-902C8A5CD1A2}.Debug|x64.Build.0 = Debug|x64
-		{021E056B-E7D7-4A0B-877A-902C8A5CD1A2}.Debug|x64.Deploy.0 = Debug|x64
-		{021E056B-E7D7-4A0B-877A-902C8A5CD1A2}.Release|x64.ActiveCfg = Release|x64
-		{021E056B-E7D7-4A0B-877A-902C8A5CD1A2}.Release|x64.Build.0 = Release|x64
-		{021E056B-E7D7-4A0B-877A-902C8A5CD1A2}.Release|x64.Deploy.0 = Release|x64
-		{93F48055-DF04-450C-A3B0-38A56C416D13}.Debug|x64.ActiveCfg = Debug|x64
-		{93F48055-DF04-450C-A3B0-38A56C416D13}.Debug|x64.Build.0 = Debug|x64
-		{93F48055-DF04-450C-A3B0-38A56C416D13}.Release|x64.ActiveCfg = Release|x64
-		{93F48055-DF04-450C-A3B0-38A56C416D13}.Release|x64.Build.0 = Release|x64
-		{E992E0B1-AA95-47A5-86B9-31BAE322E684}.Debug|x64.ActiveCfg = Debug|x64
-		{E992E0B1-AA95-47A5-86B9-31BAE322E684}.Debug|x64.Build.0 = Debug|x64
-		{E992E0B1-AA95-47A5-86B9-31BAE322E684}.Release|x64.ActiveCfg = Release|x64
-		{E992E0B1-AA95-47A5-86B9-31BAE322E684}.Release|x64.Build.0 = Release|x64
-		{B67D9F04-DA83-46A0-AB76-3563252D984A}.Debug|x64.ActiveCfg = Debug|x64
-		{B67D9F04-DA83-46A0-AB76-3563252D984A}.Debug|x64.Build.0 = Debug|x64
-		{B67D9F04-DA83-46A0-AB76-3563252D984A}.Release|x64.ActiveCfg = Release|x64
-		{B67D9F04-DA83-46A0-AB76-3563252D984A}.Release|x64.Build.0 = Release|x64
+		{BA3923DF-5815-405A-99DE-9B14E20A7F23}.Debug|x64.ActiveCfg = Debug|x64
+		{BA3923DF-5815-405A-99DE-9B14E20A7F23}.Debug|x64.Build.0 = Debug|x64
+		{BA3923DF-5815-405A-99DE-9B14E20A7F23}.Release|x64.ActiveCfg = Release|x64
+		{BA3923DF-5815-405A-99DE-9B14E20A7F23}.Release|x64.Build.0 = Release|x64
+		{DA1EBD61-FBC0-4736-88E4-93C36BDA1695}.Debug|x64.ActiveCfg = Debug|x64
+		{DA1EBD61-FBC0-4736-88E4-93C36BDA1695}.Debug|x64.Build.0 = Debug|x64
+		{DA1EBD61-FBC0-4736-88E4-93C36BDA1695}.Release|x64.ActiveCfg = Release|x64
+		{DA1EBD61-FBC0-4736-88E4-93C36BDA1695}.Release|x64.Build.0 = Release|x64
+		{0EFB1A09-372D-47DC-AE85-2D9B377A9395}.Debug|x64.ActiveCfg = Debug|x64
+		{0EFB1A09-372D-47DC-AE85-2D9B377A9395}.Debug|x64.Build.0 = Debug|x64
+		{0EFB1A09-372D-47DC-AE85-2D9B377A9395}.Release|x64.ActiveCfg = Release|x64
+		{0EFB1A09-372D-47DC-AE85-2D9B377A9395}.Release|x64.Build.0 = Release|x64
+		{084FEBA3-8E53-4C53-B61A-EA065D589FDF}.Debug|x64.ActiveCfg = Debug|x64
+		{084FEBA3-8E53-4C53-B61A-EA065D589FDF}.Debug|x64.Build.0 = Debug|x64
+		{084FEBA3-8E53-4C53-B61A-EA065D589FDF}.Release|x64.ActiveCfg = Release|x64
+		{084FEBA3-8E53-4C53-B61A-EA065D589FDF}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BA3923DF-5815-405A-99DE-9B14E20A7F23} = {DD0DA555-0774-4AAE-B767-5730D6BB0BF7}
+		{DA1EBD61-FBC0-4736-88E4-93C36BDA1695} = {DD0DA555-0774-4AAE-B767-5730D6BB0BF7}
+		{0EFB1A09-372D-47DC-AE85-2D9B377A9395} = {DD0DA555-0774-4AAE-B767-5730D6BB0BF7}
+		{084FEBA3-8E53-4C53-B61A-EA065D589FDF} = {A6B3CB4E-F380-4B33-AF1C-A830B64FBCBF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		RESX_AutoCreateNewLanguageFiles = True
