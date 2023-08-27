@@ -1,17 +1,17 @@
-name: Documentation
+name: docs
 
 on:
   push:
     branches:
     - main
     paths:
-    - Documentation/**
+    - docs/**
     - .github/workflows/docs.yml
   pull_request:
     branches:
     - main
     paths:
-    - Documentation/**
+    - docs/**
     - .github/workflows/docs.yml
   workflow_dispatch:
 
@@ -34,7 +34,7 @@ jobs:
         args: install docfx
 
     - name: DocFX Build
-      working-directory: Documentation
+      working-directory: docs
       run: docfx .\docfx.json
       continue-on-error: false
 
@@ -43,5 +43,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: Documentation/public
+        publish_dir: docs/public
         force_orphan: true

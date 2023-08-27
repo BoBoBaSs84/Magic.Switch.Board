@@ -9,7 +9,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Magic.Switch.Board.Core\Magic.Switch.Board.Core.csproj" />
+	  <ProjectReference Include="..\..\src\Magic.Switch.Board.Core\Magic.Switch.Board.Core.csproj" />
 	</ItemGroup>
 
 </Project>
