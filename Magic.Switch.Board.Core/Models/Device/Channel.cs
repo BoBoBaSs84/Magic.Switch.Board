@@ -1,9 +1,11 @@
-﻿using Magic.Switch.Board.Core.Contracts.Models.Device;
-using Magic.Switch.Board.Core.Models.BaseTypes.Device;
-using Magic.Switch.Board.Core.Properties;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
+
+using Magic.Switch.Board.Core.Contracts.Models.Device;
+using Magic.Switch.Board.Core.Models.BaseTypes.Device;
+using Magic.Switch.Board.Core.Properties;
+
 using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core.Models.Device;

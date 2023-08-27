@@ -1,4 +1,5 @@
 ﻿using Magic.Switch.Board.Core.Models;
+
 using static Magic.Switch.Board.Core.Enums;
 
 namespace Magic.Switch.Board.Core.Contracts.Services;

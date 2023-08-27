@@ -1,6 +1,7 @@
 ﻿using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.Core.Exceptions;
 using Magic.Switch.Board.Core.Models;
+
 using static Magic.Switch.Board.Core.Enums;
 using static Magic.Switch.Board.Core.Properties.Resources;
 
