@@ -1,6 +1,8 @@
-﻿using Magic.Switch.Board.Core.Contracts.Services;
+﻿using System.Text;
+
+using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.Core.Exceptions;
-using System.Text;
+
 using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core.Services;

@@ -1,6 +1,5 @@
 ﻿using System.Globalization;
 using System.IO;
-using System.Reflection;
 
 namespace Magic.Switch.Board.UI;
 

@@ -1,5 +1,6 @@
-﻿using Magic.Switch.Board.UI.Logic.ViewModels;
-using System.Windows;
+﻿using System.Windows;
+
+using Magic.Switch.Board.UI.Logic.ViewModels;
 
 namespace Magic.Switch.Board.UI.Views;
 

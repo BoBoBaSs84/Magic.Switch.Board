@@ -1,7 +1,9 @@
-﻿using Magic.Switch.Board.Core.Exceptions;
-using System.Text;
+﻿using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
+
+using Magic.Switch.Board.Core.Exceptions;
+
 using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core.Helpers;
@@ -12,33 +14,33 @@ namespace Magic.Switch.Board.Core.Helpers;
 /// <typeparam name="T">The object to transform.</typeparam>
 internal sealed class XmlHelper<T> where T : class
 {
-	private readonly XmlSerializer xmlSerializer;
-	private readonly XmlWriterSettings xmlWriterSettings;
-	private readonly XmlReaderSettings xmlReaderSettings;
+	private readonly XmlSerializer _xmlSerializer;
+	private readonly XmlWriterSettings _xmlWriterSettings;
+	private readonly XmlReaderSettings _xmlReaderSettings;
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="XmlHelper{T}"/> class.
 	/// </summary>
 	public XmlHelper()
 	{
-		xmlSerializer = new XmlSerializer(typeof(T));
-		xmlWriterSettings = new XmlWriterSettings()
+		_xmlSerializer = new XmlSerializer(typeof(T));
+		_xmlWriterSettings = new XmlWriterSettings()
 		{
 			CheckCharacters = true,
 			CloseOutput = true,
 			NewLineHandling = NewLineHandling.None
 		};
-		xmlReaderSettings = new XmlReaderSettings()
+		_xmlReaderSettings = new XmlReaderSettings()
 		{
 			CheckCharacters = true,
 			CloseInput = true,
 			IgnoreWhitespace = true
 		};
 
-		xmlSerializer.UnknownAttribute += OnUnknownAttribute;
-		xmlSerializer.UnknownElement += OnUnknownElement;
-		xmlSerializer.UnknownNode += OnUnknownNode;
-		xmlSerializer.UnreferencedObject += OnUnreferencedObject;
+		_xmlSerializer.UnknownAttribute += OnUnknownAttribute;
+		_xmlSerializer.UnknownElement += OnUnknownElement;
+		_xmlSerializer.UnknownNode += OnUnknownNode;
+		_xmlSerializer.UnreferencedObject += OnUnreferencedObject;
 	}
 
 	/// <summary>
@@ -94,8 +96,8 @@ internal sealed class XmlHelper<T> where T : class
 		if (textReader is null)
 			throw new ArgumentNullException(nameof(textReader));
 
-		using XmlReader xmlReader = XmlReader.Create(textReader, xmlReaderSettings);
-		T? obj = (T)xmlSerializer.Deserialize(xmlReader)!;
+		using XmlReader xmlReader = XmlReader.Create(textReader, _xmlReaderSettings);
+		T? obj = (T)_xmlSerializer.Deserialize(xmlReader)!;
 		textReader.Close();
 		return obj;
 	}
@@ -162,10 +164,10 @@ internal sealed class XmlHelper<T> where T : class
 			throw new ArgumentNullException(nameof(obj));
 
 		encoding ??= Encoding.UTF8;
-		xmlWriterSettings.Encoding = encoding;
+		_xmlWriterSettings.Encoding = encoding;
 		using StringWriter stringWriter = new StringWriterHelper(encoding);
-		using XmlWriter xmlWriter = XmlWriter.Create(stringWriter, xmlWriterSettings);
-		xmlSerializer.Serialize(stringWriter, obj);
+		using XmlWriter xmlWriter = XmlWriter.Create(stringWriter, _xmlWriterSettings);
+		_xmlSerializer.Serialize(stringWriter, obj);
 		stringWriter.Flush();
 		return stringWriter;
 	}

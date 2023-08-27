@@ -1,6 +1,8 @@
-﻿using Magic.Switch.Board.Core.Contracts.Services;
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 using System.Text;
+
+using Magic.Switch.Board.Core.Contracts.Services;
+
 using static Magic.Switch.Board.Core.Statics;
 
 namespace Magic.Switch.Board.Core.Services;

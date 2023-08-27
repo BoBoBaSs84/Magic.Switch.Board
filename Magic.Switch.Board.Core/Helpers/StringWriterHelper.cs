@@ -1,5 +1,4 @@
 ﻿using System.Text;
-using static Magic.Switch.Board.Core.Statics;
 
 namespace Magic.Switch.Board.Core.Helpers;
 
@@ -12,7 +11,7 @@ internal sealed class StringWriterHelper : StringWriter
 	/// Initializes a new instance of the <see cref="StringWriterHelper"/> class.
 	/// </summary>
 	/// <param name="encoding"></param>
-	public StringWriterHelper(Encoding encoding) : base(new StringBuilder(), CurrentCulture)
+	public StringWriterHelper(Encoding encoding) : base(new StringBuilder(), Statics.CurrentCulture)
 		=> _encoding = encoding;
 
 	/// <inheritdoc/>

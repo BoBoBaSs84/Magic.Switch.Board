@@ -1,5 +1,6 @@
-﻿using Magic.Switch.Board.Core.Models.Device;
-using System.Text;
+﻿using System.Text;
+
+using Magic.Switch.Board.Core.Models.Device;
 
 namespace Magic.Switch.Board.Core.Tests.Services;
 

@@ -1,7 +1,8 @@
-﻿using Magic.Switch.Board.Core.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+using Magic.Switch.Board.Core.Models;
 using Magic.Switch.Board.Core.Properties;
-using System.ComponentModel.DataAnnotations;
-using System.Reflection;
+
 using static Magic.Switch.Board.Core.Properties.Resources;
 
 namespace Magic.Switch.Board.Core;

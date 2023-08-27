@@ -1,9 +1,10 @@
-﻿using Magic.Switch.Board.Core.Contracts.Services;
+﻿using System.Windows.Data;
+
+using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.Core.Models.Device;
 using Magic.Switch.Board.UI.Logic.BaseTypes;
 using Magic.Switch.Board.UI.Logic.ViewModels.Device;
-using System.ComponentModel;
-using System.Windows.Data;
+
 using static Magic.Switch.Board.UI.Logic.Statics;
 
 namespace Magic.Switch.Board.UI.Logic.ViewModels;
@@ -75,7 +76,7 @@ public sealed class MainViewModel : ViewModelBase
 					new Output(Core.Enums.MidiChannel.CH03, Core.Enums.MidiMessageType.PCM, 146),
 					new Switches(Core.Enums.SwitchChannels.CH01 | Core.Enums.SwitchChannels.CH02 | Core.Enums.SwitchChannels.CH03),
 					new Loops(Core.Enums.LoopChannels.CH01 | Core.Enums.LoopChannels.CH02)));
-				bool success = _deviceConfigService.Write("D:\\", "Test.xml", config);
+				_ = _deviceConfigService.Write("D:\\", "Test.xml", config);
 			}
 			configList.Add(new(config));
 		}

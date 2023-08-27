@@ -1,5 +1,5 @@
 ﻿using Magic.Switch.Board.Core.Models;
-using System.Diagnostics;
+
 using static Magic.Switch.Board.Core.Enums;
 
 namespace Magic.Switch.Board.Core.Tests;
@@ -13,7 +13,7 @@ public class EnumsTests
 	[DataTestMethod()]
 	[DataRow(MidiMessageType.PCM)]
 	[DataRow(MidiMessageType.CCM)]
-	public void GetMidiMessageTypeEnumDescriptionTest(MidiMessageType midiMessageType) => 
+	public void GetMidiMessageTypeEnumDescriptionTest(MidiMessageType midiMessageType) =>
 		Assert.AreNotEqual(midiMessageType.GetEnumDescription(), midiMessageType.ToString());
 
 	[DataTestMethod()]
@@ -157,8 +157,8 @@ public class EnumsTests
 	public void GetEnumModelListTestFail()
 	{
 		MidiChannel midiChannel = MidiChannel.CH01;
-		List<EnumModel<MidiChannel>>? enumModel = midiChannel.GetEnumModelList();
-		enumModel = default;
+		_ = midiChannel.GetEnumModelList();
+		List<EnumModel<MidiChannel>>? enumModel = default;
 		Assert.IsNull(enumModel);
 	}
 }
