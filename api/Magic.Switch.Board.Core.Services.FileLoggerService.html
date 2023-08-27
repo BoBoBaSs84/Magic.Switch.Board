@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class FileLoggerService
+   | Magic.Switch.Board </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class FileLoggerService
+   | Magic.Switch.Board ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService">
+  
+  
+  <h1 id="Magic_Switch_Board_Core_Services_FileLoggerService" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService" class="text-break">Class FileLoggerService
+  </h1>
+  <div class="markdown level0 summary"><p>This is the <a class="xref" href="Magic.Switch.Board.Core.Services.FileLoggerService.html">FileLoggerService</a> class which implements the members of the <a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.html">ILoggerService</a> interface.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">FileLoggerService</span></div>
+  </div>
+  <div class="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.html">ILoggerService</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Magic.Switch.Board.Core.Services.html">Magic.Switch.Board.Core.Services</a></h6>
+  <h6><strong>Assembly</strong>: Magic.Switch.Board.Core.dll</h6>
+  <h5 id="Magic_Switch_Board_Core_Services_FileLoggerService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class FileLoggerService : ILoggerService</code></pre>
+  </div>
+  <h5 id="Magic_Switch_Board_Core_Services_FileLoggerService_remarks"><strong>Remarks</strong></h5>
+  <div class="markdown level0 remarks"><p>As the class name suggest, the logging is done via logging the messages to file.</p>
+</div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Services_FileLoggerService_Critical_System_String_System_String_.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Services.FileLoggerService.Critical(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileLoggerService.cs/#L22">View Source</a>
+  </span>
+  <a id="Magic_Switch_Board_Core_Services_FileLoggerService_Critical_" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService.Critical*"></a>
+  <h4 id="Magic_Switch_Board_Core_Services_FileLoggerService_Critical_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService.Critical(System.String,System.String)">Critical(String, String)</h4>
+  <div class="markdown level1 summary"><p>The interface member for logging critical messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Critical(string message, string callerName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Magic_Switch_Board_Core_Services_FileLoggerService_Critical_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Services_FileLoggerService_Debug_System_String_System_String_.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Services.FileLoggerService.Debug(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileLoggerService.cs/#L19">View Source</a>
+  </span>
+  <a id="Magic_Switch_Board_Core_Services_FileLoggerService_Debug_" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService.Debug*"></a>
+  <h4 id="Magic_Switch_Board_Core_Services_FileLoggerService_Debug_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService.Debug(System.String,System.String)">Debug(String, String)</h4>
+  <div class="markdown level1 summary"><p>The interface member for logging debug messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Debug(string message, string callerName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Magic_Switch_Board_Core_Services_FileLoggerService_Debug_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Logs that are used for interactive investigation during development.
+These logs should primarily contain information useful for debugging and have no long-term value.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Services_FileLoggerService_Error_System_String_System_String_.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Services.FileLoggerService.Error(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileLoggerService.cs/#L25">View Source</a>
+  </span>
+  <a id="Magic_Switch_Board_Core_Services_FileLoggerService_Error_" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService.Error*"></a>
+  <h4 id="Magic_Switch_Board_Core_Services_FileLoggerService_Error_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService.Error(System.String,System.String)">Error(String, String)</h4>
+  <div class="markdown level1 summary"><p>The interface member for logging error messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Error(string message, string callerName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Magic_Switch_Board_Core_Services_FileLoggerService_Error_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Logs that highlight when the current flow of execution is stopped due to a failure.
+These should indicate a failure in the current activity, not an application-wide failure.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Services_FileLoggerService_Information_System_String_System_String_.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Services.FileLoggerService.Information(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileLoggerService.cs/#L28">View Source</a>
+  </span>
+  <a id="Magic_Switch_Board_Core_Services_FileLoggerService_Information_" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService.Information*"></a>
+  <h4 id="Magic_Switch_Board_Core_Services_FileLoggerService_Information_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService.Information(System.String,System.String)">Information(String, String)</h4>
+  <div class="markdown level1 summary"><p>The interface member for logging debug messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Information(string message, string callerName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Magic_Switch_Board_Core_Services_FileLoggerService_Information_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Logs that track the general flow of the application.
+These logs should have long-term value.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Services_FileLoggerService_Trace_System_String_System_String_.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Services.FileLoggerService.Trace(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileLoggerService.cs/#L31">View Source</a>
+  </span>
+  <a id="Magic_Switch_Board_Core_Services_FileLoggerService_Trace_" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService.Trace*"></a>
+  <h4 id="Magic_Switch_Board_Core_Services_FileLoggerService_Trace_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService.Trace(System.String,System.String)">Trace(String, String)</h4>
+  <div class="markdown level1 summary"><p>The interface member for logging trace messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Trace(string message, string callerName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Magic_Switch_Board_Core_Services_FileLoggerService_Trace_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Logs that contain the most detailed messages.
+These messages may contain sensitive application data.
+These messages are disabled by default and should never be enabled in a production environment.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Services_FileLoggerService_Warning_System_String_System_String_.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Services.FileLoggerService.Warning(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileLoggerService.cs/#L34">View Source</a>
+  </span>
+  <a id="Magic_Switch_Board_Core_Services_FileLoggerService_Warning_" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService.Warning*"></a>
+  <h4 id="Magic_Switch_Board_Core_Services_FileLoggerService_Warning_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Services.FileLoggerService.Warning(System.String,System.String)">Warning(String, String)</h4>
+  <div class="markdown level1 summary"><p>The interface member for logging warning messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Warning(string message, string callerName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Magic_Switch_Board_Core_Services_FileLoggerService_Warning_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Logs that highlight an abnormal or unexpected event in the application flow,
+but do not otherwise cause the application execution to stop.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.html">ILoggerService</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Services_FileLoggerService.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Services.FileLoggerService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileLoggerService.cs/#L16" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © BoBoBaSs84.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

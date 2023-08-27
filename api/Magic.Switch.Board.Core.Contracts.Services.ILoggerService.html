@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface ILoggerService
+   | Magic.Switch.Board </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface ILoggerService
+   | Magic.Switch.Board ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService">
+  
+  
+  <h1 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService" class="text-break">Interface ILoggerService
+  </h1>
+  <div class="markdown level0 summary"><p>This is the <a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.html">ILoggerService</a> interface for various logger service implementations.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.html">Magic.Switch.Board.Core.Contracts.Services</a></h6>
+  <h6><strong>Assembly</strong>: Magic.Switch.Board.Core.dll</h6>
+  <h5 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface ILoggerService</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Critical_System_String_System_String_.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Critical(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Contracts/Services/ILoggerService.cs/#L71">View Source</a>
+  </span>
+  <a id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Critical_" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Critical*"></a>
+  <h4 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Critical_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Critical(System.String,System.String)">Critical(String, String)</h4>
+  <div class="markdown level1 summary"><p>The interface member for logging critical messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Critical(string message, string callerName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Critical_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Logs that describe an unrecoverable application or system crash, or a catastrophic failure that requires immediate attention.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Debug_System_String_System_String_.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Debug(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Contracts/Services/ILoggerService.cs/#L39">View Source</a>
+  </span>
+  <a id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Debug_" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Debug*"></a>
+  <h4 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Debug_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Debug(System.String,System.String)">Debug(String, String)</h4>
+  <div class="markdown level1 summary"><p>The interface member for logging debug messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Debug(string message, string callerName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Debug_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Logs that are used for interactive investigation during development.
+These logs should primarily contain information useful for debugging and have no long-term value.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Error_System_String_System_String_.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Error(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Contracts/Services/ILoggerService.cs/#L50">View Source</a>
+  </span>
+  <a id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Error_" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Error*"></a>
+  <h4 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Error_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Error(System.String,System.String)">Error(String, String)</h4>
+  <div class="markdown level1 summary"><p>The interface member for logging error messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Error(string message, string callerName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Error_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Logs that highlight when the current flow of execution is stopped due to a failure.
+These should indicate a failure in the current activity, not an application-wide failure.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Information_System_String_System_String_.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Information(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Contracts/Services/ILoggerService.cs/#L19">View Source</a>
+  </span>
+  <a id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Information_" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Information*"></a>
+  <h4 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Information_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Information(System.String,System.String)">Information(String, String)</h4>
+  <div class="markdown level1 summary"><p>The interface member for logging debug messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Information(string message, string callerName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Information_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Logs that track the general flow of the application.
+These logs should have long-term value.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Trace_System_String_System_String_.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Trace(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Contracts/Services/ILoggerService.cs/#L62">View Source</a>
+  </span>
+  <a id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Trace_" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Trace*"></a>
+  <h4 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Trace_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Trace(System.String,System.String)">Trace(String, String)</h4>
+  <div class="markdown level1 summary"><p>The interface member for logging trace messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Trace(string message, string callerName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Trace_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Logs that contain the most detailed messages.
+These messages may contain sensitive application data.
+These messages are disabled by default and should never be enabled in a production environment.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Warning_System_String_System_String_.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Warning(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Contracts/Services/ILoggerService.cs/#L29">View Source</a>
+  </span>
+  <a id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Warning_" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Warning*"></a>
+  <h4 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Warning_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.Warning(System.String,System.String)">Warning(String, String)</h4>
+  <div class="markdown level1 summary"><p>The interface member for logging warning messages.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Warning(string message, string callerName = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">callerName</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Warning_System_String_System_String__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Logs that highlight an abnormal or unexpected event in the application flow,
+but do not otherwise cause the application execution to stop.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_Core_Contracts_Services_ILoggerService.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.Core.Contracts.Services.ILoggerService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Contracts/Services/ILoggerService.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © BoBoBaSs84.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
