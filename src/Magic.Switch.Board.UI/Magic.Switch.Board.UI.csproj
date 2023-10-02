@@ -3,7 +3,7 @@
   <PropertyGroup>
 		<TargetFramework>net6.0-windows</TargetFramework>
 		<ApplicationIcon>Assets\Icons\Magic_Switch_Board.ico</ApplicationIcon>
-		<OutputType>Exe</OutputType>
+		<OutputType>WinExe</OutputType>
 		<StartupObject>Magic.Switch.Board.UI.App</StartupObject>
 		<Title>Magic.Switch.Board.UI</Title>
 		<UseWPF>true</UseWPF>
