@@ -2,7 +2,6 @@
 
 	<PropertyGroup>
 		<TargetFramework>net6.0-windows</TargetFramework>
-		<Title>Magic.Switch.Board.UI.Logic</Title>
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
 

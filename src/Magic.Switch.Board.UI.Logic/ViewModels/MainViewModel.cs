@@ -1,4 +1,5 @@
-﻿using System.Windows.Data;
+﻿using System.ComponentModel;
+using System.Windows.Data;
 
 using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.Core.Models.Device;

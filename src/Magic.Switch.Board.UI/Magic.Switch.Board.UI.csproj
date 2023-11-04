@@ -5,7 +5,6 @@
 		<ApplicationIcon>Assets\Icons\Magic_Switch_Board.ico</ApplicationIcon>
 		<OutputType>WinExe</OutputType>
 		<StartupObject>Magic.Switch.Board.UI.App</StartupObject>
-		<Title>Magic.Switch.Board.UI</Title>
 		<UseWPF>true</UseWPF>
   </PropertyGroup>
 

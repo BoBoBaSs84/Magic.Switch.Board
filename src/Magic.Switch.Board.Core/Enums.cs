@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Reflection;
 
 using Magic.Switch.Board.Core.Models;
 using Magic.Switch.Board.Core.Properties;
