@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Reflection;
 
 namespace Magic.Switch.Board.Core;
 
@@ -7,7 +8,7 @@ namespace Magic.Switch.Board.Core;
 /// </summary>
 internal static class Statics
 {
-	private static readonly Assembly assembly;
+	private static readonly Assembly Assembly;
 
 	/// <summary>
 	/// The <see cref="AssemblyDirectory"/> property.
@@ -44,10 +45,10 @@ internal static class Statics
 	/// </summary>
 	static Statics()
 	{
-		assembly = Assembly.GetExecutingAssembly();
-		AssemblyDirectory = Path.GetDirectoryName(assembly.Location)!;
-		AssemblyName = assembly.GetName().Name!;
-		AssemblyVersion = assembly.GetName().Version!.ToString();
+		Assembly = Assembly.GetExecutingAssembly();
+		AssemblyDirectory = Path.GetDirectoryName(Assembly.Location)!;
+		AssemblyName = Assembly.GetName().Name!;
+		AssemblyVersion = Assembly.GetName().Version!.ToString();
 		CurrentCulture = CultureInfo.CurrentCulture;
 		DeviceConfigFileName = $"{AssemblyDirectory}\\Device.Configuration.xml";
 		LogFileName = $"{AssemblyDirectory}\\{AssemblyName}.log";

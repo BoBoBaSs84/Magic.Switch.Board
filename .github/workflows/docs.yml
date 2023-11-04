@@ -2,46 +2,26 @@ name: docs
 
 on:
   push:
-    branches:
-    - main
-    paths:
-    - docs/**
-    - .github/workflows/docs.yml
-  pull_request:
-    branches:
-    - main
-    paths:
-    - docs/**
-    - .github/workflows/docs.yml
-  workflow_dispatch:
+    branches: [ main ]
 
 jobs:
-  generate-docs:
+    publish-docs:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    runs-on: windows-latest
+      - name: Dotnet Setup
+        uses: actions/setup-dotnet@v3
 
-    steps:
-    - uses: actions/checkout@v2
+      - name: DocFx Setup
+        run: dotnet tool update -g docfx
 
-    - name: Setup .NET 6.0
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 6.0.x
+      - name: Run DocFx
+        run: docfx docs/docfx.json
 
-    - name: Setup DocFX
-      uses: crazy-max/ghaction-chocolatey@v1
-      with:
-        args: install docfx
-
-    - name: DocFX Build
-      working-directory: docs
-      run: docfx .\docfx.json
-      continue-on-error: false
-
-    - name: Publish
-      if: github.event_name == 'push'
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/public
-        force_orphan: true
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_site

@@ -25,6 +25,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.UI", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic.Switch.Board.Core.Tests", "tests\Magic.Switch.Board.Core.Tests\Magic.Switch.Board.Core.Tests.csproj", "{084FEBA3-8E53-4C53-B61A-EA065D589FDF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F7A62E06-4DDE-46F6-BA9F-7EA1E0414C6D}"
+	ProjectSection(SolutionItems) = preProject
+		docs\.gitignore = docs\.gitignore
+		docs\docfx.json = docs\docfx.json
+		docs\index.md = docs\index.md
+		docs\toc.yml = docs\toc.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -58,8 +66,8 @@ Global
 		{084FEBA3-8E53-4C53-B61A-EA065D589FDF} = {A6B3CB4E-F380-4B33-AF1C-A830B64FBCBF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_AutoCreateNewLanguageFiles = True
-		RESX_SortFileContentOnSave = True
 		SolutionGuid = {DFD9DBFE-EFB5-4199-83D0-BBEF6E359B83}
+		RESX_SortFileContentOnSave = True
+		RESX_AutoCreateNewLanguageFiles = True
 	EndGlobalSection
 EndGlobal

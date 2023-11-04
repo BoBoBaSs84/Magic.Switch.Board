@@ -27,8 +27,6 @@ public class BaseTestUnit
 			{
 				_ = services.AddSingleton<ILoggerService, ConsoleLoggerService>();
 				_ = services.AddSingleton<IFileService, FileService>();
-				_ = services.AddSingleton<ISerializerDeserializerService, JsonService>();
-				_ = services.AddSingleton<ISerializerDeserializerService, XmlService>();
 				_ = services.AddSingleton<IEnumService, EnumService>();
 				_ = services.AddSingleton<IDeviceConfigService, DeviceConfigService>();
 			});
