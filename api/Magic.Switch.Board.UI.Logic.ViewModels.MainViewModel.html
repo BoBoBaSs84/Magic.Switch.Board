@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class MainViewModel
+ </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class MainViewModel
+ ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/BoBoBaSs84/Magic.Switch.Board/new/main/apiSpec/new?filename=Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel.md&amp;value=---%0Auid%3A%20Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel">
+
+
+
+  <h1 id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel" class="text-break">
+    Class MainViewModel
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/ViewModels/MainViewModel.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Magic.html">Magic</a>.<a class="xref" href="Magic.Switch.html">Switch</a>.<a class="xref" href="Magic.Switch.Board.html">Board</a>.<a class="xref" href="Magic.Switch.Board.UI.html">UI</a>.<a class="xref" href="Magic.Switch.Board.UI.Logic.html">Logic</a>.<a class="xref" href="Magic.Switch.Board.UI.Logic.ViewModels.html">ViewModels</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>Magic.Switch.Board.UI.Logic.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The <a class="xref" href="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.html">MainViewModel</a> class.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class MainViewModel : ViewModelBase, INotifyPropertyChanged, INotifyPropertyChanging</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html">ViewModelBase</a></div>
+      <div><span class="xref">MainViewModel</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanging">INotifyPropertyChanging</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_PropertyChanged">ViewModelBase.PropertyChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_PropertyChanging">ViewModelBase.PropertyChanging</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel__ctor_" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.#ctor*"></a>
+
+  <h3 id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel__ctor_Magic_Switch_Board_Core_Contracts_Services_ILoggerService_Magic_Switch_Board_Core_Contracts_Services_IDeviceConfigService_Magic_Switch_Board_Core_Contracts_Services_IEnumService_" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.#ctor(Magic.Switch.Board.Core.Contracts.Services.ILoggerService,Magic.Switch.Board.Core.Contracts.Services.IDeviceConfigService,Magic.Switch.Board.Core.Contracts.Services.IEnumService)">
+  MainViewModel(ILoggerService, IDeviceConfigService, IEnumService)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/ViewModels/MainViewModel.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.html">MainViewModel</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MainViewModel(ILoggerService logger, IDeviceConfigService deviceConfigService, IEnumService enumService)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.html">ILoggerService</a></dt>
+    <dd><p>The logger service.</p>
+</dd>
+    <dt><code>deviceConfigService</code> <a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.IDeviceConfigService.html">IDeviceConfigService</a></dt>
+    <dd><p>the device configuration service.</p>
+</dd>
+    <dt><code>enumService</code> <a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.IEnumService.html">IEnumService</a></dt>
+    <dd><p>The enumerator service.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel_ApplicationVersion_" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.ApplicationVersion*"></a>
+
+  <h3 id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel_ApplicationVersion" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.ApplicationVersion">
+  ApplicationVersion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/ViewModels/MainViewModel.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.html#Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel_ApplicationVersion">ApplicationVersion</a> property.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ApplicationVersion { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel_ConfigurationView_" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.ConfigurationView*"></a>
+
+  <h3 id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel_ConfigurationView" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.ConfigurationView">
+  ConfigurationView
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/ViewModels/MainViewModel.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ConfigurationVM ConfigurationView { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Magic.Switch.Board.UI.Logic.ViewModels.Device.ConfigurationVM.html">ConfigurationVM</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel_ConfigurationsView_" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.ConfigurationsView*"></a>
+
+  <h3 id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel_ConfigurationsView" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.ConfigurationsView">
+  ConfigurationsView
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/ViewModels/MainViewModel.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ICollectionView ConfigurationsView { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.icollectionview">ICollectionView</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel_Progress_" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.Progress*"></a>
+
+  <h3 id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel_Progress" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.Progress">
+  Progress
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/ViewModels/MainViewModel.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Progress { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel_OnConfigurationSelectionChanged_" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.OnConfigurationSelectionChanged*"></a>
+
+  <h3 id="Magic_Switch_Board_UI_Logic_ViewModels_MainViewModel_OnConfigurationSelectionChanged_System_Object_System_EventArgs_" data-uid="Magic.Switch.Board.UI.Logic.ViewModels.MainViewModel.OnConfigurationSelectionChanged(System.Object,System.EventArgs)">
+  OnConfigurationSelectionChanged(object?, EventArgs)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/ViewModels/MainViewModel.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnConfigurationSelectionChanged(object? sender, EventArgs e)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>sender</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>e</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/ViewModels/MainViewModel.cs/#L16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
