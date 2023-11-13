@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<ItemGroup>
-	  <PackageReference Include="BB84.Extensions" Version="1.7.0" />
+	  <PackageReference Include="BB84.Extensions" Version="1.7.2" />
 	</ItemGroup>
 
 	<ItemGroup>
