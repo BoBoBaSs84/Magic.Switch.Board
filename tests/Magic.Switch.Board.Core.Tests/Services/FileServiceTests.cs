@@ -1,4 +1,7 @@
-﻿namespace Magic.Switch.Board.Core.Tests.Services;
+﻿using Magic.Switch.Board.Core.Contracts.Services;
+using Magic.Switch.Board.Core.Exceptions;
+
+namespace Magic.Switch.Board.Core.Tests.Services;
 
 [TestClass()]
 public class FileServiceTests : BaseTestUnit

@@ -1,4 +1,5 @@
 ﻿using Magic.Switch.Board.Core.Models;
+using Magic.Switch.Board.Core.Properties;
 
 using static Magic.Switch.Board.Core.Enums;
 
@@ -7,9 +8,6 @@ namespace Magic.Switch.Board.Core.Tests;
 [TestClass()]
 public class EnumsTests
 {
-	[ClassInitialize]
-	public static void ClassInitialize(TestContext context) => Debug.WriteLine(nameof(ClassInitialize));
-
 	[DataTestMethod()]
 	[DataRow(MidiMessageType.PCM)]
 	[DataRow(MidiMessageType.CCM)]

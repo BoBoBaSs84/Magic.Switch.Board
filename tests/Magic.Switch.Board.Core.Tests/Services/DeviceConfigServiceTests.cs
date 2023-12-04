@@ -1,5 +1,7 @@
 ﻿using System.Text;
 
+using Magic.Switch.Board.Core.Contracts.Services;
+using Magic.Switch.Board.Core.Exceptions;
 using Magic.Switch.Board.Core.Models.Device;
 
 namespace Magic.Switch.Board.Core.Tests.Services;

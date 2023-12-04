@@ -18,18 +18,23 @@ public sealed class FileLoggerService : ILoggerService
 	/// <inheritdoc/>
 	public void Debug(string message, [CallerMemberName] string? callerName = default) =>
 		LogToFile(nameof(Debug).ToUpper(CurrentCulture), callerName, message);
+	
 	/// <inheritdoc/>
 	public void Critical(string message, [CallerMemberName] string? callerName = default) =>
 		LogToFile(nameof(Critical).ToUpper(CurrentCulture), callerName, message);
+	
 	/// <inheritdoc/>
 	public void Error(string message, [CallerMemberName] string? callerName = default) =>
 		LogToFile(nameof(Error).ToUpper(CurrentCulture), callerName, message);
+	
 	/// <inheritdoc/>
 	public void Information(string message, [CallerMemberName] string? callerName = default) =>
 		LogToFile(nameof(Information).ToUpper(CurrentCulture), callerName, message);
+	
 	/// <inheritdoc/>
 	public void Trace(string message, [CallerMemberName] string? callerName = default) =>
 		LogToFile(nameof(Trace).ToUpper(CurrentCulture), callerName, message);
+	
 	/// <inheritdoc/>
 	public void Warning(string message, [CallerMemberName] string? callerName = default) =>
 		LogToFile(nameof(Warning).ToUpper(CurrentCulture), callerName, message);
