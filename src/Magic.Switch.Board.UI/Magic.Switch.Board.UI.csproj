@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-		<TargetFramework>net6.0-windows</TargetFramework>
+		<TargetFramework>net8.0-windows</TargetFramework>
 		<ApplicationIcon>Assets\Icons\Magic_Switch_Board.ico</ApplicationIcon>
 		<OutputType>WinExe</OutputType>
 		<StartupObject>Magic.Switch.Board.UI.App</StartupObject>
