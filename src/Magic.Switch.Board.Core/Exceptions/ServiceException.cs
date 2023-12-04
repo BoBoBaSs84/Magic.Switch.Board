@@ -14,8 +14,7 @@ public sealed class ServiceException : Exception
 	/// </summary>
 	/// <param name="message">The exception message.</param>
 	public ServiceException(string message) : base(message)
-	{
-	}
+	{	}
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ServiceException"/> class.
@@ -23,6 +22,5 @@ public sealed class ServiceException : Exception
 	/// <param name="message">The exception message.</param>
 	/// <param name="innerException">The inner exception.</param>
 	public ServiceException(string message, Exception innerException) : base(message, innerException)
-	{
-	}
+	{	}
 }
