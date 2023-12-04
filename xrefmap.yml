@@ -1069,40 +1069,6 @@ references:
   fullName.vb: Magic.Switch.Board.Core.Exceptions.ServiceException.New
   nameWithType: ServiceException.ServiceException
   nameWithType.vb: ServiceException.New
-- uid: Magic.Switch.Board.Core.Exceptions.XmlHelperException
-  name: XmlHelperException
-  href: api/Magic.Switch.Board.Core.Exceptions.XmlHelperException.html
-  commentId: T:Magic.Switch.Board.Core.Exceptions.XmlHelperException
-  fullName: Magic.Switch.Board.Core.Exceptions.XmlHelperException
-  nameWithType: XmlHelperException
-- uid: Magic.Switch.Board.Core.Exceptions.XmlHelperException.#ctor(System.String)
-  name: XmlHelperException(string)
-  href: api/Magic.Switch.Board.Core.Exceptions.XmlHelperException.html#Magic_Switch_Board_Core_Exceptions_XmlHelperException__ctor_System_String_
-  commentId: M:Magic.Switch.Board.Core.Exceptions.XmlHelperException.#ctor(System.String)
-  name.vb: New(String)
-  fullName: Magic.Switch.Board.Core.Exceptions.XmlHelperException.XmlHelperException(string)
-  fullName.vb: Magic.Switch.Board.Core.Exceptions.XmlHelperException.New(String)
-  nameWithType: XmlHelperException.XmlHelperException(string)
-  nameWithType.vb: XmlHelperException.New(String)
-- uid: Magic.Switch.Board.Core.Exceptions.XmlHelperException.#ctor(System.String,System.Exception)
-  name: XmlHelperException(string, Exception)
-  href: api/Magic.Switch.Board.Core.Exceptions.XmlHelperException.html#Magic_Switch_Board_Core_Exceptions_XmlHelperException__ctor_System_String_System_Exception_
-  commentId: M:Magic.Switch.Board.Core.Exceptions.XmlHelperException.#ctor(System.String,System.Exception)
-  name.vb: New(String, Exception)
-  fullName: Magic.Switch.Board.Core.Exceptions.XmlHelperException.XmlHelperException(string, System.Exception)
-  fullName.vb: Magic.Switch.Board.Core.Exceptions.XmlHelperException.New(String, System.Exception)
-  nameWithType: XmlHelperException.XmlHelperException(string, Exception)
-  nameWithType.vb: XmlHelperException.New(String, Exception)
-- uid: Magic.Switch.Board.Core.Exceptions.XmlHelperException.#ctor*
-  name: XmlHelperException
-  href: api/Magic.Switch.Board.Core.Exceptions.XmlHelperException.html#Magic_Switch_Board_Core_Exceptions_XmlHelperException__ctor_
-  commentId: Overload:Magic.Switch.Board.Core.Exceptions.XmlHelperException.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: Magic.Switch.Board.Core.Exceptions.XmlHelperException.XmlHelperException
-  fullName.vb: Magic.Switch.Board.Core.Exceptions.XmlHelperException.New
-  nameWithType: XmlHelperException.XmlHelperException
-  nameWithType.vb: XmlHelperException.New
 - uid: Magic.Switch.Board.Core.Extensions
   name: Magic.Switch.Board.Core.Extensions
   href: api/Magic.Switch.Board.Core.Extensions.html
