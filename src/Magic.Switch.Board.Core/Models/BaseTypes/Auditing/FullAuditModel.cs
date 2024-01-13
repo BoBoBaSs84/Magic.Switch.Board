@@ -17,8 +17,8 @@ namespace Magic.Switch.Board.Core.Models.BaseTypes.Auditing;
 [XmlInclude(typeof(NamedBase))]
 public abstract class FullAuditModel : IIdentityModel, IAuditedModel, IActivatableModel
 {
-	private DateTime created;
-	private DateTime updated;
+	private DateTime _created;
+	private DateTime _updated;
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="FullAuditModel"/> class.
@@ -43,8 +43,8 @@ public abstract class FullAuditModel : IIdentityModel, IAuditedModel, IActivatab
 	[XmlAttribute(AttributeName = nameof(Created))]
 	public DateTime Created
 	{
-		get => created.AddTicks(-(created.Ticks % TimeSpan.TicksPerSecond));
-		set => created = DateTime.SpecifyKind(value, DateTimeKind.Unspecified);
+		get => _created.AddTicks(-(_created.Ticks % TimeSpan.TicksPerSecond));
+		set => _created = DateTime.SpecifyKind(value, DateTimeKind.Unspecified);
 	}
 
 	/// <inheritdoc cref="IAuditedModel.Updated"/>
@@ -54,8 +54,8 @@ public abstract class FullAuditModel : IIdentityModel, IAuditedModel, IActivatab
 	[XmlAttribute(AttributeName = nameof(Updated))]
 	public DateTime Updated
 	{
-		get => updated.AddTicks(-(updated.Ticks % TimeSpan.TicksPerSecond));
-		set => updated = DateTime.SpecifyKind(value, DateTimeKind.Unspecified);
+		get => _updated.AddTicks(-(_updated.Ticks % TimeSpan.TicksPerSecond));
+		set => _updated = DateTime.SpecifyKind(value, DateTimeKind.Unspecified);
 	}
 
 	/// <inheritdoc cref="IActivatableModel.IsActive"/>

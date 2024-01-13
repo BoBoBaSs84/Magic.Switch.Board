@@ -13,15 +13,15 @@ namespace Magic.Switch.Board.UI.Logic.ViewModels.Device;
 /// </summary>
 public sealed class ChannelVM : ViewModelBase<Channel>
 {
-	private Guid id;
-	private string name = string.Empty;
-	private string? description;
-	private DateTime created;
-	private DateTime? updated;
-	private InputVM input = default!;
-	private OutputVM? output;
-	private SwitchesVM? switches;
-	private LoopsVM? loops;
+	private Guid _id;
+	private string _name = string.Empty;
+	private string? _description;
+	private DateTime _created;
+	private DateTime? _updated;
+	private InputVM _input = default!;
+	private OutputVM? _output;
+	private SwitchesVM? _switches;
+	private LoopsVM? _loops;
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ChannelVM"/> class.
@@ -35,39 +35,39 @@ public sealed class ChannelVM : ViewModelBase<Channel>
 
 	/// <summary>The <see cref="Id"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Id))]
-	public Guid Id { get => id; private set => SetProperty(ref id, value); }
+	public Guid Id { get => _id; private set => SetProperty(ref _id, value); }
 
 	/// <summary>The <see cref="Name"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Name))]
-	public string Name { get => name; set => SetPropertyAndValidate(ref name, value); }
+	public string Name { get => _name; set => SetPropertyAndValidate(ref _name, value); }
 
 	/// <summary>The <see cref="Description"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Description))]
-	public string? Description { get => description; set => SetPropertyAndValidate(ref description, value); }
+	public string? Description { get => _description; set => SetPropertyAndValidate(ref _description, value); }
 
 	/// <summary>The <see cref="Created"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Created))]
-	public DateTime Created { get => created; set => SetProperty(ref created, value); }
+	public DateTime Created { get => _created; set => SetProperty(ref _created, value); }
 
 	/// <summary>The <see cref="Updated"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Updated))]
-	public DateTime? Updated { get => updated; set => SetProperty(ref updated, value); }
+	public DateTime? Updated { get => _updated; set => SetProperty(ref _updated, value); }
 
 	/// <summary>The <see cref="Input"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Input))]
-	public InputVM Input { get => input; set => SetProperty(ref input, value); }
+	public InputVM Input { get => _input; set => SetProperty(ref _input, value); }
 
 	/// <summary>The <see cref="Output"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Output))]
-	public OutputVM? Output { get => output; set => SetProperty(ref output, value); }
+	public OutputVM? Output { get => _output; set => SetProperty(ref _output, value); }
 
 	/// <summary>The <see cref="Switches"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Switches))]
-	public SwitchesVM? Switches { get => switches; set => SetProperty(ref switches, value); }
+	public SwitchesVM? Switches { get => _switches; set => SetProperty(ref _switches, value); }
 
 	/// <summary>The <see cref="Loops"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Loops))]
-	public LoopsVM? Loops { get => loops; set => SetProperty(ref loops, value); }
+	public LoopsVM? Loops { get => _loops; set => SetProperty(ref _loops, value); }
 
 	private void Initialize()
 	{
