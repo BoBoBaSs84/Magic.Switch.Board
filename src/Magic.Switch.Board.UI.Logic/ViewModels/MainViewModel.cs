@@ -57,7 +57,7 @@ public sealed class MainViewModel : ViewModelBase
 	// TODO: Some random configs for now ...
 	private List<ConfigurationVM> GetConfigurations()
 	{
-		List<ConfigurationVM> configList = new();
+		List<ConfigurationVM> configList = [];
 		for (int i = 1; i <= 100000; i++)
 		{
 			Configuration config = _deviceConfigService.Create(Guid.NewGuid().ToString(), AssemblyVersion);

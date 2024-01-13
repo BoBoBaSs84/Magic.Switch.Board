@@ -324,7 +324,7 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	/// <summary>
 	/// The dictonary contains the errors for each property.
 	/// </summary>
-	private readonly Dictionary<string, List<string>> _propertyErrors = new();
+	private readonly Dictionary<string, List<string>> _propertyErrors = [];
 
 	/// <inheritdoc/>
 	public bool HasErrors => _propertyErrors.Any();
@@ -355,7 +355,7 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	protected void Validate<T>(T value, string propertyName)
 	{
 		ValidationContext context = new(Model) { MemberName = propertyName };
-		List<ValidationResult> results = new();
+		List<ValidationResult> results = [];
 
 		ClearErrors(propertyName);
 
@@ -374,7 +374,7 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	private void AddError(string propertyName, string errorMessage)
 	{
 		if (!_propertyErrors.ContainsKey(propertyName))
-			_propertyErrors[propertyName] = new List<string>();
+			_propertyErrors[propertyName] = [];
 
 		if (!_propertyErrors[propertyName].Contains(errorMessage))
 		{

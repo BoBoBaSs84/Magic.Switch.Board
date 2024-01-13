@@ -334,7 +334,7 @@ public static class Enums
 	/// <returns>A <see cref="List{T}"/> of the provided enum flags.</returns>
 	public static List<T> FlagsToList<T>(this T enumFlags) where T : Enum
 	{
-		List<T> list = new();
+		List<T> list = [];
 		foreach (T flagToCheck in Enum.GetValues(typeof(T)))
 			if (enumFlags.HasFlag(flagToCheck))
 				list.Add(flagToCheck);
@@ -362,7 +362,7 @@ public static class Enums
 	public static Dictionary<T, string> GetEnumsWithDescription<T>(this T enumValue) where T : Enum
 	{
 		List<T> enumList = Enum.GetValues(enumValue.GetType()).Cast<T>().ToList();
-		Dictionary<T, string> dictToReturn = new();
+		Dictionary<T, string> dictToReturn = [];
 		foreach (T e in enumList)
 			dictToReturn.Add(e, e.GetEnumDescription());
 		return dictToReturn;
@@ -392,7 +392,7 @@ public static class Enums
 	public static List<EnumModel<T>> GetEnumModelList<T>(this T enumValue) where T : Enum
 	{
 		List<T> enumList = Enum.GetValues(enumValue.GetType()).Cast<T>().ToList();
-		List<EnumModel<T>> listToReturn = new();
+		List<EnumModel<T>> listToReturn = [];
 		foreach (T e in enumList)
 		{
 			EnumModel<T> em = new(e, e.GetEnumName(), e.GetEnumShortName(), e.GetEnumDescription());
