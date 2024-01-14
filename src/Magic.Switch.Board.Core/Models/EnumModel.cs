@@ -7,22 +7,12 @@
 /// The class contains all additional information about an enumerator.
 /// </remarks>
 /// <typeparam name="T"></typeparam>
-public class EnumModel<T> where T : Enum
+/// <param name="enumValue">The enumerator itself.</param>
+/// <param name="name">The localized enumerator name.</param>
+/// <param name="shortName">The localized enumerator short name.</param>
+/// <param name="description">The localized enumerator short name.</param>
+public sealed class EnumModel<T>(T enumValue, string name, string shortName, string description) where T : Enum
 {
-	/// <summary>
-	/// Initializes a new instance of the <see cref="EnumModel{T}"/> class.
-	/// </summary>
-	/// <param name="enumValue">The enumerator itself.</param>
-	/// <param name="name">The localized enumerator name.</param>
-	/// <param name="shortName">The localized enumerator short name.</param>
-	/// <param name="description">The localized enumerator short name.</param>
-	public EnumModel(T enumValue, string name, string shortName, string description)
-	{
-		Enum = enumValue;
-		Name = name;
-		ShortName = shortName;
-		Description = description;
-	}
 
 	/// <summary>
 	/// The <see cref="Enum"/> property.
@@ -30,7 +20,7 @@ public class EnumModel<T> where T : Enum
 	/// <remarks>
 	/// The enumerator itself.
 	/// </remarks>
-	public T Enum { get; private set; }
+	public T Enum => enumValue;
 
 	/// <summary>
 	/// The <see cref="Name"/> property.
@@ -38,7 +28,7 @@ public class EnumModel<T> where T : Enum
 	/// <remarks>
 	/// The localized enumerator name.
 	/// </remarks>
-	public string Name { get; private set; }
+	public string Name => name;
 
 	/// <summary>
 	/// The <see cref="ShortName"/> property.
@@ -46,7 +36,7 @@ public class EnumModel<T> where T : Enum
 	/// <remarks>
 	/// The localized enumerator short name.
 	/// </remarks>
-	public string ShortName { get; private set; }
+	public string ShortName => shortName;
 
 	/// <summary>
 	/// The <see cref="Description"/> property.
@@ -54,5 +44,5 @@ public class EnumModel<T> where T : Enum
 	/// <remarks>
 	/// The localized enumerator short name.
 	/// </remarks>
-	public string Description { get; private set; }
+	public string Description => description;
 }

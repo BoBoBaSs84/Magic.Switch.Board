@@ -28,11 +28,11 @@ public class Switches : ISwitches
 	/// Initializes a new instance of the <see cref="Switches"/> class.
 	/// </summary>
 	/// <param name="channels"></param>
-	public Switches(SwitchChannels channels) => Channels = channels;
+	public Switches(SwitchChannelType channels) => Channels = channels;
 
 	/// <inheritdoc cref="ISwitches.Channels"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Channels))]
 	[XmlAttribute(AttributeName = nameof(Channels))]
-	public SwitchChannels Channels { get; set; }
+	public SwitchChannelType Channels { get; set; }
 }

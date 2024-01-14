@@ -13,5 +13,5 @@ public interface ILoops
 	/// <summary>
 	/// The <see cref="Channels"/> property, cannot be <see langword="null"/>.
 	/// </summary>
-	LoopChannels Channels { get; }
+	LoopChannelType Channels { get; }
 }

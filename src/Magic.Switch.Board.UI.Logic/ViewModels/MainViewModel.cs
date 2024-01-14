@@ -67,16 +67,16 @@ public sealed class MainViewModel : ViewModelBase
 				config.Description = "The Tatra T815, aka the \"The War Rig\", is a custom vehicle driven by Imperator Furiosa in Mad Max Fury Road.";
 				config.Channels.Add(
 					new Channel("Clean with reverb",
-					new Input(Core.Enums.MidiChannel.CH01, Core.Enums.MidiMessageType.PCM, 13),
-					new Output(Core.Enums.MidiChannel.CH03, Core.Enums.MidiMessageType.PCM, 145),
-					new Switches(Core.Enums.SwitchChannels.CH01 | Core.Enums.SwitchChannels.CH02),
-					new Loops(Core.Enums.LoopChannels.CH01)));
+					new Input(Core.Enums.MidiChannelType.CH01, Core.Enums.MidiMessageType.PCM, 13),
+					new Output(Core.Enums.MidiChannelType.CH03, Core.Enums.MidiMessageType.PCM, 145),
+					new Switches(Core.Enums.SwitchChannelType.CH01 | Core.Enums.SwitchChannelType.CH02),
+					new Loops(Core.Enums.LoopChannelType.CH01)));
 				config.Channels.Add(
 					new Channel("Distortion with reverb",
-					new Input(Core.Enums.MidiChannel.CH01, Core.Enums.MidiMessageType.PCM, 14),
-					new Output(Core.Enums.MidiChannel.CH03, Core.Enums.MidiMessageType.PCM, 146),
-					new Switches(Core.Enums.SwitchChannels.CH01 | Core.Enums.SwitchChannels.CH02 | Core.Enums.SwitchChannels.CH03),
-					new Loops(Core.Enums.LoopChannels.CH01 | Core.Enums.LoopChannels.CH02)));
+					new Input(Core.Enums.MidiChannelType.CH01, Core.Enums.MidiMessageType.PCM, 14),
+					new Output(Core.Enums.MidiChannelType.CH03, Core.Enums.MidiMessageType.PCM, 146),
+					new Switches(Core.Enums.SwitchChannelType.CH01 | Core.Enums.SwitchChannelType.CH02 | Core.Enums.SwitchChannelType.CH03),
+					new Loops(Core.Enums.LoopChannelType.CH01 | Core.Enums.LoopChannelType.CH02)));
 				_ = _deviceConfigService.Write("D:\\", "Test.xml", config);
 			}
 			configList.Add(new(config));

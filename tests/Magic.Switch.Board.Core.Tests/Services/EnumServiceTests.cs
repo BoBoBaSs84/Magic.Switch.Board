@@ -10,86 +10,59 @@ public class EnumServiceTests : BaseTestUnit
 {
 	private readonly IEnumService _enumService = GetService<IEnumService>();
 
-	[TestMethod()]
-	public void EnumServiceNotNullTest() => Assert.IsNotNull(_enumService);
+	[TestMethod]
+	public void EnumServiceIsNotNullTest()
+		=> Assert.IsNotNull(_enumService);
 
-	[TestMethod()]
+	[TestMethod]
 	public void GetLogLevelsTestPass()
 	{
-		IReadOnlyList<EnumModel<LogLevel>>? logLevelList;
-		logLevelList = _enumService.GetLogLevels();
-		Assert.IsNotNull(logLevelList);
+		IEnumerable<EnumModel<LogLevelType>>? levelTypes;
+
+		levelTypes = _enumService.GetLogLevels();
+
+		Assert.IsNotNull(levelTypes);
+		Assert.IsTrue(levelTypes.Any());
 	}
 
-	[TestMethod()]
-	public void GetLogLevelsTestFail()
-	{
-		IReadOnlyList<EnumModel<LogLevel>>? logLevelList;
-		logLevelList = null;
-		Assert.IsNull(logLevelList);
-	}
-
-	[TestMethod()]
+	[TestMethod]
 	public void GetLoopChannelsTestPass()
 	{
-		IReadOnlyList<EnumModel<LoopChannels>>? loopChannelList;
-		loopChannelList = _enumService.GetLoopChannels();
-		Assert.IsNotNull(loopChannelList);
+		IEnumerable<EnumModel<LoopChannelType>>? loopChannelTypes;
+
+		loopChannelTypes = _enumService.GetLoopChannels();
+
+		Assert.IsNotNull(loopChannelTypes);
+		Assert.IsTrue(loopChannelTypes.Any());
 	}
 
-	[TestMethod()]
-	public void GetLoopChannelsTestFail()
-	{
-		IReadOnlyList<EnumModel<LoopChannels>>? loopChannelList;
-		loopChannelList = null;
-		Assert.IsNull(loopChannelList);
-	}
-
-	[TestMethod()]
+	[TestMethod]
 	public void GetMidiChannelsTestPass()
 	{
-		IReadOnlyList<EnumModel<MidiChannel>>? midiChannelList;
+		IEnumerable<EnumModel<MidiChannelType>>? midiChannelList;
 		midiChannelList = _enumService.GetMidiChannels();
 		Assert.IsNotNull(midiChannelList);
 	}
 
-	[TestMethod()]
-	public void GetMidiChannelsTestFail()
-	{
-		IReadOnlyList<EnumModel<MidiChannel>>? midiChannelList;
-		midiChannelList = null;
-		Assert.IsNull(midiChannelList);
-	}
-
-	[TestMethod()]
+	[TestMethod]
 	public void GetMidiMessageTypesTestPass()
 	{
-		IReadOnlyList<EnumModel<MidiMessageType>>? midiMessageTypeList;
-		midiMessageTypeList = _enumService.GetMidiMessageTypes();
-		Assert.IsNotNull(midiMessageTypeList);
-	}
+		IEnumerable<EnumModel<MidiMessageType>>? midiMessageTypes;
 
-	[TestMethod()]
-	public void GetMidiMessageTypesTestFail()
-	{
-		IReadOnlyList<EnumModel<MidiMessageType>>? midiMessageTypeList;
-		midiMessageTypeList = null;
-		Assert.IsNull(midiMessageTypeList);
+		midiMessageTypes = _enumService.GetMidiMessageTypes();
+
+		Assert.IsNotNull(midiMessageTypes);
+		Assert.IsTrue(midiMessageTypes.Any());
 	}
 
 	[TestMethod()]
 	public void GetSwitchChannelsTestPass()
 	{
-		IReadOnlyList<EnumModel<SwitchChannels>>? switchChannelList;
-		switchChannelList = _enumService.GetSwitchChannels();
-		Assert.IsNotNull(switchChannelList);
-	}
+		IEnumerable<EnumModel<SwitchChannelType>>? switchChannelList;
 
-	[TestMethod()]
-	public void GetSwitchChannelsTestFail()
-	{
-		IReadOnlyList<EnumModel<SwitchChannels>>? switchChannelList;
-		switchChannelList = null;
-		Assert.IsNull(switchChannelList);
+		switchChannelList = _enumService.GetSwitchChannels();
+
+		Assert.IsNotNull(switchChannelList);
+		Assert.IsTrue(switchChannelList.Any());
 	}
 }

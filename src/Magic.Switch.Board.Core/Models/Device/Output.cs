@@ -28,7 +28,7 @@ public class Output : InputOutputBase
 	/// <param name="midiChannel"></param>
 	/// <param name="messageType"></param>
 	/// <param name="number"></param>
-	public Output(MidiChannel midiChannel, MidiMessageType messageType, int number) : base(midiChannel, messageType, number)
+	public Output(MidiChannelType midiChannel, MidiMessageType messageType, int number) : base(midiChannel, messageType, number)
 	{
 	}
 }

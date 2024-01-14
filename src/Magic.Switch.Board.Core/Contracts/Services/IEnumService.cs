@@ -13,25 +13,29 @@ public interface IEnumService
 	/// The <see cref="GetMidiMessageTypes"/> method should return a read only list for the enum type <see cref="MidiMessageType"/>.
 	/// </summary>
 	/// <returns>A read only list of type <see cref="EnumModel{T}"/>.</returns>
-	IReadOnlyList<EnumModel<MidiMessageType>> GetMidiMessageTypes();
+	IEnumerable<EnumModel<MidiMessageType>> GetMidiMessageTypes();
+
 	/// <summary>
-	/// The <see cref="GetMidiChannels"/> method should return a read only list for the enum type <see cref="MidiChannel"/>.
+	/// The <see cref="GetMidiChannels"/> method should return a read only list for the enum type <see cref="MidiChannelType"/>.
 	/// </summary>
 	/// <returns>A read only list of type <see cref="EnumModel{T}"/>.</returns>
-	IReadOnlyList<EnumModel<MidiChannel>> GetMidiChannels();
+	IEnumerable<EnumModel<MidiChannelType>> GetMidiChannels();
+
 	/// <summary>
-	/// The <see cref="GetLoopChannels"/> method should return a read only list for the enum type <see cref="LoopChannels"/>.
+	/// The <see cref="GetLoopChannels"/> method should return a read only list for the enum type <see cref="LoopChannelType"/>.
 	/// </summary>
 	/// <returns>A read only list of type <see cref="EnumModel{T}"/>.</returns>
-	IReadOnlyList<EnumModel<LoopChannels>> GetLoopChannels();
+	IEnumerable<EnumModel<LoopChannelType>> GetLoopChannels();
+
 	/// <summary>
-	/// The <see cref="GetSwitchChannels"/> method should return a read only list for the enum type <see cref="SwitchChannels"/>.
+	/// The <see cref="GetSwitchChannels"/> method should return a read only list for the enum type <see cref="SwitchChannelType"/>.
 	/// </summary>
 	/// <returns>A read only list of type <see cref="EnumModel{T}"/>.</returns>
-	IReadOnlyList<EnumModel<SwitchChannels>> GetSwitchChannels();
+	IEnumerable<EnumModel<SwitchChannelType>> GetSwitchChannels();
+
 	/// <summary>
-	/// The <see cref="GetLogLevels"/> method should return a read only list for the enum type <see cref="LogLevel"/>.
+	/// The <see cref="GetLogLevels"/> method should return a read only list for the enum type <see cref="LogLevelType"/>.
 	/// </summary>
 	/// <returns>A read only list of type <see cref="EnumModel{T}"/>.</returns>
-	IReadOnlyList<EnumModel<LogLevel>> GetLogLevels();
+	IEnumerable<EnumModel<LogLevelType>> GetLogLevels();
 }

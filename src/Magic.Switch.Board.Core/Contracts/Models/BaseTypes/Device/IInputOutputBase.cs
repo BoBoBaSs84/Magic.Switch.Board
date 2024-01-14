@@ -13,7 +13,7 @@ public interface IInputOutputBase
 	/// <summary>
 	/// The <see cref="MidiChannel"/> property, cannot be <see langword="null"/>.
 	/// </summary>
-	MidiChannel MidiChannel { get; }
+	MidiChannelType MidiChannel { get; }
 
 	/// <summary>
 	/// The <see cref="MessageType"/> property, cannot be <see langword="null"/>.

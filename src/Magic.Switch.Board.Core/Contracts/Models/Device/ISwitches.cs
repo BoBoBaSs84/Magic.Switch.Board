@@ -13,5 +13,5 @@ public interface ISwitches
 	/// <summary>
 	/// The <see cref="Channels"/> property, cannot be <see langword="null"/>.
 	/// </summary>
-	SwitchChannels Channels { get; }
+	SwitchChannelType Channels { get; }
 }
