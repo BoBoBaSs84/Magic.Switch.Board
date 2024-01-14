@@ -88,7 +88,7 @@
 
   <h1 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase`1" class="text-break">
     Class ViewModelBase&lt;TModel&gt;
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L234"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L27"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -101,7 +101,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ViewModelBase&lt;TModel&gt; : ViewModelBase, INotifyPropertyChanged, INotifyPropertyChanging, INotifyDataErrorInfo where TModel : class</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ViewModelBase&lt;TModel&gt; : ViewModelBase, INotificationObject, INotifyPropertyChanged, INotifyPropertyChanging, INotifyDataErrorInfo where TModel : class</code></pre>
   </div>
 
 
@@ -117,6 +117,7 @@
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NotificationObject</span></div>
       <div><a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html">ViewModelBase</a></div>
       <div><span class="xref">ViewModelBase&lt;TModel&gt;</span></div>
     </dd>
@@ -125,6 +126,7 @@
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><span class="xref">INotificationObject</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanging">INotifyPropertyChanging</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifydataerrorinfo">INotifyDataErrorInfo</a></div>
@@ -147,22 +149,13 @@
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_SetProperty__1___0____0_System_String_">ViewModelBase.SetProperty&lt;T&gt;(ref T, T, string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">NotificationObject.SetProperty&lt;T&gt;(ref T, T, string)</a>
     </div>
     <div>
-      <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_SetPropertyNoNotify__1___0____0_System_String_">ViewModelBase.SetPropertyNoNotify&lt;T&gt;(ref T, T, string)</a>
+      <span class="xref">NotificationObject.PropertyChanged</span>
     </div>
     <div>
-      <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_PropertyChanged">ViewModelBase.PropertyChanged</a>
-    </div>
-    <div>
-      <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_RaisePropertyChanged_System_String_">ViewModelBase.RaisePropertyChanged(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_PropertyChanging">ViewModelBase.PropertyChanging</a>
-    </div>
-    <div>
-      <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_RaisePropertyChanging_System_String_">ViewModelBase.RaisePropertyChanging(string)</a>
+      <span class="xref">NotificationObject.PropertyChanging</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -205,7 +198,7 @@ It inherits the fields and methods from the <a class="xref" href="Magic.Switch.B
 
   <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1__ctor__0_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase`1.#ctor(`0)">
   ViewModelBase(TModel)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L242"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L35"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.html">ViewModelBase&lt;TModel&gt;</a> class.</p>
@@ -242,7 +235,7 @@ It inherits the fields and methods from the <a class="xref" href="Magic.Switch.B
 
   <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_HasErrors" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase`1.HasErrors">
   HasErrors
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L123"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets a value that indicates whether the entity has validation errors.</p>
@@ -275,7 +268,7 @@ It inherits the fields and methods from the <a class="xref" href="Magic.Switch.B
 
   <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_Model" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase`1.Model">
   Model
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L251"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L44"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_Model">Model</a> property.</p>
@@ -315,7 +308,7 @@ At the first choice of design, for now the property is mutable.</p>
 
   <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_GetErrors_System_String_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase`1.GetErrors(System.String)">
   GetErrors(string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L336"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L129"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the validation errors for a specified property or for the entire entity.</p>
@@ -354,7 +347,7 @@ At the first choice of design, for now the property is mutable.</p>
 
   <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_OnPropertyChangedPropagate_System_Object_System_ComponentModel_PropertyChangedEventArgs_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase`1.OnPropertyChangedPropagate(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
   OnPropertyChangedPropagate(object?, PropertyChangedEventArgs)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L266"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L59"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_OnPropertyChangedPropagate_System_Object_System_ComponentModel_PropertyChangedEventArgs_">OnPropertyChangedPropagate(object?, PropertyChangedEventArgs)</a> method
@@ -393,7 +386,7 @@ propagates the changes in the view model through to the domain model.</p>
 
   <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_RaiseErrorsChanged_System_String_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase`1.RaiseErrorsChanged(System.String)">
   RaiseErrorsChanged(string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L346"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_RaiseErrorsChanged_System_String_">RaiseErrorsChanged(string?)</a> method to raise the erros changed event.</p>
@@ -429,7 +422,7 @@ propagates the changes in the view model through to the domain model.</p>
 
   <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_SetPropertyAndValidate__1___0____0_System_String_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase`1.SetPropertyAndValidate``1(``0@,``0,System.String)">
   SetPropertyAndValidate&lt;T&gt;(ref T, T, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L288"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets a new value for a property, notifies about the change and tries to
@@ -480,7 +473,7 @@ validate the property against the domain model class.</p>
 
   <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_SetPropertyNoNotifyAndValidate__1___0____0_System_String_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase`1.SetPropertyNoNotifyAndValidate``1(``0@,``0,System.String)">
   SetPropertyNoNotifyAndValidate&lt;T&gt;(ref T, T, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L310"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L103"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Sets a new value for a property, does not notify about the changeand tries to
@@ -531,7 +524,7 @@ validate the property against the domain model class.</p>
 
   <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_Validate__1___0_System_String_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase`1.Validate``1(``0,System.String)">
   Validate&lt;T&gt;(T, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L355"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L148"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_Validate__1___0_System_String_">Validate&lt;T&gt;(T, string)</a> method will try to validate the property value.</p>
@@ -575,7 +568,7 @@ validate the property against the domain model class.</p>
 
   <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_ErrorsChanged" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase`1.ErrorsChanged">
   ErrorsChanged
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L333"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L126"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Occurs when the validation errors have changed for a property or for the entire entity.</p>
@@ -607,7 +600,7 @@ validate the property against the domain model class.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L234" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L27" class="edit-link">Edit this page</a>
         </div>
 
 

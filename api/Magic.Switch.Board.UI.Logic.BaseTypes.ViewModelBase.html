@@ -8,7 +8,7 @@
       <meta name="title" content="Class ViewModelBase
  ">
       
-      <meta name="description" content="The abstract  base class.">
+      <meta name="description" content="The view model base class.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -88,7 +88,7 @@
 
   <h1 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase" class="text-break">
     Class ViewModelBase
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -96,12 +96,12 @@
   <dl><dt>Assembly</dt><dd>Magic.Switch.Board.UI.Logic.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/abstract">abstract</a> <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html">ViewModelBase</a> base class.</p>
+  <div class="markdown summary"><p>The view model base class.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyChanging</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class ViewModelBase : NotificationObject, INotificationObject, INotifyPropertyChanged, INotifyPropertyChanging</code></pre>
   </div>
 
 
@@ -111,6 +111,7 @@
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NotificationObject</span></div>
       <div><span class="xref">ViewModelBase</span></div>
     </dd>
   </dl>
@@ -118,6 +119,7 @@
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><span class="xref">INotificationObject</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanging">INotifyPropertyChanging</a></div>
     </dd>
@@ -134,6 +136,15 @@
   <dl class="typelist derived">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">NotificationObject.SetProperty&lt;T&gt;(ref T, T, string)</a>
+    </div>
+    <div>
+      <span class="xref">NotificationObject.PropertyChanged</span>
+    </div>
+    <div>
+      <span class="xref">NotificationObject.PropertyChanging</span>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
     </div>
@@ -160,261 +171,13 @@
 
 
 
-  <h2 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_remarks">Remarks</h2>
-  <div class="markdown level0 remarks"><p>The <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html">ViewModelBase</a> class implements the following interfaces:</p>
-<ul><li>The members of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a> interface.</li><li>The members of the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanging">INotifyPropertyChanging</a> interface.</li></ul>
-The class also provides attributes for decorating properties, in turn informing other
-properties of their value changes. See <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.NotifyPropertyChangedAttribute.html">ViewModelBase.NotifyPropertyChangedAttribute</a>.
-</div>
-
-
-  <h2 class="section" id="methods">Methods
-</h2>
-
-
-  <a id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_RaisePropertyChanged_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.RaisePropertyChanged*"></a>
-
-  <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_RaisePropertyChanged_System_String_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.RaisePropertyChanged(System.String)">
-  RaisePropertyChanged(string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L77"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_RaisePropertyChanged_System_String_">RaisePropertyChanged(string?)</a> method to raise the changed event.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void RaisePropertyChanged(string? propertyName = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the property, can be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section" id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_RaisePropertyChanged_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The calling member's name will be used as the parameter.</p>
-</div>
-
-
-
-
-  <a id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_RaisePropertyChanging_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.RaisePropertyChanging*"></a>
-
-  <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_RaisePropertyChanging_System_String_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.RaisePropertyChanging(System.String)">
-  RaisePropertyChanging(string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L92"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>The <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_RaisePropertyChanging_System_String_">RaisePropertyChanging(string?)</a> method to raise the changing event.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual void RaisePropertyChanging(string? propertyName = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The name of the property, can be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
-</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h4 class="section" id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_RaisePropertyChanging_System_String__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The calling member's name will be used as the parameter.</p>
-</div>
-
-
-
-
-  <a id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_SetPropertyNoNotify_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.SetPropertyNoNotify*"></a>
-
-  <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_SetPropertyNoNotify__1___0____0_System_String_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.SetPropertyNoNotify``1(``0@,``0,System.String)">
-  SetPropertyNoNotify&lt;T&gt;(ref T, T, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L56"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Sets a new value for a property and does not notify about the change.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected static void SetPropertyNoNotify&lt;T&gt;(ref T field, T newValue, string? propertyName = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>field</code> <span class="xref">T</span></dt>
-    <dd><p>The referenced field.</p>
-</dd>
-    <dt><code>newValue</code> <span class="xref">T</span></dt>
-    <dd><p>The new value for the property.</p>
-</dd>
-    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The property name.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">propertyName</code> is null.</p>
-</dd>
-  </dl>
-
-
-
-  <a id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_SetProperty_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.SetProperty*"></a>
-
-  <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_SetProperty__1___0____0_System_String_" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.SetProperty``1(``0@,``0,System.String)">
-  SetProperty&lt;T&gt;(ref T, T, string?)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L32"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Sets a new value for a property and notifies about the change.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void SetProperty&lt;T&gt;(ref T field, T newValue, string? propertyName = null)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>field</code> <span class="xref">T</span></dt>
-    <dd><p>The referenced field.</p>
-</dd>
-    <dt><code>newValue</code> <span class="xref">T</span></dt>
-    <dd><p>The new value for the property.</p>
-</dd>
-    <dt><code>propertyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd><p>The property name.</p>
-</dd>
-  </dl>
-
-
-  <h4 class="section">Type Parameters</h4>
-  <dl class="parameters">
-    <dt><code>T</code></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-  <h4 class="section">Exceptions</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>If <code class="paramref">propertyName</code> is null.</p>
-</dd>
-  </dl>
-
-
-
-  <h2 class="section" id="events">Events
-</h2>
-
-
-
-  <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_PropertyChanged" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.PropertyChanged">
-  PropertyChanged
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L68"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Occurs when a property value changes.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event PropertyChangedEventHandler? PropertyChanged</code></pre>
-  </div>
-
-
-
-
-
-
-  <h4 class="section">Event Type</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler">PropertyChangedEventHandler</a></dt>
-    <dd>The abstract  base class.</dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <h3 id="Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_PropertyChanging" data-uid="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.PropertyChanging">
-  PropertyChanging
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L83"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Occurs when a property value is changing.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public event PropertyChangingEventHandler? PropertyChanging</code></pre>
-  </div>
-
-
-
-
-
-
-  <h4 class="section">Event Type</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangingeventhandler">PropertyChangingEventHandler</a></dt>
-    <dd>The abstract  base class.</dd>
-  </dl>
-
-
-
-
-
 
 
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L21" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.UI.Logic/BaseTypes/ViewModelBase.cs/#L13" class="edit-link">Edit this page</a>
         </div>
 
 

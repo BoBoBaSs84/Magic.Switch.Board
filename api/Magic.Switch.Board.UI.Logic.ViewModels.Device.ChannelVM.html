@@ -101,7 +101,7 @@
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class ChannelVM : ViewModelBase&lt;Channel&gt;, INotifyPropertyChanged, INotifyPropertyChanging, INotifyDataErrorInfo</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ChannelVM : ViewModelBase&lt;Channel&gt;, INotificationObject, INotifyPropertyChanged, INotifyPropertyChanging, INotifyDataErrorInfo</code></pre>
   </div>
 
 
@@ -111,6 +111,7 @@
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NotificationObject</span></div>
       <div><a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html">ViewModelBase</a></div>
       <div><a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.html">ViewModelBase</a>&lt;<a class="xref" href="Magic.Switch.Board.Core.Models.Device.Channel.html">Channel</a>&gt;</div>
       <div><span class="xref">ChannelVM</span></div>
@@ -120,6 +121,7 @@
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><span class="xref">INotificationObject</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanging">INotifyPropertyChanging</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifydataerrorinfo">INotifyDataErrorInfo</a></div>
@@ -143,10 +145,10 @@
       <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_GetErrors_System_String_">ViewModelBase&lt;Channel&gt;.GetErrors(string)</a>
     </div>
     <div>
-      <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_PropertyChanged">ViewModelBase.PropertyChanged</a>
+      <span class="xref">NotificationObject.PropertyChanged</span>
     </div>
     <div>
-      <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_PropertyChanging">ViewModelBase.PropertyChanging</a>
+      <span class="xref">NotificationObject.PropertyChanging</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>

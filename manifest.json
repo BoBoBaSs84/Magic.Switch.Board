@@ -514,40 +514,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.RelayCommand.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.RelayCommand.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.yml",
       "output": {
         ".html": {
           "relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.NotifyPropertyChangedAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.NotifyPropertyChangedAttribute.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.NotifyPropertyChangingAttribute.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.NotifyPropertyChangingAttribute.html"
         }
       },
       "version": ""
