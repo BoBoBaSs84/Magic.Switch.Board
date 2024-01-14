@@ -43,7 +43,7 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 
 	/// <summary>The <see cref="Id"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Id))]
-	public Guid Id { get => _id; private set => SetPropertyNoNotify(ref _id, value); }
+	public Guid Id { get => _id; private set => SetProperty(ref _id, value); }
 
 	/// <summary>The <see cref="Name"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Name))]
@@ -55,7 +55,7 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 
 	/// <summary>The <see cref="Created"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Created))]
-	public DateTime Created { get => _created; set => SetPropertyNoNotify(ref _created, value); }
+	public DateTime Created { get => _created; set => SetProperty(ref _created, value); }
 
 	/// <summary>The <see cref="Updated"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Updated))]
@@ -63,11 +63,11 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 
 	/// <summary>The <see cref="ApplicationVersion"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Application_Version))]
-	public string ApplicationVersion { get => _applicationVersion; private set => SetPropertyNoNotify(ref _applicationVersion, value); }
+	public string ApplicationVersion { get => _applicationVersion; private set => SetProperty(ref _applicationVersion, value); }
 
 	/// <summary>The <see cref="ConfigurationVersion"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Configuration_Version))]
-	public string ConfigurationVersion { get => _configurationVersion; private set => SetPropertyNoNotify(ref _configurationVersion, value); }
+	public string ConfigurationVersion { get => _configurationVersion; private set => SetProperty(ref _configurationVersion, value); }
 
 	/// <summary>The <see cref="Channels"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Channels))]
