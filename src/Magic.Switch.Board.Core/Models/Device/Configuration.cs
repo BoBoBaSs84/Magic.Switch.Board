@@ -29,7 +29,7 @@ public class Configuration : NamedBase, IConfiguration
 	public Configuration() : base()
 	{
 		ApplicationVersion = string.Empty;
-		Channels = new();
+		Channels = [];
 		ConfigurationVersion = AssemblyVersion;
 	}
 
@@ -45,7 +45,7 @@ public class Configuration : NamedBase, IConfiguration
 	public Configuration(string name, string applicationVersion) : base(name)
 	{
 		ApplicationVersion = applicationVersion ?? throw new ArgumentNullException(nameof(applicationVersion));
-		Channels = new();
+		Channels = [];
 		ConfigurationVersion = AssemblyVersion;
 	}
 
