@@ -5,30 +5,17 @@ using BB84.Extensions.Serialization;
 using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.Core.Exceptions;
 using Magic.Switch.Board.Core.Models.Device;
-
-using static Magic.Switch.Board.Core.Properties.Resources;
+using Magic.Switch.Board.Core.Properties;
 
 namespace Magic.Switch.Board.Core.Services;
 
 /// <summary>
 /// The <see cref="DeviceConfigService"/> class implements the members of the <see cref="IDeviceConfigService"/> interface.
 /// </summary>
-public sealed class DeviceConfigService : IDeviceConfigService
+/// <param name="logger">The logger service to use.</param>
+/// <param name="fileService">The file service to use.</param>
+public sealed class DeviceConfigService(ILoggerService logger, IFileService fileService) : IDeviceConfigService
 {
-	private readonly ILoggerService _logger;
-	private readonly IFileService _fileService;
-
-	/// <summary>
-	/// Initializes a new instance of the <see cref="DeviceConfigService"/> class.
-	/// </summary>
-	/// <param name="logger">The logger service.</param>
-	/// <param name="fileService">The file service.</param>
-	public DeviceConfigService(ILoggerService logger, IFileService fileService)
-	{
-		_logger = logger;
-		_fileService = fileService;
-	}
-
 	/// <inheritdoc/>	
 	/// <exception cref="ArgumentNullException"></exception>
 	/// <exception cref="ServiceException"></exception>
@@ -36,14 +23,15 @@ public sealed class DeviceConfigService : IDeviceConfigService
 	{
 		try
 		{
-			return name is null
-				? throw new ArgumentNullException(nameof(name))
-				: applicationVersion is null ? throw new ArgumentNullException(nameof(applicationVersion)) : new(name, applicationVersion);
+			ArgumentException.ThrowIfNullOrWhiteSpace(name, nameof(name));
+			ArgumentException.ThrowIfNullOrWhiteSpace(applicationVersion, nameof(applicationVersion));
+
+			return new(name, applicationVersion);
 		}
 		catch (Exception ex)
 		{
-			_logger.Error(ex.Message);
-			string message = string.Format(Culture, Error_While_Creating_A_New_Device_Configuration);
+			logger.Error(ex.Message);
+			string message = Resources.Error_While_Creating_A_New_Device_Configuration;
 			throw new ServiceException(message, ex);
 		}
 	}
@@ -54,15 +42,19 @@ public sealed class DeviceConfigService : IDeviceConfigService
 	{
 		try
 		{
-			string content = _fileService.Read(folderPath, fileName);
+			ArgumentException.ThrowIfNullOrWhiteSpace(folderPath, nameof(folderPath));
+			ArgumentException.ThrowIfNullOrWhiteSpace(fileName, nameof(fileName));
+
+			string content = fileService.Read(folderPath, fileName);
+
 			return string.IsNullOrWhiteSpace(content)
 				? default
 				: content.FromXml<Configuration>();
 		}
 		catch (Exception ex)
 		{
-			_logger.Error(ex.Message);
-			string message = string.Format(Culture, Error_While_Reading_A_Existing_Device_Configuration);
+			logger.Error(ex.Message);
+			string message = Resources.Error_While_Reading_A_Existing_Device_Configuration;
 			throw new ServiceException(message, ex);
 		}
 	}
@@ -74,17 +66,18 @@ public sealed class DeviceConfigService : IDeviceConfigService
 	{
 		try
 		{
-			if (configuration is null)
-				throw new ArgumentNullException(nameof(configuration));
+			ArgumentException.ThrowIfNullOrWhiteSpace(folderPath, nameof(folderPath));
+			ArgumentException.ThrowIfNullOrWhiteSpace(fileName, nameof(fileName));
+			ArgumentNullException.ThrowIfNull(configuration, nameof(configuration));
 
 			string fileContent = configuration.ToXml();
-			_fileService.Save(folderPath, fileName, fileContent);
+			fileService.Save(folderPath, fileName, fileContent);
 			return true;
 		}
 		catch (Exception ex)
 		{
-			_logger.Error(ex.Message);
-			string message = string.Format(Culture, Error_While_Saving_Device_Configuration);
+			logger.Error(ex.Message);
+			string message = Resources.Error_While_Saving_Device_Configuration;
 			throw new ServiceException(message, ex);
 		}
 	}

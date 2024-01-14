@@ -23,7 +23,7 @@ public abstract class InputOutputBase : IInputOutputBase
 	/// </summary>
 	protected InputOutputBase()
 	{
-		MidiChannel = MidiChannel.CH01;
+		MidiChannel = MidiChannelType.CH01;
 		MessageType = MidiMessageType.PCM;
 		Number = 1;
 	}
@@ -34,7 +34,7 @@ public abstract class InputOutputBase : IInputOutputBase
 	/// <param name="midiChannel"></param>
 	/// <param name="messageType"></param>
 	/// <param name="number"></param>
-	protected InputOutputBase(MidiChannel midiChannel, MidiMessageType messageType, int number)
+	protected InputOutputBase(MidiChannelType midiChannel, MidiMessageType messageType, int number)
 	{
 		MidiChannel = midiChannel;
 		MessageType = messageType;
@@ -45,7 +45,7 @@ public abstract class InputOutputBase : IInputOutputBase
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(MidiChannel))]
 	[XmlAttribute(AttributeName = nameof(MidiChannel))]
-	public MidiChannel MidiChannel { get; set; }
+	public MidiChannelType MidiChannel { get; set; }
 
 	/// <inheritdoc cref="IInputOutputBase.MessageType"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]

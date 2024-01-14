@@ -1,5 +1,7 @@
 ﻿using System.Text;
 
+using BB84.Extensions;
+
 using Magic.Switch.Board.Core.Contracts.Services;
 using Magic.Switch.Board.Core.Exceptions;
 
@@ -10,85 +12,64 @@ namespace Magic.Switch.Board.Core.Services;
 /// <summary>
 /// The <see cref="FileService"/> class implements the mebers of the <see cref="IFileService"/> interface.
 /// </summary>
-public sealed class FileService : IFileService
+/// <param name="logger">The logger service instance to use.</param>
+public sealed class FileService(ILoggerService logger) : IFileService
 {
-	private readonly ILoggerService _logger;
-
-	/// <summary>
-	/// Initializes a new instance of the <see cref="FileService"/> class.
-	/// </summary>
-	/// <param name="logger"></param>
-	public FileService(ILoggerService logger) => _logger = logger;
-
 	/// <inheritdoc/>
-	/// <exception cref="ArgumentNullException"></exception>
-	/// <exception cref="ArgumentException"></exception>
 	/// <exception cref="ServiceException"></exception>
 	public void Delete(string folderPath, string fileName)
 	{
-		string message;
-		string fullpath = string.Empty;
+		string message, fullpath = string.Empty;
 		try
 		{
-			if (folderPath is null)
-				throw new ArgumentNullException(nameof(folderPath));
-
-			if (fileName is null)
-				throw new ArgumentNullException(nameof(fileName));
+			ArgumentException.ThrowIfNullOrWhiteSpace(folderPath, nameof(folderPath));
+			ArgumentException.ThrowIfNullOrWhiteSpace(fileName, nameof(fileName));
 
 			fullpath = Path.Combine(folderPath, fileName);
 
 			if (!FileExists(fullpath))
-				throw new ArgumentException(string.Format(Culture, File_Service_Error_File));
+				throw new IOException(File_Service_Error_File);
 
 			File.Delete(fullpath);
-			message = string.Format(Culture, File_Service_File_Deleted, fullpath);
-			_logger.Information(message);
+			message = File_Service_File_Deleted.Format(Culture, fullpath);
+			logger.Information(message);
 		}
 		catch (Exception ex)
 		{
-			_logger.Error(ex.Message);
-			message = string.Format(Culture, Error_While_Deleting_File, fullpath);
+			logger.Error(ex.Message);
+			message = Error_While_Deleting_File.Format(Culture, fullpath);
 			throw new ServiceException(message, ex);
 		}
 	}
 
 	/// <inheritdoc/>
-	/// <exception cref="ArgumentNullException"></exception>
-	/// <exception cref="ArgumentException"></exception>
 	/// <exception cref="ServiceException"></exception>
 	public string Read(string folderPath, string fileName)
 	{
-		string content;
-		string fullpath = string.Empty;
+		string content, fullpath = string.Empty;
 		try
 		{
-			if (folderPath is null)
-				throw new ArgumentNullException(nameof(folderPath));
-
-			if (fileName is null)
-				throw new ArgumentNullException(nameof(fileName));
+			ArgumentException.ThrowIfNullOrWhiteSpace(folderPath, nameof(folderPath));
+			ArgumentException.ThrowIfNullOrWhiteSpace(fileName, nameof(fileName));
 
 			fullpath = Path.Combine(folderPath, fileName);
 
 			if (!FileExists(fullpath))
-				throw new ArgumentException(string.Format(Culture, File_Service_Error_File));
+				throw new IOException(File_Service_Error_File);
 
 			content = File.ReadAllText(fullpath);
-			_logger.Information(string.Format(Culture, File_Service_File_Read, fullpath));
+			logger.Information(File_Service_File_Read.Format(Culture, fullpath));
 			return content;
 		}
 		catch (Exception ex)
 		{
-			_logger.Error(ex.Message);
-			content = string.Format(Culture, Error_While_Reading_File, fullpath);
+			logger.Error(ex.Message);
+			content = Error_While_Reading_File.Format(Culture, fullpath);
 			throw new ServiceException(content, ex);
 		}
 	}
 
 	/// <inheritdoc/>
-	/// <exception cref="ArgumentNullException"></exception>
-	/// <exception cref="ArgumentException"></exception>
 	/// <exception cref="ServiceException"></exception>
 	public void Save(string folderPath, string fileName, string fileContent)
 	{
@@ -96,28 +77,23 @@ public sealed class FileService : IFileService
 		string fullpath = string.Empty;
 		try
 		{
-			if (folderPath is null)
-				throw new ArgumentNullException(nameof(folderPath));
-
-			if (fileName is null)
-				throw new ArgumentNullException(nameof(fileName));
-
-			if (fileContent is null)
-				throw new ArgumentNullException(nameof(fileContent));
+			ArgumentException.ThrowIfNullOrWhiteSpace(folderPath, nameof(folderPath));
+			ArgumentException.ThrowIfNullOrWhiteSpace(fileName, nameof(fileName));
+			ArgumentException.ThrowIfNullOrWhiteSpace(fileContent, nameof(fileContent));
 
 			if (!DirectoryExists(folderPath))
-				throw new ArgumentException(string.Format(Culture, File_Service_Error_Directory));
+				throw new IOException(File_Service_Error_Directory);
 
 			fullpath = Path.Combine(folderPath, fileName);
 
 			File.WriteAllText(fullpath, fileContent, Encoding.UTF8);
-			message = string.Format(Culture, File_Service_File_Created, fullpath);
-			_logger.Information(message);
+			message = File_Service_File_Created.Format(Culture, fullpath);
+			logger.Information(message);
 		}
 		catch (Exception ex)
 		{
-			_logger.Error(ex.Message);
-			message = string.Format(Culture, Error_While_Creating_File, fullpath);
+			logger.Error(ex.Message);
+			message = Error_While_Creating_File.Format(Culture, fullpath);
 			throw new ServiceException(message, ex);
 		}
 	}

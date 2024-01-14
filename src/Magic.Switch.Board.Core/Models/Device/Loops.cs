@@ -28,11 +28,11 @@ public class Loops : ILoops
 	/// Initializes a new instance of the <see cref="Loops"/> class.
 	/// </summary>
 	/// <param name="channels"></param>
-	public Loops(LoopChannels channels) => Channels = channels;
+	public Loops(LoopChannelType channels) => Channels = channels;
 
 	/// <inheritdoc cref="ILoops.Channels"/>
 	[Required(ErrorMessageResourceType = typeof(Resources), ErrorMessageResourceName = nameof(Model_Field_Required_Generic))]
 	[JsonPropertyName(nameof(Channels))]
 	[XmlAttribute(AttributeName = nameof(Channels))]
-	public LoopChannels Channels { get; set; }
+	public LoopChannelType Channels { get; set; }
 }

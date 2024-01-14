@@ -18,9 +18,9 @@ public static class Enums
 {
 	#region enums
 	/// <summary>
-	/// The <see cref="LogLevel"/> enums.
+	/// The <see cref="LogLevelType"/> enums.
 	/// </summary>
-	public enum LogLevel
+	public enum LogLevelType
 	{
 		/// <summary>
 		/// The <see cref="Trace"/> log level type enum.
@@ -74,10 +74,10 @@ public static class Enums
 	}
 
 	/// <summary>
-	/// The <see cref="SwitchChannels"/> enums.
+	/// The <see cref="SwitchChannelType"/> enums.
 	/// </summary>
 	[Flags]
-	public enum SwitchChannels
+	public enum SwitchChannelType
 	{
 		/// <summary>
 		/// The <see cref="CH01"/> enum is the "Switch Channel 1".
@@ -122,10 +122,10 @@ public static class Enums
 	}
 
 	/// <summary>
-	/// The <see cref="LoopChannels"/> enums.
+	/// The <see cref="LoopChannelType"/> enums.
 	/// </summary>
 	[Flags]
-	public enum LoopChannels
+	public enum LoopChannelType
 	{
 		/// <summary>
 		/// The <see cref="CH01"/> enum is the "Loop Channel 1".
@@ -193,9 +193,9 @@ public static class Enums
 	}
 
 	/// <summary>
-	/// The <see cref="MidiChannel"/> enums.
+	/// The <see cref="MidiChannelType"/> enums.
 	/// </summary>
-	public enum MidiChannel
+	public enum MidiChannelType
 	{
 		/// <summary>
 		/// The <see cref="CH01"/> enum is the "Midi Channel 1".
