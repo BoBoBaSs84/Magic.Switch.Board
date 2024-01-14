@@ -51,8 +51,8 @@ public sealed class MainViewModel : ViewModelBase
 	public ICollectionView ConfigurationsView { get; }
 
 
-	private ConfigurationVM configurationView;
-	public ConfigurationVM ConfigurationView { get => configurationView; set => SetProperty(ref configurationView, value); }
+	private ConfigurationVM _configurationView;
+	public ConfigurationVM ConfigurationView { get => _configurationView; set => SetProperty(ref _configurationView, value); }
 
 	// TODO: Some random configs for now ...
 	private List<ConfigurationVM> GetConfigurations()
@@ -84,7 +84,7 @@ public sealed class MainViewModel : ViewModelBase
 		return configList;
 	}
 
-	private double progress;
+	private double _progress;
 
-	public double Progress { get => progress; set => SetProperty(ref progress, value); }
+	public double Progress { get => _progress; set => SetProperty(ref _progress, value); }
 }

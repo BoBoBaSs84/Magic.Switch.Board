@@ -103,7 +103,7 @@ public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyCha
 	[AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
 	public sealed class NotifyPropertyChangedAttribute : Attribute
 	{
-		private string propertyName = string.Empty;
+		private string _propertyName = string.Empty;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="NotifyPropertyChangedAttribute"/> class.
@@ -118,7 +118,7 @@ public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyCha
 			if (string.IsNullOrEmpty(propertyName))
 				throw new ArgumentException("Can not be null or empty.", nameof(propertyName));
 
-			this.propertyName = propertyName;
+			this._propertyName = propertyName;
 		}
 
 		/// <summary>
@@ -126,11 +126,11 @@ public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyCha
 		/// </summary>
 		public string PropertyName
 		{
-			get => propertyName;
+			get => _propertyName;
 			set
 			{
-				if (propertyName != value)
-					propertyName = value;
+				if (_propertyName != value)
+					_propertyName = value;
 			}
 		}
 	}
@@ -144,7 +144,7 @@ public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyCha
 	[AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
 	public sealed class NotifyPropertyChangingAttribute : Attribute
 	{
-		private string propertyName = string.Empty;
+		private string _propertyName = string.Empty;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="NotifyPropertyChangedAttribute"/> class.
@@ -159,7 +159,7 @@ public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyCha
 			if (string.IsNullOrEmpty(propertyName))
 				throw new ArgumentException("Can not be null or empty.", nameof(propertyName));
 
-			this.propertyName = propertyName;
+			this._propertyName = propertyName;
 		}
 
 		/// <summary>
@@ -167,11 +167,11 @@ public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyCha
 		/// </summary>
 		public string PropertyName
 		{
-			get => propertyName;
+			get => _propertyName;
 			set
 			{
-				if (propertyName != value)
-					propertyName = value;
+				if (_propertyName != value)
+					_propertyName = value;
 			}
 		}
 	}
@@ -233,13 +233,13 @@ public abstract class ViewModelBase : INotifyPropertyChanged, INotifyPropertyCha
 /// <typeparam name="TModel">The domain model class.</typeparam>
 public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInfo where TModel : class
 {
-	private TModel model;
+	private TModel _model;
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ViewModelBase{TModel}"/> class.
 	/// </summary>
 	/// <param name="model">The domain model class.</param>
-	protected ViewModelBase(TModel model) => this.model = model;
+	protected ViewModelBase(TModel model) => this._model = model;
 
 	/// <summary>
 	/// The <see cref="Model"/> property.
@@ -250,8 +250,8 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	/// </remarks>
 	public TModel Model
 	{
-		get => model;
-		private set => SetProperty(ref model, value);
+		get => _model;
+		private set => SetProperty(ref _model, value);
 	}
 
 	/// <summary>

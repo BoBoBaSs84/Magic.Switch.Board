@@ -13,14 +13,14 @@ namespace Magic.Switch.Board.UI.Logic.ViewModels.Device;
 /// </summary>
 public sealed class ConfigurationVM : ViewModelBase<Configuration>
 {
-	private Guid id;
-	private string name = string.Empty;
-	private string? description;
-	private string applicationVersion = string.Empty;
-	private string configurationVersion = string.Empty;
-	private ICollection<ChannelVM> channels = new List<ChannelVM>();
-	private DateTime created;
-	private DateTime? updated;
+	private Guid _id;
+	private string _name = string.Empty;
+	private string? _description;
+	private string _applicationVersion = string.Empty;
+	private string _configurationVersion = string.Empty;
+	private ICollection<ChannelVM> _channels = new List<ChannelVM>();
+	private DateTime _created;
+	private DateTime? _updated;
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="ConfigurationVM"/> class.
@@ -43,35 +43,35 @@ public sealed class ConfigurationVM : ViewModelBase<Configuration>
 
 	/// <summary>The <see cref="Id"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Id))]
-	public Guid Id { get => id; private set => SetPropertyNoNotify(ref id, value); }
+	public Guid Id { get => _id; private set => SetPropertyNoNotify(ref _id, value); }
 
 	/// <summary>The <see cref="Name"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Name))]
-	public string Name { get => name; set => SetPropertyAndValidate(ref name, value); }
+	public string Name { get => _name; set => SetPropertyAndValidate(ref _name, value); }
 
 	/// <summary>The <see cref="Description"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Description))]
-	public string? Description { get => description; set => SetPropertyAndValidate(ref description, value); }
+	public string? Description { get => _description; set => SetPropertyAndValidate(ref _description, value); }
 
 	/// <summary>The <see cref="Created"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Created))]
-	public DateTime Created { get => created; set => SetPropertyNoNotify(ref created, value); }
+	public DateTime Created { get => _created; set => SetPropertyNoNotify(ref _created, value); }
 
 	/// <summary>The <see cref="Updated"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Updated))]
-	public DateTime? Updated { get => updated; set => SetProperty(ref updated, value); }
+	public DateTime? Updated { get => _updated; set => SetProperty(ref _updated, value); }
 
 	/// <summary>The <see cref="ApplicationVersion"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Application_Version))]
-	public string ApplicationVersion { get => applicationVersion; private set => SetPropertyNoNotify(ref applicationVersion, value); }
+	public string ApplicationVersion { get => _applicationVersion; private set => SetPropertyNoNotify(ref _applicationVersion, value); }
 
 	/// <summary>The <see cref="ConfigurationVersion"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Configuration_Version))]
-	public string ConfigurationVersion { get => configurationVersion; private set => SetPropertyNoNotify(ref configurationVersion, value); }
+	public string ConfigurationVersion { get => _configurationVersion; private set => SetPropertyNoNotify(ref _configurationVersion, value); }
 
 	/// <summary>The <see cref="Channels"/> property.</summary>
 	[Display(ResourceType = typeof(Resources), Name = nameof(ViewModel_Display_Name_Channels))]
-	public ICollection<ChannelVM> Channels { get => channels; set => SetProperty(ref channels, value); }
+	public ICollection<ChannelVM> Channels { get => _channels; set => SetProperty(ref _channels, value); }
 
 	private void Initialize()
 	{
