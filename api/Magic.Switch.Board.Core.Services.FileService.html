@@ -88,7 +88,7 @@
 
   <h1 id="Magic_Switch_Board_Core_Services_FileService" data-uid="Magic.Switch.Board.Core.Services.FileService" class="text-break">
     Class FileService
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileService.cs/#L13"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileService.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -159,10 +159,10 @@
 
   <h3 id="Magic_Switch_Board_Core_Services_FileService__ctor_Magic_Switch_Board_Core_Contracts_Services_ILoggerService_" data-uid="Magic.Switch.Board.Core.Services.FileService.#ctor(Magic.Switch.Board.Core.Contracts.Services.ILoggerService)">
   FileService(ILoggerService)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileService.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileService.cs/#L16"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Magic.Switch.Board.Core.Services.FileService.html">FileService</a> class.</p>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Magic.Switch.Board.Core.Services.FileService.html">FileService</a> class implements the mebers of the <a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.IFileService.html">IFileService</a> interface.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -173,7 +173,8 @@
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>logger</code> <a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.ILoggerService.html">ILoggerService</a></dt>
-    <dd></dd>
+    <dd><p>The logger service instance to use.</p>
+</dd>
   </dl>
 
 
@@ -195,7 +196,7 @@
 
   <h3 id="Magic_Switch_Board_Core_Services_FileService_Delete_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Services.FileService.Delete(System.String,System.String)">
   Delete(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileService.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileService.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.IFileService.html#Magic_Switch_Board_Core_Contracts_Services_IFileService_Delete_System_String_System_String_">Delete(string, string)</a> method should be used for deleting a file.</p>
@@ -229,10 +230,6 @@
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd></dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd></dd>
     <dt><a class="xref" href="Magic.Switch.Board.Core.Exceptions.ServiceException.html">ServiceException</a></dt>
     <dd></dd>
   </dl>
@@ -243,7 +240,7 @@
 
   <h3 id="Magic_Switch_Board_Core_Services_FileService_Read_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Services.FileService.Read(System.String,System.String)">
   Read(string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileService.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileService.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.IFileService.html#Magic_Switch_Board_Core_Contracts_Services_IFileService_Read_System_String_System_String_">Read(string, string)</a> method should be used for reading a file.</p>
@@ -280,10 +277,6 @@
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd></dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd></dd>
     <dt><a class="xref" href="Magic.Switch.Board.Core.Exceptions.ServiceException.html">ServiceException</a></dt>
     <dd></dd>
   </dl>
@@ -294,7 +287,7 @@
 
   <h3 id="Magic_Switch_Board_Core_Services_FileService_Save_System_String_System_String_System_String_" data-uid="Magic.Switch.Board.Core.Services.FileService.Save(System.String,System.String,System.String)">
   Save(string, string, string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileService.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileService.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>The <a class="xref" href="Magic.Switch.Board.Core.Contracts.Services.IFileService.html#Magic_Switch_Board_Core_Contracts_Services_IFileService_Save_System_String_System_String_System_String_">Save(string, string, string)</a> method should be used for saving a file.</p>
@@ -328,10 +321,6 @@
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd></dd>
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd></dd>
     <dt><a class="xref" href="Magic.Switch.Board.Core.Exceptions.ServiceException.html">ServiceException</a></dt>
     <dd></dd>
   </dl>
@@ -342,7 +331,7 @@
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileService.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/BoBoBaSs84/Magic.Switch.Board/blob/main/src/Magic.Switch.Board.Core/Services/FileService.cs/#L16" class="edit-link">Edit this page</a>
         </div>
 
 

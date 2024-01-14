@@ -753,210 +753,210 @@ references:
   fullName.vb: Magic.Switch.Board.Core.Enums.GetListFromEnum(Of T)(T)
   nameWithType: Enums.GetListFromEnum<T>(T)
   nameWithType.vb: Enums.GetListFromEnum(Of T)(T)
-- uid: Magic.Switch.Board.Core.Enums.LogLevel
-  name: Enums.LogLevel
-  href: api/Magic.Switch.Board.Core.Enums.LogLevel.html
-  commentId: T:Magic.Switch.Board.Core.Enums.LogLevel
-  fullName: Magic.Switch.Board.Core.Enums.LogLevel
-  nameWithType: Enums.LogLevel
-- uid: Magic.Switch.Board.Core.Enums.LogLevel.Critical
+- uid: Magic.Switch.Board.Core.Enums.LogLevelType
+  name: Enums.LogLevelType
+  href: api/Magic.Switch.Board.Core.Enums.LogLevelType.html
+  commentId: T:Magic.Switch.Board.Core.Enums.LogLevelType
+  fullName: Magic.Switch.Board.Core.Enums.LogLevelType
+  nameWithType: Enums.LogLevelType
+- uid: Magic.Switch.Board.Core.Enums.LogLevelType.Critical
   name: Critical
-  href: api/Magic.Switch.Board.Core.Enums.LogLevel.html#Magic_Switch_Board_Core_Enums_LogLevel_Critical
-  commentId: F:Magic.Switch.Board.Core.Enums.LogLevel.Critical
-  fullName: Magic.Switch.Board.Core.Enums.LogLevel.Critical
-  nameWithType: Enums.LogLevel.Critical
-- uid: Magic.Switch.Board.Core.Enums.LogLevel.Debug
+  href: api/Magic.Switch.Board.Core.Enums.LogLevelType.html#Magic_Switch_Board_Core_Enums_LogLevelType_Critical
+  commentId: F:Magic.Switch.Board.Core.Enums.LogLevelType.Critical
+  fullName: Magic.Switch.Board.Core.Enums.LogLevelType.Critical
+  nameWithType: Enums.LogLevelType.Critical
+- uid: Magic.Switch.Board.Core.Enums.LogLevelType.Debug
   name: Debug
-  href: api/Magic.Switch.Board.Core.Enums.LogLevel.html#Magic_Switch_Board_Core_Enums_LogLevel_Debug
-  commentId: F:Magic.Switch.Board.Core.Enums.LogLevel.Debug
-  fullName: Magic.Switch.Board.Core.Enums.LogLevel.Debug
-  nameWithType: Enums.LogLevel.Debug
-- uid: Magic.Switch.Board.Core.Enums.LogLevel.Error
+  href: api/Magic.Switch.Board.Core.Enums.LogLevelType.html#Magic_Switch_Board_Core_Enums_LogLevelType_Debug
+  commentId: F:Magic.Switch.Board.Core.Enums.LogLevelType.Debug
+  fullName: Magic.Switch.Board.Core.Enums.LogLevelType.Debug
+  nameWithType: Enums.LogLevelType.Debug
+- uid: Magic.Switch.Board.Core.Enums.LogLevelType.Error
   name: Error
-  href: api/Magic.Switch.Board.Core.Enums.LogLevel.html#Magic_Switch_Board_Core_Enums_LogLevel_Error
-  commentId: F:Magic.Switch.Board.Core.Enums.LogLevel.Error
-  fullName: Magic.Switch.Board.Core.Enums.LogLevel.Error
-  nameWithType: Enums.LogLevel.Error
-- uid: Magic.Switch.Board.Core.Enums.LogLevel.Information
+  href: api/Magic.Switch.Board.Core.Enums.LogLevelType.html#Magic_Switch_Board_Core_Enums_LogLevelType_Error
+  commentId: F:Magic.Switch.Board.Core.Enums.LogLevelType.Error
+  fullName: Magic.Switch.Board.Core.Enums.LogLevelType.Error
+  nameWithType: Enums.LogLevelType.Error
+- uid: Magic.Switch.Board.Core.Enums.LogLevelType.Information
   name: Information
-  href: api/Magic.Switch.Board.Core.Enums.LogLevel.html#Magic_Switch_Board_Core_Enums_LogLevel_Information
-  commentId: F:Magic.Switch.Board.Core.Enums.LogLevel.Information
-  fullName: Magic.Switch.Board.Core.Enums.LogLevel.Information
-  nameWithType: Enums.LogLevel.Information
-- uid: Magic.Switch.Board.Core.Enums.LogLevel.None
+  href: api/Magic.Switch.Board.Core.Enums.LogLevelType.html#Magic_Switch_Board_Core_Enums_LogLevelType_Information
+  commentId: F:Magic.Switch.Board.Core.Enums.LogLevelType.Information
+  fullName: Magic.Switch.Board.Core.Enums.LogLevelType.Information
+  nameWithType: Enums.LogLevelType.Information
+- uid: Magic.Switch.Board.Core.Enums.LogLevelType.None
   name: None
-  href: api/Magic.Switch.Board.Core.Enums.LogLevel.html#Magic_Switch_Board_Core_Enums_LogLevel_None
-  commentId: F:Magic.Switch.Board.Core.Enums.LogLevel.None
-  fullName: Magic.Switch.Board.Core.Enums.LogLevel.None
-  nameWithType: Enums.LogLevel.None
-- uid: Magic.Switch.Board.Core.Enums.LogLevel.Trace
+  href: api/Magic.Switch.Board.Core.Enums.LogLevelType.html#Magic_Switch_Board_Core_Enums_LogLevelType_None
+  commentId: F:Magic.Switch.Board.Core.Enums.LogLevelType.None
+  fullName: Magic.Switch.Board.Core.Enums.LogLevelType.None
+  nameWithType: Enums.LogLevelType.None
+- uid: Magic.Switch.Board.Core.Enums.LogLevelType.Trace
   name: Trace
-  href: api/Magic.Switch.Board.Core.Enums.LogLevel.html#Magic_Switch_Board_Core_Enums_LogLevel_Trace
-  commentId: F:Magic.Switch.Board.Core.Enums.LogLevel.Trace
-  fullName: Magic.Switch.Board.Core.Enums.LogLevel.Trace
-  nameWithType: Enums.LogLevel.Trace
-- uid: Magic.Switch.Board.Core.Enums.LogLevel.Warning
+  href: api/Magic.Switch.Board.Core.Enums.LogLevelType.html#Magic_Switch_Board_Core_Enums_LogLevelType_Trace
+  commentId: F:Magic.Switch.Board.Core.Enums.LogLevelType.Trace
+  fullName: Magic.Switch.Board.Core.Enums.LogLevelType.Trace
+  nameWithType: Enums.LogLevelType.Trace
+- uid: Magic.Switch.Board.Core.Enums.LogLevelType.Warning
   name: Warning
-  href: api/Magic.Switch.Board.Core.Enums.LogLevel.html#Magic_Switch_Board_Core_Enums_LogLevel_Warning
-  commentId: F:Magic.Switch.Board.Core.Enums.LogLevel.Warning
-  fullName: Magic.Switch.Board.Core.Enums.LogLevel.Warning
-  nameWithType: Enums.LogLevel.Warning
-- uid: Magic.Switch.Board.Core.Enums.LoopChannels
-  name: Enums.LoopChannels
-  href: api/Magic.Switch.Board.Core.Enums.LoopChannels.html
-  commentId: T:Magic.Switch.Board.Core.Enums.LoopChannels
-  fullName: Magic.Switch.Board.Core.Enums.LoopChannels
-  nameWithType: Enums.LoopChannels
-- uid: Magic.Switch.Board.Core.Enums.LoopChannels.CH01
+  href: api/Magic.Switch.Board.Core.Enums.LogLevelType.html#Magic_Switch_Board_Core_Enums_LogLevelType_Warning
+  commentId: F:Magic.Switch.Board.Core.Enums.LogLevelType.Warning
+  fullName: Magic.Switch.Board.Core.Enums.LogLevelType.Warning
+  nameWithType: Enums.LogLevelType.Warning
+- uid: Magic.Switch.Board.Core.Enums.LoopChannelType
+  name: Enums.LoopChannelType
+  href: api/Magic.Switch.Board.Core.Enums.LoopChannelType.html
+  commentId: T:Magic.Switch.Board.Core.Enums.LoopChannelType
+  fullName: Magic.Switch.Board.Core.Enums.LoopChannelType
+  nameWithType: Enums.LoopChannelType
+- uid: Magic.Switch.Board.Core.Enums.LoopChannelType.CH01
   name: CH01
-  href: api/Magic.Switch.Board.Core.Enums.LoopChannels.html#Magic_Switch_Board_Core_Enums_LoopChannels_CH01
-  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannels.CH01
-  fullName: Magic.Switch.Board.Core.Enums.LoopChannels.CH01
-  nameWithType: Enums.LoopChannels.CH01
-- uid: Magic.Switch.Board.Core.Enums.LoopChannels.CH02
+  href: api/Magic.Switch.Board.Core.Enums.LoopChannelType.html#Magic_Switch_Board_Core_Enums_LoopChannelType_CH01
+  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannelType.CH01
+  fullName: Magic.Switch.Board.Core.Enums.LoopChannelType.CH01
+  nameWithType: Enums.LoopChannelType.CH01
+- uid: Magic.Switch.Board.Core.Enums.LoopChannelType.CH02
   name: CH02
-  href: api/Magic.Switch.Board.Core.Enums.LoopChannels.html#Magic_Switch_Board_Core_Enums_LoopChannels_CH02
-  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannels.CH02
-  fullName: Magic.Switch.Board.Core.Enums.LoopChannels.CH02
-  nameWithType: Enums.LoopChannels.CH02
-- uid: Magic.Switch.Board.Core.Enums.LoopChannels.CH03
+  href: api/Magic.Switch.Board.Core.Enums.LoopChannelType.html#Magic_Switch_Board_Core_Enums_LoopChannelType_CH02
+  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannelType.CH02
+  fullName: Magic.Switch.Board.Core.Enums.LoopChannelType.CH02
+  nameWithType: Enums.LoopChannelType.CH02
+- uid: Magic.Switch.Board.Core.Enums.LoopChannelType.CH03
   name: CH03
-  href: api/Magic.Switch.Board.Core.Enums.LoopChannels.html#Magic_Switch_Board_Core_Enums_LoopChannels_CH03
-  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannels.CH03
-  fullName: Magic.Switch.Board.Core.Enums.LoopChannels.CH03
-  nameWithType: Enums.LoopChannels.CH03
-- uid: Magic.Switch.Board.Core.Enums.LoopChannels.CH04
+  href: api/Magic.Switch.Board.Core.Enums.LoopChannelType.html#Magic_Switch_Board_Core_Enums_LoopChannelType_CH03
+  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannelType.CH03
+  fullName: Magic.Switch.Board.Core.Enums.LoopChannelType.CH03
+  nameWithType: Enums.LoopChannelType.CH03
+- uid: Magic.Switch.Board.Core.Enums.LoopChannelType.CH04
   name: CH04
-  href: api/Magic.Switch.Board.Core.Enums.LoopChannels.html#Magic_Switch_Board_Core_Enums_LoopChannels_CH04
-  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannels.CH04
-  fullName: Magic.Switch.Board.Core.Enums.LoopChannels.CH04
-  nameWithType: Enums.LoopChannels.CH04
-- uid: Magic.Switch.Board.Core.Enums.LoopChannels.CH05
+  href: api/Magic.Switch.Board.Core.Enums.LoopChannelType.html#Magic_Switch_Board_Core_Enums_LoopChannelType_CH04
+  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannelType.CH04
+  fullName: Magic.Switch.Board.Core.Enums.LoopChannelType.CH04
+  nameWithType: Enums.LoopChannelType.CH04
+- uid: Magic.Switch.Board.Core.Enums.LoopChannelType.CH05
   name: CH05
-  href: api/Magic.Switch.Board.Core.Enums.LoopChannels.html#Magic_Switch_Board_Core_Enums_LoopChannels_CH05
-  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannels.CH05
-  fullName: Magic.Switch.Board.Core.Enums.LoopChannels.CH05
-  nameWithType: Enums.LoopChannels.CH05
-- uid: Magic.Switch.Board.Core.Enums.LoopChannels.CH06
+  href: api/Magic.Switch.Board.Core.Enums.LoopChannelType.html#Magic_Switch_Board_Core_Enums_LoopChannelType_CH05
+  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannelType.CH05
+  fullName: Magic.Switch.Board.Core.Enums.LoopChannelType.CH05
+  nameWithType: Enums.LoopChannelType.CH05
+- uid: Magic.Switch.Board.Core.Enums.LoopChannelType.CH06
   name: CH06
-  href: api/Magic.Switch.Board.Core.Enums.LoopChannels.html#Magic_Switch_Board_Core_Enums_LoopChannels_CH06
-  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannels.CH06
-  fullName: Magic.Switch.Board.Core.Enums.LoopChannels.CH06
-  nameWithType: Enums.LoopChannels.CH06
-- uid: Magic.Switch.Board.Core.Enums.LoopChannels.CH07
+  href: api/Magic.Switch.Board.Core.Enums.LoopChannelType.html#Magic_Switch_Board_Core_Enums_LoopChannelType_CH06
+  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannelType.CH06
+  fullName: Magic.Switch.Board.Core.Enums.LoopChannelType.CH06
+  nameWithType: Enums.LoopChannelType.CH06
+- uid: Magic.Switch.Board.Core.Enums.LoopChannelType.CH07
   name: CH07
-  href: api/Magic.Switch.Board.Core.Enums.LoopChannels.html#Magic_Switch_Board_Core_Enums_LoopChannels_CH07
-  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannels.CH07
-  fullName: Magic.Switch.Board.Core.Enums.LoopChannels.CH07
-  nameWithType: Enums.LoopChannels.CH07
-- uid: Magic.Switch.Board.Core.Enums.LoopChannels.CH08
+  href: api/Magic.Switch.Board.Core.Enums.LoopChannelType.html#Magic_Switch_Board_Core_Enums_LoopChannelType_CH07
+  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannelType.CH07
+  fullName: Magic.Switch.Board.Core.Enums.LoopChannelType.CH07
+  nameWithType: Enums.LoopChannelType.CH07
+- uid: Magic.Switch.Board.Core.Enums.LoopChannelType.CH08
   name: CH08
-  href: api/Magic.Switch.Board.Core.Enums.LoopChannels.html#Magic_Switch_Board_Core_Enums_LoopChannels_CH08
-  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannels.CH08
-  fullName: Magic.Switch.Board.Core.Enums.LoopChannels.CH08
-  nameWithType: Enums.LoopChannels.CH08
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel
-  name: Enums.MidiChannel
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html
-  commentId: T:Magic.Switch.Board.Core.Enums.MidiChannel
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel
-  nameWithType: Enums.MidiChannel
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH01
+  href: api/Magic.Switch.Board.Core.Enums.LoopChannelType.html#Magic_Switch_Board_Core_Enums_LoopChannelType_CH08
+  commentId: F:Magic.Switch.Board.Core.Enums.LoopChannelType.CH08
+  fullName: Magic.Switch.Board.Core.Enums.LoopChannelType.CH08
+  nameWithType: Enums.LoopChannelType.CH08
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType
+  name: Enums.MidiChannelType
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html
+  commentId: T:Magic.Switch.Board.Core.Enums.MidiChannelType
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType
+  nameWithType: Enums.MidiChannelType
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH01
   name: CH01
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH01
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH01
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH01
-  nameWithType: Enums.MidiChannel.CH01
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH02
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH01
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH01
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH01
+  nameWithType: Enums.MidiChannelType.CH01
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH02
   name: CH02
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH02
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH02
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH02
-  nameWithType: Enums.MidiChannel.CH02
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH03
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH02
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH02
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH02
+  nameWithType: Enums.MidiChannelType.CH02
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH03
   name: CH03
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH03
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH03
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH03
-  nameWithType: Enums.MidiChannel.CH03
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH04
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH03
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH03
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH03
+  nameWithType: Enums.MidiChannelType.CH03
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH04
   name: CH04
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH04
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH04
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH04
-  nameWithType: Enums.MidiChannel.CH04
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH05
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH04
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH04
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH04
+  nameWithType: Enums.MidiChannelType.CH04
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH05
   name: CH05
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH05
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH05
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH05
-  nameWithType: Enums.MidiChannel.CH05
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH06
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH05
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH05
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH05
+  nameWithType: Enums.MidiChannelType.CH05
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH06
   name: CH06
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH06
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH06
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH06
-  nameWithType: Enums.MidiChannel.CH06
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH07
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH06
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH06
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH06
+  nameWithType: Enums.MidiChannelType.CH06
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH07
   name: CH07
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH07
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH07
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH07
-  nameWithType: Enums.MidiChannel.CH07
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH08
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH07
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH07
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH07
+  nameWithType: Enums.MidiChannelType.CH07
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH08
   name: CH08
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH08
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH08
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH08
-  nameWithType: Enums.MidiChannel.CH08
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH09
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH08
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH08
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH08
+  nameWithType: Enums.MidiChannelType.CH08
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH09
   name: CH09
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH09
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH09
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH09
-  nameWithType: Enums.MidiChannel.CH09
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH10
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH09
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH09
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH09
+  nameWithType: Enums.MidiChannelType.CH09
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH10
   name: CH10
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH10
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH10
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH10
-  nameWithType: Enums.MidiChannel.CH10
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH11
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH10
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH10
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH10
+  nameWithType: Enums.MidiChannelType.CH10
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH11
   name: CH11
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH11
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH11
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH11
-  nameWithType: Enums.MidiChannel.CH11
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH12
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH11
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH11
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH11
+  nameWithType: Enums.MidiChannelType.CH11
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH12
   name: CH12
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH12
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH12
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH12
-  nameWithType: Enums.MidiChannel.CH12
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH13
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH12
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH12
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH12
+  nameWithType: Enums.MidiChannelType.CH12
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH13
   name: CH13
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH13
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH13
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH13
-  nameWithType: Enums.MidiChannel.CH13
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH14
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH13
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH13
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH13
+  nameWithType: Enums.MidiChannelType.CH13
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH14
   name: CH14
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH14
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH14
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH14
-  nameWithType: Enums.MidiChannel.CH14
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH15
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH14
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH14
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH14
+  nameWithType: Enums.MidiChannelType.CH14
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH15
   name: CH15
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH15
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH15
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH15
-  nameWithType: Enums.MidiChannel.CH15
-- uid: Magic.Switch.Board.Core.Enums.MidiChannel.CH16
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH15
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH15
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH15
+  nameWithType: Enums.MidiChannelType.CH15
+- uid: Magic.Switch.Board.Core.Enums.MidiChannelType.CH16
   name: CH16
-  href: api/Magic.Switch.Board.Core.Enums.MidiChannel.html#Magic_Switch_Board_Core_Enums_MidiChannel_CH16
-  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannel.CH16
-  fullName: Magic.Switch.Board.Core.Enums.MidiChannel.CH16
-  nameWithType: Enums.MidiChannel.CH16
+  href: api/Magic.Switch.Board.Core.Enums.MidiChannelType.html#Magic_Switch_Board_Core_Enums_MidiChannelType_CH16
+  commentId: F:Magic.Switch.Board.Core.Enums.MidiChannelType.CH16
+  fullName: Magic.Switch.Board.Core.Enums.MidiChannelType.CH16
+  nameWithType: Enums.MidiChannelType.CH16
 - uid: Magic.Switch.Board.Core.Enums.MidiMessageType
   name: Enums.MidiMessageType
   href: api/Magic.Switch.Board.Core.Enums.MidiMessageType.html
@@ -975,60 +975,60 @@ references:
   commentId: F:Magic.Switch.Board.Core.Enums.MidiMessageType.PCM
   fullName: Magic.Switch.Board.Core.Enums.MidiMessageType.PCM
   nameWithType: Enums.MidiMessageType.PCM
-- uid: Magic.Switch.Board.Core.Enums.SwitchChannels
-  name: Enums.SwitchChannels
-  href: api/Magic.Switch.Board.Core.Enums.SwitchChannels.html
-  commentId: T:Magic.Switch.Board.Core.Enums.SwitchChannels
-  fullName: Magic.Switch.Board.Core.Enums.SwitchChannels
-  nameWithType: Enums.SwitchChannels
-- uid: Magic.Switch.Board.Core.Enums.SwitchChannels.CH01
+- uid: Magic.Switch.Board.Core.Enums.SwitchChannelType
+  name: Enums.SwitchChannelType
+  href: api/Magic.Switch.Board.Core.Enums.SwitchChannelType.html
+  commentId: T:Magic.Switch.Board.Core.Enums.SwitchChannelType
+  fullName: Magic.Switch.Board.Core.Enums.SwitchChannelType
+  nameWithType: Enums.SwitchChannelType
+- uid: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH01
   name: CH01
-  href: api/Magic.Switch.Board.Core.Enums.SwitchChannels.html#Magic_Switch_Board_Core_Enums_SwitchChannels_CH01
-  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannels.CH01
-  fullName: Magic.Switch.Board.Core.Enums.SwitchChannels.CH01
-  nameWithType: Enums.SwitchChannels.CH01
-- uid: Magic.Switch.Board.Core.Enums.SwitchChannels.CH02
+  href: api/Magic.Switch.Board.Core.Enums.SwitchChannelType.html#Magic_Switch_Board_Core_Enums_SwitchChannelType_CH01
+  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannelType.CH01
+  fullName: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH01
+  nameWithType: Enums.SwitchChannelType.CH01
+- uid: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH02
   name: CH02
-  href: api/Magic.Switch.Board.Core.Enums.SwitchChannels.html#Magic_Switch_Board_Core_Enums_SwitchChannels_CH02
-  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannels.CH02
-  fullName: Magic.Switch.Board.Core.Enums.SwitchChannels.CH02
-  nameWithType: Enums.SwitchChannels.CH02
-- uid: Magic.Switch.Board.Core.Enums.SwitchChannels.CH03
+  href: api/Magic.Switch.Board.Core.Enums.SwitchChannelType.html#Magic_Switch_Board_Core_Enums_SwitchChannelType_CH02
+  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannelType.CH02
+  fullName: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH02
+  nameWithType: Enums.SwitchChannelType.CH02
+- uid: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH03
   name: CH03
-  href: api/Magic.Switch.Board.Core.Enums.SwitchChannels.html#Magic_Switch_Board_Core_Enums_SwitchChannels_CH03
-  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannels.CH03
-  fullName: Magic.Switch.Board.Core.Enums.SwitchChannels.CH03
-  nameWithType: Enums.SwitchChannels.CH03
-- uid: Magic.Switch.Board.Core.Enums.SwitchChannels.CH04
+  href: api/Magic.Switch.Board.Core.Enums.SwitchChannelType.html#Magic_Switch_Board_Core_Enums_SwitchChannelType_CH03
+  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannelType.CH03
+  fullName: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH03
+  nameWithType: Enums.SwitchChannelType.CH03
+- uid: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH04
   name: CH04
-  href: api/Magic.Switch.Board.Core.Enums.SwitchChannels.html#Magic_Switch_Board_Core_Enums_SwitchChannels_CH04
-  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannels.CH04
-  fullName: Magic.Switch.Board.Core.Enums.SwitchChannels.CH04
-  nameWithType: Enums.SwitchChannels.CH04
-- uid: Magic.Switch.Board.Core.Enums.SwitchChannels.CH05
+  href: api/Magic.Switch.Board.Core.Enums.SwitchChannelType.html#Magic_Switch_Board_Core_Enums_SwitchChannelType_CH04
+  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannelType.CH04
+  fullName: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH04
+  nameWithType: Enums.SwitchChannelType.CH04
+- uid: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH05
   name: CH05
-  href: api/Magic.Switch.Board.Core.Enums.SwitchChannels.html#Magic_Switch_Board_Core_Enums_SwitchChannels_CH05
-  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannels.CH05
-  fullName: Magic.Switch.Board.Core.Enums.SwitchChannels.CH05
-  nameWithType: Enums.SwitchChannels.CH05
-- uid: Magic.Switch.Board.Core.Enums.SwitchChannels.CH06
+  href: api/Magic.Switch.Board.Core.Enums.SwitchChannelType.html#Magic_Switch_Board_Core_Enums_SwitchChannelType_CH05
+  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannelType.CH05
+  fullName: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH05
+  nameWithType: Enums.SwitchChannelType.CH05
+- uid: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH06
   name: CH06
-  href: api/Magic.Switch.Board.Core.Enums.SwitchChannels.html#Magic_Switch_Board_Core_Enums_SwitchChannels_CH06
-  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannels.CH06
-  fullName: Magic.Switch.Board.Core.Enums.SwitchChannels.CH06
-  nameWithType: Enums.SwitchChannels.CH06
-- uid: Magic.Switch.Board.Core.Enums.SwitchChannels.CH07
+  href: api/Magic.Switch.Board.Core.Enums.SwitchChannelType.html#Magic_Switch_Board_Core_Enums_SwitchChannelType_CH06
+  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannelType.CH06
+  fullName: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH06
+  nameWithType: Enums.SwitchChannelType.CH06
+- uid: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH07
   name: CH07
-  href: api/Magic.Switch.Board.Core.Enums.SwitchChannels.html#Magic_Switch_Board_Core_Enums_SwitchChannels_CH07
-  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannels.CH07
-  fullName: Magic.Switch.Board.Core.Enums.SwitchChannels.CH07
-  nameWithType: Enums.SwitchChannels.CH07
-- uid: Magic.Switch.Board.Core.Enums.SwitchChannels.CH08
+  href: api/Magic.Switch.Board.Core.Enums.SwitchChannelType.html#Magic_Switch_Board_Core_Enums_SwitchChannelType_CH07
+  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannelType.CH07
+  fullName: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH07
+  nameWithType: Enums.SwitchChannelType.CH07
+- uid: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH08
   name: CH08
-  href: api/Magic.Switch.Board.Core.Enums.SwitchChannels.html#Magic_Switch_Board_Core_Enums_SwitchChannels_CH08
-  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannels.CH08
-  fullName: Magic.Switch.Board.Core.Enums.SwitchChannels.CH08
-  nameWithType: Enums.SwitchChannels.CH08
+  href: api/Magic.Switch.Board.Core.Enums.SwitchChannelType.html#Magic_Switch_Board_Core_Enums_SwitchChannelType_CH08
+  commentId: F:Magic.Switch.Board.Core.Enums.SwitchChannelType.CH08
+  fullName: Magic.Switch.Board.Core.Enums.SwitchChannelType.CH08
+  nameWithType: Enums.SwitchChannelType.CH08
 - uid: Magic.Switch.Board.Core.Exceptions
   name: Magic.Switch.Board.Core.Exceptions
   href: api/Magic.Switch.Board.Core.Exceptions.html
@@ -1249,15 +1249,15 @@ references:
   fullName.vb: Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.New()
   nameWithType: InputOutputBase.InputOutputBase()
   nameWithType.vb: InputOutputBase.New()
-- uid: Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.#ctor(Magic.Switch.Board.Core.Enums.MidiChannel,Magic.Switch.Board.Core.Enums.MidiMessageType,System.Int32)
-  name: InputOutputBase(MidiChannel, MidiMessageType, int)
-  href: api/Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.html#Magic_Switch_Board_Core_Models_BaseTypes_Device_InputOutputBase__ctor_Magic_Switch_Board_Core_Enums_MidiChannel_Magic_Switch_Board_Core_Enums_MidiMessageType_System_Int32_
-  commentId: M:Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.#ctor(Magic.Switch.Board.Core.Enums.MidiChannel,Magic.Switch.Board.Core.Enums.MidiMessageType,System.Int32)
-  name.vb: New(MidiChannel, MidiMessageType, Integer)
-  fullName: Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.InputOutputBase(Magic.Switch.Board.Core.Enums.MidiChannel, Magic.Switch.Board.Core.Enums.MidiMessageType, int)
-  fullName.vb: Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.New(Magic.Switch.Board.Core.Enums.MidiChannel, Magic.Switch.Board.Core.Enums.MidiMessageType, Integer)
-  nameWithType: InputOutputBase.InputOutputBase(Enums.MidiChannel, Enums.MidiMessageType, int)
-  nameWithType.vb: InputOutputBase.New(Enums.MidiChannel, Enums.MidiMessageType, Integer)
+- uid: Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.#ctor(Magic.Switch.Board.Core.Enums.MidiChannelType,Magic.Switch.Board.Core.Enums.MidiMessageType,System.Int32)
+  name: InputOutputBase(MidiChannelType, MidiMessageType, int)
+  href: api/Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.html#Magic_Switch_Board_Core_Models_BaseTypes_Device_InputOutputBase__ctor_Magic_Switch_Board_Core_Enums_MidiChannelType_Magic_Switch_Board_Core_Enums_MidiMessageType_System_Int32_
+  commentId: M:Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.#ctor(Magic.Switch.Board.Core.Enums.MidiChannelType,Magic.Switch.Board.Core.Enums.MidiMessageType,System.Int32)
+  name.vb: New(MidiChannelType, MidiMessageType, Integer)
+  fullName: Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.InputOutputBase(Magic.Switch.Board.Core.Enums.MidiChannelType, Magic.Switch.Board.Core.Enums.MidiMessageType, int)
+  fullName.vb: Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.New(Magic.Switch.Board.Core.Enums.MidiChannelType, Magic.Switch.Board.Core.Enums.MidiMessageType, Integer)
+  nameWithType: InputOutputBase.InputOutputBase(Enums.MidiChannelType, Enums.MidiMessageType, int)
+  nameWithType.vb: InputOutputBase.New(Enums.MidiChannelType, Enums.MidiMessageType, Integer)
 - uid: Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.#ctor*
   name: InputOutputBase
   href: api/Magic.Switch.Board.Core.Models.BaseTypes.Device.InputOutputBase.html#Magic_Switch_Board_Core_Models_BaseTypes_Device_InputOutputBase__ctor_
@@ -1556,15 +1556,15 @@ references:
   fullName.vb: Magic.Switch.Board.Core.Models.Device.Input.New()
   nameWithType: Input.Input()
   nameWithType.vb: Input.New()
-- uid: Magic.Switch.Board.Core.Models.Device.Input.#ctor(Magic.Switch.Board.Core.Enums.MidiChannel,Magic.Switch.Board.Core.Enums.MidiMessageType,System.Int32)
-  name: Input(MidiChannel, MidiMessageType, int)
-  href: api/Magic.Switch.Board.Core.Models.Device.Input.html#Magic_Switch_Board_Core_Models_Device_Input__ctor_Magic_Switch_Board_Core_Enums_MidiChannel_Magic_Switch_Board_Core_Enums_MidiMessageType_System_Int32_
-  commentId: M:Magic.Switch.Board.Core.Models.Device.Input.#ctor(Magic.Switch.Board.Core.Enums.MidiChannel,Magic.Switch.Board.Core.Enums.MidiMessageType,System.Int32)
-  name.vb: New(MidiChannel, MidiMessageType, Integer)
-  fullName: Magic.Switch.Board.Core.Models.Device.Input.Input(Magic.Switch.Board.Core.Enums.MidiChannel, Magic.Switch.Board.Core.Enums.MidiMessageType, int)
-  fullName.vb: Magic.Switch.Board.Core.Models.Device.Input.New(Magic.Switch.Board.Core.Enums.MidiChannel, Magic.Switch.Board.Core.Enums.MidiMessageType, Integer)
-  nameWithType: Input.Input(Enums.MidiChannel, Enums.MidiMessageType, int)
-  nameWithType.vb: Input.New(Enums.MidiChannel, Enums.MidiMessageType, Integer)
+- uid: Magic.Switch.Board.Core.Models.Device.Input.#ctor(Magic.Switch.Board.Core.Enums.MidiChannelType,Magic.Switch.Board.Core.Enums.MidiMessageType,System.Int32)
+  name: Input(MidiChannelType, MidiMessageType, int)
+  href: api/Magic.Switch.Board.Core.Models.Device.Input.html#Magic_Switch_Board_Core_Models_Device_Input__ctor_Magic_Switch_Board_Core_Enums_MidiChannelType_Magic_Switch_Board_Core_Enums_MidiMessageType_System_Int32_
+  commentId: M:Magic.Switch.Board.Core.Models.Device.Input.#ctor(Magic.Switch.Board.Core.Enums.MidiChannelType,Magic.Switch.Board.Core.Enums.MidiMessageType,System.Int32)
+  name.vb: New(MidiChannelType, MidiMessageType, Integer)
+  fullName: Magic.Switch.Board.Core.Models.Device.Input.Input(Magic.Switch.Board.Core.Enums.MidiChannelType, Magic.Switch.Board.Core.Enums.MidiMessageType, int)
+  fullName.vb: Magic.Switch.Board.Core.Models.Device.Input.New(Magic.Switch.Board.Core.Enums.MidiChannelType, Magic.Switch.Board.Core.Enums.MidiMessageType, Integer)
+  nameWithType: Input.Input(Enums.MidiChannelType, Enums.MidiMessageType, int)
+  nameWithType.vb: Input.New(Enums.MidiChannelType, Enums.MidiMessageType, Integer)
 - uid: Magic.Switch.Board.Core.Models.Device.Input.#ctor*
   name: Input
   href: api/Magic.Switch.Board.Core.Models.Device.Input.html#Magic_Switch_Board_Core_Models_Device_Input__ctor_
@@ -1590,15 +1590,15 @@ references:
   fullName.vb: Magic.Switch.Board.Core.Models.Device.Loops.New()
   nameWithType: Loops.Loops()
   nameWithType.vb: Loops.New()
-- uid: Magic.Switch.Board.Core.Models.Device.Loops.#ctor(Magic.Switch.Board.Core.Enums.LoopChannels)
-  name: Loops(LoopChannels)
-  href: api/Magic.Switch.Board.Core.Models.Device.Loops.html#Magic_Switch_Board_Core_Models_Device_Loops__ctor_Magic_Switch_Board_Core_Enums_LoopChannels_
-  commentId: M:Magic.Switch.Board.Core.Models.Device.Loops.#ctor(Magic.Switch.Board.Core.Enums.LoopChannels)
-  name.vb: New(LoopChannels)
-  fullName: Magic.Switch.Board.Core.Models.Device.Loops.Loops(Magic.Switch.Board.Core.Enums.LoopChannels)
-  fullName.vb: Magic.Switch.Board.Core.Models.Device.Loops.New(Magic.Switch.Board.Core.Enums.LoopChannels)
-  nameWithType: Loops.Loops(Enums.LoopChannels)
-  nameWithType.vb: Loops.New(Enums.LoopChannels)
+- uid: Magic.Switch.Board.Core.Models.Device.Loops.#ctor(Magic.Switch.Board.Core.Enums.LoopChannelType)
+  name: Loops(LoopChannelType)
+  href: api/Magic.Switch.Board.Core.Models.Device.Loops.html#Magic_Switch_Board_Core_Models_Device_Loops__ctor_Magic_Switch_Board_Core_Enums_LoopChannelType_
+  commentId: M:Magic.Switch.Board.Core.Models.Device.Loops.#ctor(Magic.Switch.Board.Core.Enums.LoopChannelType)
+  name.vb: New(LoopChannelType)
+  fullName: Magic.Switch.Board.Core.Models.Device.Loops.Loops(Magic.Switch.Board.Core.Enums.LoopChannelType)
+  fullName.vb: Magic.Switch.Board.Core.Models.Device.Loops.New(Magic.Switch.Board.Core.Enums.LoopChannelType)
+  nameWithType: Loops.Loops(Enums.LoopChannelType)
+  nameWithType.vb: Loops.New(Enums.LoopChannelType)
 - uid: Magic.Switch.Board.Core.Models.Device.Loops.#ctor*
   name: Loops
   href: api/Magic.Switch.Board.Core.Models.Device.Loops.html#Magic_Switch_Board_Core_Models_Device_Loops__ctor_
@@ -1637,15 +1637,15 @@ references:
   fullName.vb: Magic.Switch.Board.Core.Models.Device.Output.New()
   nameWithType: Output.Output()
   nameWithType.vb: Output.New()
-- uid: Magic.Switch.Board.Core.Models.Device.Output.#ctor(Magic.Switch.Board.Core.Enums.MidiChannel,Magic.Switch.Board.Core.Enums.MidiMessageType,System.Int32)
-  name: Output(MidiChannel, MidiMessageType, int)
-  href: api/Magic.Switch.Board.Core.Models.Device.Output.html#Magic_Switch_Board_Core_Models_Device_Output__ctor_Magic_Switch_Board_Core_Enums_MidiChannel_Magic_Switch_Board_Core_Enums_MidiMessageType_System_Int32_
-  commentId: M:Magic.Switch.Board.Core.Models.Device.Output.#ctor(Magic.Switch.Board.Core.Enums.MidiChannel,Magic.Switch.Board.Core.Enums.MidiMessageType,System.Int32)
-  name.vb: New(MidiChannel, MidiMessageType, Integer)
-  fullName: Magic.Switch.Board.Core.Models.Device.Output.Output(Magic.Switch.Board.Core.Enums.MidiChannel, Magic.Switch.Board.Core.Enums.MidiMessageType, int)
-  fullName.vb: Magic.Switch.Board.Core.Models.Device.Output.New(Magic.Switch.Board.Core.Enums.MidiChannel, Magic.Switch.Board.Core.Enums.MidiMessageType, Integer)
-  nameWithType: Output.Output(Enums.MidiChannel, Enums.MidiMessageType, int)
-  nameWithType.vb: Output.New(Enums.MidiChannel, Enums.MidiMessageType, Integer)
+- uid: Magic.Switch.Board.Core.Models.Device.Output.#ctor(Magic.Switch.Board.Core.Enums.MidiChannelType,Magic.Switch.Board.Core.Enums.MidiMessageType,System.Int32)
+  name: Output(MidiChannelType, MidiMessageType, int)
+  href: api/Magic.Switch.Board.Core.Models.Device.Output.html#Magic_Switch_Board_Core_Models_Device_Output__ctor_Magic_Switch_Board_Core_Enums_MidiChannelType_Magic_Switch_Board_Core_Enums_MidiMessageType_System_Int32_
+  commentId: M:Magic.Switch.Board.Core.Models.Device.Output.#ctor(Magic.Switch.Board.Core.Enums.MidiChannelType,Magic.Switch.Board.Core.Enums.MidiMessageType,System.Int32)
+  name.vb: New(MidiChannelType, MidiMessageType, Integer)
+  fullName: Magic.Switch.Board.Core.Models.Device.Output.Output(Magic.Switch.Board.Core.Enums.MidiChannelType, Magic.Switch.Board.Core.Enums.MidiMessageType, int)
+  fullName.vb: Magic.Switch.Board.Core.Models.Device.Output.New(Magic.Switch.Board.Core.Enums.MidiChannelType, Magic.Switch.Board.Core.Enums.MidiMessageType, Integer)
+  nameWithType: Output.Output(Enums.MidiChannelType, Enums.MidiMessageType, int)
+  nameWithType.vb: Output.New(Enums.MidiChannelType, Enums.MidiMessageType, Integer)
 - uid: Magic.Switch.Board.Core.Models.Device.Output.#ctor*
   name: Output
   href: api/Magic.Switch.Board.Core.Models.Device.Output.html#Magic_Switch_Board_Core_Models_Device_Output__ctor_
@@ -1671,15 +1671,15 @@ references:
   fullName.vb: Magic.Switch.Board.Core.Models.Device.Switches.New()
   nameWithType: Switches.Switches()
   nameWithType.vb: Switches.New()
-- uid: Magic.Switch.Board.Core.Models.Device.Switches.#ctor(Magic.Switch.Board.Core.Enums.SwitchChannels)
-  name: Switches(SwitchChannels)
-  href: api/Magic.Switch.Board.Core.Models.Device.Switches.html#Magic_Switch_Board_Core_Models_Device_Switches__ctor_Magic_Switch_Board_Core_Enums_SwitchChannels_
-  commentId: M:Magic.Switch.Board.Core.Models.Device.Switches.#ctor(Magic.Switch.Board.Core.Enums.SwitchChannels)
-  name.vb: New(SwitchChannels)
-  fullName: Magic.Switch.Board.Core.Models.Device.Switches.Switches(Magic.Switch.Board.Core.Enums.SwitchChannels)
-  fullName.vb: Magic.Switch.Board.Core.Models.Device.Switches.New(Magic.Switch.Board.Core.Enums.SwitchChannels)
-  nameWithType: Switches.Switches(Enums.SwitchChannels)
-  nameWithType.vb: Switches.New(Enums.SwitchChannels)
+- uid: Magic.Switch.Board.Core.Models.Device.Switches.#ctor(Magic.Switch.Board.Core.Enums.SwitchChannelType)
+  name: Switches(SwitchChannelType)
+  href: api/Magic.Switch.Board.Core.Models.Device.Switches.html#Magic_Switch_Board_Core_Models_Device_Switches__ctor_Magic_Switch_Board_Core_Enums_SwitchChannelType_
+  commentId: M:Magic.Switch.Board.Core.Models.Device.Switches.#ctor(Magic.Switch.Board.Core.Enums.SwitchChannelType)
+  name.vb: New(SwitchChannelType)
+  fullName: Magic.Switch.Board.Core.Models.Device.Switches.Switches(Magic.Switch.Board.Core.Enums.SwitchChannelType)
+  fullName.vb: Magic.Switch.Board.Core.Models.Device.Switches.New(Magic.Switch.Board.Core.Enums.SwitchChannelType)
+  nameWithType: Switches.Switches(Enums.SwitchChannelType)
+  nameWithType.vb: Switches.New(Enums.SwitchChannelType)
 - uid: Magic.Switch.Board.Core.Models.Device.Switches.#ctor*
   name: Switches
   href: api/Magic.Switch.Board.Core.Models.Device.Switches.html#Magic_Switch_Board_Core_Models_Device_Switches__ctor_
@@ -2969,25 +2969,6 @@ references:
   commentId: T:Magic.Switch.Board.Core.Services.EnumService
   fullName: Magic.Switch.Board.Core.Services.EnumService
   nameWithType: EnumService
-- uid: Magic.Switch.Board.Core.Services.EnumService.#ctor(Magic.Switch.Board.Core.Contracts.Services.ILoggerService)
-  name: EnumService(ILoggerService)
-  href: api/Magic.Switch.Board.Core.Services.EnumService.html#Magic_Switch_Board_Core_Services_EnumService__ctor_Magic_Switch_Board_Core_Contracts_Services_ILoggerService_
-  commentId: M:Magic.Switch.Board.Core.Services.EnumService.#ctor(Magic.Switch.Board.Core.Contracts.Services.ILoggerService)
-  name.vb: New(ILoggerService)
-  fullName: Magic.Switch.Board.Core.Services.EnumService.EnumService(Magic.Switch.Board.Core.Contracts.Services.ILoggerService)
-  fullName.vb: Magic.Switch.Board.Core.Services.EnumService.New(Magic.Switch.Board.Core.Contracts.Services.ILoggerService)
-  nameWithType: EnumService.EnumService(ILoggerService)
-  nameWithType.vb: EnumService.New(ILoggerService)
-- uid: Magic.Switch.Board.Core.Services.EnumService.#ctor*
-  name: EnumService
-  href: api/Magic.Switch.Board.Core.Services.EnumService.html#Magic_Switch_Board_Core_Services_EnumService__ctor_
-  commentId: Overload:Magic.Switch.Board.Core.Services.EnumService.#ctor
-  isSpec: "True"
-  name.vb: New
-  fullName: Magic.Switch.Board.Core.Services.EnumService.EnumService
-  fullName.vb: Magic.Switch.Board.Core.Services.EnumService.New
-  nameWithType: EnumService.EnumService
-  nameWithType.vb: EnumService.New
 - uid: Magic.Switch.Board.Core.Services.EnumService.GetLogLevels
   name: GetLogLevels()
   href: api/Magic.Switch.Board.Core.Services.EnumService.html#Magic_Switch_Board_Core_Services_EnumService_GetLogLevels

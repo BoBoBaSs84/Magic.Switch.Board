@@ -174,30 +174,30 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.LogLevel.yml",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.LogLevelType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Magic.Switch.Board.Core.Enums.LogLevel.html"
+          "relative_path": "api/Magic.Switch.Board.Core.Enums.LogLevelType.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.LoopChannels.yml",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.LoopChannelType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Magic.Switch.Board.Core.Enums.LoopChannels.html"
+          "relative_path": "api/Magic.Switch.Board.Core.Enums.LoopChannelType.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.MidiChannel.yml",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.MidiChannelType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Magic.Switch.Board.Core.Enums.MidiChannel.html"
+          "relative_path": "api/Magic.Switch.Board.Core.Enums.MidiChannelType.html"
         }
       },
       "version": ""
@@ -214,10 +214,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.SwitchChannels.yml",
+      "source_relative_path": "api/Magic.Switch.Board.Core.Enums.SwitchChannelType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Magic.Switch.Board.Core.Enums.SwitchChannels.html"
+          "relative_path": "api/Magic.Switch.Board.Core.Enums.SwitchChannelType.html"
         }
       },
       "version": ""
