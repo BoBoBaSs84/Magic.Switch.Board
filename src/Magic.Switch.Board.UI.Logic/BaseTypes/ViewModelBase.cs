@@ -80,8 +80,7 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	/// <exception cref="ArgumentNullException">If <paramref name="propertyName"/> is null.</exception>
 	protected void SetPropertyAndValidate<T>(ref T field, T newValue, [CallerMemberName] string? propertyName = null)
 	{
-		if (propertyName is null)
-			throw new ArgumentNullException(nameof(propertyName));
+		ArgumentNullException.ThrowIfNull(propertyName);
 
 		if (!Equals(field, newValue))
 		{
@@ -102,8 +101,7 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	/// <exception cref="ArgumentNullException">If <paramref name="propertyName"/> is null.</exception>
 	protected void SetPropertyNoNotifyAndValidate<T>(ref T field, T newValue, [CallerMemberName] string? propertyName = null)
 	{
-		if (propertyName is null)
-			throw new ArgumentNullException(nameof(propertyName));
+		ArgumentNullException.ThrowIfNull(propertyName);
 
 		if (!Equals(field, newValue))
 		{
@@ -117,17 +115,22 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	/// <summary>
 	/// The dictonary contains the errors for each property.
 	/// </summary>
-	private readonly Dictionary<string, List<string>> _propertyErrors = [];
+	private readonly Dictionary<string, List<string?>> _errors = [];
 
 	/// <inheritdoc/>
-	public bool HasErrors => _propertyErrors.Any();
+	public bool HasErrors => _errors.Count > 0;
 
 	/// <inheritdoc/>
 	public event EventHandler<DataErrorsChangedEventArgs>? ErrorsChanged;
 
 	/// <inheritdoc/>
-	public IEnumerable GetErrors(string? propertyName) =>
-		_propertyErrors.ContainsKey(propertyName!) ? _propertyErrors[propertyName!] : null!;
+	public IEnumerable GetErrors(string? propertyName)
+	{
+		ArgumentException.ThrowIfNullOrEmpty(propertyName);
+
+		List<string?>? values = [];
+		return _errors.TryGetValue(propertyName, out values) ? values : Array.Empty<string?>();
+	}
 
 	/// <summary>
 	/// The <see cref="RaiseErrorsChanged(string?)"/> method to raise the erros changed event.
@@ -166,12 +169,12 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	/// <param name="errorMessage">The error message.</param>
 	private void AddError(string propertyName, string errorMessage)
 	{
-		if (!_propertyErrors.ContainsKey(propertyName))
-			_propertyErrors[propertyName] = [];
+		if (!_errors.ContainsKey(propertyName))
+			_errors[propertyName] = [];
 
-		if (!_propertyErrors[propertyName].Contains(errorMessage))
+		if (!_errors[propertyName].Contains(errorMessage))
 		{
-			_propertyErrors[propertyName].Add(errorMessage);
+			_errors[propertyName].Add(errorMessage);
 			RaiseErrorsChanged(propertyName);
 		}
 	}
@@ -182,9 +185,9 @@ public abstract class ViewModelBase<TModel> : ViewModelBase, INotifyDataErrorInf
 	/// <param name="propertyName">The property name.</param>
 	private void ClearErrors(string propertyName)
 	{
-		if (_propertyErrors.ContainsKey(propertyName))
+		if (_errors.ContainsKey(propertyName))
 		{
-			_ = _propertyErrors.Remove(propertyName);
+			_ = _errors.Remove(propertyName);
 			RaiseErrorsChanged(propertyName);
 		}
 	}
