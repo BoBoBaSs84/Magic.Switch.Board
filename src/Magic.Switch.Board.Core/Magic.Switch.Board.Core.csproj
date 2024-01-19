@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<ItemGroup>
-	  <PackageReference Include="BB84.Extensions" Version="2.0.0" />
-	  <PackageReference Include="BB84.Notifications" Version="2.1.0" />
+	  <PackageReference Include="BB84.Extensions" />
+	  <PackageReference Include="BB84.Notifications" />
 	</ItemGroup>
 
 	<ItemGroup>

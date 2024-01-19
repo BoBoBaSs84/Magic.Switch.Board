@@ -16,7 +16,7 @@
 		<AppendTargetFrameworkToOutputPath>true</AppendTargetFrameworkToOutputPath>
 		<AssemblyOriginatorKeyFile>..\..\PublicKey.snk</AssemblyOriginatorKeyFile>
 		<CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-		<DebugType>full</DebugType>
+		<DebugType>none</DebugType>
 		<Deterministic>true</Deterministic>
 		<EnableNETAnalyzers>true</EnableNETAnalyzers>
 		<EnableWindowsTargeting>true</EnableWindowsTargeting>
@@ -35,8 +35,8 @@
 		<TargetFramework>net8.0</TargetFramework>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)'=='Release'">
-		<DebugType>none</DebugType>
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+		<DebugType>full</DebugType>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="!$(MSBuildProjectName.EndsWith('Tests'))" Label="Metadata">
@@ -63,15 +63,16 @@
 
 	<ItemGroup Condition="!$(MSBuildProjectName.EndsWith('Tests'))">
 		<InternalsVisibleTo Include="$(AssemblyName).Tests" Key="002400000480000094000000060200000024000052534131000400000100010079781fed8396a2be130478f990ccf903cf09980be71d48d2e9cc166181194aaeba46350ad7204b51056df24995923798ebf0f851a013ba26bd2c7e7c298482cc3e98162988fbb3b9cf4e7fbdbeeed360a713c7b68566ad48f807e6e2efc437f9afefc4303749ef429e98a7e9723bbf0dcf13bd2a1e4f20809382009da9660a9e"/>
-		<None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
-		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 	<ItemGroup Condition="$(MSBuildProjectName.EndsWith('Tests'))">
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
-		<PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
-		<PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
-		<PackageReference Include="coverlet.collector" Version="6.0.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" />
+		<PackageReference Include="MSTest.TestAdapter" />
+		<PackageReference Include="MSTest.TestFramework" />
+		<PackageReference Include="coverlet.collector">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
 		<Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
 		<Using Include="System.Diagnostics.CodeAnalysis" />
 		<Using Include="System.Diagnostics" />
