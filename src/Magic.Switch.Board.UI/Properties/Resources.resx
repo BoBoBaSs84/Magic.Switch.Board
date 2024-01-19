@@ -117,32 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="File_New" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icons\File_New.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="File_Open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icons\File_Open.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="File_Quit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icons\File_Quit.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="File_Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icons\File_Settings.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Help_About" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icons\Help_About.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Help_Center" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icons\Help_Center.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Help_News" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icons\Help_News.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Help_Update" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icons\Help_Update.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Magic_Switch_Board" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Icons\Magic_Switch_Board.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
