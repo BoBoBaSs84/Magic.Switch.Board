@@ -98,7 +98,7 @@ Class LoopsVM  <a class="header-action link-secondary" title="View source" href=
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LoopsVM : ViewModelBase&lt;Loops&gt;, INotificationObject, INotifyPropertyChanged, INotifyPropertyChanging, INotifyDataErrorInfo</code></pre>
+    <pre><code class="lang-csharp hljs">public class LoopsVM : ViewModelBase&lt;Loops&gt;, INotifiableObject, INotifyPropertyChanged, INotifyPropertyChanging, INotifyDataErrorInfo</code></pre>
   </div>
 
 
@@ -108,7 +108,7 @@ Class LoopsVM  <a class="header-action link-secondary" title="View source" href=
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">NotificationObject</span></div>
+      <div><span class="xref">NotifiableObject</span></div>
       <div><a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html">ViewModelBase</a></div>
       <div><a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.html">ViewModelBase</a>&lt;<a class="xref" href="Magic.Switch.Board.Core.Models.Device.Loops.html">Loops</a>&gt;</div>
       <div><span class="xref">LoopsVM</span></div>
@@ -118,7 +118,7 @@ Class LoopsVM  <a class="header-action link-secondary" title="View source" href=
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><span class="xref">INotificationObject</span></div>
+      <div><span class="xref">INotifiableObject</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanging">INotifyPropertyChanging</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifydataerrorinfo">INotifyDataErrorInfo</a></div>
@@ -157,13 +157,13 @@ Class LoopsVM  <a class="header-action link-secondary" title="View source" href=
       <a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase-1.html#Magic_Switch_Board_UI_Logic_BaseTypes_ViewModelBase_1_Validate__1___0_System_String_">ViewModelBase&lt;Loops&gt;.Validate&lt;T&gt;(T, string)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">NotificationObject.SetProperty&lt;T&gt;(ref T, T, string)</a>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">NotifiableObject.SetProperty&lt;T&gt;(ref T, T, string)</a>
     </div>
     <div>
-      <span class="xref">NotificationObject.PropertyChanged</span>
+      <span class="xref">NotifiableObject.PropertyChanged</span>
     </div>
     <div>
-      <span class="xref">NotificationObject.PropertyChanging</span>
+      <span class="xref">NotifiableObject.PropertyChanging</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>

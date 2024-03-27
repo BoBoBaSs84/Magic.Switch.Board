@@ -98,7 +98,7 @@ Class MainViewModel  <a class="header-action link-secondary" title="View source"
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class MainViewModel : ViewModelBase, INotificationObject, INotifyPropertyChanged, INotifyPropertyChanging</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class MainViewModel : ViewModelBase, INotifiableObject, INotifyPropertyChanged, INotifyPropertyChanging</code></pre>
   </div>
 
 
@@ -108,7 +108,7 @@ Class MainViewModel  <a class="header-action link-secondary" title="View source"
     <dt>Inheritance</dt>
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
-      <div><span class="xref">NotificationObject</span></div>
+      <div><span class="xref">NotifiableObject</span></div>
       <div><a class="xref" href="Magic.Switch.Board.UI.Logic.BaseTypes.ViewModelBase.html">ViewModelBase</a></div>
       <div><span class="xref">MainViewModel</span></div>
     </dd>
@@ -117,7 +117,7 @@ Class MainViewModel  <a class="header-action link-secondary" title="View source"
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
-      <div><span class="xref">INotificationObject</span></div>
+      <div><span class="xref">INotifiableObject</span></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanged">INotifyPropertyChanged</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.componentmodel.inotifypropertychanging">INotifyPropertyChanging</a></div>
     </dd>
@@ -128,10 +128,10 @@ Class MainViewModel  <a class="header-action link-secondary" title="View source"
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <span class="xref">NotificationObject.PropertyChanged</span>
+      <span class="xref">NotifiableObject.PropertyChanged</span>
     </div>
     <div>
-      <span class="xref">NotificationObject.PropertyChanging</span>
+      <span class="xref">NotifiableObject.PropertyChanging</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
