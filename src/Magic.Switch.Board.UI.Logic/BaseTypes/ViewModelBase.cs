@@ -10,7 +10,7 @@ namespace Magic.Switch.Board.UI.Logic.BaseTypes;
 /// <summary>
 /// The view model base class.
 /// </summary>
-public abstract class ViewModelBase : NotificationObject
+public abstract class ViewModelBase : NotifiableObject
 { }
 
 /// <summary>
