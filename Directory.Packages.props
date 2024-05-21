@@ -6,7 +6,7 @@
 
 	<ItemGroup>
 		<PackageVersion Include="BB84.Extensions" Version="2.3.421" />
-		<PackageVersion Include="BB84.Notifications" Version="3.2.421" />
+		<PackageVersion Include="BB84.Notifications" Version="3.2.520" />
 		<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
 		<PackageVersion Include="MSTest.TestAdapter" Version="3.3.1" />
 		<PackageVersion Include="MSTest.TestFramework" Version="3.3.1" />
