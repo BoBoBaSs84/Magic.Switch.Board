@@ -3256,6 +3256,32 @@ references:
   fullName.vb: Magic.Switch.Board.UI.App.GetService(Of T)()
   nameWithType: App.GetService<T>()
   nameWithType.vb: App.GetService(Of T)()
+- uid: Magic.Switch.Board.UI.App.InitializeComponent
+  name: InitializeComponent()
+  href: api/Magic.Switch.Board.UI.App.html#Magic_Switch_Board_UI_App_InitializeComponent
+  commentId: M:Magic.Switch.Board.UI.App.InitializeComponent
+  fullName: Magic.Switch.Board.UI.App.InitializeComponent()
+  nameWithType: App.InitializeComponent()
+- uid: Magic.Switch.Board.UI.App.InitializeComponent*
+  name: InitializeComponent
+  href: api/Magic.Switch.Board.UI.App.html#Magic_Switch_Board_UI_App_InitializeComponent_
+  commentId: Overload:Magic.Switch.Board.UI.App.InitializeComponent
+  isSpec: "True"
+  fullName: Magic.Switch.Board.UI.App.InitializeComponent
+  nameWithType: App.InitializeComponent
+- uid: Magic.Switch.Board.UI.App.Main
+  name: Main()
+  href: api/Magic.Switch.Board.UI.App.html#Magic_Switch_Board_UI_App_Main
+  commentId: M:Magic.Switch.Board.UI.App.Main
+  fullName: Magic.Switch.Board.UI.App.Main()
+  nameWithType: App.Main()
+- uid: Magic.Switch.Board.UI.App.Main*
+  name: Main
+  href: api/Magic.Switch.Board.UI.App.html#Magic_Switch_Board_UI_App_Main_
+  commentId: Overload:Magic.Switch.Board.UI.App.Main
+  isSpec: "True"
+  fullName: Magic.Switch.Board.UI.App.Main
+  nameWithType: App.Main
 - uid: Magic.Switch.Board.UI.Logic.BaseTypes
   name: Magic.Switch.Board.UI.Logic.BaseTypes
   href: api/Magic.Switch.Board.UI.Logic.BaseTypes.html
@@ -4057,3 +4083,16 @@ references:
   fullName.vb: Magic.Switch.Board.UI.Views.MainWindow.New
   nameWithType: MainWindow.MainWindow
   nameWithType.vb: MainWindow.New
+- uid: Magic.Switch.Board.UI.Views.MainWindow.InitializeComponent
+  name: InitializeComponent()
+  href: api/Magic.Switch.Board.UI.Views.MainWindow.html#Magic_Switch_Board_UI_Views_MainWindow_InitializeComponent
+  commentId: M:Magic.Switch.Board.UI.Views.MainWindow.InitializeComponent
+  fullName: Magic.Switch.Board.UI.Views.MainWindow.InitializeComponent()
+  nameWithType: MainWindow.InitializeComponent()
+- uid: Magic.Switch.Board.UI.Views.MainWindow.InitializeComponent*
+  name: InitializeComponent
+  href: api/Magic.Switch.Board.UI.Views.MainWindow.html#Magic_Switch_Board_UI_Views_MainWindow_InitializeComponent_
+  commentId: Overload:Magic.Switch.Board.UI.Views.MainWindow.InitializeComponent
+  isSpec: "True"
+  fullName: Magic.Switch.Board.UI.Views.MainWindow.InitializeComponent
+  nameWithType: MainWindow.InitializeComponent
