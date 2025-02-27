@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 namespace Magic.Switch.Board.Core.Tests;
 
 [TestClass]
-public abstract class BaseTestUnit
+public abstract class UnitTestBase
 {
 	private static ServiceProvider? s_serviceProvider;
 

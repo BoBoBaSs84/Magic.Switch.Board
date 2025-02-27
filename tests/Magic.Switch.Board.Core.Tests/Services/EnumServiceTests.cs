@@ -6,7 +6,7 @@ using static Magic.Switch.Board.Core.Enums;
 namespace Magic.Switch.Board.Core.Tests.Services;
 
 [TestClass()]
-public class EnumServiceTests : BaseTestUnit
+public class EnumServiceTests : UnitTestBase
 {
 	private readonly IEnumService _enumService = GetService<IEnumService>();
 

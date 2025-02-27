@@ -7,7 +7,7 @@ using Magic.Switch.Board.Core.Models.Device;
 namespace Magic.Switch.Board.Core.Tests.Services;
 
 [TestClass()]
-public class DeviceConfigServiceTests : BaseTestUnit
+public class DeviceConfigServiceTests : UnitTestBase
 {
 	private readonly IDeviceConfigService _deviceConfigService = GetService<IDeviceConfigService>();
 	private const string ConfigurationFileName = "DeviceConfiguration.xml";

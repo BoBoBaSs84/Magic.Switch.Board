@@ -4,7 +4,7 @@ using Magic.Switch.Board.Core.Exceptions;
 namespace Magic.Switch.Board.Core.Tests.Services;
 
 [TestClass()]
-public class FileServiceTests : BaseTestUnit
+public class FileServiceTests : UnitTestBase
 {
 	private readonly IFileService _fileService = GetService<IFileService>();
 	private const string FolderPath = "D:\\";
