@@ -3,8 +3,8 @@
 		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageVersion Include="BB84.Extensions" Version="2.10.315" />
-		<PackageVersion Include="BB84.Notifications" Version="3.6.319" />
+		<PackageVersion Include="BB84.Extensions" Version="2.11.323" />
+		<PackageVersion Include="BB84.Notifications" Version="3.6.322" />
 		<PackageVersion Include="MSTest" Version="3.8.3" />
 		<PackageVersion Include="coverlet.collector" Version="6.0.4" />
 		<PackageVersion Include="Microsoft.Extensions.Hosting" Version="9.0.3" />
