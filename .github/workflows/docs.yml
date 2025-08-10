@@ -1,4 +1,6 @@
 name: docs
+permissions:
+  contents: read
 
 on:
   push:
@@ -6,6 +8,8 @@ on:
 
 jobs:
     publish-docs:
+      permissions:
+        contents: write
       runs-on: windows-latest
       steps:
       - name: Checkout
