@@ -1,13 +1,13 @@
 <Project>
-	<PropertyGroup>
-		<ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-	</PropertyGroup>
-	<ItemGroup>
-		<PackageVersion Include="BB84.Extensions" Version="3.2.930" />
-		<PackageVersion Include="BB84.Notifications" Version="3.6.904" />
-		<PackageVersion Include="MSTest" Version="3.10.4" />
-		<PackageVersion Include="coverlet.collector" Version="6.0.4" />
-		<PackageVersion Include="Microsoft.Extensions.Hosting" Version="9.0.9" />
-		<PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="9.0.9" />
-	</ItemGroup>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="BB84.Extensions" Version="3.2.930" />
+    <PackageVersion Include="BB84.Notifications" Version="3.6.904" />
+    <PackageVersion Include="MSTest" Version="3.11.0" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="9.0.9" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="9.0.9" />
+  </ItemGroup>
 </Project>
