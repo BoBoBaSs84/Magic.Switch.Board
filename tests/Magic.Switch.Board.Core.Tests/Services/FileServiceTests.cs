@@ -14,7 +14,7 @@ public class FileServiceTests : UnitTestBase
 	[TestMethod()]
 	public void FileServiceNotNullTest() => Assert.IsNotNull(_fileService);
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(FolderPath, FileName, FileContent)]
 	[DataRow(FolderPath, null, FileContent)]
 	public void DeleteTest(string folderpath, string fileName, string fileContent)
@@ -26,11 +26,11 @@ public class FileServiceTests : UnitTestBase
 		}
 		catch (ServiceException ex)
 		{
-			Assert.IsInstanceOfType(ex, typeof(ServiceException));
+			Assert.IsInstanceOfType<ServiceException>(ex);
 		}
 	}
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(FolderPath, FileName, FileContent)]
 	[DataRow(FolderPath, null, FileContent)]
 	public void ReadTest(string folderpath, string fileName, string fileContent)
@@ -43,11 +43,11 @@ public class FileServiceTests : UnitTestBase
 		}
 		catch (ServiceException ex)
 		{
-			Assert.IsInstanceOfType(ex, typeof(ServiceException));
+			Assert.IsInstanceOfType<ServiceException>(ex);
 		}
 	}
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(FolderPath, FileName, FileContent)]
 	[DataRow(FolderPath, null, FileContent)]
 	public void SaveTest(string folderpath, string fileName, string fileContent)
@@ -58,7 +58,7 @@ public class FileServiceTests : UnitTestBase
 		}
 		catch (ServiceException ex)
 		{
-			Assert.IsInstanceOfType(ex, typeof(ServiceException));
+			Assert.IsInstanceOfType<ServiceException>(ex);
 		}
 	}
 

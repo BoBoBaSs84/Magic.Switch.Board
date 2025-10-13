@@ -14,7 +14,6 @@ public abstract class UnitTestBase
 	[AssemblyInitialize]
 	public static void AssemblyInitialize(TestContext context)
 	{
-		Debug.WriteLine(context.TestName);
 		s_serviceProvider = CreateServiceProvider();
 	}
 
