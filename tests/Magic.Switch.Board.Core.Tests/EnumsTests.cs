@@ -8,19 +8,19 @@ namespace Magic.Switch.Board.Core.Tests;
 [TestClass()]
 public class EnumsTests
 {
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(MidiMessageType.PCM)]
 	[DataRow(MidiMessageType.CCM)]
 	public void GetMidiMessageTypeEnumDescriptionTest(MidiMessageType midiMessageType) =>
 		Assert.AreNotEqual(midiMessageType.GetEnumDescription(), midiMessageType.ToString());
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(MidiMessageType.PCM)]
 	[DataRow(MidiMessageType.CCM)]
 	public void GetMidiMessageTypeEnumNameTest(MidiMessageType midiMessageType) =>
 		Assert.AreNotEqual(midiMessageType.GetEnumName(), midiMessageType.ToString());
 
-	[DataTestMethod]
+	[TestMethod]
 	[DataRow(LogLevelType.None)]
 	[DataRow(LogLevelType.Trace)]
 	[DataRow(LogLevelType.Debug)]
@@ -31,7 +31,7 @@ public class EnumsTests
 	public void GetLogLevelEnumDescriptionTest(LogLevelType logLevel) =>
 		Assert.AreNotEqual(logLevel.GetEnumDescription(), logLevel.ToString());
 
-	[DataTestMethod]
+	[TestMethod]
 	[DataRow(LoopChannelType.CH01)]
 	[DataRow(LoopChannelType.CH02)]
 	[DataRow(LoopChannelType.CH03)]
@@ -43,7 +43,7 @@ public class EnumsTests
 	public void GetLoopChannelsEnumNameTest(LoopChannelType loopChannels) =>
 		Assert.AreNotEqual(loopChannels.GetEnumName(), loopChannels.ToString());
 
-	[DataTestMethod]
+	[TestMethod]
 	[DataRow(SwitchChannelType.CH01)]
 	[DataRow(SwitchChannelType.CH02)]
 	[DataRow(SwitchChannelType.CH03)]
@@ -55,7 +55,7 @@ public class EnumsTests
 	public void GetSwitchChannelsEnumNameTest(SwitchChannelType switchChannels) =>
 		Assert.AreNotEqual(switchChannels.GetEnumName(), switchChannels.ToString());
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(MidiMessageType.PCM)]
 	[DataRow(MidiMessageType.CCM)]
 	public void GetMidiMessageTypeEnumShortNameTest(MidiMessageType midiMessageType) =>
@@ -68,43 +68,43 @@ public class EnumsTests
 		Assert.AreNotEqual(midiMessageTypeShortName, MidiMessageType.PCM.GetEnumName());
 	}
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(MidiMessageType.PCM)]
 	[DataRow(MidiMessageType.CCM)]
 	public void GetListFromMidiMessageTypeEnumTest(MidiMessageType midiMessageType)
 	{
 		List<MidiMessageType> enumList = midiMessageType.GetListFromEnum();
-		Assert.AreEqual(enumList.Count, 2);
+		Assert.HasCount(2, enumList);
 	}
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(SwitchChannelType.CH01)]
 	[DataRow(SwitchChannelType.CH08)]
 	public void GetListFromSwitchChannelsEnumTest(SwitchChannelType switchChannels)
 	{
 		List<SwitchChannelType> enumList = switchChannels.GetListFromEnum();
-		Assert.AreEqual(enumList.Count, 8);
+		Assert.HasCount(8, enumList);
 	}
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(LoopChannelType.CH01)]
 	[DataRow(LoopChannelType.CH08)]
 	public void GetListFromLoopChannelsEnumTest(LoopChannelType loopChannels)
 	{
 		List<LoopChannelType> enumList = loopChannels.GetListFromEnum();
-		Assert.AreEqual(enumList.Count, 8);
+		Assert.HasCount(8, enumList);
 	}
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(MidiChannelType.CH01)]
 	[DataRow(MidiChannelType.CH16)]
 	public void GetListFromMidiChannelEnumTest(MidiChannelType midiChannel)
 	{
 		List<MidiChannelType> enumList = midiChannel.GetListFromEnum();
-		Assert.AreEqual(enumList.Count, 16);
+		Assert.HasCount(16, enumList);
 	}
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(SwitchChannelType.CH01 | SwitchChannelType.CH02)]
 	[DataRow(SwitchChannelType.CH03 | SwitchChannelType.CH04)]
 	[DataRow(SwitchChannelType.CH05 | SwitchChannelType.CH06)]
@@ -112,17 +112,17 @@ public class EnumsTests
 	public void FlagsToListTestPass(SwitchChannelType switchChannels)
 	{
 		List<SwitchChannelType> enumFlags = switchChannels.FlagsToList();
-		Assert.AreEqual(enumFlags.Count, 2);
+		Assert.HasCount(2, enumFlags);
 	}
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(SwitchChannelType.CH01)]
 	[DataRow(SwitchChannelType.CH02 | SwitchChannelType.CH03)]
 	[DataRow(SwitchChannelType.CH04 | SwitchChannelType.CH05 | SwitchChannelType.CH06)]
 	public void FlagsToListTestFail(SwitchChannelType switchChannels)
 	{
 		List<SwitchChannelType> enumFlags = switchChannels.FlagsToList();
-		Assert.AreNotEqual(enumFlags.Count, 0);
+		Assert.AreNotEqual(0, enumFlags.Count);
 	}
 
 	[TestMethod()]
@@ -140,7 +140,7 @@ public class EnumsTests
 		LogLevelType enumValue = LogLevelType.Critical;
 		Dictionary<LogLevelType, string> rightDict = new() { { enumValue, Resources.Enum_LogLevel_Critical_Description } };
 		Dictionary<LogLevelType, string> enumDict = new() { { enumValue, enumValue.GetEnumDescription() } };
-		Assert.AreEqual(enumDict.Count, rightDict.Count);
+		Assert.HasCount(enumDict.Count, rightDict);
 	}
 
 	[TestMethod()]

@@ -18,7 +18,7 @@ public class DeviceConfigServiceTests : UnitTestBase
 	[TestMethod()]
 	public void DeviceConfigServiceNotNullTest() => Assert.IsNotNull(_deviceConfigService);
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(ConfigurationName, ConfigurationVersion)]
 	[DataRow(null, ConfigurationVersion)]
 	[DataRow(ConfigurationName, null)]
@@ -32,11 +32,11 @@ public class DeviceConfigServiceTests : UnitTestBase
 		}
 		catch (ServiceException ex)
 		{
-			Assert.IsInstanceOfType(ex, typeof(ServiceException));
+			Assert.IsInstanceOfType<ServiceException>(ex);
 		}
 	}
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(ConfigurationName, ConfigurationVersion, ConfigurationFileName)]
 	[DataRow(null, ConfigurationVersion, ConfigurationFileName)]
 	[DataRow(ConfigurationName, null, ConfigurationFileName)]
@@ -55,11 +55,11 @@ public class DeviceConfigServiceTests : UnitTestBase
 		}
 		catch (ServiceException ex)
 		{
-			Assert.IsInstanceOfType(ex, typeof(ServiceException));
+			Assert.IsInstanceOfType<ServiceException>(ex);
 		}
 	}
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(ConfigurationName, ConfigurationVersion, ConfigurationFileName)]
 	[DataRow(null, ConfigurationVersion, ConfigurationFileName)]
 	[DataRow(ConfigurationName, null, ConfigurationFileName)]
@@ -75,11 +75,11 @@ public class DeviceConfigServiceTests : UnitTestBase
 		}
 		catch (ServiceException ex)
 		{
-			Assert.IsInstanceOfType(ex, typeof(ServiceException));
+			Assert.IsInstanceOfType<ServiceException>(ex);
 		}
 	}
 
-	[DataTestMethod()]
+	[TestMethod]
 	[DataRow(ConfigurationName, ConfigurationVersion, ConfigurationFileName, "Utf-8")]
 	[DataRow(ConfigurationName, ConfigurationVersion, ConfigurationFileName, "UniCode")]
 	[DataRow(ConfigurationName, ConfigurationVersion, ConfigurationFileName, "Utf-16")]
@@ -95,7 +95,7 @@ public class DeviceConfigServiceTests : UnitTestBase
 		}
 		catch (ServiceException ex)
 		{
-			Assert.IsInstanceOfType(ex, typeof(ServiceException));
+			Assert.IsInstanceOfType<ServiceException>(ex);
 		}
 	}
 
