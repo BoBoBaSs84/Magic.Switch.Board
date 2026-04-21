@@ -1,0 +1,43 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Folder Name="/docs/">
+    <File Path="docs/.gitignore" />
+    <File Path="docs/docfx.json" />
+    <File Path="docs/index.md" />
+    <File Path="docs/toc.yml" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="CODE_OF_CONDUCT.md" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="LICENSE" />
+    <File Path="PublicKey.snk" />
+    <File Path="README.md" />
+    <File Path="test.runsettings" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Magic.Switch.Board.Core/Magic.Switch.Board.Core.csproj">
+      <Platform Project="x64" />
+    </Project>
+    <Project Path="src/Magic.Switch.Board.UI.Logic/Magic.Switch.Board.UI.Logic.csproj">
+      <Platform Project="x64" />
+    </Project>
+    <Project Path="src/Magic.Switch.Board.UI/Magic.Switch.Board.UI.csproj">
+      <Platform Project="x64" />
+    </Project>
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Magic.Switch.Board.Core.Tests/Magic.Switch.Board.Core.Tests.csproj">
+      <Platform Project="x64" />
+    </Project>
+  </Folder>
+  <Properties Name="ExtensibilityGlobals" Scope="PostLoad">
+    <Property Name="RESX_AutoCreateNewLanguageFiles" Value="True" />
+    <Property Name="RESX_SortFileContentOnSave" Value="True" />
+  </Properties>
+</Solution>
